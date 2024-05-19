@@ -5,9 +5,9 @@ outline: [2, 3, 4]
 ---
 
 <script setup>
-import { NAV_DATA } from './nav/data'
+import { NAV_DATA } from '../../nav/data.ts'
 </script>
-<style src="./nav/index.scss"></style>
+<style src="../../nav/index.scss"></style>
 
 # 前端导航
 

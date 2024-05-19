@@ -63,6 +63,18 @@
   --vp-custom-block-tip-border: var(--vp-c-brand);
   --vp-custom-block-tip-text: var(--vp-c-brand-darker);
   --vp-custom-block-tip-bg: var(--vp-c-brand-dimm);
+  /* 黑色代码块配置 */
+  --vp-code-block-divider-color: #000000;
+  /* 黑色代码块配置 */
+  --vp-code-line-number-color: rgba(235, 235, 245, 0.38);
+}
+/* 黑色代码块配置 */
+.vp-doc div[class*='language-'], .vp-block{
+  background-color: #161618;
+}
+/* 黑色代码块配置 */
+.vp-doc [class*='language-'] > span.lang{
+  color:rgba(235, 235, 245, 0.38);
 }
 .dark {
   --vp-custom-block-tip-border: var(--vp-c-brand);
@@ -76,3 +88,4 @@
 .DocSearch {
   --docsearch-primary-color: var(--vp-c-brand) !important;
 }
+

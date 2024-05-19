@@ -1,14 +1,15 @@
-import { createWriteStream } from 'node:fs'
-import { resolve } from 'node:path'
-import { SitemapStream } from 'sitemap'
-import { defineConfig, PageData } from 'vitepress'
+import {createWriteStream} from 'node:fs'
+import {resolve} from 'node:path'
+import {SitemapStream} from 'sitemap'
+import {defineConfig, PageData} from 'vitepress'
 
-import { head, nav, sidebar, algolia } from './configs'
+import {head, nav, sidebar, algolia} from './configs'
 
 const links: { url: string; lastmod: PageData['lastUpdated'] }[] = []
 
 export default defineConfig({
   outDir: '../dist',
+  srcDir: './src',
   base: process.env.APP_BASE_PATH || '/',
 
   lang: 'zh-CN',
@@ -21,7 +22,11 @@ export default defineConfig({
 
   /* markdown 配置 */
   markdown: {
-    lineNumbers: true
+    lineNumbers: true,
+    theme: {
+      light: 'one-dark-pro',
+      dark: 'one-dark-pro',
+    }
   },
 
   /* 主题配置 */
@@ -38,7 +43,7 @@ export default defineConfig({
       label: '本页目录'
     },
 
-    socialLinks: [{ icon: 'github', link: 'https://github.com/benym' }],
+    socialLinks: [{icon: 'github', link: 'https://github.com/benym'}],
 
     footer: {
       message: 'benym | <a href="https://github.com/benym/benym-book/blob/master/LICENSE" target="_blank">MIT License</a>'
@@ -62,15 +67,15 @@ export default defineConfig({
   },
 
   /* 生成站点地图 */
-  transformHtml: (_, id, { pageData }) => {
+  transformHtml: (_, id, {pageData}) => {
     if (!/[\\/]404\.html$/.test(id))
       links.push({
         url: pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2'),
         lastmod: pageData.lastUpdated
       })
   },
-  buildEnd: async ({ outDir }) => {
-    const sitemap = new SitemapStream({ hostname: 'https://cloud.benym.cn/' })
+  buildEnd: async ({outDir}) => {
+    const sitemap = new SitemapStream({hostname: 'https://cloud.benym.cn/'})
     const writeStream = createWriteStream(resolve(outDir, 'sitemap.xml'))
     sitemap.pipe(writeStream)
     links.forEach((link) => sitemap.write(link))

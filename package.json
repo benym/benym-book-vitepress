@@ -3,7 +3,7 @@
   "type": "module",
   "private": true,
   "version": "1.0.0",
-  "packageManager": "pnpm@8.0.0",
+  "packageManager": "pnpm@8.3.1",
   "description": "",
   "repository": {
     "type": "git",
@@ -14,19 +14,20 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "build:github": "cross-env APP_BASE_PATH=/benym-book/ npm run build",
     "lint": "prettier --write .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "baiduPush": "node utils/baiduPush.js https://cloud.benym.cn && bash baiduPush.sh",
+    "fix-memory-limit": "cross-env LIMIT=2600 increase-memory-limit"
   },
   "keywords": [],
   "author": "benym",
   "license": "MIT",
+  "homepage": "https://github.com/benym/benym-book-vitepress#readme",
   "devDependencies": {
-    "vitepress": "^1.2.0",
     "@femm/prettier": "^1.0.1",
     "@femm/verify-commit": "^1.0.1",
     "@mdit-vue/shared": "^0.12.0",
@@ -38,6 +39,7 @@
     "prettier": "^2.8.4",
     "sass": "^1.58.3",
     "sitemap": "^7.1.1",
+    "vitepress": "^1.2.0",
     "vue": "^3.2.47"
   },
   "lint-staged": {
