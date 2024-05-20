@@ -2,6 +2,8 @@ import {createWriteStream} from 'node:fs'
 import {resolve} from 'node:path'
 import {SitemapStream} from 'sitemap'
 import {defineConfig, PageData} from 'vitepress'
+import { fileURLToPath, URL } from "node:url";
+import { getSidebar } from "./utils/getSidebar";
 
 import {head, nav, sidebar, algolia} from './configs'
 
@@ -22,6 +24,7 @@ export default defineConfig({
 
   /* markdown 配置 */
   markdown: {
+    math: true,
     lineNumbers: true,
     theme: {
       light: 'one-dark-pro',
@@ -36,7 +39,10 @@ export default defineConfig({
     logo: '/img/favicon-benym.ico',
 
     nav,
-    sidebar,
+    // 【文章页面左侧导航】
+    sidebar: {
+      "/Notes/": getSidebar("/docs/src", "/Notes/"),
+    },
     /* 右侧大纲配置 */
     outline: {
       level: 'deep',
@@ -81,5 +87,23 @@ export default defineConfig({
     links.forEach((link) => sitemap.write(link))
     sitemap.end()
     await new Promise((r) => writeStream.on('finish', r))
+  }
+
+  // !请勿修改
+  vite: {
+    resolve: {
+      alias: [
+        {
+          find: /^.*\/VPDocFooterLastUpdated\.vue$/,
+          replacement: fileURLToPath(
+            new URL("./components/UpdateTime.vue", import.meta.url)
+          ),
+        },
+        {
+          find: /^.*\/VPFooter\.vue$/,
+          replacement: fileURLToPath(new URL("./components/Footer.vue", import.meta.url)),
+        },
+      ],
+    },
   }
 })
