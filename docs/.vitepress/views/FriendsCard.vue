@@ -29,7 +29,7 @@
 
 <script setup>
 import { computed } from "vue";
-import Badge from "../components/Badge.vue";
+import Badge from "../theme/components/Badge.vue";
 
 const friendsInfo = defineProps(["avatar", "name", "title", "link", "tag", "color"]);
 

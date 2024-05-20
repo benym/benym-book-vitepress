@@ -8,7 +8,7 @@ export const nav: DefaultTheme.Config['nav'] = [
       {
         text: 'Java',
         items: [
-          {text: 'Java-基础', link: '/01.Java/01.Java-基础/01.Java反射获取类对象的三种方式'},
+          {text: 'Java-基础', link: '/notes/01.Java/01.Java-基础/01.Java反射获取类对象的三种方式'},
           {text: 'Java-集合', link: '/pages/9786e5/'},
           {text: 'Java-多线程与并发', link: '/pages/487c60/'},
           {text: 'Java-JVM', link: '/pages/0a146e/'},
@@ -79,5 +79,7 @@ export const nav: DefaultTheme.Config['nav'] = [
     ]
   },
   {text: '🦉里程碑', link: '/milestone/'},
-  {text: '🐷关于', link: '/about/'},
+  {text: '🐷关于', link: '/notes/10.关于/01.关于'},
+  { text: "🦄 Projects", link: "Projects.md" },
+  { text: "👫 Friends", link: "Friends.md" },
 ]

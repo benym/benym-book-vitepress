@@ -8,8 +8,11 @@ import MNavVisitor from './components/MNavVisitor.vue'
 import MDocFooter from './components/MDocFooter.vue'
 import MAsideSponsors from './components/MAsideSponsors.vue'
 import MNavLinks from './components/MNavLinks.vue'
+import LinkCard from "./components/LinkCard.vue";
+import HText from "./components/HText.vue";
 
 import './styles/index.scss'
+import "./styles/tailwind.css";
 
 if (typeof window !== 'undefined') {
   /* 注销 PWA 服务 */
@@ -60,7 +63,8 @@ export default {
   },
   enhanceApp({ app, router }: EnhanceAppContext) {
     createMediumZoomProvider(app, router)
-
+    app.component("LinkCard", LinkCard);
+    app.component("HText", HText);
     app.component('MNavLinks', MNavLinks)
 
     app.provide('DEV', process.env.NODE_ENV === 'development')

@@ -1,7 +1,7 @@
 import { readdirSync, statSync } from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { fileName2Title } from "../userConfig/translations.js";
+import { fileName2Title } from "../configs/translations.js";
 import { formatDate } from "./formatDate.js";
 
 const INDEX_FILE = "index";
