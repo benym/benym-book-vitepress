@@ -69,15 +69,6 @@ export const nav: DefaultTheme.Config['nav'] = [
       },
     ],
   },
-  {
-    text: '🐿️索引',
-    items: [
-      {text: '归档', link: '/archives/'},
-      // {text: '分类', link: '/categories/'},
-      {text: '标签', link: '/tags/'},
-      {text: '目录', link: '/pages/059f1f/'},
-    ]
-  },
   {text: '🦉里程碑', link: '/milestone/'},
   {text: '🐷关于', link: '/notes/10.关于/01.关于'},
   { text: "🦄 Projects", link: "Projects.md" },

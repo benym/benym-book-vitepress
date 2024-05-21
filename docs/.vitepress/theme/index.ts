@@ -12,7 +12,7 @@ import LinkCard from "./components/LinkCard.vue";
 import HText from "./components/HText.vue";
 
 import './styles/index.scss'
-import "./styles/tailwind.css";
+import "./styles/tailwind.scss";
 
 if (typeof window !== 'undefined') {
   /* 注销 PWA 服务 */
