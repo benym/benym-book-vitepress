@@ -39,7 +39,9 @@ export default defineConfig({
 
     nav,
     // 【文章页面左侧导航】
-    sidebar,
+    sidebar: {
+      "/notes/": getSidebar("/docs/src", "/notes/"),
+    },
     /* 右侧大纲配置 */
     outline: {
       level: 'deep',

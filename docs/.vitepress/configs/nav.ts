@@ -1,14 +1,14 @@
 import type {DefaultTheme} from 'vitepress'
 
 export const nav: DefaultTheme.Config['nav'] = [
-  {text: '🦮导航', link: '/notes/00.导航/nav', activeMatch: '^/nav'},
+  {text: '🦮导航', link: '/notes/0-navigation/nav', activeMatch: '^/nav'},
   {
     text: '🦁Java',
     items: [
       {
         text: 'Java',
         items: [
-          {text: 'Java-基础', link: '/notes/01.Java/01.Java-基础/01.Java反射获取类对象的三种方式'},
+          {text: 'Java-基础', link: '/notes/01-java/01-java-basics/reflection-acquires-class-objects-in-three-ways'},
           {text: 'Java-集合', link: '/pages/9786e5/'},
           {text: 'Java-多线程与并发', link: '/pages/487c60/'},
           {text: 'Java-JVM', link: '/pages/0a146e/'},

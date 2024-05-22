@@ -6,6 +6,7 @@
  * ! 并在该文件中将其名称进行替换。
  */
 export const fileName2Title: Record<string, string> = {
+  "01-site-optimization" : "站点优化",
   // "01.Java": "Java-指南",
   // "02.Python": "示例文件",
 };
