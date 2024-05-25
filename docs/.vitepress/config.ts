@@ -5,7 +5,7 @@ import {defineConfig, PageData} from 'vitepress'
 import {fileURLToPath, URL} from "node:url";
 import {getSidebar} from "./utils/getSidebar";
 
-import {head, nav, sidebar, algolia} from './configs'
+import {head, nav, algolia} from './configs'
 
 const links: { url: string; lastmod: PageData['lastUpdated'] }[] = []
 
@@ -31,6 +31,11 @@ export default defineConfig({
     }
   },
 
+  sitemap: {
+    hostname: 'https://cloud.benym.com',
+    lastmodDateOnly: false
+  },
+
   /* 主题配置 */
   themeConfig: {
     i18nRouting: false,
@@ -40,7 +45,16 @@ export default defineConfig({
     nav,
     // 【文章页面左侧导航】
     sidebar: {
-      "/notes/": getSidebar("/docs/src", "/notes/"),
+      "/notes/01-java/": getSidebar("/docs/src", "/notes/01-java/"),
+      "/notes/02-python/": getSidebar("/docs/src", "/notes/02-python/"),
+      "/notes/03-distribution-and-middleware/": getSidebar("/docs/src", "/notes/03-distribution-and-middleware/"),
+      "/notes/05-foundation-framework/": getSidebar("/docs/src", "/notes/05-foundation-framework/"),
+      "/notes/06-algorithm/": getSidebar("/docs/src", "/notes/06-algorithm/"),
+      "/notes/07-practice/": getSidebar("/docs/src", "/notes/07-practice/"),
+      "/notes/08-open-source-project/": getSidebar("/docs/src", "/notes/08-open-source-project/"),
+      "/notes/09-milestone/": getSidebar("/docs/src", "/notes/09-milestone/"),
+      "/notes/10-about/": getSidebar("/docs/src", "/notes/10-about/"),
+      "/notes/11-design-pattern/": getSidebar("/docs/src", "/notes/11-design-pattern/")
     },
     /* 右侧大纲配置 */
     outline: {
@@ -69,22 +83,5 @@ export default defineConfig({
       prev: '上一篇',
       next: '下一篇'
     }
-  },
-
-  /* 生成站点地图 */
-  transformHtml: (_, id, {pageData}) => {
-    if (!/[\\/]404\.html$/.test(id))
-      links.push({
-        url: pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2'),
-        lastmod: pageData.lastUpdated
-      })
-  },
-  buildEnd: async ({outDir}) => {
-    const sitemap = new SitemapStream({hostname: 'https://cloud.benym.cn/'})
-    const writeStream = createWriteStream(resolve(outDir, 'sitemap.xml'))
-    sitemap.pipe(writeStream)
-    links.forEach((link) => sitemap.write(link))
-    sitemap.end()
-    await new Promise((r) => writeStream.on('finish', r))
   }
 })
