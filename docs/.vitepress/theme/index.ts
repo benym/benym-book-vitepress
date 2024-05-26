@@ -13,6 +13,7 @@ import HText from "./components/HText.vue";
 
 import './styles/index.scss'
 import "./styles/tailwind.scss";
+import BlogTheme from '@sugarat/theme'
 
 if (typeof window !== 'undefined') {
   /* 注销 PWA 服务 */
@@ -39,7 +40,7 @@ if (typeof window !== 'undefined') {
 let homePageStyle: HTMLStyleElement | undefined
 
 export default {
-  extends: DefaultTheme,
+  extends: BlogTheme,
   Layout: () => {
     const props: Record<string, any> = {}
     // 获取 frontmatter
@@ -50,7 +51,7 @@ export default {
       props.class = frontmatter.value.layoutClass
     }
 
-    return h(DefaultTheme.Layout, props, {
+    return h(BlogTheme.Layout, props, {
       /**
        * 相关插槽
        * https://vitepress.dev/guide/extending-default-theme#layout-slots

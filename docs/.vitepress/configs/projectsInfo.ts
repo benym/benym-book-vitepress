@@ -13,48 +13,33 @@ interface Project {
 export const projectsInfo: Project[] = [
   {
     banner: "/project-img/gpt-feishu.png",
-    title: "Feishu&ChatGPT",
+    title: "HNECV",
     description:
-      "将 chatGPT 接入飞书对话机器人，支持上下文对话与人格预设，并使用aircode一键部署",
-    link: "https://github.com/ZbWeR/feishu-chatGPT-plus",
-    tag: "JavaScript",
+      "⛱️Heterogeneous Network Embedding via Cloud model and Variational inference. CAAI. 2021. 代码实现",
+    link: "https://github.com/benym/HNECV",
+    tag: "Python",
   },
   {
     banner: "/project-img/cloudMusic.png",
-    title: "CloudMusic",
-    description: "对移动端网易云音乐的模仿与复现，实现了虚拟列表与无限滚动...",
-    link: "https://github.com/ZbWeR/NeteaseCloudMusic",
-    tag: "Vue",
+    title: "Rpamis",
+    description: "🚀为开发者提供快速、统一的项目结构生成，统一的包管理工具，并提供开发效能工具",
+    link: "https://github.com/rpamis/rpamis",
+    tag: "Java",
   },
   {
     banner: "/project-img/analyze-tool.png",
-    title: "Npm Analyze-tool",
+    title: "Rpamis-chain",
     description:
-      "一款用于可视化分析项目依赖关系的命令行工（第六届字节跳动前端青训大项目三等奖）",
-    link: "https://github.com/jonlyes/packageResolution",
-    tag: "TypeScript",
+      "🌱轻量、高扩展性的责任链模式框架，内置多种责任链形态及执行策略",
+    link: "https://github.com/rpamis/rpamis-chain",
+    tag: "Java",
   },
   {
     banner: "/project-img/dora-bot.png",
-    title: "Dora-bot",
+    title: "Rpamis-security",
     description:
-      "基于 go-cqhttp 框架开发的QQ聊天机器人，接入 mongodb 存储消息记录以实现虚假的学习功能.",
-    link: "https://github.com/ZbWeR/qqbot-Dora",
-    tag: "Python",
-  },
-  {
-    banner: "/project-img/ruleMining.png",
-    title: "Rule Mining",
-    description:
-      "采用 Apriori / Fpgrowth / Eclat 算法对超市商品数据集进行关联规则的挖掘.",
-    link: "https://github.com/ZbWeR/Association-rule-mining",
-    tag: "Python",
-  },
-  {
-    banner: "/project-img/dinosaur.png",
-    title: "Dinosaur-Game",
-    description: "基于 EasyX 开发的一款游戏内容更加丰富的谷歌断网小恐龙游戏.",
-    link: "https://github.com/ZbWeR/Dinosaur-Game",
-    tag: "C++",
-  },
+      "🧱基于Mybatis-Plugin的一站式加解密脱敏安全组件",
+    link: "https://github.com/rpamis/rpamis-security",
+    tag: "Java",
+  }
 ];

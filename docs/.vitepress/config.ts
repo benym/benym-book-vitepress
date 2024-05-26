@@ -1,10 +1,12 @@
 import {defineConfig} from 'vitepress'
 import {getSidebar} from "./utils/getSidebar";
-import { setupCustomContainers } from "./utils/markdown-ext"
+import {setupCustomContainers} from "./utils/markdown-ext"
 
 import {head, nav, algolia} from './configs'
+import {blogTheme} from "./blog-theme";
 
 export default defineConfig({
+  extends: blogTheme,
   outDir: '../dist',
   srcDir: './src',
   base: process.env.APP_BASE_PATH || '/',
@@ -76,7 +78,12 @@ export default defineConfig({
     lastUpdated: {text: '上次更新'},
 
     /* Algolia DocSearch 配置 */
-    algolia,
+    // algolia,
+
+    search: {
+      provider: 'algolia',
+      options: algolia
+    },
 
     docFooter: {
       prev: '上一篇',

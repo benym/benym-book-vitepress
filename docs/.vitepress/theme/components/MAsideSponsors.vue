@@ -3,10 +3,10 @@ import { VPDocAsideSponsors } from 'vitepress/theme'
 
 const data = [
   {
-    items: [{ img: 'https://cdn.jsdelivr.net/gh/maomao1996/picture/sponsor/wechat-color.jpg' }]
+    items: [{ img: '' }]
   },
   {
-    items: [{ img: 'https://cdn.jsdelivr.net/gh/maomao1996/picture/sponsor/alipay-color.jpg' }]
+    items: [{ img: '' }]
   }
 ]
 </script>

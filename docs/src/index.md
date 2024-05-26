@@ -12,7 +12,7 @@ hero:
     alt: benym-book
   actions:
     - theme: brand
-      text: Markdown Examples
+      text: 探索知识
       link: /markdown-examples
     - theme: alt
       text: API Examples
