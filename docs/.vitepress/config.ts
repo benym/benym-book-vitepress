@@ -1,9 +1,6 @@
-import {createWriteStream} from 'node:fs'
-import {resolve} from 'node:path'
-import {SitemapStream} from 'sitemap'
 import {defineConfig, PageData} from 'vitepress'
-import {fileURLToPath, URL} from "node:url";
 import {getSidebar} from "./utils/getSidebar";
+import { setupCustomContainers } from "./utils/markdown-ext"
 
 import {head, nav, algolia} from './configs'
 
@@ -24,6 +21,10 @@ export default defineConfig({
 
   /* markdown 配置 */
   markdown: {
+    config(md) {
+      // 自定义::: center容器
+      setupCustomContainers(md);
+    },
     lineNumbers: true,
     theme: {
       light: 'one-dark-pro',
