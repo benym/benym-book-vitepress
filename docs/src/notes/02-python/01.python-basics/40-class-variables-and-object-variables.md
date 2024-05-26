@@ -6,9 +6,7 @@ categories:
 tags: 
   - Python面向对象
 permalink: /pages/43bfe3/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 类变量与对象变量

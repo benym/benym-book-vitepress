@@ -12,9 +12,7 @@ permalink: /pages/21e57b/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-142-环形链表2

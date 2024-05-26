@@ -10,9 +10,7 @@ permalink: /pages/fb7a5f/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-83-删除排序链表中的重复元素

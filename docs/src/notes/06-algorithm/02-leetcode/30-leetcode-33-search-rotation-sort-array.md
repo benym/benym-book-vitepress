@@ -11,9 +11,7 @@ permalink: /pages/1b9196/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-33-搜索旋转排序数组

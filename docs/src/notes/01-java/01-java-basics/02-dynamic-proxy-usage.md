@@ -9,9 +9,7 @@ tags:
   - Java
 keywords: Java,动态代理,JDK,Cglib
 permalink: /pages/ddcc22/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 动态代理使用方法

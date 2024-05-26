@@ -4,9 +4,7 @@ tags:
   - SpringData
   - MongoDB
   - 自定义Converter
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 date: 2023-06-03 15:37:33
 permalink: /pages/304eaa/
 ---

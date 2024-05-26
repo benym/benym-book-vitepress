@@ -7,9 +7,7 @@ tags:
   - Python基础
   - assert
 permalink: /pages/0de67d/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # assert语句的运用

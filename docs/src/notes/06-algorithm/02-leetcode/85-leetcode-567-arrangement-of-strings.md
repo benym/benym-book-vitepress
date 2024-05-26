@@ -12,9 +12,7 @@ permalink: /pages/5997b7/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-567-字符串的排列

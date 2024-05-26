@@ -13,9 +13,7 @@ permalink: /pages/444ab2/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-300-最长上升子序列

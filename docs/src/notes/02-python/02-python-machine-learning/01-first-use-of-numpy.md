@@ -8,9 +8,7 @@ tags:
   - 机器学习
   - 矩阵
 permalink: /pages/43f8b9/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # Numpy库的首次使用

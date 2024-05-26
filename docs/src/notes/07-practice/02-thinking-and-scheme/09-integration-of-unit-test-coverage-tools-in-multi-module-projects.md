@@ -8,9 +8,7 @@ tags:
   - jacoco
   - codecov
   - maven
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 date: 2023-07-11 11:34:55
 permalink: /pages/da3c26/
 ---

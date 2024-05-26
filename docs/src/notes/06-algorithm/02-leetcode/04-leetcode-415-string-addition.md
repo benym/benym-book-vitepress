@@ -11,9 +11,7 @@ permalink: /pages/9c3f56/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-415-字符串相加

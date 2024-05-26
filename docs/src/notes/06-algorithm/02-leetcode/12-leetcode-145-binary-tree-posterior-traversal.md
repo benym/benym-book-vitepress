@@ -12,9 +12,7 @@ permalink: /pages/bc617d/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-145-二叉树的后序遍历

@@ -9,9 +9,7 @@ tags:
   - 分布式事务
   - TCC
 permalink: /pages/f256e0/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 分布式事务TCC模式的空回滚和业务悬挂问题

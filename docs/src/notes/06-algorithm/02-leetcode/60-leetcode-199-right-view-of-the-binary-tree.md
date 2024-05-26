@@ -13,9 +13,7 @@ permalink: /pages/2aa937/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-199-二叉树的右视图

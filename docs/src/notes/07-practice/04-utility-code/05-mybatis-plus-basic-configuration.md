@@ -7,9 +7,7 @@ tags:
   - 填充策略
   - 乐观锁
   - 分页插件
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # Mybatis-plus基本配置类

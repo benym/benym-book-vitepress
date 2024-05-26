@@ -11,9 +11,7 @@ permalink: /pages/c1fce8/
 categories: 
   - 算法
   - 排序算法
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 快速排序

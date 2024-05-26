@@ -11,9 +11,7 @@ permalink: /pages/8d243f/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-406-根据身高重建队列

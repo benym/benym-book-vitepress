@@ -8,9 +8,7 @@ permalink: /pages/20361f/
 categories: 
   - 分布式与中间件
   - Redis
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # Redis分片集群

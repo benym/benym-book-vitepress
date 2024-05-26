@@ -6,9 +6,7 @@ categories:
 tags: 
   - Python基础
 permalink: /pages/7c7c36/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # Python中完整for循环的实际运用

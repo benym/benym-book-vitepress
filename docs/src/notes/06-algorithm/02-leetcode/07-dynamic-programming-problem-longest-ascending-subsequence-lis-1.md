@@ -10,9 +10,7 @@ permalink: /pages/6ddb3f/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 动态规划问题——最长上升子序列(LIS)(一)

@@ -10,9 +10,7 @@ permalink: /pages/db04fa/
 categories: 
   - 算法
   - 排序算法
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 插入排序

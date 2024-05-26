@@ -11,9 +11,7 @@ permalink: /pages/a64c8b/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-字符串排序

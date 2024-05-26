@@ -11,9 +11,7 @@ tags:
   - 降级
   - 限流
   - 熔断
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 date: 2023-07-05 16:30:06
 permalink: /pages/12a5d6/
 ---

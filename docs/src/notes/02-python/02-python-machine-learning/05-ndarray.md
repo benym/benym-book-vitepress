@@ -8,9 +8,7 @@ tags:
   - Python
 keywords: Numpy,Python,array
 permalink: /pages/6ae370/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # Ndarray对象

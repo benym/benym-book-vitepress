@@ -6,9 +6,7 @@ categories:
 tags: 
   - Python基础
 permalink: /pages/e5cf66/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 使用多种方法快速交换两个变量的值

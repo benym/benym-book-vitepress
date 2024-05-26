@@ -11,9 +11,7 @@ tags:
   - JMH
   - BenchMark
 permalink: /pages/ffed02/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 什么是JMH

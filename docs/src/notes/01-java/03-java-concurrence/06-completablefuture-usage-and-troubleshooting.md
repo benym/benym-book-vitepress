@@ -8,9 +8,7 @@ tags:
   - CompletableFuture
 date: 2022-06-06 21:05:25
 permalink: /pages/b1318d/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # CompletableFuture常用用法及踩坑

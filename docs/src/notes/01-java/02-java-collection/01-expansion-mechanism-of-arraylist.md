@@ -8,9 +8,7 @@ tags:
   - Java
 keywords: Java
 permalink: /pages/9786e5/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # ArrayList的扩容机制

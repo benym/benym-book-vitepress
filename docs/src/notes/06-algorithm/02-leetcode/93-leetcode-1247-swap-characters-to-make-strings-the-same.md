@@ -11,9 +11,7 @@ permalink: /pages/961a11/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-1247-交换字符使得字符串相同

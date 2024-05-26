@@ -11,9 +11,7 @@ permalink: /pages/1f0b71/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-34-在排序数组中查找元素的第一个和最后一个位置

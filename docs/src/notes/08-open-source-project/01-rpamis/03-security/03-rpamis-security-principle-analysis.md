@@ -18,9 +18,7 @@ tags:
   - 脱敏
   - Security
   - 原理解析
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 date: 2023-12-13 16:00:41
 permalink: /pages/1ffe0d/
 ---

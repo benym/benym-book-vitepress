@@ -8,9 +8,7 @@ tags:
   - 机器学习
 keywords: 机器学习,Python,Tensorflow
 permalink: /pages/f9a151/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 一些TensorFlow的基本操作

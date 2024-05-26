@@ -6,9 +6,7 @@ categories:
 tags: 
   - Python异常处理
 permalink: /pages/74cf7d/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 用户自己引发的异常处理

@@ -6,9 +6,7 @@ tags:
   - JackSon
   - Long精度丢失
   - LocalDateTime转化
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # Jackson基本配置类

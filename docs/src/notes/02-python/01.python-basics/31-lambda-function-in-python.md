@@ -6,9 +6,7 @@ categories:
 tags: 
   - Python基础
 permalink: /pages/7235b8/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # Python中的lambda函数

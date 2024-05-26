@@ -9,9 +9,7 @@ tags:
   - Java
 keywords: 反射,Java
 permalink: /pages/225727/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # Java反射获取类对象的三种方式

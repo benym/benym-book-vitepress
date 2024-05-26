@@ -12,9 +12,7 @@ permalink: /pages/ebc391/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-679-24点游戏

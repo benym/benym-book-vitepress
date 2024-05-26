@@ -10,9 +10,7 @@ tags:
   - Java
 keywords: AOP,Java
 permalink: /pages/a657d3/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 利用AOP实现操作日志

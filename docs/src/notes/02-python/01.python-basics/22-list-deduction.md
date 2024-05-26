@@ -7,9 +7,7 @@ tags:
   - Python基础
   - 列表
 permalink: /pages/f7e4b1/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 列表推导

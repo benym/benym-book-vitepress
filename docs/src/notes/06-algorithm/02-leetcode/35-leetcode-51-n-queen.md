@@ -13,9 +13,7 @@ permalink: /pages/cd98da/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-51-N皇后

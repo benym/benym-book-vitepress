@@ -6,9 +6,7 @@ tags:
   - Caffeine
   - ReentrantLock
   - 锁
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 本地锁工具类

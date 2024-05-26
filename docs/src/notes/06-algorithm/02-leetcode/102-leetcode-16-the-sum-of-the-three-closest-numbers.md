@@ -12,9 +12,7 @@ permalink: /pages/ce722a/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-16-最接近的三数之和

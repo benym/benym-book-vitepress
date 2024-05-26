@@ -10,9 +10,7 @@ tags:
   - 工具类
   - BeanUtil
   - RpamisBeanUtils
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 permalink: /pages/cedee6/
 ---
 

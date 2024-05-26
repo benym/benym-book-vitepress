@@ -7,9 +7,7 @@ tags:
   - Java
   - JUC
 permalink: /pages/3898a4/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # CyclicBarrier使用方法

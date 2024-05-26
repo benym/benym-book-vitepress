@@ -6,9 +6,7 @@ categories:
 tags: 
   - Python基础
 permalink: /pages/31bd37/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # Python中的Docstring

@@ -7,9 +7,7 @@ tags:
   - Java
   - 多线程
 permalink: /pages/5047a0/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 多线程交替打印数字—多种实现

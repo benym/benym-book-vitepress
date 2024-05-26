@@ -11,9 +11,7 @@ permalink: /pages/a35d7b/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-75-颜色分类

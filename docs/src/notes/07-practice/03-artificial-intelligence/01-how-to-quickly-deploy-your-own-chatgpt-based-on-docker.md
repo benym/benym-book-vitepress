@@ -10,9 +10,7 @@ tags:
   - 部署
   - Docker
 keywords: AI,LLM,ChatGPT,部署,Docker
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 date: 2023-03-26 15:36:44
 permalink: /pages/859608/
 ---

@@ -12,9 +12,7 @@ permalink: /pages/c56f5d/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-238-除自身以外数组的乘积

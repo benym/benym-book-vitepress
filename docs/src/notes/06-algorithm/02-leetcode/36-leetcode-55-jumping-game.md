@@ -12,9 +12,7 @@ permalink: /pages/010874/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-55-跳跃游戏

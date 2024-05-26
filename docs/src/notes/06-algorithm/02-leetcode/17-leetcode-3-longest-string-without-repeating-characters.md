@@ -13,9 +13,7 @@ permalink: /pages/30e6dd/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-3-无重复字符的最长字串

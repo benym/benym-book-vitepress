@@ -9,9 +9,7 @@ tags:
   - SpringIOC
 date: 2022-04-17 18:56:09
 permalink: /pages/6e0b99/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 ::: tip
 正在路上...

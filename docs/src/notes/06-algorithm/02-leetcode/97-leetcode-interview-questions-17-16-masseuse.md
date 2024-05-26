@@ -13,9 +13,7 @@ permalink: /pages/0c5197/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-面试题17.16-按摩师

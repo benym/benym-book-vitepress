@@ -11,9 +11,7 @@ permalink: /pages/f626bf/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-114-二叉树展开为链表

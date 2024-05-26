@@ -5,9 +5,7 @@ permalink: /pages/fdab7c/
 tags:
   - RestTemplate
   - 超时时间
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # RestTemplate基本配置类

@@ -11,9 +11,7 @@ permalink: /pages/657ad4/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-169-多数元素

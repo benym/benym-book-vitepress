@@ -11,9 +11,7 @@ permalink: /pages/d9a097/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-31-下一个排列

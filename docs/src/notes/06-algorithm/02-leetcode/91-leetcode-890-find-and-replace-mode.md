@@ -11,9 +11,7 @@ permalink: /pages/a29fa8/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-890-查找和替换模式

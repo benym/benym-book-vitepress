@@ -10,9 +10,7 @@ permalink: /pages/8d006a/
 categories: 
   - 算法
   - 排序算法
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 常见排序算法总结

@@ -14,9 +14,7 @@ article: true
 categories: 
   - 算法
   - 剑指Offer
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-面试题39-数组中出现次数超过一半的数字 

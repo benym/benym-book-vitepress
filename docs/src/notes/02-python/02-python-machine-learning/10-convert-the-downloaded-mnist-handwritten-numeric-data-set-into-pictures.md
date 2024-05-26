@@ -8,9 +8,7 @@ tags:
   - 机器学习
 keywords: 机器学习,Python,MNIST
 permalink: /pages/8b335a/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 将下载下来的MNIST手写数字数据集转化成为图片

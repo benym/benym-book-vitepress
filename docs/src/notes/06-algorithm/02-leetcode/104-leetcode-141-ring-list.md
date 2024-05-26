@@ -12,9 +12,7 @@ permalink: /pages/edad8f/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-141-环形链表

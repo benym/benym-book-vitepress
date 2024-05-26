@@ -14,9 +14,7 @@ permalink: /pages/bd9776/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-198-打家劫舍

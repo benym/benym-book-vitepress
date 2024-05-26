@@ -8,9 +8,7 @@ permalink: /pages/2f1bf8/
 categories: 
   - 分布式与中间件
   - Redis
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # Redis持久化RDB

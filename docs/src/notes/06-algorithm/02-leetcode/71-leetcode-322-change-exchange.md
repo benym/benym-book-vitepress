@@ -13,9 +13,7 @@ permalink: /pages/9868ec/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-322-零钱兑换

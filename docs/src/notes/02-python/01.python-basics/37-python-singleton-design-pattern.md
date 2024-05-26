@@ -4,9 +4,7 @@ date: 2018-08-08 21:15:36
 categories: Python-基础
 tags: Python面向对象
 permalink: /pages/ccdd54/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 单例设计模式

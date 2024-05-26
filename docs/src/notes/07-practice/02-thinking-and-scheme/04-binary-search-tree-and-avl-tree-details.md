@@ -10,9 +10,7 @@ tags:
   - 平衡二叉搜索树
   - 二叉搜索树
 permalink: /pages/2efaaf/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 二叉搜索树及AVL树详解

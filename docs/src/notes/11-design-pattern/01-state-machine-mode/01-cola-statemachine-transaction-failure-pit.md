@@ -15,9 +15,7 @@ tags:
   - AOP
   - 自调用
   - 设计模式
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 date: 2023-05-15 22:27:26
 permalink: /pages/ac5f01/
 ---

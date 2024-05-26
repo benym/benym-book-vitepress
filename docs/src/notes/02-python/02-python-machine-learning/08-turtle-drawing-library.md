@@ -7,9 +7,7 @@ categories:
 tags: 
   - Python库
 permalink: /pages/0779b1/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # turtle绘图库

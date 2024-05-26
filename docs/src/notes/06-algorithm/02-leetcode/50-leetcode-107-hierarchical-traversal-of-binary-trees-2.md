@@ -12,9 +12,7 @@ permalink: /pages/4d6c7d/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-107-二叉树的层次遍历2

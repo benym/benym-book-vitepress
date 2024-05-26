@@ -12,9 +12,7 @@ permalink: /pages/b7ac0a/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-20-有效的括号

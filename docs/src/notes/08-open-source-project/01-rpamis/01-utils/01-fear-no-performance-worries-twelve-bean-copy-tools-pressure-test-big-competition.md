@@ -12,9 +12,7 @@ tags:
   - 压测
   - JMH
 permalink: /pages/3147fe/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 无惧性能烦恼-12款Bean拷贝工具压测大比拼

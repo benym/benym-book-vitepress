@@ -10,9 +10,7 @@ permalink: /pages/3fd3f6/
 categories: 
   - 算法
   - 排序算法
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 冒泡排序

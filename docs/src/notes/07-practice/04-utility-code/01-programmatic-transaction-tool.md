@@ -6,9 +6,7 @@ tags:
   - 事务
   - 编程式事务
   - Spring
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 编程式事务工具类

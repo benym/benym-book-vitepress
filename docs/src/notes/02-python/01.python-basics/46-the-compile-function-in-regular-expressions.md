@@ -6,9 +6,7 @@ categories:
 tags: 
   - Python正则表达式
 permalink: /pages/270272/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 正则表达式中的compile函数

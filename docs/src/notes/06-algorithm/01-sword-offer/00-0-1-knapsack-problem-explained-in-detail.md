@@ -14,9 +14,7 @@ article: true
 categories: 
   - 算法
   - 剑指Offer
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 01背包问题详解

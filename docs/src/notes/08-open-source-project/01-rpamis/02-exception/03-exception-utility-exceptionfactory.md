@@ -10,9 +10,7 @@ tags:
   - 开源项目
   - Rpamis
   - Exception
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 异常工具类-ExceptionFactory

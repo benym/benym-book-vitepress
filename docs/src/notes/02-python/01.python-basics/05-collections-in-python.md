@@ -7,9 +7,7 @@ tags:
   - Python基础
   - Python集合
 permalink: /pages/c47343/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # Python中的集合

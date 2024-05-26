@@ -6,9 +6,7 @@ categories:
 tags: 
   - Python面向对象
 permalink: /pages/6a1778/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 继承的运用

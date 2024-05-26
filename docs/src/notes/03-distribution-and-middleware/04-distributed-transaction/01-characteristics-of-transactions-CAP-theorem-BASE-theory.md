@@ -7,9 +7,7 @@ tags:
   - Java
   - 事务
 permalink: /pages/aaed8c/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 事务的特性、CAP定理、BASE理论

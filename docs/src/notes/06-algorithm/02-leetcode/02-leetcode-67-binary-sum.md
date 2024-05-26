@@ -10,9 +10,7 @@ permalink: /pages/7d3b6e/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-67-二进制求和

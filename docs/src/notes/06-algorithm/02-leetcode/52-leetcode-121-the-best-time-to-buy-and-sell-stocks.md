@@ -13,9 +13,7 @@ permalink: /pages/6f907a/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-121-买卖股票的最佳时机

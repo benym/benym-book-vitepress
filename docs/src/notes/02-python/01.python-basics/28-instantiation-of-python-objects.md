@@ -6,9 +6,7 @@ categories:
 tags: 
   - Python基础
 permalink: /pages/7cedd2/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # Python对象的实例化

@@ -10,9 +10,7 @@ permalink: /pages/847591/
 categories: 
   - 分布式与中间件
   - Redis
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # Redis实现共享Session

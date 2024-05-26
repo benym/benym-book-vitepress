@@ -11,9 +11,7 @@ permalink: /pages/19f71b/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-160-相交链表

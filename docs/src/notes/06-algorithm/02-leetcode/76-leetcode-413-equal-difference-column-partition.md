@@ -13,9 +13,7 @@ permalink: /pages/cd66f6/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-413-等差数列划分

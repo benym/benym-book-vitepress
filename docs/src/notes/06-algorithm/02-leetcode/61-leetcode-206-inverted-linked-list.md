@@ -11,9 +11,7 @@ permalink: /pages/7c576f/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-206-反转链表

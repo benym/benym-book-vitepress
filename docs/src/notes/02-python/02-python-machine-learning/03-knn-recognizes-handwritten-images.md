@@ -8,9 +8,7 @@ tags:
   - 机器学习
   - Numpy
 permalink: /pages/6c1c7d/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # KNN识别手写图像

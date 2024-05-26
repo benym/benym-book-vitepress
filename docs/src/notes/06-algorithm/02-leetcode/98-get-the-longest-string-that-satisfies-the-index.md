@@ -10,9 +10,7 @@ permalink: /pages/5969d4/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 ## 获取满足指数的最长字符串

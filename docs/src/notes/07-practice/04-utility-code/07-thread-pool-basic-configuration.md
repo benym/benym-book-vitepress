@@ -6,9 +6,7 @@ tags:
   - ThreadPoolTaskExecutor
   - ThreadPoolExecutor
   - Spring
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 线程池基本配置类

@@ -14,9 +14,7 @@ article: true
 categories: 
   - 算法
   - 剑指Offer
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-面试题59-1-滑动窗口的最大值

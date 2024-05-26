@@ -7,9 +7,7 @@ tags:
   - Python多态
   - Python基础
 permalink: /pages/866a91/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # Python中的多态

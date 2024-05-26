@@ -12,9 +12,7 @@ permalink: /pages/053bcf/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-1367-二叉树中的列表

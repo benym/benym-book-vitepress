@@ -6,9 +6,7 @@ categories:
 tags: 
   - Python基础
 permalink: /pages/f954d1/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 在函数中接受元组与字典

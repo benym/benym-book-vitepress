@@ -6,9 +6,7 @@ categories:
 tags: 
   - Python异常处理
 permalink: /pages/c20072/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # with open异常处理

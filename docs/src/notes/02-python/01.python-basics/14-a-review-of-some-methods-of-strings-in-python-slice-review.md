@@ -7,9 +7,7 @@ tags:
   - Python基础
   - 切片
 permalink: /pages/c7192a/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # Python中字符串的一些方法回顾(切片回顾)

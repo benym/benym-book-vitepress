@@ -10,9 +10,7 @@ permalink: /pages/f095b3/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 # LeetCode-724-寻找数组的中心索引
 

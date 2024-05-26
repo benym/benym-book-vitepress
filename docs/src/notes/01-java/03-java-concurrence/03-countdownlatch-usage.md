@@ -7,9 +7,7 @@ tags:
   - Java
   - JUC
 permalink: /pages/bccbee/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # CountDownLatch使用方法

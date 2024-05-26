@@ -11,9 +11,7 @@ permalink: /pages/bcc13b/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-102-二叉树的层序遍历

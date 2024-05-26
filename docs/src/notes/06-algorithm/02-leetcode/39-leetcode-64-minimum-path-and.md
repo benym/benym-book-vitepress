@@ -14,9 +14,7 @@ permalink: /pages/b04e8c/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-64-最小路径和

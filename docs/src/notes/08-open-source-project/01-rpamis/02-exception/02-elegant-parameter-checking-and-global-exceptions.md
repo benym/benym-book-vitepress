@@ -19,9 +19,7 @@ tags:
   - Dubbo
   - Filter
   - Http
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 permalink: /pages/1c47ed/
 ---
 

@@ -8,9 +8,7 @@ tags:
   - Python
 keywords: Numpy,Python,arange,astype
 permalink: /pages/f66019/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # Numpy数据类型和arange方法、astype方法的使用

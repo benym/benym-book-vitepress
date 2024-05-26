@@ -9,9 +9,7 @@ tags:
   - 分布式事务
   - AT
 permalink: /pages/81dbd1/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 分布式事务AT模式的脏写问题

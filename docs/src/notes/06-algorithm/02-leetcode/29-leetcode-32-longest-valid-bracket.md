@@ -12,9 +12,7 @@ permalink: /pages/bcf8b4/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-32-最长有效括号

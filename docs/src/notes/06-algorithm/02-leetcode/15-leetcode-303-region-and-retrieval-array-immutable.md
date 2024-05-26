@@ -13,9 +13,7 @@ permalink: /pages/d42c3d/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-303-区域和检索-数组不可变

@@ -6,9 +6,7 @@ categories:
 tags: 
   - Python基础
 permalink: /pages/adffdd/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # Python日志模块

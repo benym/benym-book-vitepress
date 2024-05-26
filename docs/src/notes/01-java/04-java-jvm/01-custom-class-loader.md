@@ -11,9 +11,7 @@ tags:
   - Java
 keywords: Java,类加载器,ClassLoader,双亲委派模型
 permalink: /pages/0a146e/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 自定义类加载器

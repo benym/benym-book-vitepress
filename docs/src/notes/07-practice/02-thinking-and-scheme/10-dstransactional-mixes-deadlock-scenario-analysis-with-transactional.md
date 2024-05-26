@@ -8,9 +8,7 @@ tags:
   - DSTransactional
   - Transactional
   - 事务
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 date: 2024-03-04 17:10:50
 permalink: /pages/aef382/
 ---

@@ -7,9 +7,7 @@ categories:
 tags: 
   - 接口管理
   - Yapi
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 date: 2023-05-13 17:04:53
 permalink: /pages/747050/
 ---

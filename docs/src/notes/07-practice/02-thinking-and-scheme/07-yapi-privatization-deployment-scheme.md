@@ -8,9 +8,7 @@ tags:
   - Yapi
   - 私有化部署
   - Docker
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 date: 2023-05-14 14:05:43
 permalink: /pages/492330/
 ---

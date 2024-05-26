@@ -11,9 +11,7 @@ permalink: /pages/c5dd58/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-105-从前序与中序遍历构造二叉树

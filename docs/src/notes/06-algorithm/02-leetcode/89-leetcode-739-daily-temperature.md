@@ -12,9 +12,7 @@ permalink: /pages/d7d595/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-739-每日温度

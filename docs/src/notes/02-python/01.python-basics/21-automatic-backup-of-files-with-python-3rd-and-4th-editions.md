@@ -6,9 +6,7 @@ categories:
 tags: 
   - 基本教程
 permalink: /pages/a8d563/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 利用Python进行文件的自动备份(第三版和第四版)

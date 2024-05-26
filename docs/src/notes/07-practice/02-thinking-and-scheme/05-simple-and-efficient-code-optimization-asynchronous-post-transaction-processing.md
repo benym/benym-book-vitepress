@@ -12,9 +12,7 @@ tags:
   - 隔离级别
   - 异步
   - Skywalking
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 date: 2023-04-15 19:28:02
 permalink: /pages/4f8faf/
 ---

@@ -11,9 +11,7 @@ permalink: /pages/1c92f0/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-128-最长连续序列

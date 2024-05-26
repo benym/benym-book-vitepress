@@ -13,9 +13,7 @@ permalink: /pages/f586d8/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-215-数组中的第K个最大元素

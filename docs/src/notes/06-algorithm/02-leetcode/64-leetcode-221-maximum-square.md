@@ -12,9 +12,7 @@ permalink: /pages/3b7ec6/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-221-最大正方形

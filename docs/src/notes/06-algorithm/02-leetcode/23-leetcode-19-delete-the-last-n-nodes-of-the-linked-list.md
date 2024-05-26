@@ -11,9 +11,7 @@ permalink: /pages/2b5a76/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-19-删除链表的倒数第N个节点

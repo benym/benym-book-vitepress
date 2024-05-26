@@ -6,9 +6,7 @@ categories:
 tags: 
   - Python正则表达式
 permalink: /pages/e8935b/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 正则表达式检索与替换

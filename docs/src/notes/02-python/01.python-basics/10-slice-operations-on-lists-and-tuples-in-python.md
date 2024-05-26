@@ -7,9 +7,7 @@ tags:
   - Python基础
   - 切片
 permalink: /pages/bf2ef2/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # Python中对列表和元组的切片操作

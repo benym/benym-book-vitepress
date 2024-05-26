@@ -13,9 +13,7 @@ article: true
 categories: 
   - 算法
   - 剑指Offer
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-面试题67-把字符串转化成整数

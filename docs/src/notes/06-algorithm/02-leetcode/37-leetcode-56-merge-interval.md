@@ -11,9 +11,7 @@ permalink: /pages/232d3c/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-56-合并区间

@@ -11,9 +11,7 @@ tags:
   - LambdaMetafactory
   - 压测
   - 反射
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 permalink: /pages/b127c7/
 ---
 

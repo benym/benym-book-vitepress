@@ -10,9 +10,7 @@ tags:
   - Java
 keywords: TopK,Java
 permalink: /pages/2c256c/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 海量数据TopK问题

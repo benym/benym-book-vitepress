@@ -11,9 +11,7 @@ permalink: /pages/4923ab/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-234-回文链表

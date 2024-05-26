@@ -8,9 +8,7 @@ tags:
   - 机器学习
 keywords: 机器学习,Python,Tensorflow
 permalink: /pages/b8d563/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # Tensorflow交互式使用

@@ -5,9 +5,7 @@ description: __new__方法的重写，单例模式前置？
 categories: Python-基础
 tags: Python基础
 permalink: /pages/985752/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # Python中的__new__方法的重写

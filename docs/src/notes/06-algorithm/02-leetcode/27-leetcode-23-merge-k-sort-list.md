@@ -12,9 +12,7 @@ permalink: /pages/e24301/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-23-合并K个排序链表

@@ -6,9 +6,7 @@ categories:
 tags: 
   - Python基础
 permalink: /pages/ee2549/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # Python的pickle模块

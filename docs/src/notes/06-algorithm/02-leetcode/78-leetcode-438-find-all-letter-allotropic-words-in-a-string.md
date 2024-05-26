@@ -12,9 +12,7 @@ permalink: /pages/e8a730/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-438-找到字符串中所有字母异位词

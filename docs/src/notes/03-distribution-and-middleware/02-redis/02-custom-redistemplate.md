@@ -10,9 +10,7 @@ permalink: /pages/b185b0/
 categories: 
   - 分布式与中间件
   - Redis
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 自定义RedisTemplate

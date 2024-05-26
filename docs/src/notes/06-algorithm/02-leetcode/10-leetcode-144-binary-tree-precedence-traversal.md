@@ -12,9 +12,7 @@ permalink: /pages/b03f05/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-144-二叉树的前序遍历

@@ -11,9 +11,7 @@ permalink: /pages/0d05d2/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-146-LRU缓存机制

@@ -8,9 +8,7 @@ tags:
   - Python
 keywords: Numpy,Python,维度
 permalink: /pages/cdba0b/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # Numpy中的数组维度

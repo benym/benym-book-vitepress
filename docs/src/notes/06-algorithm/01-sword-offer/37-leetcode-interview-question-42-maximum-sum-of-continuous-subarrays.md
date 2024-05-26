@@ -15,9 +15,7 @@ article: true
 categories: 
   - 算法
   - 剑指Offer
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-面试题42-连续子数组的最大和 

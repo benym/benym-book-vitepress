@@ -13,9 +13,7 @@ permalink: /pages/20a5df/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-392-判断子序列

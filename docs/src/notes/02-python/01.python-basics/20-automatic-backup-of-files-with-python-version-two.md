@@ -7,9 +7,7 @@ tags:
   - Python基础
   - 备份
 permalink: /pages/04f569/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 利用python进行文件的自动备份（第二版）

@@ -11,9 +11,7 @@ permalink: /pages/13f871/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 网易2021秋招-数组的最多素数个数

@@ -7,9 +7,7 @@ tags:
   - Java
   - JUC
 permalink: /pages/8e40cc/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # Semaphore使用方法

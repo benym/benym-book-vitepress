@@ -10,9 +10,7 @@ tags:
   - 状态机
   - StateMachine
   - 设计模式
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 date: 2023-08-25 13:39:59
 permalink: /pages/2ae430/
 ---

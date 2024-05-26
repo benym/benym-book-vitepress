@@ -7,9 +7,7 @@ tags:
   - Python基础
   - strip
 permalink: /pages/a7c3f3/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # Python中字符串的一些方法回顾(文本对齐、去除空白)

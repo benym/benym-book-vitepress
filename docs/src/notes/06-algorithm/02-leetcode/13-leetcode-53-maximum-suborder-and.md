@@ -14,9 +14,7 @@ permalink: /pages/1ac9e8/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-53-最大子序和

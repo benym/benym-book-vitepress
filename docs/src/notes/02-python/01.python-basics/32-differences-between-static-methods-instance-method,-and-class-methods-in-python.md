@@ -5,9 +5,7 @@ description: 静态方法，实例方法，类方法的区别
 categories: Python-基础
 tags: Python-基础
 permalink: /pages/57af9e/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # Python中的静态方法、实例方法、类方法的区别

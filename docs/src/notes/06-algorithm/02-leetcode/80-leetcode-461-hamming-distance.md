@@ -11,9 +11,7 @@ permalink: /pages/ad566a/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-461-汉明距离

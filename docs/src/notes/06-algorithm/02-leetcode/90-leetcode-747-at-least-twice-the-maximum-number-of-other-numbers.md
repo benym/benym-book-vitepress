@@ -12,9 +12,7 @@ permalink: /pages/0343b2/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-747-至少是其他数字两倍的最大数

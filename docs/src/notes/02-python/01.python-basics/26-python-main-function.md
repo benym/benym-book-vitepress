@@ -6,9 +6,7 @@ categories:
 tags: 
   - Python基础
 permalink: /pages/f09b25/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # Python的__name__ = '__main__' 的作用

@@ -6,9 +6,7 @@ categories:
 tags: 
   - Python基础
 permalink: /pages/d79b2c/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # Python中面向对象比较简单的内部函数

@@ -10,9 +10,7 @@ tags:
   - Typecho
   - VuePress
 permalink: /pages/a07112/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # hexo到Typecho的迁移日志

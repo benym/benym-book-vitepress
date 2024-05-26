@@ -7,9 +7,7 @@ tags:
   - Python基础
   - Python集合
 permalink: /pages/50bf39/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 # list(列表)、tuple（元组）、dict（字典）的回顾
 ## 代码

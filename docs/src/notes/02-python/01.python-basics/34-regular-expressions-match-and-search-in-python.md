@@ -6,9 +6,7 @@ categories:
 tags: 
   - Python基础
 permalink: /pages/ee44fe/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # Python中的正则表达式match和search

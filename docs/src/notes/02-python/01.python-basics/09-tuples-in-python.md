@@ -7,9 +7,7 @@ tags:
   - Python基础
   - 元组
 permalink: /pages/e8270d/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # Python中的元组

@@ -11,9 +11,7 @@ permalink: /pages/9d7aee/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-538-把二叉搜索树转换为累加树

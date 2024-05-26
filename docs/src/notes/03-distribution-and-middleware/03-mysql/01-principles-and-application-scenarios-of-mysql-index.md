@@ -10,9 +10,7 @@ tags:
 keywords: MySQL,索引,B+树
 date: 2022-08-02 18:56:07
 permalink: /pages/0f7e8e/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # MySQL索引原理及应用场景

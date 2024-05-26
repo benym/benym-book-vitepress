@@ -6,9 +6,7 @@ categories:
 tags: 
   - Python基础
 permalink: /pages/962777/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 装饰器

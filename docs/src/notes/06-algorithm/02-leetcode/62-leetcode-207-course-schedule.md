@@ -15,9 +15,7 @@ permalink: /pages/44df2f/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-207-课程表

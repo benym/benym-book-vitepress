@@ -11,9 +11,7 @@ permalink: /pages/d2f3f5/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-448-找到所有数组中消失的数字

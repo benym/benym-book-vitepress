@@ -10,9 +10,7 @@ tags:
   - Java
 keywords: SpringBoot,Java
 permalink: /pages/45617b/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 关于DO,VO,DTO,QueryParam的思考

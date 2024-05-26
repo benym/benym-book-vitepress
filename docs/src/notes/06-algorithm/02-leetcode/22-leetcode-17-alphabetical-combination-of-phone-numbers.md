@@ -12,9 +12,7 @@ permalink: /pages/23ca91/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-17-电话号码的字母组合

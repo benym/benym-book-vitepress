@@ -13,9 +13,7 @@ permalink: /pages/a6eaf0/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-22-括号生成

@@ -7,9 +7,7 @@ tags:
   - Python基础
   - 字符串
 permalink: /pages/800d04/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # Python中字符串的一些方法回顾

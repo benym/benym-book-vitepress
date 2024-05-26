@@ -11,9 +11,7 @@ permalink: /pages/9686ce/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-581-最短无序连续子数组

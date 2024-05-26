@@ -17,9 +17,7 @@ tags:
   - 加解密
   - 脱敏
   - Security
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 date: 2023-11-23 14:46:44
 permalink: /pages/792496/
 ---

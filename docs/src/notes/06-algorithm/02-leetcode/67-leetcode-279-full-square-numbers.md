@@ -12,9 +12,7 @@ permalink: /pages/aa9694/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-279-完全平方数

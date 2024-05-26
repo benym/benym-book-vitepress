@@ -12,9 +12,7 @@ permalink: /pages/3b3388/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-309-最佳买卖股票时机含冷冻期

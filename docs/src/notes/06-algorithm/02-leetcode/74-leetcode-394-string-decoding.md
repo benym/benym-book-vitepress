@@ -11,9 +11,7 @@ permalink: /pages/0af455/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-394-字符串解码

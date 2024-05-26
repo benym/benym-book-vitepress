@@ -8,9 +8,7 @@ tags:
   - Python
 keywords: Python,Numpy
 permalink: /pages/92372b/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # Numpy中花式索引和shape用法

@@ -12,9 +12,7 @@ permalink: /pages/193e4b/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-62-不同路径

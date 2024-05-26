@@ -12,9 +12,7 @@ permalink: /pages/b9a49e/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-70-爬楼梯

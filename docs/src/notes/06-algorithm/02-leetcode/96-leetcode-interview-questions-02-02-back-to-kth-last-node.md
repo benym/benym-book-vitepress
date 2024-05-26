@@ -12,9 +12,7 @@ permalink: /pages/7899ff/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-面试题02.02-返回倒数第k个节点

@@ -13,9 +13,7 @@ permalink: /pages/7a9856/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-136-只出现一次的数字

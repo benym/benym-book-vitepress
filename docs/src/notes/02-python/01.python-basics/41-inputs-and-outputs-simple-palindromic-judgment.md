@@ -6,9 +6,7 @@ categories:
 tags: 
   - Python面向对象
 permalink: /pages/0f3eea/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 输入输出——简单的回文判断

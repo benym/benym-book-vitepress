@@ -12,9 +12,7 @@ permalink: /pages/77c839/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-1143-最长公共子序列

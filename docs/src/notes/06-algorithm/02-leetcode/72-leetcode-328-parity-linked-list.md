@@ -12,9 +12,7 @@ permalink: /pages/74a1b6/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-328-奇偶链表

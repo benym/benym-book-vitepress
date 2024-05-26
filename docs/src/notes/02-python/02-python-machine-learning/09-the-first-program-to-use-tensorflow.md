@@ -8,9 +8,7 @@ tags:
   - Python
   - 机器学习
 permalink: /pages/6cd0c4/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 第一个使用Tensorflow的程序

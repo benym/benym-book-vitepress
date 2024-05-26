@@ -14,9 +14,7 @@ tags:
   - Spring
 keywords: Java,异步,消息队列,事务,Spring,线程池
 permalink: /pages/3572ad/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 异步消息通知—异步改造

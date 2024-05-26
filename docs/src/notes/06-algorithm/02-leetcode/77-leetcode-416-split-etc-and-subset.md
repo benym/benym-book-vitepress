@@ -12,9 +12,7 @@ permalink: /pages/87a353/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-416-分割等和子集

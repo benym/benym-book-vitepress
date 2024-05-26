@@ -8,9 +8,7 @@ tags:
   - 机器学习
   - matplotlib
 permalink: /pages/a76d65/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 使用k-近邻算法改进约会网站的配对效果

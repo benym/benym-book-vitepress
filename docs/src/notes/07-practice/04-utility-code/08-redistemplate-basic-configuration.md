@@ -7,9 +7,7 @@ tags:
   - RedisTemplate
   - 序列化
   - JackSon
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # RedisTemplate基本配置类

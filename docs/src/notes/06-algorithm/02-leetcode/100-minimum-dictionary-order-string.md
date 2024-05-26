@@ -11,9 +11,7 @@ permalink: /pages/bac26b/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 网易2021秋招-最小字典序字符串

@@ -8,9 +8,7 @@ tags:
   - 引用
   - 切片
 permalink: /pages/037f6f/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # Python中的引用和切片

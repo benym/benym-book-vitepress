@@ -9,9 +9,7 @@ tags:
   - 机器学习
 keywords: 机器学习,Python,k-近邻算法
 permalink: /pages/b2a5ff/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # KNN（k-近邻算法）

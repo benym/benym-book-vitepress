@@ -2,9 +2,7 @@
 title: SpringCache基本配置类
 tags: 
   - SpringCache
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 date: 2024-05-16 15:23:02
 permalink: /pages/c91eef/
 ---

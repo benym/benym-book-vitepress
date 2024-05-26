@@ -9,9 +9,7 @@ tags:
   - 机器学习
 keywords: 机器学习,Python,逻辑回归
 permalink: /pages/dbeb49/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LogisticRegression(逻辑回归)

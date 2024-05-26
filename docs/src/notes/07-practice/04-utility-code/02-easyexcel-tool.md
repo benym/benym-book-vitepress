@@ -6,9 +6,7 @@ tags:
   - EasyExcel
   - 导入
   - 导出
-author:
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # EasyExcel工具类

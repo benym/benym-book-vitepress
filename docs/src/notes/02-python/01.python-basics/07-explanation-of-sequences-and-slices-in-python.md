@@ -7,9 +7,7 @@ tags:
   - Python基础
   - Python切片
 permalink: /pages/0d6aa8/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # python中的序列以及切片的解释

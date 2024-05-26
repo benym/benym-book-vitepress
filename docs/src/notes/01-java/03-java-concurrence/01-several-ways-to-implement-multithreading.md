@@ -9,9 +9,7 @@ tags:
   - Java
 keywords: 多线程,Java
 permalink: /pages/487c60/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # Java多线程实现的几种方式

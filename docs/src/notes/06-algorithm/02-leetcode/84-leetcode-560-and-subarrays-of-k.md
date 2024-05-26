@@ -11,9 +11,7 @@ permalink: /pages/c7dca6/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-560-和为K的子数组

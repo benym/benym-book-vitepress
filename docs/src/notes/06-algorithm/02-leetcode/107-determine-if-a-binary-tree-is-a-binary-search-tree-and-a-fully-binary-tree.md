@@ -12,9 +12,7 @@ permalink: /pages/6d1dda/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 判断一棵二叉树是否为二叉搜索树和完全二叉树

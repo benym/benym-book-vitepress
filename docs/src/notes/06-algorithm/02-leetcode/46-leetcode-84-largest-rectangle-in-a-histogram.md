@@ -11,9 +11,7 @@ permalink: /pages/16f784/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-84-柱状图中最大的矩形

@@ -7,9 +7,7 @@ categories:
 tags: 
   - Hexo
 permalink: /pages/f6b758/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 将hexo自定义域名升级https

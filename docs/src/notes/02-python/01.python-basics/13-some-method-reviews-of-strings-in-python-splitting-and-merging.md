@@ -6,9 +6,7 @@ categories:
 tags: 
   - Python基础
 permalink: /pages/5386bd/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # python中字符串的一些方法回顾(拆分与合并)

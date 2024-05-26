@@ -12,9 +12,7 @@ permalink: /pages/e945ea/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-4-寻找两个正序数组的中位数

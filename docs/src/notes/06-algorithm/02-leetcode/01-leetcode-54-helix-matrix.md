@@ -10,9 +10,7 @@ permalink: /pages/b2b5b5/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-54-螺旋矩阵

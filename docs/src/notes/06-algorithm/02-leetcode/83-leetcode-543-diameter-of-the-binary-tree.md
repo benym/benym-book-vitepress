@@ -12,9 +12,7 @@ permalink: /pages/a78f8c/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-543-二叉树的直径

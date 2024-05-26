@@ -11,9 +11,7 @@ permalink: /pages/d6c0fb/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-287-寻找重复数

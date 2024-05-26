@@ -12,9 +12,7 @@ permalink: /pages/95771c/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-104-二叉树的最大深度

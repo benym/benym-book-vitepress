@@ -12,9 +12,7 @@ permalink: /pages/2bee97/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-226-翻转二叉树

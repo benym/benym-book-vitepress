@@ -12,9 +12,7 @@ permalink: /pages/1104ba/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-11-盛最多水的容器

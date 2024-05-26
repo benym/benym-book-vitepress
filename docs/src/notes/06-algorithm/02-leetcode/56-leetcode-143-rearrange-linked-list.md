@@ -12,9 +12,7 @@ permalink: /pages/825806/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-143-重排链表

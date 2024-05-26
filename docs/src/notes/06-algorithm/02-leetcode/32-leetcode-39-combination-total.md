@@ -12,9 +12,7 @@ permalink: /pages/731f67/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-39-组合总数

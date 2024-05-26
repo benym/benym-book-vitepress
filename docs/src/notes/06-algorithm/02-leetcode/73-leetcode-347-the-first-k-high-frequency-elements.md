@@ -11,9 +11,7 @@ permalink: /pages/5abc8f/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-347-前K个高频元素

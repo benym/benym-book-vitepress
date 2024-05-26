@@ -13,9 +13,7 @@ tags:
   - AT
   - SAGA
 permalink: /pages/e8a7fb/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # 分布式事务XA、AT、TCC、SAGA

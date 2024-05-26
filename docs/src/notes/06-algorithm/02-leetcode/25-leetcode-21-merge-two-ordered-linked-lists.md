@@ -12,9 +12,7 @@ permalink: /pages/d0dd86/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-21-合并两个有序链表

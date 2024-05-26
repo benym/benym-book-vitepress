@@ -12,9 +12,7 @@ permalink: /pages/005df6/
 categories: 
   - 算法
   - LeetCode
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # LeetCode-1-两数之和

@@ -7,9 +7,7 @@ tags:
   - Python基础
   - 字典
 permalink: /pages/76ac47/
-author: 
-  name: benym
-  link: https://github.com/benym
+author: benym
 ---
 
 # Python中字典(key-value)
