@@ -15,11 +15,13 @@ author:
   link: https://github.com/benym
 ---
 
-## Redis实现共享Session
+# Redis实现共享Session
 
 ::: tip
 本文时间为2020-06-25，涉及技术可能已过时
 :::
+
+## 背景
 
 Session共享，一般有一个这样的场景。以往单机的项目，数据请求都是在一个服务器上，session保存在这个服务器上自然是没有问题的。但是如果项目需要部署在多台服务器上的时候，session就会存在共享的问题
 

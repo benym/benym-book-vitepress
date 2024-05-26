@@ -13,9 +13,12 @@ author:
   link: https://github.com/benym
 ---
 
-### Redis持久化AOF
+# Redis持久化AOF
+
+## 背景
+
 Redis主要包含2中持久化方式，即RDB和AOF，本文主要介绍AOF，RDB见本站的另一篇博客[Redis持久化RDB][1]
-#### 什么是AOF
+## 什么是AOF
 AOF全称为Append Only File（追加文件）。Redis处理的每一个**写命令**都会记录在AOF文件，可以看做是命令日志文件。
 AOF默认是关闭的，需要修改`redis.conf`配置文件来开启AOF：
 ```java
@@ -52,13 +55,13 @@ auto-aof-rewrite-percentage 100
 # AOF文件体积最小多大以上才触发重写
 auto-aof-rewrite-min-size 64mb 
 ```
-#### 重写原理，如何实现重写
+## 重写原理，如何实现重写
 AOF文件持续增长而过大时，会fork出一条新进程来将文件重写(也是先写临时文件最后再rename)，redis4.0版本后的重写，是指上就是把rdb 的快照，以二级制的形式附在新的aof头部，作为已有的历史数据，替换掉原来的流水账操作。
 关键命令`no-appendfsync-on-rewrite`
 
  - 如果`no-appendfsync-on-rewrite=yes`,不写入aof文件只写入缓存，用户请求不会阻塞，但是在这段时间如果宕机会丢失这段时间的缓存数据。（降低数据安全性，提高性能）
  - 如果`no-appendfsync-on-rewrite=no`,  还是会把数据往磁盘里刷，但是遇到重写操作，可能会发生阻塞。（数据安全，但是性能降低）
-##### 重写流程
+### 重写流程
   1. `bgrewriteaof`触发重写，判断是否当前有`bgsave`或`bgrewriteaof`在运行，如果有，则等待该命令结束后再继续执行。
   2. 主进程`fork`出子进程执行重写操作，保证主进程不会阻塞。
   3. 子进程遍历redis内存中数据到临时文件，客户端的写请求同时写入`aof_buf`缓冲区和`aof_rewrite_buf`重写缓冲区保证原AOF文件完整以及新AOF文件生成期间的新的数据修改动作不会丢失。
@@ -68,13 +71,13 @@ AOF文件持续增长而过大时，会fork出一条新进程来将文件重写(
   ::: center
   <img src="https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/redisImg/redisAOFrewrite.png/zipstyle" alt="AOF重写流程" style="zoom:60%;" />
   :::
-#### AOF持久化流程
+## AOF持久化流程
 
   1. 客户端的请求写命令会被append追加到AOF缓冲区内；
   2. AOF缓冲区根据AOF持久化策略[always,everysec,no]将操作sync同步到磁盘的AOF文件中；
   3. AOF文件大小超过重写策略或手动重写时，会对AOF文件rewrite重写，压缩AOF文件容量；
   4. Redis服务重启时，会重新load加载AOF文件中的写操作达到数据恢复的目的；
-#### 总结-与RDB对比
+## 总结-与RDB对比
 ::: center
 RDB和AOF各有自己的优缺点，如果对数据安全性要求较高，在实际开发中往往会结合两者来使用。
 |                |                     RDB                      |                           AOF                            |

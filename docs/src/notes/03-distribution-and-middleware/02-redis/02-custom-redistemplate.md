@@ -15,17 +15,19 @@ author:
   link: https://github.com/benym
 ---
 
-## 自定义RedisTemplate
+# 自定义RedisTemplate
 
 ::: tip
 本文已过时，请见最新配置[RedisTemplate配置类](https://cloud.benym.cn/pages/c9a954/)
 :::
 
+## 背景
+
 在Spring Data Redis中，有一个高度封装的`RedisTemplate`类，实现了对Redis客户端的操作，其中提供了针对数据的`StringRedisSerializer`序列化方式，但这只能序列化String类型的Key和Value。在日常的数据处理中，通常会面对存储一个对象数据的任务，所以需要定义一个自己的序列化和反序列化方法。
 
  
 
-### Redis基本数据结构
+## Redis基本数据结构
 
 RedisTemplate中定义了对应的redis五种数据结构操作：
 
@@ -121,7 +123,7 @@ public class StringRedisSerializer implements RedisSerializer<String> {
 }
 ```
 
-### 自定义redis序列化工具类
+## 自定义redis序列化工具类
 
 将传入的Object对象转化为JSON字符串，之后再变为字节数组
 
