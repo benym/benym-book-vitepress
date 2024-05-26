@@ -14,11 +14,11 @@ author:
   link: https://github.com/benym
 ---
 
-## Java反射获取类对象的三种方式
+# Java反射获取类对象的三种方式
 
 简单了解Java获取类的3种方式
 
- 
+## 概览
 
 **1、Class.forName("全类名")**
 
