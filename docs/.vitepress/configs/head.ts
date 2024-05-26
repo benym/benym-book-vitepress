@@ -12,6 +12,8 @@ export const head: HeadConfig[] = [
   ['link', {rel: 'apple-touch-icon', href: '/img/favicon-benym.ico'}],
   ['link', {rel: 'mask-icon', href: '/img/favicon-benym.ico', color: '#3eaf7c'}],
   ['link', {rel: 'manifest', href: '/manifest.webmanifest'}],
+  // 在标签上显示所的 logo
+  ["link", {rel: 'icon', href: "/img/favicon-benym.ico"}],
   [
     'script',
     {
@@ -20,7 +22,7 @@ export const head: HeadConfig[] = [
   ],
   [
     'script',
-    { id: 'register-sw' },
+    {id: 'register-sw'},
     `;(() => {
         if ('serviceWorker' in navigator) {
           navigator.serviceWorker.register('/sw.js')

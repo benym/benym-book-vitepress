@@ -1,5 +1,5 @@
 import type { Theme } from '@sugarat/theme'
-import { getThemeConfig } from '@sugarat/theme/node'
+import {footerHTML, getThemeConfig} from '@sugarat/theme/node'
 
 const baseUrl = 'https://cloud.benym.cn'
 const RSS: Theme.RSSOptions = {
@@ -53,5 +53,17 @@ export const blogTheme = getThemeConfig({
       { type: 'text', content: '❤️博客翻新中' },
     ],
     duration: 0
-  }
+  },
+  // footer: {
+  //   version: true,
+  //   copyright: 'MIT License | 2018-present benym',
+  //   icpRecord: {
+  //     name: '渝ICP备18012574号',
+  //     link: 'https://beian.miit.gov.cn/#/Integrated/index'
+  //   },
+  //   securityRecord: {
+  //     name: '渝公网安备50010902502537号',
+  //     link: 'http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=50010902502537'
+  //   },
+  // }
 })
