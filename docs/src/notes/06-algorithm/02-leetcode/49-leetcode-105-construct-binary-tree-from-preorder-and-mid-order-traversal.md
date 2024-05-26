@@ -16,14 +16,16 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-105-从前序与中序遍历构造二叉树
+# LeetCode-105-从前序与中序遍历构造二叉树
+
+## 题目
 
 根据一棵树的前序遍历与中序遍历构造二叉树。
 
 **注意:**
 你可以假设树中没有重复的元素。
 
-<!--more-->
+
 
 **示例 1:**
 
@@ -44,7 +46,7 @@ author:
    15   7
 ```
 
-### 解题思路
+## 解题思路
 
 **方法1、递归：**
 
@@ -84,7 +86,7 @@ author:
 
 https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/solution/cong-qian-xu-yu-zhong-xu-bian-li-xu-lie-gou-zao-9/
 
-### Java代码1
+## Java代码1
 
 ```java
 /**
@@ -132,7 +134,7 @@ class Solution {
 }
 ```
 
-### Java代码2
+## Java代码2
 
 ```java
 /**

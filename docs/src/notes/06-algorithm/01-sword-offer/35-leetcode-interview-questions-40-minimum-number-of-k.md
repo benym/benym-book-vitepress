@@ -19,11 +19,13 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-面试题40-最小的k个数 
+# LeetCode-面试题40-最小的k个数 
+
+## 题目
 
 输入整数数组 `arr` ，找出其中最小的 `k` 个数。例如，输入4、5、1、6、2、7、3、8这8个数字，则最小的4个数字是1、2、3、4。
 
- <!--more-->
+ 
 
 **示例1：**
 
@@ -44,7 +46,7 @@ author:
 - `0 <= k <= arr.length <= 10000`
 - `0 <= arr[i] <= 10000`
 
-### 解题思路
+## 解题思路
 
 **方法1、快排+选择：**
 
@@ -66,7 +68,7 @@ author:
 
 之后返回对应的数组
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {
@@ -128,7 +130,7 @@ class Solution {
 }
 ```
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {

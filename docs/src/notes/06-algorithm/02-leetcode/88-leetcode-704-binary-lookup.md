@@ -17,11 +17,13 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-704-二分查找
+# LeetCode-704-二分查找
+
+## 题目
 
 给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target  ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1。
 
- <!--more-->
+ 
 
 **示例1**
 
@@ -45,13 +47,13 @@ author:
 - `n` 将在 `[1, 10000]`之间。
 - `nums` 的每个元素都将在 `[-9999, 9999]`之间。`
 
-### 解题思路
+## 解题思路
 
 二分查找是一个基本算法，简单来说就是头尾2个指针，看中间数比查找数大还是小，大的话说明要在右边范围找，小的话就要在左边范围找。
 
 **注意：**防止直接相加int溢出，取中点mid时，可采用`start+(end-start)/2`的方式
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {
@@ -77,7 +79,7 @@ class Solution {
 }
 ```
 
-### Python代码
+## Python代码
 
 ```python
 class Solution(object):

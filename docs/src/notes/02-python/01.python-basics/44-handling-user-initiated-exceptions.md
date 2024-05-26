@@ -11,7 +11,7 @@ author:
   link: https://github.com/benym
 ---
 
-### 由用户自行定义的异常类处理
+# 用户自己引发的异常处理
 
 ## 代码
 

@@ -20,7 +20,9 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-207-课程表
+# LeetCode-207-课程表
+
+## 题目
 
 你这个学期必须选修 numCourse 门课程，记为 0 到 numCourse-1 。
 
@@ -28,7 +30,7 @@ author:
 
 给定课程总量以及它们的先决条件，请你判断是否可能完成所有课程的学习？
 
-<!--more-->
+
 
 **示例1：**
 
@@ -52,7 +54,7 @@ author:
 2. 你可以假定输入的先决条件中没有重复的边。
 3. `1 <= numCourses <= 10^5`
 
-### 解题思路
+## 解题思路
 
 转载自https://leetcode-cn.com/problems/course-schedule/solution/course-schedule-tuo-bu-pai-xu-bfsdfsliang-chong-fa/
 
@@ -78,7 +80,7 @@ author:
 - **时间复杂度** O(N + M)： 遍历一个图需要访问所有节点和所有临边，N 和 M 分别为节点数量和临边数量；
 - **空间复杂度** O(N + M)： 为建立邻接表所需额外空间，adjacency 长度为 N ，并存储 M 条临边的数据。
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {

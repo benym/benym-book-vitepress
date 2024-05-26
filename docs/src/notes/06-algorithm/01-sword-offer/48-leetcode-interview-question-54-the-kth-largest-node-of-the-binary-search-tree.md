@@ -20,11 +20,11 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-面试题54-二叉搜索树的第k大节点 
+# LeetCode-面试题54-二叉搜索树的第k大节点 
+
+## 题目
 
 给定一棵二叉搜索树，请找出其中第k大的节点。
-
- <!--more-->
 
 **示例1：**
 
@@ -56,7 +56,7 @@ author:
 
   `1 ≤ k ≤ 二叉搜索树元素个数`
 
-### 解题思路
+## 解题思路
 
 方法1、中序遍历的倒序：
 
@@ -76,7 +76,7 @@ author:
 
 之后弹出栈顶元素，如果k==n，则返回当前节点值，否则，node=node.left，按照右中左的顺序遍历
 
-### Java代码
+## Java代码
 
 ```java
 /**
@@ -108,7 +108,7 @@ class Solution {
 }
 ```
 
-### Java代码2
+## Java代码2
 ```java
 class Solution {
     private List<Integer> res = new ArrayList<>();
@@ -129,7 +129,7 @@ class Solution {
 }
 ```
 
-### Python代码
+## Python代码
 
 ```python
 # Definition for a binary tree node.

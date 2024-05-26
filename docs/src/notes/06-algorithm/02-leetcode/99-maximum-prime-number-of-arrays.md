@@ -16,7 +16,9 @@ author:
   link: https://github.com/benym
 ---
 
-## 网易2021秋招-数组的最多素数个数
+# 网易2021秋招-数组的最多素数个数
+
+## 题目
 
 第一行输入一个数字n
 
@@ -26,7 +28,7 @@ author:
 
 最多1e6个数，每个数字最大为1e9，1不是素数
 
-<!--more-->
+
 
 **示例1：**
 
@@ -36,7 +38,7 @@ author:
 6
 ```
 
-### 解题思路
+## 解题思路
 
 观察题目可知，当2的数量最多的时候，数组就拥有最多的素数个数。
 
@@ -50,7 +52,7 @@ author:
 
 所以对每个数字除以2累加即可得到答案。
 
-### Java代码1
+## Java代码1
 
 ```java
 import java.util.Scanner;
@@ -81,7 +83,7 @@ public class Main {
 
 ```
 
-### Java代码2
+## Java代码2
 
 ```java
 import java.util.Scanner;

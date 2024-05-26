@@ -18,11 +18,13 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-322-零钱兑换
+# LeetCode-322-零钱兑换
+
+## 题目
 
 给定不同面额的硬币 coins 和一个总金额 amount。编写一个函数来计算可以凑成总金额所需的最少的硬币个数。如果没有任何一种硬币组合能组成总金额，返回 -1。
 
-<!--more-->
+
 
 **示例1：**
 
@@ -42,7 +44,7 @@ author:
 **说明**:
 你可以认为每种硬币的数量是无限的。
 
-### 解题思路
+## 解题思路
 
 摘自官方题解https://leetcode-cn.com/problems/coin-change/solution/322-ling-qian-dui-huan-by-leetcode-solution/
 
@@ -113,7 +115,7 @@ coins = [1,2,3],amount = 6
 
 ![image-20200821155315909](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/image-20200821155315909.png)
 
-### Java代码1
+## Java代码1
 
 ```java
 public class LeetCode322 {
@@ -149,7 +151,7 @@ public class LeetCode322 {
 }
 
 ```
-### Java代码2
+## Java代码2
 
 ```java
 class Solution {
@@ -175,7 +177,7 @@ class Solution {
 }
 ```
 
-### Java代码3
+## Java代码3
 
 ```java
 import java.util.Arrays;

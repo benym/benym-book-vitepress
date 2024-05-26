@@ -16,11 +16,13 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-56-合并区间
+# LeetCode-56-合并区间
+
+## 题目
 
 给出一个区间的集合，请合并所有重叠的区间。
 
-<!--more-->
+
 
 **示例1：**
 
@@ -38,7 +40,7 @@ author:
 解释: 区间 [1,4] 和 [4,5] 可被视为重叠区间。
 ```
 
-### 解题思路
+## 解题思路
 
 **方法1、排序+双指针：**
 
@@ -54,7 +56,7 @@ author:
 
 由于开始的start和end是上一个区间的结果，所以在最后一次时，暂时不会添加区间，`res.add(new int[]{start,end});`为最后一次添加之后转化为`int[][]`返回即可
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {

@@ -15,11 +15,11 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-希尔排序
+# 希尔排序
 
 希尔排序算法回顾
 
- <!--more-->
+## 题目
 
 **示例1**
 
@@ -28,7 +28,7 @@ author:
 输出: [0,0,1,2,4,5]
 ```
 
-### 解题思路
+## 解题思路
 
 希尔排序算法回顾
 
@@ -38,7 +38,7 @@ author:
 
 希尔排序是不稳定的排序算法，时间复杂度`O(n^1.3)-O(n^2)`
 
-### Java代码
+## Java代码
 
 ```java
 public class ShellSort {

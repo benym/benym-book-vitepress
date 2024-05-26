@@ -11,7 +11,7 @@ author:
   name: benym
   link: https://github.com/benym
 ---
-### list(列表)、tuple（元组）、dict（字典）的回顾
+# list(列表)、tuple（元组）、dict（字典）的回顾
 ## 代码
 ```python
 list1 = [5, 6, 87, 671, 3, 54, 67, 0, 1, -6, -7]
@@ -78,8 +78,6 @@ list2 = [
 for i in list2:
     print(i)
 ```
-
-<!--more-->
 
 ## 运行结果
 

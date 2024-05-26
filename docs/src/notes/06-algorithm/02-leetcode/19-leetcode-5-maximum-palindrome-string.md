@@ -18,11 +18,11 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-5-最长回文字串
+# LeetCode-5-最长回文字串
+
+## 题目
 
 给定一个字符串 `s`，找到 `s` 中最长的回文子串。你可以假设 `s` 的最大长度为 1000。
-
- <!--more-->
 
 **示例 1:**
 
@@ -39,7 +39,7 @@ author:
 输出: "bb"
 ```
 
-### 解题思路
+## 解题思路
 
 **方法1、暴力破解：**
 
@@ -79,7 +79,7 @@ A   A   B   C   B   A                A   A   B   C   C   B   A
                    bengin = i-(len-1)/2
 ```
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {
@@ -112,7 +112,7 @@ class Solution {
 }
 ```
 
-### Java代码2
+## Java代码2
 
 ```java
 public class Solution {
@@ -162,7 +162,7 @@ public class Solution {
 
 ```
 
-### Java代码3
+## Java代码3
 
 ```java
 public class Solution {

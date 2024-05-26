@@ -12,6 +12,9 @@ author:
   name: benym
   link: https://github.com/benym
 ---
+
+# Numpy库的首次使用
+
 在pycharm中的setting安装numpy，或者在cmd里面通过pip install方法安装均可
 
 ## 代码
@@ -34,8 +37,6 @@ print("矩阵乘以逆矩阵:\n",randMat*invRandMat)
 myEye = randMat*invRandMat
 print("计算误差:\n",myEye-eye(4))
 ```
-
-<!--more-->
 
 ## 运行结果
 

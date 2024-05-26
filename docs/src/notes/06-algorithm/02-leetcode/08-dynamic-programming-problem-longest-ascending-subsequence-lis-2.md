@@ -1,7 +1,7 @@
 ---
 title: 动态规划问题——最长上升子序列(LIS)(二)
 date: 2018-08-25 17:44:35
-description: null
+description: 最长上升子序列
 tags: 
   - 算法
   - Java
@@ -15,12 +15,13 @@ author:
   name: benym
   link: https://github.com/benym
 ---
+
+# 动态规划问题——最长上升子序列(LIS)(二)
+
 样本代码时间复杂度为〇(nlogn),笔试题
 ## 题目描述
 
 一天，小凯同学震惊的发现，自己无内的PM2.5指标是有规律的！小凯采样了PM2.5数值，发现PM2.5数值以小时为周期循环，即任意时刻的PM2.5总是和一小时前相等！他的室友小文同学提出了这样一个问题，在t小时内的所有采样点中，选取若干采样点的数值，能否找到一个PM2.5不曾下降过的序列？这个序列最长是多少？
-
-<!--more-->
 
 ## 输入描述
 
@@ -70,7 +71,7 @@ author:
 
 这里是定义一个testarray数组，存储这个升序子序列，对于新来的元素，通过二分查找，插入到这个testarray数组中，当大于或者等于testarray数组最后一个元素的时候直接在最后插入，如果在testarray数组中间位置，就直接在中间位置插入,(Tips：说明中间位置额那个数比需要插入的数字大，我们找的是最长的升序子序列，比他大的当然需要被小的替代了)，由于testarray数组是动态变化的，最后testarray数组的大小就是最长升序子序列，并且其存储的数就是这个升序子序列。
 
-### Java代码
+## Java代码
 
 ```java
 public class Solution {
@@ -107,7 +108,7 @@ public class Solution {
 }
 ```
 
-### Python代码
+## Python代码
 
 ```python
 def longestIncreasingSubsequence(nums):

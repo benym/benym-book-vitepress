@@ -11,7 +11,7 @@ author:
   link: https://github.com/benym
 ---
 
-### python对象的实例化
+# Python对象的实例化
 
 ## 代码
 

@@ -15,23 +15,25 @@ author:
   link: https://github.com/benym
 ---
 
-## 常见排序算法总结
+# 常见排序算法总结
+
+## 概览
 
 总结了常用的排序算法，以及对应分析
 
 相关链接：
 
-1. [冒泡排序](https://cloud.benym.cn/benym-book/pages/3fd3f6/)
-2. [选择排序](https://cloud.benym.cn/benym-book/pages/ee0279/)
-3. [插入排序](https://cloud.benym.cn/benym-book/pages/db04fa/)
-4. [快速排序](https://cloud.benym.cn/benym-book/pages/c1fce8/)
-5. [归并排序](https://cloud.benym.cn/benym-book/pages/246724/)
-6. [希尔排序](https://cloud.benym.cn/benym-book/pages/05578a/)
-7. [桶排序](https://cloud.benym.cn/benym-book/pages/7a5e99/)
-8. [基数排序](https://cloud.benym.cn/benym-book/pages/5ee1b6/)
-9. [堆排序](https://cloud.benym.cn/benym-book/pages/c0468a/)
+1. [冒泡排序](./01-bubble-sort)
+2. [选择排序](./09-selection-sort)
+3. [插入排序](./07-insertion-sort)
+4. [快速排序](./06-quick-sort)
+5. [归并排序](./05-merge-sort)
+6. [希尔排序](./04-shell's-sort)
+7. [桶排序](./08-bucket-sort)
+8. [基数排序](./02-radix-sort)
+9. [堆排序](./03-heap-sort)
 
- <!--more-->
+ 
 
 总结各种排序算法的时间复杂度和空间复杂度，以及其对应的稳定性
 ::: center

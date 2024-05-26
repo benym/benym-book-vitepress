@@ -15,13 +15,13 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-67-二进制求和
+# LeetCode-67-二进制求和
+
+## 题目
 
 给你两个二进制字符串，返回它们的和（用二进制表示）。
 
 输入为 **非空** 字符串且只包含数字 `1` 和 `0`。
-
-<!--more-->
 
 **示例 1:**
 
@@ -44,7 +44,7 @@ author:
 - 1 <= a.length, b.length <= 10^4
 - 字符串如果不是 "0" ，就都不含前导零。
 
-### 解题思路
+## 解题思路
 
 不适用思路：二进制转十进制，十进制相加转二进制，容易溢出直接淘汰。
 
@@ -52,7 +52,7 @@ author:
 
 Python偷个懒哈哈哈~
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {
@@ -88,7 +88,7 @@ class Solution {
 }
 ```
 
-### Python代码
+## Python代码
 
 ```python
 class Solution:

@@ -10,9 +10,7 @@ author:
   link: https://github.com/benym
 ---
 
-new方法重写的步骤比较固定，直接上代码吧
-
-<!--more-->
+# Python中的__new__方法的重写
 
 ## 代码
 

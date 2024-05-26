@@ -11,7 +11,7 @@ author:
   link: https://github.com/benym
 ---
 
-### python中的lambda函数
+# Python中的lambda函数
 
 lambda函数相当于定义了一个匿名的函数，减少了代码量
 
@@ -54,8 +54,6 @@ def get_abs(x):
 print(sorted(list1, key=get_abs))
 '''
 ```
-
-<!--more-->
 
 ## 运行结果
 

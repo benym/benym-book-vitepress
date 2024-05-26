@@ -19,11 +19,11 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-面试题35-复杂链表的复制 
+# LeetCode-面试题35-复杂链表的复制
+
+## 题目
 
 请实现 copyRandomList 函数，复制一个复杂链表。在复杂链表中，每个节点除了有一个 next 指针指向下一个节点，还有一个 random 指针指向链表中的任意节点或者 null。
-
- <!--more-->
 
 **示例1：**
 
@@ -60,7 +60,7 @@ author:
 - Node.random 为空（null）或指向链表中的节点。
 - 节点数目不超过 1000 。
 
-### 解题思路
+## 解题思路
 
 方法1、哈希表：
 
@@ -84,7 +84,7 @@ author:
 
   把奇数位置的节点用next连接起来就是原始链表，把偶数位置的节点用next连接起来就是复制链表
 
-### Java代码
+## Java代码
 
 ```java
 /*
@@ -121,7 +121,7 @@ class Solution {
 }
 ```
 
-### Python代码
+## Python代码
 
 ```python
 """

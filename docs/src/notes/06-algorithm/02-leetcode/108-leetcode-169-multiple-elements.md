@@ -16,13 +16,15 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-169-多数元素
+# LeetCode-169-多数元素
+
+## 题目
 
 给定一个大小为 n 的数组，找到其中的多数元素。多数元素是指在数组中出现次数大于 ⌊ n/2 ⌋ 的元素。
 
 你可以假设数组是非空的，并且给定的数组总是存在多数元素。
 
-<!--more-->
+
 
 **示例1：**
 
@@ -38,7 +40,7 @@ author:
 输出: 2
 ```
 
-### 解题思路
+## 解题思路
 
 **方法1、哈希表：**
 
@@ -65,7 +67,7 @@ author:
 
 无论数组是1 2 1 2 1，亦或是1 2 2 1 1，总能得到正确的候选人。
 
-### Java代码1
+## Java代码1
 
 
 ```java
@@ -86,7 +88,7 @@ class Solution {
 }
 ```
 
-### Java代码2
+## Java代码2
 
 ```java
 class Solution {
@@ -97,7 +99,7 @@ class Solution {
 }
 ```
 
-### Java代码3
+## Java代码3
 
 ```java
 class Solution {

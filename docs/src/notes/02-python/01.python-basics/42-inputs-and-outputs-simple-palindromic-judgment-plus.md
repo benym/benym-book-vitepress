@@ -11,7 +11,9 @@ author:
   link: https://github.com/benym
 ---
 
-### 输入输出——回文字串的判断（加强版）
+# 输入输出——回文字串的判断（加强版）
+
+## 代码
 
 ```python
 forbindden_word = (' ', ',', ';', '.', '!', '//', '?')

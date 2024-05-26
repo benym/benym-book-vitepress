@@ -17,7 +17,9 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-309-最佳买卖股票时机含冷冻期
+# LeetCode-309-最佳买卖股票时机含冷冻期
+
+## 题目
 
 给定一个整数数组，其中第 i 个元素代表了第 i 天的股票价格 。
 
@@ -26,7 +28,7 @@ author:
 你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。
 卖出股票后，你无法在第二天买入股票 (即冷冻期为 1 天)。
 
-<!--more-->
+
 
 **示例1：**
 
@@ -36,11 +38,11 @@ author:
 解释: 对应的交易状态为: [买入, 卖出, 冷冻期, 买入, 卖出]
 ```
 
-### 解题思路
+## 解题思路
 
 详见链接https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/solution/yi-ge-fang-fa-tuan-mie-6-dao-gu-piao-wen-ti-by-lab/
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {

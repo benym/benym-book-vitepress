@@ -16,11 +16,13 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-114-二叉树展开为链表
+# LeetCode-114-二叉树展开为链表
+
+## 题目
 
 给定一个二叉树，原地将它展开为一个单链表。
 
-<!--more-->
+
 
 例如，给定二叉树
 
@@ -48,7 +50,7 @@ author:
           6
 ```
 
-### 解题思路
+## 解题思路
 
 **方法1、递归：**
 
@@ -62,7 +64,7 @@ author:
 
 当栈中弹出节点时，当前节点始终是拼接在前一个节点的右侧，于是`pre.left=null`、`pre.right=temp`,当当前节点temp右子节点不为空时，右子节点入栈，当左子节点不为空时，左子节点入栈。完成当前节点的左右子节点遍历，前一个节点变为链表中当前节点即`pre=pre.right`
 
-### Java代码1
+## Java代码1
 
 ```java
 class Solution {
@@ -87,7 +89,7 @@ class Solution {
 }
 ```
 
-### Java代码2
+## Java代码2
 
 ```java
 /**

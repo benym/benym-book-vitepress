@@ -17,13 +17,15 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-567-字符串的排列
+# LeetCode-567-字符串的排列
+
+## 题目
 
 给定两个字符串 **s1** 和 **s2**，写一个函数来判断 **s2** 是否包含 **s1** 的排列。
 
 换句话说，第一个字符串的排列之一是第二个字符串的子串。
 
-<!--more-->
+
 
 **示例1：**
 
@@ -45,7 +47,7 @@ author:
 1. 输入的字符串只包含小写字母
 2. 两个字符串的长度都在 [1, 10,000] 之间
 
-### 解题思路
+## 解题思路
 
 **方法1、滑动窗口(套模版)：**
 
@@ -56,7 +58,7 @@ https://leetcode-cn.com/problems/permutation-in-string/solution/wo-xie-liao-yi-s
 由于都是小写字符，所以初始化两个数组作为need和window，剩余步骤依旧按照模版走，详见注释。
 
 
-### Java代码1
+## Java代码1
 
 ```java
 class Solution {

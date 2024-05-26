@@ -19,11 +19,11 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-面试题52-两个链表的第一个公共节点 
+# LeetCode-面试题52-两个链表的第一个公共节点 
+
+## 题目
 
 输入两个链表，找出它们的第一个公共节点。
-
- <!--more-->
 
 **示例1：**
 
@@ -57,7 +57,7 @@ author:
 - 可假定整个链表结构中没有循环。
 - 程序尽量满足 O(n) 时间复杂度，且仅用 O(1) 内存。
 
-### 解题思路
+## 解题思路
 
 方法1、双指针+先遍历：
 
@@ -67,7 +67,7 @@ author:
 
 同样是双指针，因为一长一短的关系，有一个指针会先到达末尾，当第一个指针pA先到末尾时，将他重置到链表B的开始位置，当第二个指针pB到达末尾时，将他重置到链表A开始的位置。由于有一个先到达先重置，在等待第二个指针走到末尾的过程中，先达到的指针pA将会走这段A比B多出的长度。这样当第二个指针重置时，两个指针都在一个位置开始，之后遍历到相同的节点返回即可
 
-### Java代码
+## Java代码
 
 ```java
 /**
@@ -113,7 +113,7 @@ public class Solution {
 }
 ```
 
-### Python代码
+## Python代码
 
 ```python
 # Definition for singly-linked list.
@@ -131,7 +131,7 @@ class Solution:
         return node1
 ```
 
-### Java代码2
+## Java代码2
 
 ```java
 public class Solution {

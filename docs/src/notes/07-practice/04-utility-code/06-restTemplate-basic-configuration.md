@@ -9,6 +9,9 @@ author:
   name: benym
   link: https://github.com/benym
 ---
+
+# RestTemplate基本配置类
+
 ## RestTemplateConfig
 ```java
 import org.springframework.context.annotation.Bean;

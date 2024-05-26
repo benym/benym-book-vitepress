@@ -17,7 +17,9 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-20-有效的括号
+# LeetCode-20-有效的括号
+
+## 题目
 
 给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效。
 
@@ -27,8 +29,6 @@ author:
 2. 左括号必须以正确的顺序闭合。
 
 注意空字符串可被认为是有效字符串。
-
-<!--more-->
 
 **示例 1:**
 
@@ -65,7 +65,7 @@ author:
 输出: true
 ```
 
-### 解题思路
+## 解题思路
 
 方法1、栈：
 
@@ -85,7 +85,7 @@ author:
 
 所以新增一个新的判断，`else if(stack.isEmpty()||c!=stack.pop())`联合判别反括号和栈空的情况，都是false
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {

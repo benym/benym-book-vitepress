@@ -17,7 +17,9 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-338-比特位计数
+# LeetCode-338-比特位计数
+
+## 题目
 
 题目来自于力扣https://leetcode-cn.com/problems/counting-bits
 
@@ -43,9 +45,9 @@ author:
 - 要求算法的空间复杂度为**O(n)**。
 - 你能进一步完善解法吗？要求在C++或任何其他语言中不使用任何内置函数（如 C++ 中的 **__builtin_popcount**）来执行此操作。
 
- <!--more-->
+ 
 
-### 解题思路
+## 解题思路
 
 **方法1、暴力破解：**
 
@@ -59,7 +61,7 @@ author:
 
 没想出来....，参考https://leetcode-cn.com/problems/counting-bits/solution/bei-bi-de-yi-xiang-ren-qiao-miao-de-dong-v6zr/
 
-### Java代码1
+## Java代码1
 
 ```java
 class Solution {

@@ -17,11 +17,11 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-32-最长有效括号
+# LeetCode-32-最长有效括号
+
+## 题目
 
 给定一个只包含 `'('` 和 `')'` 的字符串，找出最长的包含有效括号的子串的长度。
-
-<!--more-->
 
 **示例1：**
 
@@ -39,7 +39,7 @@ author:
 解释: 最长有效括号子串为 "()()"
 ```
 
-### 解题思路
+## 解题思路
 
 **方法1、动态规划：**
 
@@ -70,7 +70,7 @@ author:
 当 left 计数器与 right 计数器相等时，我们计算当前有效字符串的长度，并且记录目前为止找到的最长子字符串
 这样我们就能涵盖所有情况从而求解出答案。
 
-### Java代码1
+## Java代码1
 
 ```java
 class Solution {
@@ -92,7 +92,7 @@ class Solution {
 }
 ```
 
-### Java代码2
+## Java代码2
 
 ```java
 class Solution {
@@ -117,7 +117,7 @@ class Solution {
 }
 ```
 
-### Java代码3
+## Java代码3
 
 ```java
 class Solution {

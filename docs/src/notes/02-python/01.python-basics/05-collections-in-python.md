@@ -12,7 +12,9 @@ author:
   link: https://github.com/benym
 ---
 
-### 集合
+# Python中的集合
+
+# 概览
 
 集合（Set）是简单对象的无序集合（Collection）。当集合中的项目存在与否比起次序或其出
 现次数更加重要时，我们就会使用集合。

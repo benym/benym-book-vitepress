@@ -17,13 +17,15 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-141-环形链表
+# LeetCode-141-环形链表
+
+## 题目
 
 给定一个链表，判断链表中是否有环。
 
 为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。
 
- <!--more-->
+ 
 
 **示例1：**
 
@@ -53,7 +55,7 @@ author:
 
 你能用 *O(1)*（即，常量）内存解决此问题吗？
 
-### 解题思路
+## 解题思路
 
 **快慢指针：**
 
@@ -71,7 +73,7 @@ author:
 
 使用hashset存储访问过的节点，如果有重复的节点试图添加进set中，此次的添加操作必定会失败，同时说明链表有环
 
-### Java代码
+## Java代码
 
 ```java
 /**
@@ -145,7 +147,7 @@ public class Solution {
 ```
 
 
-### Java代码2
+## Java代码2
 
 ```java
 public class Solution {

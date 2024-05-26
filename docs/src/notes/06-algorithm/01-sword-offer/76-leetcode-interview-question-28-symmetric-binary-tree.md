@@ -19,7 +19,9 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-面试题28-对称的二叉树
+# LeetCode-面试题28-对称的二叉树
+
+## 题目
 
 请实现一个函数，用来判断一棵二叉树是不是对称的。如果一棵二叉树和它的镜像一样，那么它是对称的。
 
@@ -44,8 +46,6 @@ author:
    3    3
 ```
 
- <!--more-->
-
 **示例1：**
 
 ```
@@ -64,7 +64,7 @@ author:
 
 `0 <= 节点个数 <= 1000`
 
-### 解题思路
+## 解题思路
 
 **方法1：栈**
 
@@ -91,7 +91,7 @@ author:
 
 先入队列根节点的左右节点，按层遍历，queue入队顺序和判断逻辑相同，判断左子树的左节点和右子树的右节点是否相等，左子树的右节点和右子树的左节点是否相等。当左右同时为空时，跳过。当左右只有一个为空时，此时二叉树不可能对称，返回false
 
-### Java代码1
+## Java代码1
 
 ```java
 /**
@@ -131,7 +131,7 @@ class Solution {
 }
 ```
 
-### Python代码
+## Python代码
 
 ```python
 # Definition for a binary tree node.
@@ -151,7 +151,7 @@ class Solution:
         return helper(root.left,root.right) if root else True
 ```
 
-### Java代码2
+## Java代码2
 
 ```java
 /**

@@ -14,13 +14,12 @@ author:
   link: https://github.com/benym
 ---
 
-## 动态代理使用方法
+# 动态代理使用方法
 
 Java动态代理实现方法概述与实验
 
- <!--more-->
 
-### 代理模式
+## 代理模式
 
 代理模式是指：为其他对象提供一种**代理**以控制对某个对象的访问。在某些情况下，一个对象不适合或者不能直接引用另一个对象，此时可以引入代理对象作为该情况下客户端和目标对象之间的中介。
 
@@ -33,13 +32,13 @@ Java动态代理实现方法概述与实验
 - 静态代理：编译时实现，编译完成后的代理类是一个实际的class文件
 - 动态代理：在运行时动态生成，编译完成后没有实际的class文件，而是**在运行时动态生成类字节码，并加载到JVM中**
 
-### 1.静态代理
+## 1.静态代理
 
-#### **场景**
+### **场景**
 
 假设现在我们需要创建一个用户，在创建用户的前后需要记录相关日志，但用户的创建逻辑在其他系统，我们无法直接访问代码修改业务逻辑，此时我们就需要一个代理对象在创建用户业务的前后做日志增强操作，达到扩展的目的。
 
-#### **实现方法**
+### **实现方法**
 
 - 创建一个User接口定义`createUser`方法
 - 创建一个实现了User接口的RealUser实体类，作为代理对象
@@ -87,7 +86,7 @@ public class StaticProxyHandler implements User {
 
 其中的`User`类定义了代理类和代理对象之间的共用接口，而`RealUser`作为代理对象实现了真正执行的业务逻辑(在这里为创建用户)，`StaticProxyHandler`代理`RealUser`在创建用户逻辑前后做方法增强
 
-#### **测试效果**
+### **测试效果**
 
 ```java
 public class Main {
@@ -109,11 +108,11 @@ public class Main {
 用户创建完了...
 ```
 
-#### **静态代理缺陷**
+### **静态代理缺陷**
 
 对于每个目标类都需要编写对应的代理类，如果需要代理的目标很多，那么就会写大量的代理代码，过程繁琐
 
-#### **解决方法**
+### **解决方法**
 
 仔细思考一下上述过程，代理类中我们会创建代理对象的引用，且需要去实现和他相同的接口，我们想要减少代理类的最直接的方法是通过不断的在类中增加代理对象，实现代理方法，但是这样的代码是不具备通用性的，当遇到了需要代理的目标就需要不断的实现和引用。
 
@@ -127,9 +126,9 @@ public class Main {
 
 可以想到的是利用**反射机制**，动态的去生成代理的Class对象，Class对象中包含了构造器、方法、字段等，能拿到Class对象我们就能够进行对象实例化，创建一个动态的实例了
 
-### 2.动态代理-JDK
+## 2.动态代理-JDK
 
-#### **动态代理步骤**
+### **动态代理步骤**
 
 1. 实现`InvocationHandler`接口自定义自己的`InvocationHandler`
 2. 通过`Proxy.getProxyClass`获得动态代理类
@@ -182,7 +181,7 @@ public class DynamicProxyHandler implements InvocationHandler {
 
 ```
 
-#### **第一种方法**
+### **第一种方法**
 
 严格按照上述2-5步骤实现动态代理
 
@@ -212,7 +211,7 @@ public class ProxyTest {
 
 ```
 
-#### **第二种方法**
+### **第二种方法**
 
 上述2-5步骤可以简化为Proxy类提供的方法
 
@@ -250,11 +249,11 @@ JDK代理和静态代理的不同之处：
 
 值得注意的是，JDK代理和静态代理**都要求代理对象(本文中的RealUser)去实现接口**，局限性很强，如果代理对象没有实现接口应该怎么去做呢？
 
-### 3.动态代理-Cglib
+## 3.动态代理-Cglib
 
 Cglib包底层采用了字节码处理框架`ASM`，通过字节码技术为一个类创建子类，并在子类中拦截所有父类方法的调用，由于Cglib在生成的代理类中会去**继承代理对象**，所以其**不能对final修饰的类进行代理**。
 
-#### Cglib代理步骤
+### Cglib代理步骤
 
 1. 实现一个`MethodInterceptor`，与JDK动态代理`InvocationHandler`接口类型，`invoke`变为了`intercept`
 2. 通过Cglib的`Enhancer`类实现动态代理获取代理对象
@@ -347,9 +346,9 @@ public class CglibMain {
 }
 ```
 
-#### 测试效果
+### 测试效果
 
-##### 非final方法
+#### 非final方法
 
 前后可以增强，可以发现，在创建代理对象时，Cglib将调用代理对象的无参构造函数
 
@@ -360,7 +359,7 @@ public class CglibMain {
 用户创建完了...
 ```
 
-##### final方法
+#### final方法
 
 直接调用不能做增强
 
@@ -368,7 +367,7 @@ public class CglibMain {
 final方法不能被代理
 ```
 
-#### 为什么需要无参构造函数
+### 为什么需要无参构造函数
 
 Cglib**需要代理对象实现无参构造函数**，否则会出现错误
 
@@ -386,7 +385,7 @@ public class CglibUser {
 }
 ```
 
-##### 测试结果
+#### 测试结果
 
 ```java
 Exception in thread "main" java.lang.IllegalArgumentException: Superclass has no null constructors but no arguments were given
@@ -417,7 +416,7 @@ Exception in thread "main" java.lang.IllegalArgumentException: Superclass has no
     }
 ```
 
-#### 如何支持有参构造函数创建对象
+### 如何支持有参构造函数创建对象
 
 很多时候代理的对象内部持有有参的构造函数，纯无参的代理方式显然不满足这样的场景，在Cglib中create具有重载方法来支持这种代理场景
 
@@ -498,7 +497,7 @@ public class CglibMain {
 }
 ```
 
-##### 测试结果
+#### 测试结果
 
 ```java
 有参构造函数创建代理对象李四
@@ -507,7 +506,7 @@ public class CglibMain {
 用户创建完了...
 ```
 
-### 4.总结
+## 4.总结
 
 1. Cglib动态代理基于继承，可以不需要代理没有实现接口的类，也可以代理实现了接口的类，但Cglib无法对final方法进行代理，核心方法`MethodInterceptor`
 

@@ -16,7 +16,9 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-448-找到所有数组中消失的数字
+# LeetCode-448-找到所有数组中消失的数字
+
+## 题目
 
 给定一个范围在  1 ≤ a[i] ≤ n ( n = 数组大小 ) 的 整型数组，数组中的元素一些出现了两次，另一些只出现一次。
 
@@ -24,7 +26,7 @@ author:
 
 您能在不使用额外空间且时间复杂度为O(n)的情况下完成这个任务吗? 你可以假定返回的数组不算在额外空间内。
 
-<!--more-->
+
 
 **示例1：**
 
@@ -36,7 +38,7 @@ author:
 [5,6]
 ```
 
-### 解题思路
+## 解题思路
 
 **方法1、哈希表：**
 
@@ -46,7 +48,7 @@ author:
 
 原地修改具有技巧性，不容易想到，详见https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array/solution/zhao-dao-suo-you-shu-zu-zhong-xiao-shi-de-shu-zi-2/
 
-### Java代码1
+## Java代码1
 
 ```java
 class Solution {
@@ -67,7 +69,7 @@ class Solution {
 }
 ```
 
-### Java代码2
+## Java代码2
 
 ```java
     /**

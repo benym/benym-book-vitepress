@@ -16,7 +16,9 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-84-柱状图中最大的矩形
+# LeetCode-84-柱状图中最大的矩形
+
+## 题目
 
 给定 *n* 个非负整数，用来表示柱状图中各个柱子的高度。每个柱子彼此相邻，且宽度为 1 。
 
@@ -26,7 +28,7 @@ author:
 
 图中阴影部分为所能勾勒出的最大矩形面积，其面积为 `10` 个单位。
 
-<!--more-->
+
 
 **示例1：**
 
@@ -35,7 +37,7 @@ author:
 输出: 10
 ```
 
-### 解题思路
+## 解题思路
 
 **方法1、暴力破解：**
 
@@ -53,7 +55,7 @@ author:
 
 视频详解https://leetcode-cn.com/problems/largest-rectangle-in-histogram/solution/zhu-zhuang-tu-zhong-zui-da-de-ju-xing-by-leetcode-/
 
-### Java代码1
+## Java代码1
 
 ```java
 class Solution {
@@ -78,7 +80,7 @@ class Solution {
 }
 ```
 
-### Java代码2
+## Java代码2
 
 ```java
 class Solution {
@@ -127,7 +129,7 @@ class Solution {
 }
 ```
 
-### Java代码3
+## Java代码3
 
 ```java
 class Solution {

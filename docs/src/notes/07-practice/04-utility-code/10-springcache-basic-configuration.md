@@ -8,6 +8,9 @@ author:
 date: 2024-05-16 15:23:02
 permalink: /pages/c91eef/
 ---
+
+# SpringCache基本配置类
+
 ## 起步依赖
 ```java
 <dependency>

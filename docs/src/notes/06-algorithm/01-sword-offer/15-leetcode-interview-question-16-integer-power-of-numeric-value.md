@@ -19,11 +19,13 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-面试题16-数值的整数次方
+# LeetCode-面试题16-数值的整数次方
+
+## 题目
 
 实现函数double Power(double base, int exponent)，求base的exponent次方。不得使用库函数，同时不需要考虑大数问题。
 
- <!--more-->
+ 
 
 **示例1**
 
@@ -52,7 +54,7 @@ author:
 - -100.0 < *x* < 100.0
 - *n* 是 32 位有符号整数，其数值范围是 [−231, 231 − 1] 。
 
-### 解题思路
+## 解题思路
 
 特殊值，x为0，n为0，没有意义返回1。n<0的时候要变换符号，但是这道题有个特殊的测试用例超出了int范围，拿一个long类型的作为中间变量存储
 
@@ -62,7 +64,7 @@ author:
 
 奇数有一个特点就是%2==1，也可以算成与运算&1==1，做除法/2也可以等价于移位>>1，位运算本身要更快一些。
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {
@@ -85,7 +87,7 @@ class Solution {
 }
 ```
 
-### Python代码
+## Python代码
 
 ```python
 class Solution:

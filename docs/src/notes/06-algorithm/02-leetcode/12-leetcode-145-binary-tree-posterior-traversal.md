@@ -17,7 +17,7 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-145-二叉树的后序遍历
+# LeetCode-145-二叉树的后序遍历
 
 给定一个二叉树，返回它的 *后序* 遍历。
 
@@ -27,7 +27,7 @@ author:
 2. [LeetCode-94-二叉树的中序遍历](https://cloud.benym.cn/benym-book/pages/4517f3/#leetcode-94-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86)
 3. [LeetCode-145-二叉树的后序遍历](https://cloud.benym.cn/benym-book/pages/bc617d/#leetcode-145-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86)
 
-<!--more-->
+
 
 **示例 1:**
 
@@ -42,7 +42,7 @@ author:
 输出: [3,2,1]
 ```
 
-### 解题思路
+## 解题思路
 
 二叉树的遍历问题都有2种解法，一种是递归，一种是迭代
 
@@ -58,7 +58,7 @@ author:
 
 第二，变量last用于保存当前栈顶所弹出的元素，判断 curr.right == last 是为了避免重复访问同一个元素而陷入死循环当中
 
-### Java代码(递归)
+## Java代码(递归)
 
 ```java
 /**
@@ -86,7 +86,7 @@ class Solution {
 }
 ```
 
-### Java代码(迭代Stack)
+## Java代码(迭代Stack)
 
 ```java
 /**
@@ -117,7 +117,7 @@ class Solution {
 }
 ```
 
-### Java代码(迭代模拟)
+## Java代码(迭代模拟)
 
 ```java
 /**

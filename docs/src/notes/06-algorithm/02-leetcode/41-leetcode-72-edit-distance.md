@@ -17,7 +17,9 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-72-编辑距离
+# LeetCode-72-编辑距离
+
+## 题目
 
 给你两个单词 word1 和 word2，请你计算出将 word1 转换成 word2 所使用的最少操作数 。
 
@@ -27,7 +29,7 @@ author:
 2. 删除一个字符
 3. 替换一个字符
 
-<!--more-->
+
 
 **示例1：**
 
@@ -53,7 +55,7 @@ exention -> exection (将 'n' 替换为 'c')
 exection -> execution (插入 'u')
 ```
 
-### 解题思路
+## 解题思路
 
 **方法1、动态规划：**
 
@@ -61,7 +63,7 @@ exection -> execution (插入 'u')
 
 详解见官方https://leetcode-cn.com/problems/edit-distance/solution/bian-ji-ju-chi-by-leetcode-solution/
 
-### Java代码
+## Java代码
 
 ```java
 public int minDistance(String word1, String word2) {

@@ -12,7 +12,9 @@ author:
   link: https://github.com/benym
 ---
 
-### 字典（key-value）
+# Python中字典(key-value)
+
+## 概览
 
 字典就像一本地址簿，如果你知道了他或她的姓名，你就可以在这里找到其地址或是能够联
 系上对方的更多详细信息，换言之，我们将键值（Keys）（即姓名）与值（Values）（即地

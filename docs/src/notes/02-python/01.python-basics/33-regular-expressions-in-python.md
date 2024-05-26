@@ -11,7 +11,11 @@ author:
   link: https://github.com/benym
 ---
 
+# Python中的正则表达式
+
 主要是一些正则表达式的基本语法和部分实例
+
+## 概览
 
 ***re.match 尝试从字符串的起始位置匹配一个模式，如果不是起始位置匹配成功的话，match()就返回none***
 
@@ -27,7 +31,7 @@ author:
 
 > re.search(pattern,  string,  flag=0)
 
-<!--more-->
+
 
 ## 代码
 

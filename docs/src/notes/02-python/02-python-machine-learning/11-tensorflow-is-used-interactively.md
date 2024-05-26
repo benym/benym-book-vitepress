@@ -13,11 +13,13 @@ author:
   link: https://github.com/benym
 ---
 
+# Tensorflow交互式使用
+
+## 概览
+
 文档中的 Python 示例使用一个会话 [`Session`](http://www.tensorfly.cn/tfdoc/api_docs/python/client.html#Session) 来 启动图, 并调用 [`Session.run()`](http://www.tensorfly.cn/tfdoc/api_docs/python/client.html#Session.run) 方法执行操作.
 
 为了便于使用诸如 [IPython](http://ipython.org/) 之类的 Python 交互环境, 可以使用 [`InteractiveSession`](http://www.tensorfly.cn/tfdoc/api_docs/python/client.html#InteractiveSession)代替 `Session` 类, 使用 [`Tensor.eval()`](http://www.tensorfly.cn/tfdoc/api_docs/python/framework.html#Tensor.eval) 和 [`Operation.run()`](http://www.tensorfly.cn/tfdoc/api_docs/python/framework.html#Operation.run) 方法代替`Session.run()`. 这样可以避免使用一个变量来持有会话.
-
-<!--more-->
 
 ## 代码
 

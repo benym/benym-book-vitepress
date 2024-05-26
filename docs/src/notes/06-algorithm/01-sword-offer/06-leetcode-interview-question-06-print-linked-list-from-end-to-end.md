@@ -19,11 +19,13 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-面试题06-从尾到头打印链表
+# LeetCode-面试题06-从尾到头打印链表
+
+## 题目
 
 输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）。
 
- <!--more-->
+ 
 
 **示例:**
 
@@ -32,11 +34,11 @@ author:
 输出：[2,3,1]
 ```
 
-### 解题思路
+## 解题思路
 
 用ArryList或者Stack都可以，先进后出本身就是栈的特点，这里就直接用栈来做了。还有一种思路是递归，但是递归的问题就在于链表长了之后，层级过深会引起StackOverFlowerror，也就是栈溢出。
 
-### Java代码
+## Java代码
 
 ```java
 /**
@@ -65,7 +67,7 @@ class Solution {
 }
 ```
 
-### Python代码
+## Python代码
 
 ```python
 # Definition for singly-linked list.

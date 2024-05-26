@@ -11,6 +11,8 @@ author:
   link: https://github.com/benym
 ---
 
+# 正则表达式检索与替换
+
 ***re.sub用于替换字符串中的匹配项***
 
 > re.sub(pattern, repl, string,  count=0)
@@ -40,8 +42,6 @@ def double(matched):
 s = 'A23G4HFD567'
 print(re.sub('(?P<value>\d+)', double, s))
 ```
-
-<!--more-->
 
 ## 运行结果
 

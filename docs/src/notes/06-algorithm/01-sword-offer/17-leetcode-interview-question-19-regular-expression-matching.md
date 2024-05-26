@@ -20,7 +20,9 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-面试题19-正则表达式匹配
+# LeetCode-面试题19-正则表达式匹配
+
+## 题目
 
 给你一个字符串s和一个字符规律p，请你来实现一个支持 '.'和'*'的正则表达式匹配。
 
@@ -38,7 +40,7 @@ author:
 
 - p可能为空，且只包含从a-z的小写字母，以及字符.和*。
 
- <!--more-->
+ 
 
 **示例1**
 
@@ -89,7 +91,7 @@ p = "mis*is*p*."
 输出: false
 ```
 
-### 解题思路
+## 解题思路
 
 方法1、暴力递归(Python)：
 
@@ -104,7 +106,7 @@ p = "mis*is*p*."
 
 不会写....copy自评论区
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {
@@ -164,7 +166,7 @@ class Solution {
 }
 ```
 
-### Python代码
+## Python代码
 
 ```python
 class Solution:

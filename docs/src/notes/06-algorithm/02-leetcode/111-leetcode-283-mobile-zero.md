@@ -16,7 +16,9 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-283-移动零
+# LeetCode-283-移动零
+
+## 题目
 
 题目来自于力扣https://leetcode-cn.com/problems/move-zeroes
 
@@ -35,9 +37,9 @@ author:
 必须在原数组上操作，不能拷贝额外的数组。
 尽量减少操作次数。
 
- <!--more-->
+ 
 
-### 解题思路
+## 解题思路
 
 **方法1、0填充法：**
 
@@ -47,7 +49,7 @@ author:
 
 一次遍历的过程中需要一个i指向当前遍历的元素位置，同时建立一个新的指针j，在i遍历的时候进行移动。j移动的规则为，当nums[i]!=0的时候交换nums[i]和nums[j]的值，同时j向右移，这样的方法保证了j指针始终指向了已处理好的数组的尾部。每次交换，均为左指针j指向的0和右指针i的非0进行交换，且保证了非0的相对顺序。
 
-### Java代码1
+## Java代码1
 
 ```java
 class Solution {
@@ -70,7 +72,7 @@ class Solution {
 }
 ```
 
-### Java代码2
+## Java代码2
 
 ```java
 class Solution {

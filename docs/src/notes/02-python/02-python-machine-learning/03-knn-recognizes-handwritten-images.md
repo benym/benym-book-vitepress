@@ -1,5 +1,5 @@
 ---
-title: kNN识别手写图像
+title: KNN识别手写图像
 date: 2018-08-16 21:03:00
 categories: Python-机器学习
 tags: 
@@ -13,6 +13,10 @@ author:
   link: https://github.com/benym
 ---
 
+# KNN识别手写图像
+
+## 步骤
+
 示例 ：使用k-近邻算法的手写识别系统
 (1) 收集数据：提供文本文件。
 (2) 准备数据：编写函数classify0(), 将图像格式转换为分类器使用的list格式。
@@ -23,7 +27,6 @@ author:
 ::: tip
 注：由于原本数据集已经在0和1之间，所以不需要转化数字特征值。[数据集](http://pd10tty87.bkt.clouddn.com/knn%E8%AF%86%E5%88%AB%E6%89%8B%E5%86%99%E5%9B%BE%E5%83%8F.zip)
 :::
-<!--more-->
 
 ## 代码
 

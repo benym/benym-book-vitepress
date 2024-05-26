@@ -11,6 +11,10 @@ author:
   link: https://github.com/benym
 ---
 
+# Python中的正则表达式match和search
+
+## 概览
+
 ***re.match只匹配字符串的开始，如果字符串开始不符合正则表达式，则匹配失败，函数返回None；而re.search匹配整个字符串，直到找到一个匹配*** 
 
 ## 代码
@@ -35,8 +39,6 @@ if matchObj:
 else:
     print("No match!!")
 ```
-
-<!--more-->
 
 ## 运行结果
 

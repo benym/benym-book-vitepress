@@ -19,11 +19,11 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-53-最大子序和
+# LeetCode-53-最大子序和
+
+## 题目
 
 给定一个整数数组 `nums` ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。
-
- <!--more-->
 
 **示例 1:**
 
@@ -37,7 +37,7 @@ author:
 
 如果你已经实现复杂度为 O(*n*) 的解法，尝试使用更为精妙的分治法求解。
 
-### 解题思路
+## 解题思路
 
 方法1、DP：
 
@@ -55,7 +55,7 @@ author:
 
 交换最大值
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {
@@ -73,7 +73,7 @@ class Solution {
 }
 ```
 
-### Python代码
+## Python代码
 
 ```python
 class Solution:
@@ -83,7 +83,7 @@ class Solution:
             nums[i] = nums[i]+max(nums[i-1],0)
         return max(nums)
 ```
-### Java代码
+## Java代码
 
 ```java
 class Solution {

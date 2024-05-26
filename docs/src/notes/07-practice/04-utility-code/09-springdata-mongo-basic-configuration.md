@@ -10,6 +10,9 @@ author:
 date: 2023-06-03 15:37:33
 permalink: /pages/304eaa/
 ---
+
+# SpringData-Mongo基本配置类
+
 ## 起步依赖
 ```java
 <dependency>

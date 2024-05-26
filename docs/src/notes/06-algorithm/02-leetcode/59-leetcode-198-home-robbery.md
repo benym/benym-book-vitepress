@@ -19,13 +19,15 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-198-打家劫舍
+# LeetCode-198-打家劫舍
+
+## 题目
 
 你是一个专业的小偷，计划偷窃沿街的房屋。每间房内都藏有一定的现金，影响你偷窃的唯一制约因素就是相邻的房屋装有相互连通的防盗系统，如果两间相邻的房屋在同一晚上被小偷闯入，系统会自动报警。
 
 给定一个代表每个房屋存放金额的非负整数数组，计算你 不触动警报装置的情况下 ，一夜之内能够偷窃到的最高金额。
 
- <!--more-->
+ 
 
 **示例 1:**
 
@@ -50,7 +52,7 @@ author:
 - `0 <= nums.length <= 100`
 - `0 <= nums[i] <= 400`
 
-### 解题思路
+## 解题思路
 
 动态规划：
 
@@ -66,7 +68,7 @@ dp数组的状态：当前位置前相隔数据的最大值
 
 多加一间房子，这个解法是经过分析之后简化的，原文来源[这里](https://leetcode-cn.com/problems/house-robber/solution/da-jia-jie-she-dong-tai-gui-hua-jie-gou-hua-si-lu-/)
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {
@@ -86,7 +88,7 @@ class Solution {
 }
 ```
 
-### Python代码
+## Python代码
 
 ```python
 class Solution:

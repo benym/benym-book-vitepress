@@ -17,7 +17,9 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-1367-二叉树中的列表
+# LeetCode-1367-二叉树中的列表
+
+## 题目
 
 给你一棵以 root 为根的二叉树和一个 head 为第一个节点的链表。
 
@@ -25,7 +27,7 @@ author:
 
 一直向下的路径的意思是：从树中某个节点开始，一直连续向下的路径。
 
-<!--more-->
+
 
 **示例 1:**
 
@@ -56,7 +58,7 @@ author:
 - 链表包含的节点数目在 1 到 100 之间。
 - 二叉树包含的节点数目在 1 到 2500 之间。
 
-### 解题思路
+## 解题思路
 
 **DFS递归：**
 
@@ -70,7 +72,7 @@ author:
 
 当根节点或者左右子树任意一个匹配成功，则说明包含路径，即`dfs(head,root)||isSubPath(head,root.left)||isSubPath(head,root.right)`
 
-### Java代码
+## Java代码
 
 ```java
 /**

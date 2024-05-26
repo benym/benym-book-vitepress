@@ -17,6 +17,8 @@ author:
   link: https://github.com/benym
 ---
 
+# 异常工具类-Assert
+
 ## Assert
 Assert断言工具类是直接从`org.springframework.util.Assert`中拷贝出来的，`api`的用法和定义和`Spring Assert`一模一样，在`Spring Assert`的使用经验可无缝迁移到该`Assert`中
 

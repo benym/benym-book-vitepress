@@ -22,6 +22,8 @@ date: 2023-05-15 22:27:26
 permalink: /pages/ac5f01/
 ---
 
+# COLA-statemachine事务失效踩坑
+
 ## 背景
 
 `cola-statemachine`是阿里开源项目[`COLA`](https://github.com/alibaba/COLA)中的轻量级状态机组件。最大的特点是无状态、采用纯`Java`实现，用`Fluent Interface`(连贯接口)定义状态和事件，可用于管理状态转换场景。比如：订单状态、支付状态等简单有限状态场景。在实际使用的过程中我曾发现状态机内事务不生效的问题，经过排查得到解决，以此记录一下。

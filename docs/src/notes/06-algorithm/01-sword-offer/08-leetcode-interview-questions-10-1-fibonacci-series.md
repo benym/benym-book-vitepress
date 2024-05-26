@@ -19,7 +19,9 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-面试题10-1-斐波那契数列
+# LeetCode-面试题10-1-斐波那契数列
+
+## 题目
 
 写一个函数，输入 `n` ，求斐波那契（Fibonacci）数列的第 `n` 项。斐波那契数列的定义如下：
 
@@ -34,7 +36,7 @@ F(N) = F(N - 1) + F(N - 2), 其中 N > 1.
 
 `一定记得取余!`
 
- <!--more-->
+ 
 
 **示例1**
 
@@ -54,7 +56,7 @@ F(N) = F(N - 1) + F(N - 2), 其中 N > 1.
 
 - `0 <= n <= 100`
 
-### 解题思路
+## 解题思路
 
 斐波那契数列是一个非常熟悉的问题了，基本思路有2种方法
 
@@ -62,7 +64,7 @@ F(N) = F(N - 1) + F(N - 2), 其中 N > 1.
 
 方法2、递归：递归的解法看上去很简洁，但是实际运行的时候效率特别慢，还会遇到重复计算和超出系统栈的问题，不推荐使用。基本思想是按照公式`f(n)=f(n-1)+f(n-2)`递归
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {
@@ -85,7 +87,7 @@ class Solution {
 }
 ```
 
-### Python代码1
+## Python代码1
 
 递归超时
 
@@ -101,7 +103,7 @@ class Solution(object):
         return (self.fib(n - 1) + self.fib(n - 2)) % 1000000007
 ```
 
-### Python代码2
+## Python代码2
 
 ```python
 class Solution(object):

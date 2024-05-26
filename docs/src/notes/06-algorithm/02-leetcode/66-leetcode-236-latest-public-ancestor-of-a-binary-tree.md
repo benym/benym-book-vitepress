@@ -16,7 +16,9 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-236-二叉树的最近公共祖先
+# LeetCode-236-二叉树的最近公共祖先
+
+## 题目
 
 给定一个二叉树, 找到该树中两个指定节点的最近公共祖先。
 
@@ -24,7 +26,7 @@ author:
 
 例如，给定如下二叉树:  root = [3,5,1,6,2,0,8,null,null,7,4]
 
-<!--more-->
+
 
 **示例1：**
 
@@ -47,7 +49,7 @@ author:
 - 所有节点的值都是唯一的。
 - p、q 为不同节点且均存在于给定的二叉树中。
 
-### 解题思路
+## 解题思路
 
 **方法1、递归：**
 
@@ -82,7 +84,7 @@ author:
 
 观察发现，情况`1`可合并至`3`和`4`内
 
-### Java代码1
+## Java代码1
 
 ```java
 /**
@@ -106,7 +108,7 @@ class Solution {
 }
 ```
 
-### Java代码2
+## Java代码2
 
 ```java
 class Solution {
@@ -122,7 +124,7 @@ class Solution {
 }
 ```
 
-### Java代码3
+## Java代码3
 
 逻辑更清晰版本，出处https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/comments/
 

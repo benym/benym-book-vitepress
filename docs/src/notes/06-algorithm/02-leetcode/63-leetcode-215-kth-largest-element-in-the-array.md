@@ -18,11 +18,13 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-215-数组中的第K个最大元素
+# LeetCode-215-数组中的第K个最大元素
+
+## 题目
 
 在未排序的数组中找到第 **k** 个最大的元素。请注意，你需要找的是数组排序后的第 k 个最大的元素，而不是第 k 个不同的元素。
 
- <!--more-->
+ 
 
 **示例 1:**
 
@@ -42,7 +44,7 @@ author:
 
 你可以假设 k 总是有效的，且 1 ≤ k ≤ 数组的长度。
 
-### 解题思路
+## 解题思路
 
 **方法1、优先队列：**
 
@@ -87,7 +89,7 @@ author:
 - 比较 pos 和 N - k 以决定在哪边继续递归处理。
 
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {
@@ -114,7 +116,7 @@ class Solution {
 }
 ```
 
-### Python代码
+## Python代码
 
 ```python
 class Solution:
@@ -123,7 +125,7 @@ class Solution:
         return nums[k-1]
 ```
 
-### Java代码2
+## Java代码2
 
 ```java
 class Solution {

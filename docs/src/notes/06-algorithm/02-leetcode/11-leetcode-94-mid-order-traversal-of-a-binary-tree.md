@@ -17,7 +17,7 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-94-二叉树的中序遍历
+# LeetCode-94-二叉树的中序遍历
 
 给定一个二叉树，返回它的*中序* 遍历。
 
@@ -27,7 +27,7 @@ author:
 2. [LeetCode-94-二叉树的中序遍历](https://cloud.benym.cn/benym-book/pages/4517f3/#leetcode-94-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86)
 3. [LeetCode-145-二叉树的后序遍历](https://cloud.benym.cn/benym-book/pages/bc617d/#leetcode-145-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86)
 
-<!--more-->
+
 
 **示例 1:**
 
@@ -42,7 +42,7 @@ author:
 输出: [1,3,2]
 ```
 
-### 解题思路
+## 解题思路
 
 二叉树的遍历问题都有2种解法，一种是递归，一种是迭代
 
@@ -50,7 +50,7 @@ author:
 
 迭代：中序遍历一般等同于DFS，用Stack来实现，后进先出。迭代是先把左子树全部添加进Stack中，然后弹出一个尾部，获得对应的val之后遍历右子树，在添加左子树的时候同时也添加了根节点，所以pop弹出时再添加val实际上会对左子树和左子树的根节点进行操作
 
-### Java代码(递归)
+## Java代码(递归)
 
 ```java
 /**
@@ -77,7 +77,7 @@ class Solution {
 }
 ```
 
-### Java代码(迭代)
+## Java代码(迭代)
 
 ```java
 /**

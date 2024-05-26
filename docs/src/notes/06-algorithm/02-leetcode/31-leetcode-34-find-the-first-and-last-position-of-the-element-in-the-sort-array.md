@@ -16,7 +16,9 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-34-在排序数组中查找元素的第一个和最后一个位置
+# LeetCode-34-在排序数组中查找元素的第一个和最后一个位置
+
+## 题目
 
 给定一个按照升序排列的整数数组 nums，和一个目标值 target。找出给定目标值在数组中的开始位置和结束位置。
 
@@ -24,7 +26,7 @@ author:
 
 如果数组中不存在目标值，返回 [-1, -1]。
 
-<!--more-->
+
 
 **示例1：**
 
@@ -40,7 +42,7 @@ author:
 输出: [-1,-1]
 ```
 
-### 解题思路
+## 解题思路
 
 **方法1、双指针暴力法(low)：**
 
@@ -79,7 +81,7 @@ author:
 
 第一次二分找左边界，第二次二分找右边界，找左边界时向右逼近，找右边界时向左逼近
 
-### Java代码1
+## Java代码1
 
 ```java
 class Solution {
@@ -107,7 +109,7 @@ class Solution {
 }
 ```
 
-### Java代码2
+## Java代码2
 
 ```java
 class Solution {
@@ -134,7 +136,7 @@ class Solution {
 }
 ```
 
-### Java代码3
+## Java代码3
 
 ```java
 class Solution {
@@ -159,7 +161,7 @@ class Solution {
 }
 ```
 
-### Java代码4
+## Java代码4
 
 ```java
 class Solution {

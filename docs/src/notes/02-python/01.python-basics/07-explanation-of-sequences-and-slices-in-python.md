@@ -12,7 +12,7 @@ author:
   link: https://github.com/benym
 ---
 
-### python中的序列以及切片的解释
+# python中的序列以及切片的解释
 
 ## 切片：
 

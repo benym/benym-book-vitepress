@@ -11,6 +11,9 @@ author:
   name: benym
   link: https://github.com/benym
 ---
+
+# Mybatis-plus基本配置类
+
 ## MybatisPlusConfig
 ```java
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;

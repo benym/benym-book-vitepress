@@ -11,6 +11,10 @@ author:
   link: https://github.com/benym
 ---
 
+# 正则表达式中的compile函数
+
+## 概览
+
 ***compile 函数用于编译正则表达式，生成一个正则表达式（ Pattern ）对象，供 match() 和 search() 这两个函数使用。***
 
 ***语法格式为：***
@@ -27,8 +31,6 @@ author:
   - re.S 即为' . '并且包括换行符在内的任意字符（' . '不包括换行符）
   - re.U 表示特殊字符集 \w, \W, \b, \B, \d, \D, \s, \S 依赖于 Unicode 字符属性数据库
   - re.X 为了增加可读性，忽略空格和' # '后面的注释
-
-<!--more-->
 
 ## 代码
 

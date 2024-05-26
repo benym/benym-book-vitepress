@@ -11,7 +11,9 @@ author:
   link: https://github.com/benym
 ---
 
-### 利用Python进行文件的自动备份（第一版）
+# 利用Python进行文件的自动备份（第一版）
+
+# 概览
 
 os.system 函数的命令，这一函数可以使命令像是从系统中运行的。也就是说，从 shell 中运行的——如果运行成功，它将返回 0 ，如果运行失败，将返回一个错误代码。
 
@@ -68,8 +70,6 @@ if os.system(zip_command) == 0:
 else:
     print('Backup FAILED')
 ```
-
-<!--more-->
 
 ## 输出结果
 

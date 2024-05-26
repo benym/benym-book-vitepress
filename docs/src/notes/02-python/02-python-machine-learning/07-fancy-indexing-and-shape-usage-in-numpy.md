@@ -13,6 +13,8 @@ author:
   link: https://github.com/benym
 ---
 
+# Numpy中花式索引和shape用法
+
 总结一下最近学习中容易出现问题的地方️ 
 
 ## 代码
@@ -54,7 +56,6 @@ print("维数:\n",randMat.shape)
  (4, 3)
 ```
 
-<!--more-->
 ::: tip
 2018年8月22日 21:40:54更新，新增：使用shape和reshape调整数组大小
 :::

@@ -17,7 +17,9 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-142-环形链表2
+# LeetCode-142-环形链表2
+
+## 题目
 
 给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。
 
@@ -25,7 +27,7 @@ author:
 
 说明：不允许修改给定的链表。
 
- <!--more-->
+ 
 
 **示例1：**
 
@@ -54,7 +56,7 @@ author:
 **进阶：**
 你是否可以不用额外空间解决此题？
 
-### 解题思路
+## 解题思路
 
 **相关链接：**
 
@@ -75,7 +77,7 @@ author:
 
 我们使用两个指针，fast 与 slow。它们起始都位于链表的头部。随后，slow 指针每次向后移动一个位置，而 fast 指针向后移动两个位置。如果链表中存在环，则 fast 指针最终将再次与 slow 指针在环中相遇。当发现 slow 与 fast 相遇时，我们再使slow变成head，指向链表头部；随后，它和 slow 每次向后移动一个位置。最终，它们会在入环点相遇。
 
-### Java代码
+## Java代码
 
 ```java
 /**
@@ -128,7 +130,7 @@ public class Solution {
 }
 ```
 
-### Java代码2
+## Java代码2
 
 ```java
 public class Solution {

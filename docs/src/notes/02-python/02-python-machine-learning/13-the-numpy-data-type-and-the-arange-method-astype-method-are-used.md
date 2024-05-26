@@ -13,6 +13,10 @@ author:
   link: https://github.com/benym
 ---
 
+# Numpy数据类型和arange方法、astype方法的使用
+
+## Numpy数据类型
+
 Numpy支持比Python更多的数字类型
 ::: center
 | 数据类型   | 描述                                                       |
@@ -43,7 +47,7 @@ Numpy支持比Python更多的数字类型
 ::: tip
 arange函数用于创建等差数组，使用频率非常高，arange非常类似range函数 ,两者的区别仅仅是arange返回的是一个数据，而range返回的是list 。要转换数组的类型，请使用.astype()方法（首选）或类型本身作为函数
 :::
-<!--more-->
+
 
 ## 代码
 

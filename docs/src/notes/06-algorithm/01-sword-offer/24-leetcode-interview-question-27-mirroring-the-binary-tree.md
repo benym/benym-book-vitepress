@@ -19,7 +19,9 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-面试题27-二叉树的镜像
+# LeetCode-面试题27-二叉树的镜像
+
+## 题目
 
 请完成一个函数，输入一个二叉树，该函数输出它的镜像。
 
@@ -39,7 +41,7 @@ author:
  / \   / \
 9   6 3   1
 ```
- <!--more-->
+ 
 
 **示例1：**
 
@@ -52,7 +54,7 @@ author:
 
 `0 <= 节点个数 <= 1000`
 
-### 解题思路
+## 解题思路
 
 方法1、递归：
 
@@ -70,7 +72,7 @@ author:
 
 最后返回根节点root
 
-### Java代码
+## Java代码
 
 ```java
 /**
@@ -100,7 +102,7 @@ class Solution {
 }
 ```
 
-### Python代码
+## Python代码
 
 ```python
 # Definition for a binary tree node.

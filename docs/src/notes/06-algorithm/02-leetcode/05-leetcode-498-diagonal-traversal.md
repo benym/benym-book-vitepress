@@ -15,13 +15,13 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-498-对角线遍历
+# LeetCode-498-对角线遍历
+
+## 题目
 
 给定一个含有 M x N 个元素的矩阵（M 行，N 列），请以对角线遍历的顺序返回这个矩阵中的所有元素，对角线遍历如下图所示。
 
 ![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/image_loop.png)
-
- <!--more-->
 
 **示例:**
 
@@ -40,7 +40,7 @@ author:
 
 1. 给定矩阵中的元素总数不会超过 100000 。
 
-### 解题思路
+## 解题思路
 
 方法1、模拟路径，观察图可以知道对角线位置的横纵坐标之和等于第一行的该对角线元素索引号，以第一行为例，奇数往右上走，偶数往左下走，对于越界的不添加，将他按左下或右上移动，直到到矩阵位置里面进行添加。这种方法的缺点是遍历了很多没有用的位置，浪费了时间，运行时间`93ms`
 
@@ -48,7 +48,7 @@ author:
 
 还有一些其他更简单的方法，时间和空间上消耗都比较少，可以右转leetcode看看~
 
-### Java代码1
+## Java代码1
 
 ```java
 public static int[] findDiagonalOrder(int[][] matrix) {
@@ -83,7 +83,7 @@ public static int[] findDiagonalOrder(int[][] matrix) {
     }
 ```
 
-### Java代码2
+## Java代码2
 
 ```java
 public static int[] findDiagonalOrder(int[][] matrix) {
@@ -134,7 +134,7 @@ public static int[] findDiagonalOrder(int[][] matrix) {
 }
 ```
 
-### Python代码
+## Python代码
 
 ```python
 class Solution:

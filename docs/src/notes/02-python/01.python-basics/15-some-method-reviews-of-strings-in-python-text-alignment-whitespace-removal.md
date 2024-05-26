@@ -12,7 +12,7 @@ author:
   link: https://github.com/benym
 ---
 
-### python中字符串的一些方法回顾(文本对齐、去除空白)
+# Python中字符串的一些方法回顾(文本对齐、去除空白)
 
 文本对齐的方法，以及用strip函数去除字符串的中空白字符
 

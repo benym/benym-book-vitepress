@@ -16,6 +16,8 @@ author:
 permalink: /pages/cedee6/
 ---
 
+# Bean工具类-RpamisBeanUtils
+
 ## 背景
 
 当项目中有需要使用拷贝类时，开发者可能会需要将目前的拷贝工具进行二次封装用于适配项目，减少动态创建拷贝工具的性能损耗，这里给出一个简单的封装Bean工具类。

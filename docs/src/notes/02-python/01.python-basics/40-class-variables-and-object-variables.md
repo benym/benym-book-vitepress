@@ -11,7 +11,7 @@ author:
   link: https://github.com/benym
 ---
 
-### 类变量与对象变量
+# 类变量与对象变量
 
 ## 代码
 
@@ -80,8 +80,6 @@ Robot.how_many()
 ```
 
 ## 运行结果
-
-<!--more-->
 
 ```bash
 (Initializing R2-D2)

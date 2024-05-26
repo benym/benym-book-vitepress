@@ -14,13 +14,13 @@ author:
   link: https://github.com/benym
 ---
 
-### LogisticRegression定义
+# LogisticRegression(逻辑回归)
+
+## 定义
 
 logistic回归，是一种广义的线性回归分析模型，常用于数据挖掘，疾病自动诊断，经济预测等领域。例如，探讨引发疾病的危险因素，并根据危险因素预测疾病发生的概率等。以胃癌病情分析为例，选择两组人群，一组是胃癌组，一组是非胃癌组，两组人群必定具有不同的体征与生活方式等。一般来说逻辑回归用来做分类任务，**本文列举的是以线性的2分类为例， 除此之外还可以拓展到多更多参数实现非线性分类，以及多分类问题等。在文章中主要写了其推导过程以及部分代码实现**
 
-<!--more-->
-
-### 构造函数h(x)
+## 构造函数h(x)
 ::: center
 ![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/%E5%85%AC%E5%BC%8F/1.png)
 :::
@@ -112,7 +112,7 @@ logistic回归，是一种广义的线性回归分析模型，常用于数据挖
 ::: center
 ![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/%E5%85%AC%E5%BC%8F/13.png)
 :::
-### 代码实现
+## 代码实现
 
 ```python
 # @Time    : 2018/10/19 16:37

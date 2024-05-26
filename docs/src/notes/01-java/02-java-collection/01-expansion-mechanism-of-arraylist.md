@@ -17,8 +17,6 @@ author:
 
 ArrayList是List接口的实现类，能够根据需要动态增长数组，本文通过分析源码，总结ArrayList的扩容机制
 
- <!--more-->
-
 ### ArrayList构造函数
 
 在ArrayList中有3种方法进行初始化，构造方法源码如下

@@ -18,11 +18,13 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-300-最长上升子序列
+# LeetCode-300-最长上升子序列
+
+## 题目
 
 给定一个无序的整数数组，找到其中最长上升子序列的长度。
 
- <!--more-->
+ 
 
 **示例 1:**
 
@@ -38,7 +40,7 @@ author:
 你算法的时间复杂度应该为 O(n2) 。
 进阶: 你能将算法的时间复杂度降低到 O(n log n) 吗?
 
-### 解题思路
+## 解题思路
 
 **动态规划：**
 
@@ -58,7 +60,7 @@ author:
 
 实在是想不到这种解法....[原题题解出处](https://leetcode-cn.com/problems/longest-increasing-subsequence/solution/zui-chang-shang-sheng-zi-xu-lie-dong-tai-gui-hua-2/)
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {
@@ -82,7 +84,7 @@ class Solution {
 }
 ```
 
-### Java代码2
+## Java代码2
 
 ```java
 class Solution {

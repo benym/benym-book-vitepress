@@ -11,7 +11,7 @@ author:
   link: https://github.com/benym
 ---
 
-### 日志模块的应用
+# Python日志模块
 
 ## 代码
 

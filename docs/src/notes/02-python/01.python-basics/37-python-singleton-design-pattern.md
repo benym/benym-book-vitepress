@@ -9,9 +9,7 @@ author:
   link: https://github.com/benym
 ---
 
-单例设计模式，以下是代码部分
-
-<!--more-->
+# 单例设计模式
 
 ## 代码
 

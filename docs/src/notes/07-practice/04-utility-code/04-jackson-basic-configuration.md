@@ -10,6 +10,9 @@ author:
   name: benym
   link: https://github.com/benym
 ---
+
+# Jackson基本配置类
+
 ## 起步依赖
 ```bash
 <dependency>

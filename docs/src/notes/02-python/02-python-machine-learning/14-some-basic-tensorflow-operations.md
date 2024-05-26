@@ -13,13 +13,13 @@ author:
   link: https://github.com/benym
 ---
 
+# 一些TensorFlow的基本操作
+
 简单用代码说明Tensor,变量,Fetch,Feed的使用
 
-# Tensor
+## Tensor
 
-TensorFlow 程序使用 tensor 数据结构来代表所有的数据, 计算图中, 操作间传递的数据都是 tensor. 你可以把 TensorFlow tensor 看作是一个 n 维的数组或列表. 一个 tensor 包含一个静态类型 rank, 和 一个 shape. 
-
-<!--more-->
+TensorFlow 程序使用 tensor 数据结构来代表所有的数据, 计算图中, 操作间传递的数据都是 tensor. 你可以把 TensorFlow tensor 看作是一个 n 维的数组或列表. 一个 tensor 包含一个静态类型 rank, 和 一个 shape.
 
 ## 代码
 

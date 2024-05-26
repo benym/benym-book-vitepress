@@ -20,11 +20,11 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-面试题55-2-平衡二叉树 
+# LeetCode-面试题55-2-平衡二叉树 
+
+## 题目
 
 输入一棵二叉树的根节点，判断该树是不是平衡二叉树。如果某二叉树中**任意节点**的左右子树的深度相差不超过1，那么它就是一棵平衡二叉树。
-
- <!--more-->
 
 **示例1：**
 
@@ -59,7 +59,7 @@ author:
 - **限制：**
   1. `1 <= 树的结点个数 <= 10000`
 
-### 解题思路
+## 解题思路
 
 方法1、DFS分别求深度：
 
@@ -75,7 +75,7 @@ author:
 
 当左右子树的深度不平衡时，即left==-1||right==-1时，提前终止递归进行剪枝，返回-1
 
-### Java代码
+## Java代码
 
 ```java
 /**
@@ -106,7 +106,7 @@ class Solution {
 }
 ```
 
-### Python代码
+## Python代码
 
 ```python
 # Definition for a binary tree node.

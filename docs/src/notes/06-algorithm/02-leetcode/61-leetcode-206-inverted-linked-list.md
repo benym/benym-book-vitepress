@@ -16,11 +16,13 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-206-反转链表
+# LeetCode-206-反转链表
+
+## 题目
 
 反转一个单链表。
 
-<!--more-->
+
 
 **示例1：**
 
@@ -32,7 +34,7 @@ author:
 **进阶:**
 你可以迭代或递归地反转链表。你能否用两种方法解决这道题？
 
-### 解题思路
+## 解题思路
 
 **方法1、迭代：**
 
@@ -46,7 +48,7 @@ author:
 
 递归方法不容易理解，详见https://leetcode-cn.com/problems/reverse-linked-list/solution/dong-hua-yan-shi-206-fan-zhuan-lian-biao-by-user74/中的幻灯片演示
 
-### Java代码1
+## Java代码1
 
 ```java
 /**
@@ -73,7 +75,7 @@ class Solution {
 }
 ```
 
-### Java代码2
+## Java代码2
 
 ```java
 class Solution {

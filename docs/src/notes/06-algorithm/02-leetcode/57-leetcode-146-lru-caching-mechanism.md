@@ -16,7 +16,9 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-146-LRU缓存机制
+# LeetCode-146-LRU缓存机制
+
+## 题目
 
 运用你所掌握的数据结构，设计和实现一个  LRU (最近最少使用) 缓存机制。它应该支持以下操作： 获取数据 get 和 写入数据 put 。
 
@@ -27,7 +29,7 @@ author:
 
 你是否可以在 **O(1)** 时间复杂度内完成这两种操作？
 
-<!--more-->
+
 
 **示例1：**
 
@@ -45,7 +47,7 @@ cache.get(3);       // 返回  3
 cache.get(4);       // 返回  4
 ```
 
-### 解题思路
+## 解题思路
 
 **方法1、队列+哈希表：**
 
@@ -110,7 +112,7 @@ LRU 缓存机制可以通过哈希表辅以双向链表实现，我们用一个�
 
 在双向链表的实现中，使用一个**伪头部**（dummy head）和**伪尾部**（dummy tail）标记界限，这样在添加节点和删除节点的时候就不需要检查相邻的节点是否存在。
 
-### Java代码1
+## Java代码1
 
 ```java
 class LRUCache {
@@ -159,7 +161,7 @@ class LRUCache {
  */
 ```
 
-### Java代码2
+## Java代码2
 
 ```java
 class LRUCache {
@@ -194,7 +196,7 @@ class LRUCache {
 }
 ```
 
-### Java代码3
+## Java代码3
 
 完全手动实现LinkedHashMap
 

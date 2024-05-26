@@ -24,6 +24,9 @@ author:
 date: 2023-12-13 16:00:41
 permalink: /pages/1ffe0d/
 ---
+
+# Rpamis-security-原理解析
+
 ## 核心组件
 
 [rpamis-security](https://github.com/rpamis/rpamis-security)<Badge text="1.0.1"/>主要通过`Mybatis-Plugin`及`AOP`切面实现安全功能，其主要组件如下图所示
@@ -325,7 +328,7 @@ return invocation.proceed();
 
 虽然动态`SQL`并未进行深拷贝，但其执行阶段在普通`SQL`加密插件之前，后续经过普通`SQL`加密插件后，仍然能够进行深拷贝，以确保加密对象不对原始对象引用进行修改，这也是组件将动态`SQL`和普通`SQL`分离为`2`个插件的原因
 
-### 解密插件-MybatisDecryptInterceptor
+## 解密插件-MybatisDecryptInterceptor
 
 解密需要拦截`ResultSetHandler`阶段，此时是将`SQL`执行的真实结果转化为`Java`对象的时机
 

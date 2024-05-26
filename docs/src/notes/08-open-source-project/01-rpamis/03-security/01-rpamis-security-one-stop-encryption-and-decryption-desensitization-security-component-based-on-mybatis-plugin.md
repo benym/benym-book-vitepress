@@ -24,6 +24,8 @@ date: 2023-11-23 14:46:44
 permalink: /pages/792496/
 ---
 
+# Rpamis-security-基于Mybatis-Plugin的一站式加解密脱敏安全组件
+
 ## 介绍
 
 [rpamis-security](https://github.com/rpamis/rpamis-security)<Badge text="1.0.1"/>是一个基于Mybatis插件开发的安全组件，旨在提供更优于市面上组件的脱敏、加解密落库等企业数据安全解决方案。组件提供注解式编程方式，开发者只需要对需要处理的字段或方法加上对应注解，无需关心安全相关需求，由组件全自动完成脱敏、加解密等功能

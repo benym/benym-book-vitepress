@@ -14,6 +14,9 @@ author:
 date: 2023-05-14 14:05:43
 permalink: /pages/492330/
 ---
+
+# Yapi私有化部署方案
+
 ## 背景
 
 作为前文[接口管理平台Yapi-最佳实践](https://cloud.benym.cn/pages/747050/)的补充，本文将给出`Yapi`私有化部署方案的教程

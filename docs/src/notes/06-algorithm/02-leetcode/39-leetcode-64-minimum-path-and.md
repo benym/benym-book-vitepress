@@ -19,13 +19,15 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-64-最小路径和
+# LeetCode-64-最小路径和
+
+## 题目
 
 给定一个包含非负整数的 *m* x *n* 网格，请找出一条从左上角到右下角的路径，使得路径上的数字总和为最小。
 
 **说明：**每次只能向下或者向右移动一步。
 
-<!--more-->
+
 
 **示例：**
 
@@ -40,7 +42,7 @@ author:
 解释: 因为路径 1→3→1→1→1 的总和最小。
 ```
 
-### 解题思路
+## 解题思路
 
 **方法1、动态规划：**
 
@@ -64,7 +66,7 @@ author:
 
 横向按顺序遍历的方法类似，这里不再重复介绍，详见Python代码
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {
@@ -90,7 +92,7 @@ class Solution {
 }
 ```
 
-### Python代码
+## Python代码
 
 ```python
 class Solution:

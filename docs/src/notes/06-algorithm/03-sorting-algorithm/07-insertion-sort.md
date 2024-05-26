@@ -15,11 +15,11 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-插入排序
+# 插入排序
 
 插入排序算法回顾
 
- <!--more-->
+## 题目
 
 **示例1**
 
@@ -28,7 +28,7 @@ author:
 输出: [0,0,1,2,4,5]
 ```
 
-### 解题思路
+## 解题思路
 
 插入排序算法回顾
 
@@ -36,7 +36,7 @@ author:
 
 插入排序是稳定的排序算法，时间复杂度O(n^(1-2))
 
-### Java代码
+## Java代码
 
 ```java
 public class InsertSort {

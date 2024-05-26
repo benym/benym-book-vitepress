@@ -19,11 +19,11 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-面试题57-和为s的两个数字
+# LeetCode-面试题57-和为s的两个数字
+
+## 题目
 
 输入一个递增排序的数组和一个数字s，在数组中查找两个数，使得它们的和正好是s。如果有多对数字的和等于s，则输出任意一对即可。
-
- <!--more-->
 
 **示例1：**
 
@@ -44,7 +44,7 @@ author:
 - `1 <= nums.length <= 10^5`
 - `1 <= nums[i] <= 10^6`
 
-### 解题思路
+## 解题思路
 
 查找思想：
 
@@ -54,7 +54,7 @@ author:
 
 如果对应位置之和小于target，说明需要取大一点，右移头指针，让数值变大
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {
@@ -76,7 +76,7 @@ class Solution {
 }
 ```
 
-### Python代码
+## Python代码
 
 ```python
 class Solution:

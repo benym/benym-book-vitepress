@@ -23,7 +23,7 @@ author:
 
 在Spring Data Redis中，有一个高度封装的`RedisTemplate`类，实现了对Redis客户端的操作，其中提供了针对数据的`StringRedisSerializer`序列化方式，但这只能序列化String类型的Key和Value。在日常的数据处理中，通常会面对存储一个对象数据的任务，所以需要定义一个自己的序列化和反序列化方法。
 
- <!--more-->
+ 
 
 ### Redis基本数据结构
 

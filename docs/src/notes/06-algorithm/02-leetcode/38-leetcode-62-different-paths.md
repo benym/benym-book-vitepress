@@ -17,7 +17,9 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-62-不同路径
+# LeetCode-62-不同路径
+
+## 题目
 
 一个机器人位于一个 m x n 网格的左上角 （起始点在下图中标记为“Start” ）。
 
@@ -25,7 +27,7 @@ author:
 
 问总共有多少条不同的路径？
 
-<!--more-->
+
 
 **示例1：**
 
@@ -51,7 +53,7 @@ author:
 - `1 <= m, n <= 100`
 - 题目数据保证答案小于等于 `2 * 10 ^ 9`
 
-### 解题思路
+## 解题思路
 
 **方法1、动态规划：**
 
@@ -70,7 +72,7 @@ author:
 
 由于每格的值仅与左侧和上方的值有关，所以只需要维护一行的值即可，空间复杂度可以降到O(N)
 
-### Java代码1
+## Java代码1
 
 ```java
 class Solution {
@@ -90,7 +92,7 @@ class Solution {
 }
 ```
 
-### Java代码2
+## Java代码2
 
 ```java
 class Solution {

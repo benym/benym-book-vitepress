@@ -12,13 +12,14 @@ author:
   link: https://github.com/benym
 ---
 
+# 将hexo自定义域名升级https
+
 ## 前言
 
 最近在折腾博客，发现github上很多人说个人博客支持https很重要，原本的github.io域名本来支持https协议，但是在自定义域名之后，协议变成了http。这使得网站变得不够安全，容易被劫持。
 
 但是网上的支持https很多都是反向代理，以及SSL证书等，涉及到备案还有一些配置操作，算是比较麻烦，期间如果不对还会出现各种bug。所以针对简单想支持全站https的站长而言，我们可以选择如下操作：
 
-<!--more-->
 ::: tip
 对于github解析的用户
 :::

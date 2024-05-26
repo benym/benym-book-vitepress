@@ -12,7 +12,7 @@ author:
   link: https://github.com/benym
 ---
 
-### python中对列表和元组的切片操作
+# Python中对列表和元组的切片操作
 
 ## 代码
 

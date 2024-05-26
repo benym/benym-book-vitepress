@@ -11,7 +11,7 @@ author:
   link: https://github.com/benym
 ---
 
-### python的pickle模块
+# Python的pickle模块
 
 Python 提供了一个叫作 Pickle 的标准模块，通过它你可以将任何纯 Python 对象存储到一个文件中，并在稍后将其取回。这叫作持久地（Persistently）存储对象。
 

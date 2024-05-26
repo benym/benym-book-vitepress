@@ -19,11 +19,13 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-面试题29-顺时针打印矩阵
+# LeetCode-面试题29-顺时针打印矩阵
+
+## 题目
 
 输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字。本题和螺旋矩阵相同
 
- <!--more-->
+ 
 
 **示例1：**
 
@@ -44,7 +46,7 @@ author:
 - 0 <= matrix.length <= 100
 - 0 <= matrix[i].length <= 100
 
-### 解题思路
+## 解题思路
 
 **方法1、**圈层
 
@@ -63,7 +65,7 @@ author:
 
 dx，dy分别是向右下左上移动时，行和列的变化情况，联合起来看
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {
@@ -114,7 +116,7 @@ class Solution {
 }
 ```
 
-### Python代码
+## Python代码
 
 ```python
 class Solution:

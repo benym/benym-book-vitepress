@@ -19,11 +19,11 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-面试题58-2-左旋转字符串
+# LeetCode-面试题58-2-左旋转字符串
+
+## 题目
 
 字符串的左旋转操作是把字符串前面的若干个字符转移到字符串的尾部。请定义一个函数实现字符串左旋转操作的功能。比如，输入字符串"abcdefg"和数字2，该函数将返回左旋转两位得到的结果"cdefgab"。
-
- <!--more-->
 
 **示例1：**
 
@@ -43,7 +43,7 @@ author:
 
 - `1 <= k < s.length <= 10000`
 
-### 解题思路
+## 解题思路
 
 线性遍历：
 
@@ -53,7 +53,7 @@ n已经给出来了，第一部分字符串就是从n到字符末尾，第二部
 
 s[n:]+s[:n]搞定
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {
@@ -73,7 +73,7 @@ class Solution {
 }
 ```
 
-### Python代码
+## Python代码
 
 ```python
 class Solution:

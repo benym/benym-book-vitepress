@@ -21,11 +21,11 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-面试题34-二叉树中和为某一值的路径 
+# LeetCode-面试题34-二叉树中和为某一值的路径 
+
+## 题目
 
 输入一棵二叉树和一个整数，打印出二叉树中节点值的和为输入整数的所有路径。从树的根节点开始往下一直到叶节点所经过的节点形成一条路径。
-
- <!--more-->
 
 **示例：**
 
@@ -54,7 +54,7 @@ author:
 
 1. `节点总数 <= 10000`
 
-### 解题思路
+## 解题思路
 
 初始化2个全局数组，之后进行DFS递归遍历
 
@@ -76,7 +76,7 @@ author:
 
   路径回溯：向上回溯前，需要将当前节点从路径path中删除，即删去path路径的最后一个节点值
 
-### Java代码
+## Java代码
 
 ```java
 /**
@@ -108,7 +108,7 @@ class Solution {
 }
 ```
 
-### Python代码
+## Python代码
 
 ```python
 # Definition for a binary tree node.

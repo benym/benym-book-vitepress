@@ -17,7 +17,9 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-1143-最长公共子序列
+# LeetCode-1143-最长公共子序列
+
+## 题目
 
 给定两个字符串 text1 和 text2，返回这两个字符串的最长公共子序列的长度。
 
@@ -26,7 +28,7 @@ author:
 
 若这两个字符串没有公共子序列，则返回 0。
 
-<!--more-->
+
 
 **示例1：**
 
@@ -58,7 +60,7 @@ author:
 - `1 <= text2.length <= 1000`
 - 输入的字符串只含有小写英文字符。
 
-### 解题思路
+## 解题思路
 
 **方法1、动态规划：**
 详见大佬解析https://leetcode-cn.com/problems/longest-common-subsequence/solution/dong-tai-gui-hua-zhi-zui-chang-gong-gong-zi-xu-lie/
@@ -71,7 +73,7 @@ author:
 
 状态转移方程：根据DP表得到，是前一列的LCS长度和上一行的LCS长度的最大值
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {

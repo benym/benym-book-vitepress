@@ -18,11 +18,11 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-3-无重复字符的最长字串
+# LeetCode-3-无重复字符的最长字串
+
+## 题目
 
 给定一个字符串，请你找出其中不含有重复字符的 **最长子串** 的长度。
-
- <!--more-->
 
 **示例 1:**
 
@@ -49,7 +49,7 @@ author:
      请注意，你的答案必须是 子串 的长度，"pwke" 是一个子序列，不是子串。
 ```
 
-### 解题思路
+## 解题思路
 
 **方法1、哈希表：**
 
@@ -73,7 +73,7 @@ author:
 
 当窗口变化的时候记录当前窗口的最大值
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {
@@ -94,7 +94,7 @@ class Solution {
 }
 ```
 
-### Python代码
+## Python代码
 
 ```python
 class Solution:
@@ -115,7 +115,7 @@ class Solution:
         return Max
 ```
 
-### Java代码2
+## Java代码2
 
 ```java
 class Solution {

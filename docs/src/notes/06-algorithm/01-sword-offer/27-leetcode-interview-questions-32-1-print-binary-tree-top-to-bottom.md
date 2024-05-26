@@ -20,7 +20,9 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-面试题32-1-从上到下打印二叉树
+# LeetCode-面试题32-1-从上到下打印二叉树
+
+## 题目
 
 从上到下打印出二叉树的每个节点，同一层的节点按照从左到右的顺序打印。
 
@@ -38,13 +40,13 @@ author:
 [3,9,20,15,7]
 ```
 
- <!--more-->
+ 
 
 **提示：**
 
 1. `节点总数 <= 1000`
 
-### 解题思路
+## 解题思路
 
 BFS就完事儿了.....
 
@@ -58,7 +60,7 @@ BFS就完事儿了.....
 
   找出头结点左右子节点，依次放入queue中
 
-### Java代码
+## Java代码
 
 ```java
 /**
@@ -89,7 +91,7 @@ class Solution {
 }
 ```
 
-### Python代码
+## Python代码
 
 ```python
 # Definition for a binary tree node.

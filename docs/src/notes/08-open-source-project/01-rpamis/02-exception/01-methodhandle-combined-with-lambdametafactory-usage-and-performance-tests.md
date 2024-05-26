@@ -17,6 +17,8 @@ author:
 permalink: /pages/b127c7/
 ---
 
+# MethodHandle结合LambdaMetafactory-使用方法及性能测试
+
 ## 背景
 在进行实例的动态推断和构建时，我们会经常使用到反射这一技巧，然而在某些场景中反射的效率显得有些力不从心。从JDK7开始，MethodHandle被推出，用于解决反射的效率问题。在JDK8，MethodHandle又与Lambda进行深度结合，成为Lambda的最底层调用方式。在JDK9，MethodHandle又被进一步增强。
 在开源项目中，Mybatis Mapper的动态代理、fastjson2实现则运用了MethodHandle。

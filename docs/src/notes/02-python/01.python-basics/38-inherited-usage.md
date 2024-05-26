@@ -11,7 +11,7 @@ author:
   link: https://github.com/benym
 ---
 
-### 继承的运用
+# 继承的运用
 
 ## 代码
 
@@ -68,8 +68,6 @@ for member in members:  # 对全体师生工作
 ```
 
 ## 运行结果
-
-<!--more-->
 
 ```bash
 (Initialized SchoolMember: Mrs. Shrividya)

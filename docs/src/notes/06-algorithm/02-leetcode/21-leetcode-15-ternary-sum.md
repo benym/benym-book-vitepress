@@ -17,13 +17,15 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-15-三数之和
+# LeetCode-15-三数之和
+
+## 题目
 
 给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？请你找出所有满足条件且不重复的三元组。
 
 注意：答案中不可以包含重复的三元组。
 
- <!--more-->
+ 
 
 **示例 1:**
 
@@ -37,7 +39,7 @@ author:
 ]
 ```
 
-### 解题思路
+## 解题思路
 
 **方法1、双指针：**
 
@@ -61,7 +63,7 @@ author:
 
 当`sum<0`的时候说明区间数太小了，左移指针可以增大`sum`的值
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {

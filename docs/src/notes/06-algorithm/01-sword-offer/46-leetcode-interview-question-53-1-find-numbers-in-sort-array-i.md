@@ -18,11 +18,11 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-面试题53-1-在排序数组中查找数字I 
+# LeetCode-面试题53-1-在排序数组中查找数字I 
+
+## 题目
 
 统计一个数字在排序数组中出现的次数。
-
- <!--more-->
 
 **示例1：**
 
@@ -42,15 +42,15 @@ author:
 
   `0 <= 数组长度 <= 50000`
 
-### 解题思路1
+## 解题思路1
 
 在有序的数组中二分查找，确定第一个k出现的位置和最后一个k出现的位置，然后两个位置相减即是出现次数
 
-### 解题思路2
+## 解题思路2
 
 hash表，遍历的过程中把次数加上去即可，速度慢于2分查找
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {
@@ -103,7 +103,7 @@ class Solution {
 }
 ```
 
-### Java代码2
+## Java代码2
 
 ```java
 class Solution {
@@ -140,7 +140,7 @@ class Solution {
 }
 ```
 
-### Java代码3
+## Java代码3
 ```java
 class Solution {
     public int search(int[] nums, int target) {

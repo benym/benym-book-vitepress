@@ -16,7 +16,7 @@ author:
   link: https://github.com/benym
 ---
 
-## 什么是JMH
+# 什么是JMH
 
 `JMH`(Java Microbenchmark Harness)由OpenJDK团队开发，是一款基准测试工具。作为JDK官方的基准测试工具，在JDK9开始已内嵌。通常用于代码的性能调优，JMH开发者同样为JIT的开发者，得益于专业的JVM优化分析，JMH具有高精度的特点，适用于Java及基于JVM的语言。通常JMH能够统计程序的`OPS`(Opeartion Per Second，每秒操作量)、及`TP99`、`平均差`等，JMH测试的对象可以是方法级的，粒度更小、不限于REST API。
 

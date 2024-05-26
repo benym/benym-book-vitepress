@@ -16,7 +16,9 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-字符串排序
+# LeetCode-字符串排序
+
+## 题目
 
 编写一个程序，将输入字符串中的字符按如下规则排序。 
 规则 1 ：英文字母从 A 到 Z 排列，不区分大小写。 
@@ -26,7 +28,7 @@ author:
 规则 3 ：非英文字母的其它字符保持原来的位置。 
 如，输入： By?e 输出： Be?y
 
-<!--more-->
+
 
 **示例1：**
 
@@ -48,7 +50,7 @@ A Famous Saying: Much Ado About Nothing (2012/8).
 A aaAAbc dFgghh: iimM nNn oooos Sttuuuy (2012/8).
 ```
 
-### 解题思路
+## 解题思路
 
 外层循环按照26个字母的顺序循环，内层进行字母顺序进行字符串的遍历，如按照A字母内层一轮，将A和a加入到结果集。循环完毕之后，res中即存储的排序好的字符串
 

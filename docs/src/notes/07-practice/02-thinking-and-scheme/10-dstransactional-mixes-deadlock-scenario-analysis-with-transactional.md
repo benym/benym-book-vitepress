@@ -15,6 +15,8 @@ date: 2024-03-04 17:10:50
 permalink: /pages/aef382/
 ---
 
+# DSTransactional与Transactional事务混用死锁场景分析
+
 ## 问题背景
 最近在生产环境发现了死锁问题，经过排查发现是由于在使用`@DSTransactional`跨数据源注解时，混合使用了`@Transactional`注解，造成了同时对某个表中数据行的更新，导致了死锁。以此记录下排查的过程
 

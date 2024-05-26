@@ -18,13 +18,15 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-494-目标和
+# LeetCode-494-目标和
+
+## 题目
 
 给定一个非负整数数组，a1, a2, ..., an, 和一个目标数，S。现在你有两个符号 + 和 -。对于数组中的任意一个整数，你都可以从 + 或 -中选择一个符号添加在前面。
 
 返回可以使最终数组和为目标数 S 的所有添加符号的方法数。
 
-<!--more-->
+
 
 **示例1：**
 
@@ -48,7 +50,7 @@ author:
 - 初始的数组的和不会超过 1000 。
 - 保证返回的最终结果能被 32 位整数存下。
 
-### 解题思路
+## 解题思路
 
 **方法1、回溯：**
 
@@ -66,7 +68,7 @@ author:
 
 详见https://leetcode-cn.com/problems/target-sum/solution/494-mu-biao-he-by-ming-zhi-shan-you-m9rfkvkdad/
 
-### Java代码1
+## Java代码1
 
 ```java
 class Solution {
@@ -100,7 +102,7 @@ class Solution {
 }
 ```
 
-### Java代码2
+## Java代码2
 
 ```java
 

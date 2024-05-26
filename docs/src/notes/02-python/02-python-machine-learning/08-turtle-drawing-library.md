@@ -12,9 +12,7 @@ author:
   link: https://github.com/benym
 ---
 
-大概学习了下turtle库的一个绘图实例= =，估计以后也用不上这个库....
-
-<!--more-->
+# turtle绘图库
 
 ## 代码
 

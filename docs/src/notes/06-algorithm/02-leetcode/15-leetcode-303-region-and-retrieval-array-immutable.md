@@ -18,11 +18,11 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-303-区域和检索-数组不可变
+# LeetCode-303-区域和检索-数组不可变
+
+## 题目
 
 给定一个整数数组  *nums*，求出数组从索引 *i* 到 *j*  (*i* ≤ *j*) 范围内元素的总和，包含 *i,  j* 两点。
-
- <!--more-->
 
 **示例 1:**
 
@@ -39,7 +39,7 @@ sumRange(0, 5) -> -3
 1. 你可以假设数组不可变。
 2. 会多次调用 *sumRange* 方法。
 
-### 解题思路
+## 解题思路
 
 方法1、DP暴力破解：
 
@@ -68,7 +68,7 @@ sumrange(i,j)=sum[j+1]-sum[i]，也就是把后面部分的和前去并集部分
 
 这种方法只需要计算一次和，之后仅需要从数组取值相减即可得到结果
 
-### Java代码
+## Java代码
 
 ```java
 class NumArray {
@@ -99,7 +99,7 @@ class NumArray {
  */
 ```
 
-### Java代码2
+## Java代码2
 
 ```java
 class NumArray {

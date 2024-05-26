@@ -12,9 +12,9 @@ author:
   link: https://github.com/benym
 ---
 
-### 多线程交替打印数字—多种实现
+# 多线程交替打印数字—多种实现
 
-#### 使用synchronized锁实现
+## 使用synchronized锁实现
 
 ```java
 public class Test {
@@ -58,7 +58,7 @@ class mutilThreadPrintNum implements Runnable {
 }
 ```
 
-##### 打印结果
+### 打印结果
 
 ```java
 奇数:1
@@ -72,7 +72,7 @@ class mutilThreadPrintNum implements Runnable {
 
 通过加锁和`notify()`、`wait()`机制可以有效的实现两个线程分别打印奇数和偶数，但互斥锁始终会影响性能，效率不高。
 
-#### 使用valatile标志位实现
+## 使用valatile标志位实现
 
 ```java
 public class Test {
@@ -123,7 +123,7 @@ public class Test {
 
 打印结果和上文相同，使用`volatile`关键字可以保证变量的可见性，但并不能保证num的原子性，即多个线程操作num时，他是非线程安全的，此处能够正确打印的原因是因为`flag`标志位的判断。相对于加锁来说，效率更高
 
-#### 使用AtomicInteger+LockSupport实现
+## 使用AtomicInteger+LockSupport实现
 
 ```java
 public class Test {
@@ -186,7 +186,7 @@ public class Test {
 
 使用JUC包内的`AtomicInteger`保持多线程并发安全，同时采用`LockSupport`唤醒或阻塞线程
 
-#### 踩坑日志
+## 踩坑日志
 
 第三种实现方法一开始并不是正确的，如果`LockSupport.park()`方法放在如下位置
 

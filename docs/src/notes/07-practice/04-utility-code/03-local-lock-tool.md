@@ -3,13 +3,16 @@ title: 本地锁工具类
 date: 2023-05-17 17:37:06
 permalink: /pages/0e762d/
 tags:
-  - Caffine
+  - Caffeine
   - ReentrantLock
   - 锁
 author: 
   name: benym
   link: https://github.com/benym
 ---
+
+# 本地锁工具类
+
 ## 起步依赖
 ```bash
 <dependency>
@@ -18,7 +21,7 @@ author:
     <version>2.9.3</version>
 </dependency>
 ```
-## LockUtil
+# LockUtil
 ```java
 import com.github.benmanes.caffeine.cache.Cache;
 import com.github.benmanes.caffeine.cache.Caffeine;

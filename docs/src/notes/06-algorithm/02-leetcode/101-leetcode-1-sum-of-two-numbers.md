@@ -17,13 +17,15 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-1-两数之和
+# LeetCode-1-两数之和
+
+## 题目
 
 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
 
 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。
 
- <!--more-->
+ 
 
 **示例 1:**
 
@@ -34,7 +36,7 @@ author:
 所以返回 [0, 1]
 ```
 
-### 解题思路
+## 解题思路
 
 **方法1、**暴力破解：
 
@@ -50,7 +52,7 @@ author:
 
 于是可以利用hash表存储对应的数字和下标，按照这个思路实现，一次遍历就可以完成target下标和的寻找
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {
@@ -70,7 +72,7 @@ class Solution {
 }
 ```
 
-### Java代码2
+## Java代码2
 
 ```java
 class Solution {

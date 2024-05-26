@@ -22,13 +22,15 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-面试题38-字符串的排列 
+# LeetCode-面试题38-字符串的排列 
+
+## 题目
 
 输入一个字符串，打印出该字符串中字符的所有排列。
 
 你可以以任意顺序返回这个字符串数组，但里面不能有重复元素。
 
- <!--more-->
+ 
 
 **示例：**
 
@@ -41,7 +43,7 @@ author:
 
 ​	`1 <= s 的长度 <= 8`
 
-### 解题思路
+## 解题思路
 
 **方法1：DFS全排列+剪枝**
 
@@ -59,7 +61,7 @@ author:
 
 路径从空开始构建，当DFS深度达到了字符串长度时则添加进去，之后开始回溯，将访问过的状态复原，path弹出
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {
@@ -95,7 +97,7 @@ class Solution {
 }
 ```
 
-### Python代码
+## Python代码
 
 ```python
 class Solution:
@@ -126,7 +128,7 @@ class Solution:
         return res
 ```
 
-### Java代码2
+## Java代码2
 
 ```java
 class Solution {

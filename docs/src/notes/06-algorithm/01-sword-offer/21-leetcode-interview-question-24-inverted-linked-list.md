@@ -19,11 +19,13 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-面试题24-反转链表
+# LeetCode-面试题24-反转链表
+
+## 题目
 
 定义一个函数，输入一个链表的头节点，反转该链表并输出反转后链表的头节点。
 
- <!--more-->
+ 
 
 **示例：**
 
@@ -36,13 +38,13 @@ author:
 
 `0 <= 节点个数 <= 5000`
 
-### 解题思路
+## 解题思路
 
 总共需要3个指针，一个指向当前节点，一个指向前一个节点，一个指向后一个节点
 
 局部反转，将当前节点的后一个节点保存在temp指针里，改变cur指向前一个位置pre，然后向后移动一位pre和cur
 
-### Java代码
+## Java代码
 
 ```java
 /**
@@ -70,7 +72,7 @@ class Solution {
 }
 ```
 
-### Python代码
+## Python代码
 
 ```python
 # Definition for singly-linked list.

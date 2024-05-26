@@ -13,6 +13,10 @@ author:
   link: https://github.com/benym
 ---
 
+# Ndarray对象
+
+## 定义
+
 NumPy 中定义的最重要的对象是称为  ndarray  的 N 维数组类型。 它描述相同类型的元素集合。 可以使用基于零的索引访问集合中的项目。ndarray  中的每个元素在内存中使用相同大小的块。基本
 的 ndarray  是使用 NumPy 中的数组函数创建的，如：`numpy.array`
 
@@ -31,7 +35,6 @@ NumPy 中定义的最重要的对象是称为  ndarray  的 N 维数组类型。
 | 5.   | `subok` 默认情况下，返回的数组被强制为基类数组。 如果为`true`，则返回子类。 |
 | 6.   | `ndimin` 指定返回数组的最小维数。                            |
 :::
-<!--more-->
 
 ## 代码
 

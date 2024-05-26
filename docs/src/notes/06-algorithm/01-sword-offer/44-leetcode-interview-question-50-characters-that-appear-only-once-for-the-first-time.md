@@ -18,11 +18,11 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-面试题50-第一次只出现一次的字符 
+# LeetCode-面试题50-第一次只出现一次的字符 
+
+## 题目
 
 在字符串 s 中找出第一个只出现一次的字符。如果没有，返回一个单空格。
-
- <!--more-->
 
 **示例1：**
 
@@ -38,7 +38,7 @@ s = ""
 
 0 <= s 的长度 <= 50000
 
-### 解题思路
+## 解题思路
 
 哈希表：
 
@@ -46,7 +46,7 @@ s = ""
 
 遍历的时候由于hash表重新put改变了原本的先后顺序(Java的hashmap不能原地改变，Python的dict可以原地改变)，所以需要按照字符顺序遍历，当第1次value为1的时候，就返回该字符
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {
@@ -73,7 +73,7 @@ class Solution {
 }
 ```
 
-### Python代码1
+## Python代码1
 
 ```python
 class Solution:

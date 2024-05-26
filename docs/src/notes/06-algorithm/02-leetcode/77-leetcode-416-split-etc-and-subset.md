@@ -17,7 +17,9 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-416-分割等和子集
+# LeetCode-416-分割等和子集
+
+## 题目
 
 给定一个只包含正整数的非空数组。是否可以将这个数组分割成两个子集，使得两个子集的元素和相等。
 
@@ -26,7 +28,7 @@ author:
 1. 每个数组中的元素不会超过 100
 2. 数组的大小不会超过 200
 
-<!--more-->
+
 
 **示例1：**
 
@@ -48,13 +50,13 @@ author:
 解释: 数组不能分割成两个元素和相等的子集.
 ```
 
-### 解题思路
+## 解题思路
 
 **方法1、动态规划：**非常好的详解，0-1背包问题https://leetcode-cn.com/problems/partition-equal-subset-sum/solution/0-1-bei-bao-wen-ti-xiang-jie-zhen-dui-ben-ti-de-yo/
 
 做这道题需要做这样一个等价转换：**是否可以从这个数组中挑选出一些正整数，使得这些数的和等于整个数组元素的和的一半。**前提条件是：数组的和一定得是偶数，即数组的和一定得被2整除，这一点是特判。
 
-### Java代码
+## Java代码
 
 ```java
 public class Solution {

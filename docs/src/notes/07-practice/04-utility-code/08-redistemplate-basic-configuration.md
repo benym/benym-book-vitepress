@@ -11,6 +11,9 @@ author:
   name: benym
   link: https://github.com/benym
 ---
+
+# RedisTemplate基本配置类
+
 ## RedisConfig
 ```java
 import com.fasterxml.jackson.annotation.JsonAutoDetect;

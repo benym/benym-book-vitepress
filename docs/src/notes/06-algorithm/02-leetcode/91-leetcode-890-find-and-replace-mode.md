@@ -16,7 +16,9 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-890-查找和替换模式
+# LeetCode-890-查找和替换模式
+
+## 题目
 
 你有一个单词列表 words 和一个模式  pattern，你想知道 words 中的哪些单词与模式匹配。
 
@@ -28,7 +30,7 @@ author:
 
 你可以按任何顺序返回答案。
 
-<!--more-->
+
 
 **示例1：**
 
@@ -46,11 +48,11 @@ author:
 - `1 <= words.length <= 50`
 - `1 <= pattern.length = words[i].length <= 20`
 
-### 解题思路
+## 解题思路
 
 我们可以用两个映射表（map）存储字母到字母的映射关系，第一个映射表保证一个字母不会映射到两个字母，第二个映射表保证不会有两个字母映射到同一个字母。例如 word 为 a，pattern 为 x，那么第一个映射表存储 a -> x，第二个映射表存储 x -> a。
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {

@@ -12,6 +12,10 @@ author:
   link: https://github.com/benym
 ---
 
+# Python中的多态
+
+## 概览
+
 当子类和父类都存在相同的 game()方法时，子类的 game() 覆盖了父类的 game()，在代码运行时，会调用子类的 game()。
 
 这样，我们就获得了继承的另一个好处：**多态**。 
@@ -20,8 +24,6 @@ author:
 
 - 对扩展开放（Open for extension）：允许子类重写方法函数
 - 对修改封闭（Closed for modification）：不重写，直接继承父类方法函数
-
-<!--more-->
 
 ## 代码
 

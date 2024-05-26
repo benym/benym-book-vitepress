@@ -12,7 +12,7 @@ author:
   link: https://github.com/benym
 ---
 
-### assert语句的运用
+# assert语句的运用
 
 ## 代码
 

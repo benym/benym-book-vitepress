@@ -19,7 +19,9 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-面试题33-二叉搜索树的后序遍历序列 
+# LeetCode-面试题33-二叉搜索树的后序遍历序列 
+
+## 题目
 
 输入一个整数数组，判断该数组是不是某二叉搜索树的后序遍历结果。如果是则返回 `true`，否则返回 `false`。假设输入的数组的任意两个数字都互不相同。
 
@@ -33,7 +35,7 @@ author:
  1   3
 ```
 
- <!--more-->
+ 
 
 **示例1：**
 
@@ -53,7 +55,7 @@ author:
 
 1. `节点总数 <= 1000`
 
-### 解题思路
+## 解题思路
 
 递归：
 
@@ -65,7 +67,7 @@ author:
 
 当找到划分边界后进行递归，判断左子树中哪些是左节点，哪些是又节点。右子树同理
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {
@@ -89,7 +91,7 @@ class Solution {
 }
 ```
 
-### Python代码
+## Python代码
 
 ```python
 class Solution:

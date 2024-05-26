@@ -19,7 +19,9 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-797-所有可能的路径
+# LeetCode-797-所有可能的路径
+
+## 题目
 
 题目来自于力扣https://leetcode-cn.com/problems/all-paths-from-source-to-target
 
@@ -74,9 +76,9 @@ author:
 - graph[i] 中的所有元素 **互不相同**
 - 保证输入为 **有向无环图（DAG）**
 
- <!--more-->
+ 
 
-### 解题思路
+## 解题思路
 
 **方法1、DFS**
 
@@ -87,7 +89,7 @@ author:
 - **回溯：**当这条路径走完了，或者遍历结束时，移除上一轮加入path中的节点(**remove**操作)
 - **终止条件：**当目前的深度达到了数组length-1时结束，因为最后一个节点始终是空
 
-### Java代码1
+## Java代码1
 
 ```java
 class Solution {

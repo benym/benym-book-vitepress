@@ -20,13 +20,14 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-面试题42-连续子数组的最大和 
+# LeetCode-面试题42-连续子数组的最大和 
+
+## 题目
 
 输入一个整型数组，数组里有正数也有负数。数组中的一个或连续多个整数组成一个子数组。求所有子数组的和的最大值。
 
 要求时间复杂度为O(n)。
 
- <!--more-->
 
 **示例1：**
 
@@ -41,7 +42,7 @@ author:
 - `1 <= arr.length <= 10^5`
 - `-100 <= arr[i] <= 100`
 
-### 解题思路
+## 解题思路
 
 方法1、找规律：
 
@@ -59,7 +60,7 @@ author:
 
 在这里因为dp[i]只与dp[i-1]和nums[i]有关系，因此可以将原数组nums用做dp列表，即直接在nums上修改
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {
@@ -82,7 +83,7 @@ class Solution {
 }
 ```
 
-### Python代码
+## Python代码
 
 ```python
 class Solution:

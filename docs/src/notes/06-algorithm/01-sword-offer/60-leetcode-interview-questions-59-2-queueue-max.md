@@ -18,13 +18,13 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-面试题59-2-队列的最大值
+# LeetCode-面试题59-2-队列的最大值
+
+## 题目
 
 请定义一个队列并实现函数 max_value 得到队列里的最大值，要求函数max_value、push_back 和 pop_front 的均摊时间复杂度都是O(1)。
 
 若队列为空，pop_front 和 max_value 需要返回 -1
-
- <!--more-->
 
 **示例1：**
 
@@ -49,7 +49,7 @@ author:
 - `1 <= push_back,pop_front,max_value的总操作数 <= 10000`
 - `1 <= value <= 10^5`
 
-### 解题思路
+## 解题思路
 
 双队列：
 
@@ -61,7 +61,7 @@ author:
 - 当需要取得队列中的最大值时，如果deque为空，根据题意返回-1，如果不为空则取得最大值(不从双端队列中删除)
 - 当需要弹出队列首位时，需要判断原本的队列是否为空，为空则返回-1，不为空则需要判断出队的元素是否是当前最大值，如果是最大值，则原本的队列最大值出队了，deque中的最大值自然也不存在了，需要弹出首位。此时返回原本队列的首位即可
 
-### Java代码
+## Java代码
 
 ```java
 class MaxQueue {
@@ -106,7 +106,7 @@ class MaxQueue {
  */
 ```
 
-### Java代码2
+## Java代码2
 
 注释版
 ```java

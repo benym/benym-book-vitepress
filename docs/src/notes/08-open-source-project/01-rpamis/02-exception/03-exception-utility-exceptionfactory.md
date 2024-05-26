@@ -15,6 +15,8 @@ author:
   link: https://github.com/benym
 ---
 
+# 异常工具类-ExceptionFactory
+
 ## ExceptionFactory
 
 异常工厂是一个自定义异常的入口，系统内基本的自定义异常很多，长期下去难以让人记住

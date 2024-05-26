@@ -18,7 +18,9 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-51-N皇后
+# LeetCode-51-N皇后
+
+## 题目
 
 *n* 皇后问题研究的是如何将 *n* 个皇后放置在 *n*×*n* 的棋盘上，并且使皇后彼此之间不能相互攻击。
 
@@ -26,7 +28,7 @@ author:
 
 每一种解法包含一个明确的 n 皇后问题的棋子放置方案，该方案中 'Q' 和 '.' 分别代表了皇后和空位。
 
- <!--more-->
+ 
 
 **示例 1:**
 
@@ -51,7 +53,7 @@ author:
 - 皇后，是国际象棋中的棋子，意味着国王的妻子。皇后只做一件事，那就是“吃子”。当她遇见可以吃的棋子时，就迅速冲上去吃掉棋子。当然，她横、竖、斜都可走一到七步，可进可退。（引用自 百度百科 - 皇后 ）
 
 
-### 解题思路
+## 解题思路
 
 回溯方法引用与[LeetCode官方](https://leetcode-cn.com/problems/n-queens/solution/nhuang-hou-by-leetcode/)
 
@@ -86,7 +88,7 @@ author:
       - 继续考虑接下来的皇后放置 backtrack(row + 1).
     - 回溯：将在 (row, column) 方格的皇后移除.
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {

@@ -19,11 +19,11 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-面试题56-2-数组中数字出现的次数2
+# LeetCode-面试题56-2-数组中数字出现的次数2
+
+## 题目
 
 在一个数组 `nums` 中除一个数字只出现一次之外，其他数字都出现了三次。请找出那个只出现一次的数字。
-
- <!--more-->
 
 **示例1：**
 
@@ -44,7 +44,7 @@ author:
   - `1 <= nums.length <= 10000`
   - `1 <= nums[i] < 2^31`
 
-### 解题思路
+## 解题思路
 
 方法1、异或运算(单1为1，其余0)：
 
@@ -62,7 +62,7 @@ author:
 
 如果前面都没有找到，则最后一位必定是要找的数字
 
-### Java代码1
+## Java代码1
 
 ```java
 class Solution {
@@ -94,7 +94,7 @@ class Solution {
 }
 ```
 
-### Python代码
+## Python代码
 
 ```python
 class Solution:
@@ -112,7 +112,7 @@ class Solution:
         return -1
 ```
 
-### Java代码2
+## Java代码2
 
 ```java
 class Solution {

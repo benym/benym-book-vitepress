@@ -11,7 +11,9 @@ author:
   link: https://github.com/benym
 ---
 
-### 装饰器
+# 装饰器
+
+## 概览
 
 装饰器（Decorators）是应用包装函数的快捷方式。这有助于将某一功能与一些代码一遍又一
 遍地“包装”。举个例子，我为自己创建了一个 retry 装饰器，这样我可以将其运用到任何函
@@ -68,8 +70,6 @@ def save_to_database(arg):
 if __name__ == '__main__':
     save_to_database("Some bad value")
 ```
-
-<!--more-->
 
 ## 运行结果
 

@@ -13,12 +13,14 @@ author:
   link: https://github.com/benym
 ---
 
+# 将下载下来的MNIST手写数字数据集转化成为图片
+
+## 数据集
+
 解析源文件下载（总共包含60000个训练数据和10000个测试数据）
 
 1. [训练集解析](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/train_release.py)
 2. [测试集解析](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/test_release.py)
-
-<!--more-->
 
 ## 对于训练集的代码
 

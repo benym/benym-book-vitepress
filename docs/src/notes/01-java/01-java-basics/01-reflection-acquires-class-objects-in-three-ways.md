@@ -18,7 +18,7 @@ author:
 
 简单了解Java获取类的3种方式
 
- <!--more-->
+ 
 
 **1、Class.forName("全类名")**
 

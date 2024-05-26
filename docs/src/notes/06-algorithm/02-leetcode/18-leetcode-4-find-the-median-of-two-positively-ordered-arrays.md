@@ -17,15 +17,15 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-4-寻找两个正序数组的中位数
+# LeetCode-4-寻找两个正序数组的中位数
+
+## 题目
 
 给定两个大小为 m 和 n 的正序（从小到大）数组 nums1 和 nums2。
 
 请你找出这两个正序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。
 
 你可以假设 nums1 和 nums2 不会同时为空。
-
- <!--more-->
 
 **示例 1:**
 
@@ -45,7 +45,7 @@ nums2 = [3, 4]
 则中位数是 (2 + 3)/2 = 2.5
 ```
 
-### 解题思路
+## 解题思路
 
 **方法1、归并排序思想：**
 
@@ -59,7 +59,7 @@ nums2 = [3, 4]
 
 不会做....答案出自[官方题解](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/xun-zhao-liang-ge-you-xu-shu-zu-de-zhong-wei-s-114/)
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {
@@ -87,7 +87,7 @@ class Solution {
 }
 ```
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {

@@ -15,11 +15,11 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-堆排序
+# 堆排序
 
 堆排序算法回顾
 
- <!--more-->
+## 题目
 
 **示例1**
 
@@ -28,7 +28,7 @@ author:
 输出: [1,3,4,12,13,20,43,53,100,123,323,559230]
 ```
 
-### 解题思路
+## 解题思路
 
 一个不错的堆排序讲解，[出处在这](https://www.cnblogs.com/chengxiao/p/6129630.html)
 
@@ -53,7 +53,7 @@ author:
 
 [log2(n-1),log2(n-2),....,1]逐步递减，所以**时间复杂度近似为O(nlogn)**，堆排序是一种不稳定的排序算法
 
-### Java代码
+## Java代码
 
 ```java
 public class HeapSort {

@@ -12,11 +12,11 @@ author:
   link: https://github.com/benym
 ---
 
-### CyclicBarrier使用方法
+# CyclicBarrier使用方法
 
 `CyclicBarrier`字面意思就是回环栅栏，通过它可以实现让一组线程等待至某个状态之后再全部同时执行。叫做回环是因为当所有等待线程都被释放以后，CyclicBarrier可以被重用。我们暂且把这个状态就叫做barrier，当调用await()方法之后，线程就处于barrier了。
 
-**构造方法**
+## 构造方法
 
 - parties指让多少个线程或者任务等待至barrier状态
 - barrierAction为当这些线程都达到barrier状态时会执行的内容
@@ -55,9 +55,9 @@ author:
     }
 ```
 
-#### 应用场景
+## 应用场景
 
-##### 场景一：多个线程执行读数据操作，读取完毕之后执行后续任务
+### 场景一：多个线程执行读数据操作，读取完毕之后执行后续任务
 
 ```java
 public class Test {
@@ -100,7 +100,7 @@ public class Test {
 后续操作Thread-4
 ```
 
-##### 场景二：所有线程读取完毕之后，进行额外操作
+### 场景二：所有线程读取完毕之后，进行额外操作
 
 在这时候初始化`CyclicBarrier`时可以开启一个额外的`Runnable`线程执行其他任务
 
@@ -149,7 +149,7 @@ Thread-1额外任务执行
 
 可以看出，当读取操作完成之后，这8个线程都到达了barrier状态，此时会**随机其中的一个线程去执行额外的任务**，这个执行额外任务的线程执行完毕之后，就会接着执行后续的任务。
 
-##### 特性：指定await时间
+### 特性：指定await时间
 
 ```java
 public class Test {
@@ -247,7 +247,7 @@ java.util.concurrent.BrokenBarrierException
 
 这个场景模拟其中一个线程延迟执行，`await`等待时间内，检测到最后一个线程还没有到达栅栏，就会直接抛出异常让到达栅栏的线程继续执行后面的任务
 
-##### 特性：可复用
+### 特性：可复用
 
 ```java
 public class Test {

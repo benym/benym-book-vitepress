@@ -16,7 +16,9 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-394-字符串解码
+# LeetCode-394-字符串解码
+
+## 题目
 
 给定一个经过编码的字符串，返回它解码后的字符串。
 
@@ -26,7 +28,7 @@ author:
 
 此外，你可以认为原始数据不包含数字，所有的数字只表示重复的次数 k ，例如不会出现像 3a 或 2[4] 的输入。
 
-<!--more-->
+
 
 **示例1：**
 
@@ -56,7 +58,7 @@ author:
 输出："abccdcdcdxyz"
 ```
 
-### 解题思路
+## 解题思路
 
 **方法1、栈：**
 
@@ -73,7 +75,7 @@ author:
 
 最后，返回`res.toString()`
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {

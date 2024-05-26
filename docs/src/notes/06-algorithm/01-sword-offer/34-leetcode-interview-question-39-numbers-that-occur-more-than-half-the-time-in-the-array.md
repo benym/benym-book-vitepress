@@ -19,13 +19,15 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-面试题39-数组中出现次数超过一半的数字 
+# LeetCode-面试题39-数组中出现次数超过一半的数字 
+
+## 题目
 
 数组中有一个数字出现的次数超过数组长度的一半，请找出这个数字。
 
 你可以假设数组是非空的，并且给定的数组总是存在多数元素。
 
- <!--more-->
+ 
 
 **示例：**
 
@@ -38,7 +40,7 @@ author:
 
 ​	`1 <= 数组长度 <= 50000`
 
-### 解题思路
+## 解题思路
 
 方法1、投票法：
 
@@ -48,7 +50,7 @@ author:
 
 空间换时间，没有出现在map中的数添加进去，出现过了则次数+1，之后获取次数最大的key即可
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {
@@ -72,7 +74,7 @@ class Solution {
 }
 ```
 
-### Python代码
+## Python代码
 
 ```python
 class Solution:

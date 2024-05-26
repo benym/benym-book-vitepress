@@ -19,11 +19,12 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-面试题37-序列化二叉树 
+# LeetCode-面试题37-序列化二叉树 
+
+## 题目
 
 请实现两个函数，分别用来序列化和反序列化二叉树。
 
- <!--more-->
 
 **示例：**
 
@@ -39,7 +40,7 @@ author:
 序列化为 "[1,2,3,null,null,4,5]"
 ```
 
-### 解题思路
+## 解题思路
 
 BFS+位置指针(队列、递归2种解法)：
 
@@ -74,7 +75,7 @@ BFS+位置指针(队列、递归2种解法)：
 
   **递推：**新建Node，index指针后移指向左节点，开启左右子树递归`node.left = self.deshelper(data)`和`node.right = self.deshelper(data)`
 
-### Java代码
+## Java代码
 
 ```java
 /**
@@ -138,7 +139,7 @@ public class Codec {
 // codec.deserialize(codec.serialize(root));
 ```
 
-### Python代码
+## Python代码
 
 ```python
 # Definition for a binary tree node.

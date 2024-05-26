@@ -15,7 +15,9 @@ author:
   link: https://github.com/benym
 ---
 
-## 关于DO,VO,DTO,QueryParam的思考
+# 关于DO,VO,DTO,QueryParam的思考
+
+## 概览
 
 总结一下最近项目中的一些问题
 
@@ -31,9 +33,7 @@ author:
 
 > 在项目中接口和接口间常常需要获取大量参数，DTO就是将这些参数封装成为一个对象，简化参数的直接传递
 
- <!--more-->
-
-### 实际例子
+## 实际例子
 
 下面用一个实际的例子展示上述几个对象在具体的开发中的作用域
 
@@ -43,7 +43,7 @@ author:
 :::
 以一个简单的数据库为例，数据库中包含id、name、address、ctime、state五种字段，分别表示用户的id，名字，地址，数据创建事件，状态。
 
-#### POJO类设计
+## POJO类设计
 
 与之对应的DO、DTO、VO、QueryParam如下
 
@@ -138,13 +138,13 @@ public class TestDataQueryParam {
 }
 ```
 
-#### Controller
+## Controller
 
 以最简单的增删改查为例。我们规定前端传输为JSON，对于增加、修改和删除来说，入参统一接收为VO对象。对于查询操作，我们规定入参统一为QueryParam对象。如下图红框所示：
 ::: center
 ![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/%E8%A7%84%E5%AE%9A%E5%85%A5%E5%8F%82.png)
 :::
-##### 类型转换
+### 类型转换
 
 首先讲解`saveOrUpdate`方法和`deleteTestData`方法。
 
@@ -166,7 +166,7 @@ getTestDataLocation方法：
 ::: center
 ![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/getlist.png)
 :::
-#### Service层
+## Service层
 
 在service和serviceImpl层中，**对DTO对象和QueryParam对象无需做对象类型转化**
 ::: center
@@ -175,7 +175,7 @@ getTestDataLocation方法：
 ::: center
 ![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/ServiceImpl.png)
 :::
-#### Dao层
+## Dao层
 
 在Dao和DaoImpl的入参定义中，DTO和QueryParam统一不需要转换对象，因为还是接口之间的参数传递，但在DaoImpl中，**操作数据库之前，需要将DTO对象转化为DO对象**，而QueryParam可以选择用QueryWapper等包装类或者直接传输的方式交给Mapper操作。如下图红框所示
 ::: center
@@ -184,13 +184,13 @@ getTestDataLocation方法：
 ::: center
 ![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/DaoImpl.png)
 :::
-#### Mapper层
+## Mapper层
 
 mapper层用于真正操作数据库，这里采用Mybatis-plus中的BaseMapper提供的接口实现增删改，查询则通过Location查数据，重写一下对应的mapper.xml文件的sql即可
 ::: center
 ![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/mapper.png)
 :::
-#### 数据返回
+## 数据返回
 
 增加删除修改等操作，前端往往只需要判断操作成功没有即可，所以返回值一般不是一个对象，对于非对象的传输可以直接返回。另外如查询操作，一般会涉及到分页，查出来的数据是List形式展现而从数据库查到的是DO对象，当这种操作返回值时会从`Mapper-->Dao-->Service-->Controller`一层一层返回回去，这时候就又变成了接口之间的参数传输了，DO对象显然不适合，所以还需转化为DTO对象。如下图红框操作所示，从DO的list转化为DTO的list作为返回值列表。
 ::: center
@@ -200,7 +200,7 @@ mapper层用于真正操作数据库，这里采用Mybatis-plus中的BaseMapper�
 ::: center
 ![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/DTOtoVO.png)
 :::
-### 总结
+## 总结
 
 1. 除QueryParam以外，VO对象进入Controller之后需要进行对象转换变为DTO方便数据在接口中间的传递
 2. 在数据库操作之前，DTO对象需要转换为DO

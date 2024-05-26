@@ -20,7 +20,9 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-面试题32-2-从上到下打印二叉树 
+# LeetCode-面试题32-2-从上到下打印二叉树 
+
+## 题目
 
 从上到下按层打印二叉树，同一层的节点按从左到右的顺序打印，每一层打印到一行。
 
@@ -43,13 +45,11 @@ author:
 ]
 ```
 
- <!--more-->
-
 **提示：**
 
 1. `节点总数 <= 1000`
 
-### 解题思路
+## 解题思路
 
 方法1：递推
 
@@ -78,7 +78,7 @@ author:
 - `traversal(node.left, depth + 1)`
 - `traversal(node.right, depth + 1)`·
 
-### Java代码
+## Java代码
 
 ```java
 /**
@@ -123,7 +123,7 @@ class Solution {
 }
 ```
 
-### Python代码
+## Python代码
 
 ```python
 # Definition for a binary tree node.

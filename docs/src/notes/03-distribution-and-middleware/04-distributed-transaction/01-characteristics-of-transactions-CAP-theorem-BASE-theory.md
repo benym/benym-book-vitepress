@@ -12,12 +12,14 @@ author:
   link: https://github.com/benym
 ---
 
-### 事务的四大特性(ACID)
+# 事务的特性、CAP定理、BASE理论
+
+## 事务的四大特性(ACID)
  - 原子性(Atomicity):事务中的所有操作，要么全部成功，要么全部失败
  - 一致性(Consistency):事务前后数据的完整性必须保持一致
  - 隔离性(Isolation):事务的隔离性是多个用户并发访问数据库时，数据库为每一个用户开启的事务，不能被其他事务的操作数据所干扰，多个并发事务之间要相互隔离。
  - 持久性(Durability):持久性是指一个事务一旦被提交，它对数据库中数据的改变就是永久性的，接下来即使数据库发生故障也不应该对其有任何影响
-### CAP定理
+## CAP定理
 分布式系统有三个指标
  - Consistency(一致性)：用户访问分布式系统中的任意节点，得到的数据必须一致
  - Availability(可用性)：用户访问集群中的任意健康节点，必须能得到响应，而不是超时或拒绝
@@ -26,7 +28,7 @@ author:
 ::: center
 <img src="https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/CAP.png" alt="CAP" style="zoom:60%;" />
 :::
-### BASE理论
+## BASE理论
 BASE理论是对CAP的一种解决思路，包含三个思想：
  - Basically Available(基本可用)：分布式系统在出现故障时，允许损失部分可用性，即保证核心可用。
  - Soft State(软状态)：在一定时间内，允许出现中间状态，比如临时的不一致状态。

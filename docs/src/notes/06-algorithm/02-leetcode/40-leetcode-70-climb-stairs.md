@@ -17,7 +17,9 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-70-爬楼梯
+# LeetCode-70-爬楼梯
+
+## 题目
 
 假设你正在爬楼梯。需要 *n* 阶你才能到达楼顶。
 
@@ -25,7 +27,7 @@ author:
 
 **注意：**给定 *n* 是一个正整数。
 
-<!--more-->
+
 
 **示例 1:**
 
@@ -48,7 +50,7 @@ author:
 3.  2 阶 + 1 阶
 ```
 
-### 解题思路
+## 解题思路
 
 **方法1、动态规划：**
 
@@ -68,7 +70,7 @@ author:
 
 上一个方法需要开辟一个n的数组，其实可以直接用双指针完成状态的转移，不再需要开辟多余的空间
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {
@@ -86,7 +88,7 @@ class Solution {
 }
 ```
 
-### Java代码2
+## Java代码2
 
 ```java
 class Solution {

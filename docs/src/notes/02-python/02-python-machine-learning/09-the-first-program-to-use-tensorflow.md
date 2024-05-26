@@ -13,7 +13,9 @@ author:
   link: https://github.com/benym
 ---
 
-### 构建图
+# 第一个使用Tensorflow的程序
+
+## 构建图
 
 构建图的第一步, 是创建源 op (source op). 源 op 不需要任何输入, 例如 `常量 (Constant)`. 源 op 的输出被传递给其它 op 做运算.
 
@@ -23,11 +25,11 @@ TensorFlow Python 库有一个*默认图 (default graph)*, op 构造器可以为
 
 默认图现在有三个节点, 两个`constant()`op, 和一个`matmul()`op. 为了真正进行矩阵相乘运算, 并得到矩阵乘法的 结果, 你必须在会话里启动这个图. 
 
-### 在一个会话中启动图
+## 在一个会话中启动图
 
 构造阶段完成后, 才能启动图. 启动图的第一步是创建一个 Session 对象, 如果无任何创建参数, 会话构造器将启动默认图.
 
-<!--more-->
+
 
 ## 代码
 

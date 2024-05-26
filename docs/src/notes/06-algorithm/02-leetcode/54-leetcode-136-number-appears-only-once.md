@@ -18,7 +18,9 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-136-只出现一次的数字
+# LeetCode-136-只出现一次的数字
+
+## 题目
 
 给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。
 
@@ -26,7 +28,7 @@ author:
 
 你的算法应该具有线性时间复杂度。 你可以不使用额外空间来实现吗？
 
- <!--more-->
+ 
 
 **示例 1:**
 
@@ -42,7 +44,7 @@ author:
 输出: 4
 ```
 
-### 解题思路
+## 解题思路
 
 **方法1、异或运算：**
 
@@ -60,7 +62,7 @@ author:
 
 之后取出出现次数为1的数字即可
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {
@@ -74,7 +76,7 @@ class Solution {
 }
 ```
 
-### Python代码
+## Python代码
 
 ```python
 class Solution:

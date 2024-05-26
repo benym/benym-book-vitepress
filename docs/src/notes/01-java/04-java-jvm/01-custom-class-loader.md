@@ -16,13 +16,11 @@ author:
   link: https://github.com/benym
 ---
 
-## 自定义类加载器
+# 自定义类加载器
 
 自定义类加载器的实现与作用
 
- <!--more-->
-
-### 为什么需要自定义类加载器
+## 为什么需要自定义类加载器
 
 自定义类加载器是从实际场景出发，解决一些应用上的问题，比如：
 
@@ -31,7 +29,7 @@ author:
 3. 类隔离：在项目中可能不同的微服务用的某个类的版本不一样，某些应用依赖于特定版本的`SDK`功能，自定义类加载器可以解决某个同名的`Class`想要加载不同的版本的场景，实现同名Class多版本共存，相互隔离从而达到解决版本冲突的目的。如`Java`模块化规范 `OSGi `、蚂蚁金服的类隔离框架`SOFAArk`
 4. 非标准化来源加载代码：编译后的字节码在数据库、云端等情况
 
-### 双亲委派模型
+## 双亲委派模型
 
 想要自定义类加载器，一定需要了解双亲委派模型
 
@@ -92,12 +90,12 @@ author:
 
 ![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%B4%BE%E6%A8%A1%E5%9E%8B.png)
 
-### 双亲委派的好处
+## 双亲委派的好处
 
 1. 安全性。避免了用户自己编写的类与Java的核心类冲突，如自定义了java.lang.String.class类不会被系统加载，因为顶层启动类加载器会先于自定义加载器加载该类，防止核心API被修改
 2. 避免类的重复加载。如果父类已经加载过该类，则直接返回，在JVM中区分不同的类，不仅需要根据全限定名，且需要判断是否是同一个ClassLoader。相同的class文件被不同的ClassLoader加载就是不同的两个类。
 
-### 自定义步骤
+## 自定义步骤
 
 自定义类加载器只需要继承`ClassLoader`，同时覆盖`findClass`方法(而不是`loadClass`方法)即可
 
@@ -197,7 +195,7 @@ public class CustomClassLoader extends ClassLoader {
 
 自定义的函数很简单，将全限定名的class文件加载为字节码数组，然后传入`defineClass`方法进行加载，`defineClass`的作用是将一个字节数组转化为`Class`对象
 
-#### POJO测试类LoadCustomPojoTest
+### POJO测试类LoadCustomPojoTest
 
 需要注意的是**要加载的Class必须在全限定名一样的目录**下进行`javac`编译，以为`package`必须一致，比如`com.test.custom.pojo.TestUser`，`TestUser`必须在`com.test.custom.pojo`目录下编译生成字节码
 
@@ -258,7 +256,7 @@ public class TestUser {
 }
 ```
 
-#### 测试POJO结果
+### 测试POJO结果
 
 ```java
 ========这是User测试文件1号========
@@ -270,7 +268,7 @@ com.test.custom.CustomClassLoader@30c7da1e
 
 可以看到，两个类加载器是不一样的，且两个类的方法都已经打印了，说明此时同名类不同版本共存。
 
-#### Service测试类LoadCustomMethodTest
+### Service测试类LoadCustomMethodTest
 
 构建一个带参数的Service方法，加载到方法之后，利用反射进行调用
 
@@ -296,7 +294,7 @@ public class LoadCustomMethodTest {
 }
 ```
 
-#### 测试Service结果
+### 测试Service结果
 
 ```java
 李四调用当前方法

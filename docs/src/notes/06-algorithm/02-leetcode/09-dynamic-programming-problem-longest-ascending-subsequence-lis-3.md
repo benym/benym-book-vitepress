@@ -15,6 +15,11 @@ author:
   name: benym
   link: https://github.com/benym
 ---
+
+# 动态规划问题——最长上升子序列(LIS)(三)
+
+## 题目
+
 样本代码时间复杂度为〇(nlogn),笔试题
 
 上一个版本用二分法优化了时间复杂度，但其实根据数据的样本观察可知，后面的数据都是重复的，我们只需要当列表遍历到一小时数据的最后时将后面数据的最大数加入到列表即可，这样可以快速跳出循环，避免后面不必要的查找
@@ -23,9 +28,7 @@ author:
 
 写完之后发现可以考虑的情况还是有的，还可以继续优化，不过优化到这里应该也差不多了，列表的append方法性能上是非常好的。两个版本Java耗时0.000196s，Python耗时0.000050s
 
-<!--more-->
-
-### Java代码
+## Java代码
 
 ```java
 import java.util.*;
@@ -108,7 +111,7 @@ public class Main {
 }
 ```
 
-### Python代码
+## Python代码
 
 ```python
 def longestIncreasingSubsequence(nums, n, m):
@@ -175,7 +178,7 @@ if __name__ == "__main__":
     print(count)
 ```
 
-### 运行结果
+## 运行结果
 
 ```
 5 10

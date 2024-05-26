@@ -18,11 +18,11 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-22-括号生成
+# LeetCode-22-括号生成
+
+## 题目
 
 数字 *n* 代表生成括号的对数，请你设计一个函数，用于能够生成所有可能的并且 **有效的** 括号组合。
-
-<!--more-->
 
 **示例 1:**
 
@@ -37,7 +37,7 @@ author:
      ]
 ```
 
-### 解题思路
+## 解题思路
 
 **方法1、DFS：**
 
@@ -47,7 +47,7 @@ author:
 
 回溯法基本上和DFS一致，只是这里的回溯需要手动回溯，由于String每次生成一个新的String对象耗时比较多，所以可以用StringBuilder，然而StringBuilder拼接的时候会把上一次的字符记录着，所以在DFS之后需要手动回溯，即删除上一层拼接的字符`cur.deleteCharAt(cur.length()-1);`
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {
@@ -74,7 +74,7 @@ class Solution {
 }
 ```
 
-### Java代码2
+## Java代码2
 
 ```java
 class Solution {

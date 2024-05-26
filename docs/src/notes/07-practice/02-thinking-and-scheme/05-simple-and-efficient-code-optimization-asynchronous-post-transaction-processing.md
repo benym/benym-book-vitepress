@@ -19,6 +19,8 @@ date: 2023-04-15 19:28:02
 permalink: /pages/4f8faf/
 ---
 
+# 简单高效的代码优化-事务后异步处理
+
 ## 背景
 
 以电商平台为例，对于用户而言订单签收是订单正向流程的最后一环，也是用户高频使用的场景之一。
@@ -82,7 +84,7 @@ permalink: /pages/4f8faf/
 - 泛型的折叠使用，存在潜在的泛型擦涂问题
 - 单一方法职责不清晰，代码过长导致阅读困难
 
-### Service层
+## Service层
 
 ::: center
 
@@ -96,7 +98,7 @@ permalink: /pages/4f8faf/
 
 :::
 
-### Manager层
+## Manager层
 
 ::: center
 

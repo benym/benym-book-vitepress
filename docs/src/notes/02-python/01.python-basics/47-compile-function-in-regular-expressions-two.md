@@ -12,6 +12,8 @@ author:
   link: https://github.com/benym
 ---
 
+# 正则表达式中的compile函数(二)
+
 接着上一篇文章的compile函数实例
 
 ## 代码
@@ -31,8 +33,6 @@ print(m.span(2))  # 返回第二个分组匹配成功的子串的索引
 print(m.groups())  # 等价于(m.group(1),m.group(2), ...)
 print(m.group(3))  # 不存在第三个分组
 ```
-
-<!--more-->
 
 ## 运行结果
 

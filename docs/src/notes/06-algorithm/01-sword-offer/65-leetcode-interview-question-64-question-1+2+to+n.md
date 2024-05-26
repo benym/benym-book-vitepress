@@ -18,11 +18,11 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-面试题64-求1+2+...+n
+# LeetCode-面试题64-求1+2+...+n
+
+## 题目
 
 求 `1+2+...+n` ，要求不能使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句（A?B:C）。
-
- <!--more-->
 
 **示例1：**
 
@@ -42,7 +42,7 @@ author:
 
 - `1 <= n <= 10000`
 
-### 解题思路
+## 解题思路
 
 很多运算不能够使用，这道题主要是考察的，能不能多角度的解决问题
 
@@ -50,11 +50,11 @@ author:
 
 然而Python不受本题限制....一行搞定
 
-### 解题思路2
+## 解题思路2
 
 高斯定理：(首项+末项)x项数/2
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {
@@ -65,7 +65,7 @@ class Solution {
 }
 ```
 
-### Python代码
+## Python代码
 
 ```python
 class Solution:
@@ -73,7 +73,7 @@ class Solution:
         return sum(range(1,n+1));
 ```
 
-### Java代码2
+## Java代码2
 
 ```java
 class Solution {

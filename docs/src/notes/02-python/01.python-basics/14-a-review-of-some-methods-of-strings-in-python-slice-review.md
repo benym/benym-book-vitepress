@@ -12,7 +12,7 @@ author:
   link: https://github.com/benym
 ---
 
-### python中字符串的一些方法回顾(切片回顾)
+# Python中字符串的一些方法回顾(切片回顾)
 
 ## 代码
 

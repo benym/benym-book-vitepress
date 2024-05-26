@@ -20,13 +20,13 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-面试题57-2-和为s的连续正数序列
+# LeetCode-面试题57-2-和为s的连续正数序列
+
+## 题目
 
 输入一个正整数 target ，输出所有和为 target 的连续正整数序列（至少含有两个数）。
 
 序列内的数字由小到大排列，不同序列按照首个数字从小到大排列。
-
- <!--more-->
 
 **示例1：**
 
@@ -46,7 +46,7 @@ author:
 
 - `1 <= target <= 10^5`
 
-### 解题思路
+## 解题思路
 
 滑动窗口：
 
@@ -60,7 +60,7 @@ author:
 
 实际上序列和可以由公式`(left+right)*(right-left+1)//2`得到，Python代码返回更加轻松
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {
@@ -95,7 +95,7 @@ class Solution {
 }
 ```
 
-### Python代码
+## Python代码
 
 ```python
 class Solution:

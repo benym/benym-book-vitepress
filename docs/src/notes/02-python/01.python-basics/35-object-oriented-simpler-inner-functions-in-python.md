@@ -11,7 +11,7 @@ author:
   link: https://github.com/benym
 ---
 
-### 比较简单的内部函数
+# Python中面向对象比较简单的内部函数
 
 ## 代码部分
 

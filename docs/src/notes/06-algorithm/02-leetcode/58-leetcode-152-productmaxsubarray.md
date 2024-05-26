@@ -17,11 +17,13 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-152-乘积最大子数组
+# LeetCode-152-乘积最大子数组
+
+## 题目
 
 给你一个整数数组 `nums` ，请你找出数组中乘积最大的连续子数组（该子数组中至少包含一个数字），并返回该子数组所对应的乘积。
 
-<!--more-->
+
 
 **示例1：**
 
@@ -39,7 +41,7 @@ author:
 解释: 结果不能为 2, 因为 [-2,-1] 不是子数组。
 ```
 
-### 解题思路
+## 解题思路
 
 **方法1、动态规划：**
 
@@ -63,7 +65,7 @@ author:
 
 一个更好的题解来自https://leetcode-cn.com/problems/maximum-product-subarray/solution/dpfang-fa-xiang-jie-by-yang-cong-12/
 
-### Java代码
+## Java代码
 
 
 ```java
@@ -89,7 +91,7 @@ class Solution {
 
 dp数组版本
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {

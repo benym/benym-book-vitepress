@@ -11,7 +11,7 @@ author:
   link: https://github.com/benym
 ---
 
-### python中字符串的一些方法回顾(拆分与合并)
+# python中字符串的一些方法回顾(拆分与合并)
 
 字符串中split函数和join函数的使用
 

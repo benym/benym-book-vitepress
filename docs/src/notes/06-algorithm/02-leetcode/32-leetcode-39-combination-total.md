@@ -17,7 +17,9 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-39-组合总数
+# LeetCode-39-组合总数
+
+## 题目
 
 给定一个无重复元素的数组 candidates 和一个目标数 target ，找出 candidates 中所有可以使数字和为 target 的组合。
 
@@ -28,7 +30,7 @@ candidates 中的数字可以无限制重复被选取。
 - 所有数字（包括 `target`）都是正整数。
 - 解集不能包含重复的组合。 
 
-<!--more-->
+
 
 **示例1：**
 
@@ -53,7 +55,7 @@ candidates 中的数字可以无限制重复被选取。
 ]
 ```
 
-### 解题思路
+## 解题思路
 
 **方法1、DFS+回溯：**
 
@@ -77,7 +79,7 @@ candidates 中的数字可以无限制重复被选取。
 
 - 在搜索的时候，需要设置起点的下标`start`，避免选择之前选择过的节点
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {

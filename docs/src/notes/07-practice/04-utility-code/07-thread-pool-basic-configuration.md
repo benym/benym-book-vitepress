@@ -10,6 +10,9 @@ author:
   name: benym
   link: https://github.com/benym
 ---
+
+# 线程池基本配置类
+
 ## ThreadPoolExecutorConfig
 ```java
 import org.springframework.context.annotation.Bean;

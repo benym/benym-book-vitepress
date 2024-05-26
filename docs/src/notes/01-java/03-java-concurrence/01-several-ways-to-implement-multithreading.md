@@ -14,7 +14,7 @@ author:
   link: https://github.com/benym
 ---
 
-## Java多线程实现的几种方式
+# Java多线程实现的几种方式
 
 多进程是计算机中的一个重要概念，通常一个任务称为一个进程，比如浏览网页、播放音乐都是一个进程。
 
@@ -24,7 +24,7 @@ author:
 
 在Java中，多线程的学习是非常重要的，本文主要概括Java多线程实现的几种方式。
 
- <!--more-->
+## 概览
 
 Java中实现多进程的方式大概有3种：
 
@@ -32,7 +32,7 @@ Java中实现多进程的方式大概有3种：
 2. 继承Thread类，重写run方法(Thread类本身也实现了Runnable接口)
 3. 实现Callable接口，重写call方法(带有返回值)
 
-#### 通过Runnable接口实现多线程
+### 通过Runnable接口实现多线程
 
 ```java
 public class Main {
@@ -53,7 +53,7 @@ class MyRunnable implements Runnable {
 
 实现Runnable接口的类，只定义了任务，自身不具有线程能力。需要通过Thread类的构造器来将任务驱动在一个线程中。
 
-#### 通过继承Thread类实现
+### 通过继承Thread类实现
 
 Thread类中已经实现了Runnable接口，所以可以直接继承Thread类，覆写run方法实现多线程
 
@@ -70,7 +70,7 @@ public class MyThread extends Thread{
 }
 ```
 
-#### 通过继承Callable接口实现
+### 通过继承Callable接口实现
 
 相较于实现Runnable接口，Callable方法可以有返回值，并且可以抛出异常
 

@@ -14,9 +14,10 @@ author:
   link: https://github.com/benym
 ---
 
-### TCC模式的空回滚和业务悬挂问题
+# 分布式事务TCC模式的空回滚和业务悬挂问题
+
+## TCC模式原理
 首先回顾一下TCC模式
-#### TCC模式原理
 TCC模式与AT模式非常相似，每阶段都是独立事务，不同的是TCC通过人工编码来实现数据恢复。需要实现三个方法：
  - Try：资源的检测和预留； 
  - Confirm：完成资源操作业务；要求Try成功Confirm一定要能成功。
@@ -38,7 +39,7 @@ TCC模式与AT模式非常相似，每阶段都是独立事务，不同的是TCC
 ::: center
 <img src="https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/TCCALL.png" alt="TCCALL" style="zoom:80%;" />
 :::
-#### 空回滚和业务悬挂问题
+### 空回滚和业务悬挂问题
 以代码中的`account—service`服务为例，利用TCC实现分布式事务需要完成以下逻辑：
  - 修改account-service，编写try、confirm、cancel逻辑
  - try业务：添加冻结金额，扣减可用金额
@@ -63,7 +64,7 @@ TCC模式与AT模式非常相似，每阶段都是独立事务，不同的是TCC
 :::
 **业务悬挂情况：**
 假设在上方的基础上，下方分支的阻塞畅通了，此时他执行1.4去锁定资源(try)，但整个事务都已经回滚结束了，所以他不会执行第二阶段，但冻结了资源，这种情况应该进行避免。需要在try操作之前查看当前分支是否已经回滚过，如果已经回滚过则不能在执行try命令。
-#### 实现方法
+### 实现方法
 为了实现空回滚、防止业务悬挂，以及幂等性要求。我们必须在数据库记录冻结金额的同时，记录当前事务id和执行状态，为此我们设计了一张表：
 ```sql
 CREATE TABLE `account_freeze_tbl` (
@@ -111,7 +112,7 @@ public interface TCCService {
     boolean cancel(BusinessActionContext context);
 }
 ```
-#### 在account-service中的具体实现
+### 在account-service中的具体实现
 **AccountTCCService.java**
 ```java
 @LocalTCC

@@ -16,7 +16,9 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-31-下一个排列
+# LeetCode-31-下一个排列
+
+## 题目
 
 实现获取下一个排列的函数，算法需要将给定数字序列重新排列成字典序中下一个更大的排列。
 
@@ -29,9 +31,7 @@ author:
 3,2,1 → 1,2,3
 1,1,5 → 1,5,1
 
-<!--more-->
-
-### 解题思路
+## 解题思路
 
 [思路出处](https://leetcode-cn.com/problems/next-permutation/solution/xia-yi-ge-pai-lie-suan-fa-xiang-jie-si-lu-tui-dao-/)
 
@@ -61,7 +61,7 @@ author:
 4. 可以断定这时 [j,end) 必然是降序，逆置 [j,end)，使其升序
 5. 如果在步骤 1 找不到符合的相邻元素对，说明当前 [begin,end) 为一个降序顺序，则直接跳到步骤 4
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {

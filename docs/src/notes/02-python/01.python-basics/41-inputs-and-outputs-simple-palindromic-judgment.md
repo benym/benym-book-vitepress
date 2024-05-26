@@ -11,7 +11,7 @@ author:
   link: https://github.com/benym
 ---
 
-### 输入输出——简单的回文判断
+# 输入输出——简单的回文判断
 
 ## 代码
 

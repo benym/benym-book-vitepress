@@ -11,7 +11,7 @@ author:
   link: https://github.com/benym
 ---
 
-### 利用python进行文件的自动备份(第三版和第四版)
+# 利用Python进行文件的自动备份(第三版和第四版)
 
 ## 代码
 
@@ -62,8 +62,6 @@ else:
 ```
 
 ## 运行结果
-
-<!--more-->
 
 ```bash
 Enter a comment -->This is my backup

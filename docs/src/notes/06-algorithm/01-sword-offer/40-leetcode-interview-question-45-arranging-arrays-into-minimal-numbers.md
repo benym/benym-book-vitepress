@@ -20,11 +20,13 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-面试题45-把数组排成最小的数 
+# LeetCode-面试题45-把数组排成最小的数 
+
+## 题目
 
 输入一个正整数数组，把数组里所有数字拼接起来排成一个数，打印能拼接出的所有数字中最小的一个。
 
- <!--more-->
+ 
 
 **示例1：**
 
@@ -49,7 +51,7 @@ author:
 - 输出结果可能非常大，所以你需要返回一个字符串而不是整数
 - 拼接起来的数字可能会有前导 0，最后结果不需要去掉前导 0
 
-### 解题思路
+## 解题思路
 
 排序：
 
@@ -59,7 +61,7 @@ author:
 
 Python代码....原来还可以根据key自定义规则，方法来自<https://leetcode-cn.com/u/bigkjp97/>因为默认升序，所以只需要改变大于或者小于的规则即可，其他规则富比较方法中不变不影响
 
-### Java代码
+## Java代码
 
 ```java
 class Solution {
@@ -79,7 +81,7 @@ class Solution {
 }
 ```
 
-### Python代码1
+## Python代码1
 
 ```python
 class SmallerNumKey(str): # 定义一个类
@@ -93,7 +95,7 @@ class Solution:
         return smallest_num
 ```
 
-### Python代码2
+## Python代码2
 
 ```python
 class Solution:

@@ -16,7 +16,9 @@ author:
   link: https://github.com/benym
 ---
 
-## LeetCode-155-最小栈
+# LeetCode-155-最小栈
+
+## 题目
 
 设计一个支持 push ，pop ，top 操作，并能在常数时间内检索到最小元素的栈。
 
@@ -25,7 +27,7 @@ author:
 - top() —— 获取栈顶元素。
 - getMin() —— 检索栈中的最小元素。
 
-<!--more-->
+
 
 **示例1：**
 
@@ -57,7 +59,7 @@ minStack.getMin();   --> 返回 -2.
 - 可假定整个链表结构中没有循环。
 - 程序尽量满足 O(n) 时间复杂度，且仅用 O(1) 内存。
 
-### 解题思路
+## 解题思路
 
 **方法1、两个栈：**
 
@@ -75,7 +77,7 @@ minStack.getMin();   --> 返回 -2.
 
 当需要拿到top时，返回数据栈栈顶元素
 
-### Java代码
+## Java代码
 
 ```java
 class MinStack {
@@ -122,7 +124,7 @@ class MinStack {
  */
 ```
 
-### Java代码2
+## Java代码2
 
 ```java
 class MinStack {
