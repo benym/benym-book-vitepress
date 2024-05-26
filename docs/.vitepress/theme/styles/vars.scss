@@ -93,9 +93,20 @@
   --docsearch-primary-color: var(--vp-c-brand) !important;
 }
 
+/* 自定义居中center容器 */
 .center-container {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   /* 可以根据需要添加其他样式 */
+}
+/* 自定义笔记note容器 */
+.custom-note {
+  padding: .5rem 1.5rem;
+  border-left-width: .5rem;
+  border-left-style: solid;
+  margin: 1rem 0;
+  background-color: #e8f5fa;
+  border-color: #157bae;
+  color: #0d4a68
 }

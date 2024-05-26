@@ -13,7 +13,7 @@ author:
   link: https://github.com/benym
 ---
 
-## ArrayList的扩容机制
+# ArrayList的扩容机制
 
 ArrayList是List接口的实现类，能够根据需要动态增长数组，本文通过分析源码，总结ArrayList的扩容机制
 

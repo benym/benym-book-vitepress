@@ -1,10 +1,8 @@
-import {defineConfig, PageData} from 'vitepress'
+import {defineConfig} from 'vitepress'
 import {getSidebar} from "./utils/getSidebar";
 import { setupCustomContainers } from "./utils/markdown-ext"
 
 import {head, nav, algolia} from './configs'
-
-const links: { url: string; lastmod: PageData['lastUpdated'] }[] = []
 
 export default defineConfig({
   outDir: '../dist',
