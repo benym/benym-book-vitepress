@@ -5,7 +5,7 @@ import { useRoute } from 'vitepress'
 const DEV = inject('DEV') as Ref<boolean>
 const route = useRoute()
 
-const pageId = computed(() => route.path.replace('/mm-notes', ''))
+const pageId = computed(() => route.path.replace('/benym-book-vitepress', ''))
 </script>
 
 <template>
@@ -24,9 +24,9 @@ const pageId = computed(() => route.path.replace('/mm-notes', ''))
 <style scoped>
 .copyright {
   margin-top: 24px;
-  border-top: 1px solid var(--vp-c-gutter);
+  border-top: 1px solid rgba(60, 60, 67, 0.12);
   padding: 32px 24px;
-  background-color: var(--vp-c-bg);
+  background-color: #ffffff;
 }
 
 .visitor {

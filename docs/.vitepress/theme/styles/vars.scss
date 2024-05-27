@@ -110,3 +110,11 @@
   border-color: #157bae;
   color: #0d4a68
 }
+/* 防止访问徽标超出侧边栏 */
+@media (min-width: 1440px) {
+  .VPNavBar.has-sidebar .title[data-v-c3b958ab] {
+    padding-left: max(32px, calc((100% - (var(--vp-layout-max-width) - 16px)) / 2.05))
+  }
+}
+
+
