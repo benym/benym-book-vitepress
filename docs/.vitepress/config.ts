@@ -1,8 +1,7 @@
 import {defineConfig} from 'vitepress'
-import {getSidebar} from "./utils/getSidebar";
 import {setupCustomContainers} from "./utils/markdown-ext"
 
-import {head, nav, algolia} from './configs'
+import {sidebarConfig, navConfig, headConfig, algoliaConfig} from './configs'
 import {blogTheme} from "./blog-theme";
 
 export default defineConfig({
@@ -14,7 +13,7 @@ export default defineConfig({
   lang: 'zh-CN',
   title: 'benym的知识笔记',
   description: 'benym的知识管理&博客',
-  head,
+  head: headConfig,
 
   lastUpdated: true,
   cleanUrls: true,
@@ -22,7 +21,7 @@ export default defineConfig({
   /* markdown 配置 */
   markdown: {
     config(md) {
-      // 自定义::: center容器
+      // 自定义容器
       setupCustomContainers(md);
     },
     lineNumbers: true,
@@ -43,20 +42,9 @@ export default defineConfig({
 
     logo: '/img/favicon-benym.ico',
 
-    nav,
+    nav: navConfig,
     // 【文章页面左侧导航】
-    sidebar: {
-      "/notes/01-java/": getSidebar("/docs/src", "/notes/01-java/"),
-      "/notes/02-python/": getSidebar("/docs/src", "/notes/02-python/"),
-      "/notes/03-distribution-and-middleware/": getSidebar("/docs/src", "/notes/03-distribution-and-middleware/"),
-      "/notes/05-foundation-framework/": getSidebar("/docs/src", "/notes/05-foundation-framework/"),
-      "/notes/06-algorithm/": getSidebar("/docs/src", "/notes/06-algorithm/"),
-      "/notes/07-practice/": getSidebar("/docs/src", "/notes/07-practice/"),
-      "/notes/08-open-source-project/": getSidebar("/docs/src", "/notes/08-open-source-project/"),
-      "/notes/09-milestone/": getSidebar("/docs/src", "/notes/09-milestone/"),
-      "/notes/10-about/": getSidebar("/docs/src", "/notes/10-about/"),
-      "/notes/11-design-pattern/": getSidebar("/docs/src", "/notes/11-design-pattern/")
-    },
+    sidebar: sidebarConfig,
     /* 右侧大纲配置 */
     outline: {
       level: 'deep',
@@ -82,7 +70,7 @@ export default defineConfig({
 
     search: {
       provider: 'algolia',
-      options: algolia
+      options: algoliaConfig
     },
 
     docFooter: {

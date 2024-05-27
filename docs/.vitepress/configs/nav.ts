@@ -1,6 +1,6 @@
 import type {DefaultTheme} from 'vitepress'
 
-export const nav: DefaultTheme.Config['nav'] = [
+export const navConfig: DefaultTheme.Config['nav'] = [
   {text: '🦮导航', link: '/notes/0-navigation/nav', activeMatch: '^/nav'},
   {
     text: '🦁Java',

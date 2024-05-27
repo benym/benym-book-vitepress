@@ -1,6 +1,6 @@
 import type { DefaultTheme } from 'vitepress'
 
-export const algolia: DefaultTheme.AlgoliaSearchOptions = {
+export const algoliaConfig: DefaultTheme.AlgoliaSearchOptions = {
   appId: '2MUK3POOV0',
   apiKey: 'f8e1b72e1dda9f0200b3fc5acc313e1e',
   indexName: 'cloud-benym',

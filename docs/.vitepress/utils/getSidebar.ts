@@ -31,7 +31,8 @@ function generate(notesRootPath: string, pagePath: string, prefix = "", depth = 
   const relDir = path.join(prefix, pagePath);
   // sidebar 初始化
   let sidebarSection: SideBar = {
-    text: transformName(pagePath.replace(/\//g, "")),
+    // 移除路径所有斜杠，并移除notes前缀
+    text: transformName(pagePath.replace(/\//g, "").replace('notes', '')),
     items: [],
     collapsed: depth >= 2,
     link: "",
