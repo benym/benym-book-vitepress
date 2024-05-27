@@ -8,7 +8,6 @@ interface Friend {
 }
 
 /**
- * TODO: 缺项处理
  * 在此处填写你的友情链接
  */
 export const friendsInfo: Friend[] = [
