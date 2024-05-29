@@ -31,16 +31,17 @@ export const blogTheme = getThemeConfig({
   // 文章默认作者
   author: 'benym',
   // 评论
-  // comment: {
-  //   type: 'giscus',
-  //   options: {
-  //     repo: '',
-  //     repoId: '',
-  //     category: 'Announcements',
-  //     categoryId: '',
-  //     inputPosition: 'top',
-  //   },
-  // },
+  comment: {
+    type: 'giscus',
+    options: {
+      repo: 'benym/benym-book-vitepress',
+      repoId: 'R_kgDOL9jcpA',
+      category: 'Announcements',
+      categoryId: 'DIC_kwDOL9jcpM4Cfrz9',
+      inputPosition: 'top',
+    },
+    mobileMinify: true
+  },
   buttonAfterArticle: {
     openTitle: '投"币"支持',
     closeTitle: '下次一定',
