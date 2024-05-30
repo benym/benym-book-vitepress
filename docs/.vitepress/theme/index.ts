@@ -1,8 +1,6 @@
 import { h, watch } from 'vue'
 import { useData, EnhanceAppContext } from 'vitepress'
 
-import { createMediumZoomProvider } from './composables/useMediumZoom'
-
 import MNavVisitor from './components/MNavVisitor.vue'
 import MDocFooter from './components/MDocFooter.vue'
 import MAsideSponsors from './components/MAsideSponsors.vue'
@@ -62,7 +60,6 @@ export default {
     })
   },
   enhanceApp({ app, router }: EnhanceAppContext) {
-    createMediumZoomProvider(app, router)
     app.component("LinkCard", LinkCard);
     app.component("HText", HText);
     app.component('MNavLinks', MNavLinks)
