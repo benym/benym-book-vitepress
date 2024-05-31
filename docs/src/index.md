@@ -8,7 +8,7 @@ hero:
   text: Deployed with a Cloud-Native Architecture
   tagline: 惟其艰难，才更显勇毅🍂惟其笃行，才弥足珍贵
   image:
-    src: /img/playhome.png
+    src: https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/playhome.png
     alt: benym-book
   actions:
     - theme: brand
@@ -38,17 +38,17 @@ features:
     details: 包含站点优化、通用技术方案、人工智能、实用代码等总结整理
     link: /notes/07-practice/02-thinking-and-scheme/01-massive-data-topk-problem
     icon:
-      src: /icons/task.svg
+      src: https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/task.svg
   - title: 开源项目
     details: Rpamis系列开源项目，现有快速脚手架、通用工具类、安全组件、责任链组件
     link: /notes/08-open-source-project/01-rpamis/01-utils/01-fear-no-performance-worries-twelve-bean-copy-tools-pressure-test-big-competition
     icon:
-      src: /icons/open.svg
+      src: https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/open.svg
   - title: 设计模式
     details: 状态机设计模式
     link: /notes/11-design-pattern/01-state-machine-mode/01-cola-statemachine-transaction-failure-pit
     icon:
-      src: /icons/design.svg
+      src: https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/design.svg
 ---
 
 <style>
