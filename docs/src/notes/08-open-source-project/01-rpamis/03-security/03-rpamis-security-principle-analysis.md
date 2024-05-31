@@ -30,7 +30,7 @@ permalink: /pages/1ffe0d/
 [rpamis-security](https://github.com/rpamis/rpamis-security)<Badge text="1.0.1"/>主要通过`Mybatis-Plugin`及`AOP`切面实现安全功能，其主要组件如下图所示
 
 ::: center
-<img src="https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/rpas/rpamis-security-arch.jpg" />
+<img src="https://img.benym.cn/rpas/rpamis-security-arch.jpg" />
 :::
 
 ## Mybatis插件前置知识
@@ -69,17 +69,17 @@ public interface Interceptor {
 项目在启动时，`Mybatis`的`org.apache.ibatis.builder.xml.XMLConfigBuilder#parseConfiguration`方法内的`pluginElement`方法会解析配置文件中的`plugins`节点
 
 ::: center
-<img src="https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/rpas/rpamis-se1.png" />
+<img src="https://img.benym.cn/rpas/rpamis-se1.png" />
 :::
 
 ::: center
-<img src="https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/rpas/rpamis-se2.png" />
+<img src="https://img.benym.cn/rpas/rpamis-se2.png" />
 :::
 
 之后`configuration`的`addInterceptor`方法会将拦截器加入到拦截器链中
 
 ::: center
-<img src="https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/rpas/rpamis-se3.png" style="zoom:70%;" />
+<img src="https://img.benym.cn/rpas/rpamis-se3.png" style="zoom:70%;" />
 :::
 
 在执行`SQL`时，所有的插件都会依次执行
@@ -171,7 +171,7 @@ else {
 通用加密处理过程如图所示
 
 ::: center
-<img src="https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/rpas/rpamis-security-encrypt.png" />
+<img src="https://img.benym.cn/rpas/rpamis-security-encrypt.png" />
 :::
 
 对于任意需要解析的实体，我们需要寻找实体内所有被`@SecurityField`注解标记的字段
@@ -319,7 +319,7 @@ return invocation.proceed();
 原因是因为`Mybatis`在新增数据后有一个回填`id`的功能，其功能实现在`org.apache.ibatis.executor.statement.PreparedStatementHandler#update`
 
 ::: center
-<img src="https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/rpas/rpamis-se4.png" />
+<img src="https://img.benym.cn/rpas/rpamis-se4.png" />
 :::
 
 其中`KeyGenerator`将对静态`SQL`的新增实体回填`id`，此时的新增实体`parameterObject`和需要加密的实体是同一个，如果进行深拷贝，则加密对象为另外的一个实体，而此时`id`回填的为原始实体，由于原始实体已经不再使用，出参为加密实体，将造成回填`id`失效
@@ -632,7 +632,7 @@ static {
 他在获取所有`Field`之后其实不是想象中的那样返回了认识的脱敏字段，而是返回了一堆`List`的属性，如图所示
 
 ::: center
-<img src="https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/rpas/rpamis-se5.png" />
+<img src="https://img.benym.cn/rpas/rpamis-se5.png" />
 :::
 
 这其中真正的数据在`fileds[4]`的`elementData`中，其他都是不必要的取值，因此所有的类型处理器都需要判断当前处理的对象是否是真正要处理的对象

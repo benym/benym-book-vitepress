@@ -407,7 +407,7 @@ public void sendMessage(MessageEntity messageEntity) {
 
 我们用POSTMAN简单测试一下，保存用户数据后发送10000条消息，需要的时间大概为`169ms`
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/messageNoqueue.png)
+![](https://img.benym.cn/img/messageNoqueue.png)
 :::
 这是简单的打印所需要的时间，如果内部消息处理逻辑复杂，这个时间将会变得很长，以至于接口长时间等待
 
@@ -749,7 +749,7 @@ public class MessageServiceImpl implements MessageService {
 
 同样用POSTMAN简单测试一下，保存用户数据后发送10000条消息，需要的时间大概为`119ms`，由于消息发送的业务简单，所以只相对于前文串行执行快了一点
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/messageAsyncWithnoqueue.png)
+![](https://img.benym.cn/img/messageAsyncWithnoqueue.png)
 :::
 ### 引入消息队列
 
@@ -900,7 +900,7 @@ public class MessageServiceImpl implements MessageService {
 
 同样用POSTMAN简单测试一下，保存用户数据后发送10000条消息，需要的时间大概为`10ms`
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/messageWithqueue.png)
+![](https://img.benym.cn/img/messageWithqueue.png)
 :::
 消耗的时间大概为：保存用户需要的时间+发送消息实体到内存队列的时间
 

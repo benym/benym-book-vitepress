@@ -27,7 +27,7 @@ permalink: /pages/747050/
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/yapi/yapi-back.png)
+![](https://img.benym.cn/yapi/yapi-back.png)
 
 :::
 
@@ -50,7 +50,7 @@ permalink: /pages/747050/
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/yapi/yapi-1.png)
+![](https://img.benym.cn/yapi/yapi-1.png)
 
 :::
 
@@ -60,7 +60,7 @@ permalink: /pages/747050/
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/yapi/yapi-2.png)
+![](https://img.benym.cn/yapi/yapi-2.png)
 
 :::
 
@@ -68,7 +68,7 @@ permalink: /pages/747050/
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/yapi/yapi-3.png)
+![](https://img.benym.cn/yapi/yapi-3.png)
 
 :::
 
@@ -80,13 +80,13 @@ permalink: /pages/747050/
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/yapi/yapi-4.png)
+![](https://img.benym.cn/yapi/yapi-4.png)
 
 :::
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/yapi/yapi-5.png)
+![](https://img.benym.cn/yapi/yapi-5.png)
 
 :::
 
@@ -94,7 +94,7 @@ permalink: /pages/747050/
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/yapi/yapi-6.png)
+![](https://img.benym.cn/yapi/yapi-6.png)
 
 :::
 
@@ -102,7 +102,7 @@ permalink: /pages/747050/
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/yapi/yapi-7.png)
+![](https://img.benym.cn/yapi/yapi-7.png)
 
 :::
 
@@ -116,7 +116,7 @@ permalink: /pages/747050/
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/yapi/yapi-8.png)
+![](https://img.benym.cn/yapi/yapi-8.png)
 
 :::
 
@@ -124,7 +124,7 @@ permalink: /pages/747050/
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/yapi/yapi-9.png)
+![](https://img.benym.cn/yapi/yapi-9.png)
 
 :::
 
@@ -132,7 +132,7 @@ permalink: /pages/747050/
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/yapi/yapi-10.png)
+![](https://img.benym.cn/yapi/yapi-10.png)
 
 :::
 
@@ -142,13 +142,13 @@ permalink: /pages/747050/
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/yapi/yapi-11.png)
+![](https://img.benym.cn/yapi/yapi-11.png)
 
 :::
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/yapi/yapi-12.png)
+![](https://img.benym.cn/yapi/yapi-12.png)
 
 :::
 

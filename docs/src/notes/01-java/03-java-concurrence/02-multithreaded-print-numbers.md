@@ -209,17 +209,17 @@ public void run() {
 那么程序将会发生**死锁**，**因为两个线程都持有当前线程的许可，并没有等待到释放许可的执行**，当我们把断点放在奇数和偶数获取许可的代码段上时，会发现奇数线程先获取了许可，还没来得及执行`if`判断，偶数线程也获得了许可，此时程序没有任何打印。
 奇数线程：
 ::: center
-<img src="https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/threadodd.png/zipstyle" alt="奇数线程" style="zoom:60%;" />
+<img src="https://img.benym.cn/threadodd.png/zipstyle" alt="奇数线程" style="zoom:60%;" />
 :::
 偶数线程：
 ::: center
-<img src="https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/threadeven.png/zipstyle" alt="偶数线程" style="zoom:60%;" />
+<img src="https://img.benym.cn/threadeven.png/zipstyle" alt="偶数线程" style="zoom:60%;" />
 :::
 此时我们采用`jps`命令找到当前线程的`pid`
 ::: center
-<img src="https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/jpsimg.png/zipstyle" alt="jps" style="zoom:60%;" />
+<img src="https://img.benym.cn/jpsimg.png/zipstyle" alt="jps" style="zoom:60%;" />
 :::
 之后采用`jstack pid`命令分析当前线程的堆栈信息，可以发现奇数线程和偶数线程都处于`WAITING `状态，他们都在等待对方释放锁或传递许可。所以正确的写法应该在`if`判断内，当打印之后便会阻塞当前线程，由于数字已经打印，再次循环时便会进入到`else`的判断逻辑，即当前线程发现不是属于自己该打印的数字就会尝试唤醒另一个线程。
 ::: center
-<img src="https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/jstackan.png/zipstyle" alt="jstack" style="zoom:60%;" />
+<img src="https://img.benym.cn/jstackan.png/zipstyle" alt="jstack" style="zoom:60%;" />
 :::

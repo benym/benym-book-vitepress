@@ -45,7 +45,7 @@ export const blogTheme = getThemeConfig({
   buttonAfterArticle: {
     openTitle: '投"币"支持',
     closeTitle: '下次一定',
-    content: '<img src="https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/ali.jpg/zipstyle">',
+    content: '<img src="https://img.benym.cn/img/ali.jpg/zipstyle">',
     icon: 'wechatPay',
   },
   popover: {

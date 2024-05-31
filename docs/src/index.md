@@ -8,7 +8,7 @@ hero:
   text: Deployed with a Cloud-Native Architecture
   tagline: 惟其艰难，才更显勇毅🍂惟其笃行，才弥足珍贵
   image:
-    src: https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/playhome.png
+    src: https://img.benym.cn/img/playhome.png
     alt: benym-book
   actions:
     - theme: brand
@@ -23,32 +23,32 @@ features:
     details: Java基础知识总结
     link: /notes/01-java/01-java-basics/01-reflection-acquires-class-objects-in-three-ways
     icon:
-      src: https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/site1back.png
+      src: https://img.benym.cn/img/site1back.png
   - title: 分布式与中间件
     details: Kafka、Redis、MySQL、分布式相关知识
     link: /notes/03-distribution-and-middleware/03-mysql/01-principles-and-application-scenarios-of-mysql-index
     icon:
-      src: https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/site2back.png
+      src: https://img.benym.cn/img/site2back.png
   - title: 基础框架
     details: Spring生态框架与常用框架相关知识
     link: /notes/05-foundation-framework/01-spring/02-spring-aop/01-implement-operation-logging-with-aop
     icon:
-      src: https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/site3back.png
+      src: https://img.benym.cn/img/site3back.png
   - title: 项目实践方案
     details: 包含站点优化、通用技术方案、人工智能、实用代码等总结整理
     link: /notes/07-practice/02-thinking-and-scheme/01-massive-data-topk-problem
     icon:
-      src: https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/task.svg
+      src: https://img.benym.cn/img/task.svg
   - title: 开源项目
     details: Rpamis系列开源项目，现有快速脚手架、通用工具类、安全组件、责任链组件
     link: /notes/08-open-source-project/01-rpamis/01-utils/01-fear-no-performance-worries-twelve-bean-copy-tools-pressure-test-big-competition
     icon:
-      src: https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/open.svg
+      src: https://img.benym.cn/img/open.svg
   - title: 设计模式
     details: 状态机设计模式
     link: /notes/11-design-pattern/01-state-machine-mode/01-cola-statemachine-transaction-failure-pit
     icon:
-      src: https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/design.svg
+      src: https://img.benym.cn/img/design.svg
 ---
 
 <style>

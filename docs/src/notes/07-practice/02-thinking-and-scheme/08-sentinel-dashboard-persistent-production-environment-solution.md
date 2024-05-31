@@ -39,7 +39,7 @@ permalink: /pages/12a5d6/
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-1.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-1.png/zipstyle)
 
 :::
 
@@ -57,7 +57,7 @@ permalink: /pages/12a5d6/
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-2.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-2.png/zipstyle)
 
 :::
 
@@ -65,7 +65,7 @@ permalink: /pages/12a5d6/
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-3.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-3.png/zipstyle)
 
 :::
 
@@ -89,7 +89,7 @@ permalink: /pages/12a5d6/
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-4.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-4.png/zipstyle)
 
 :::
 
@@ -136,7 +136,7 @@ permalink: /pages/12a5d6/
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-5.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-5.png/zipstyle)
 
 :::
 
@@ -144,7 +144,7 @@ permalink: /pages/12a5d6/
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-6.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-6.png/zipstyle)
 
 :::
 
@@ -154,7 +154,7 @@ permalink: /pages/12a5d6/
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-7.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-7.png/zipstyle)
 
 :::
 
@@ -162,7 +162,7 @@ permalink: /pages/12a5d6/
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-8.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-8.png/zipstyle)
 
 :::
 
@@ -178,7 +178,7 @@ permalink: /pages/12a5d6/
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-9.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-9.png/zipstyle)
 
 :::
 
@@ -186,7 +186,7 @@ permalink: /pages/12a5d6/
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-10.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-10.png/zipstyle)
 
 :::
 
@@ -194,13 +194,13 @@ permalink: /pages/12a5d6/
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-11.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-11.png/zipstyle)
 
 :::
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-12.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-12.png/zipstyle)
 
 :::
 
@@ -212,7 +212,7 @@ permalink: /pages/12a5d6/
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-13.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-13.png/zipstyle)
 
 :::
 
@@ -220,7 +220,7 @@ permalink: /pages/12a5d6/
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-14.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-14.png/zipstyle)
 
 :::
 
@@ -232,7 +232,7 @@ permalink: /pages/12a5d6/
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-15.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-15.png/zipstyle)
 
 :::
 
@@ -242,7 +242,7 @@ permalink: /pages/12a5d6/
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-16.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-16.png/zipstyle)
 
 :::
 
@@ -252,7 +252,7 @@ permalink: /pages/12a5d6/
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-17.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-17.png/zipstyle)
 
 :::
 
@@ -374,13 +374,13 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-18.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-18.png/zipstyle)
 
 :::
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-19.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-19.png/zipstyle)
 
 :::
 
@@ -388,13 +388,13 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-20.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-20.png/zipstyle)
 
 :::
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-21.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-21.png/zipstyle)
 
 :::
 
@@ -404,7 +404,7 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-22.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-22.png/zipstyle)
 
 :::
 
@@ -414,7 +414,7 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-23.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-23.png/zipstyle)
 
 :::
 
@@ -424,7 +424,7 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-24.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-24.png/zipstyle)
 
 :::
 
@@ -432,7 +432,7 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-25.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-25.png/zipstyle)
 
 :::
 
@@ -446,7 +446,7 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-26.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-26.png/zipstyle)
 
 :::
 
@@ -454,7 +454,7 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-27.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-27.png/zipstyle)
 
 :::
 
@@ -462,19 +462,19 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-28.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-28.png/zipstyle)
 
 :::
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-29.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-29.png/zipstyle)
 
 :::
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-30.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-30.png/zipstyle)
 
 :::
 
@@ -482,7 +482,7 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-31.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-31.png/zipstyle)
 
 :::
 
@@ -502,7 +502,7 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-32.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-32.png/zipstyle)
 
 :::
 
@@ -510,7 +510,7 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-33.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-33.png/zipstyle)
 
 :::
 
@@ -520,7 +520,7 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-34.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-34.png/zipstyle)
 
 :::
 
@@ -540,7 +540,7 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-35.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-35.png/zipstyle)
 
 :::
 
@@ -548,13 +548,13 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-36.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-36.png/zipstyle)
 
 :::
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-37.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-37.png/zipstyle)
 
 :::
 
@@ -562,7 +562,7 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-38.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-38.png/zipstyle)
 
 :::
 
@@ -572,7 +572,7 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-39.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-39.png/zipstyle)
 
 :::
 
@@ -580,7 +580,7 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-40.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-40.png/zipstyle)
 
 :::
 
@@ -601,7 +601,7 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-41.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-41.png/zipstyle)
 
 :::
 
@@ -609,7 +609,7 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-42.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-42.png/zipstyle)
 
 :::
 
@@ -617,13 +617,13 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-43.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-43.png/zipstyle)
 
 :::
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-44.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-44.png/zipstyle)
 
 :::
 
@@ -639,7 +639,7 @@ npm install --registry=https://registry.npm.taobao.org
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-45.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-45.png/zipstyle)
 
 :::
 
@@ -647,13 +647,13 @@ npm install --registry=https://registry.npm.taobao.org
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-46.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-46.png/zipstyle)
 
 :::
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-47.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-47.png/zipstyle)
 
 :::
 
@@ -681,7 +681,7 @@ npm install --registry=https://registry.npm.taobao.org
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-48.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-48.png/zipstyle)
 
 :::
 
@@ -693,7 +693,7 @@ npm install --registry=https://registry.npm.taobao.org
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-49.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-49.png/zipstyle)
 
 :::
 
@@ -705,7 +705,7 @@ npm install --registry=https://registry.npm.taobao.org
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-50.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-50.png/zipstyle)
 
 :::
 
@@ -713,7 +713,7 @@ npm install --registry=https://registry.npm.taobao.org
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-51.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-51.png/zipstyle)
 
 :::
 
@@ -723,7 +723,7 @@ npm install --registry=https://registry.npm.taobao.org
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-52.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-52.png/zipstyle)
 
 :::
 
@@ -731,7 +731,7 @@ npm install --registry=https://registry.npm.taobao.org
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-53.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-53.png/zipstyle)
 
 :::
 
@@ -781,7 +781,7 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-54.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-54.png/zipstyle)
 
 :::
 
@@ -797,7 +797,7 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-55.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-55.png/zipstyle)
 
 :::
 
@@ -805,7 +805,7 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-56.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-56.png/zipstyle)
 
 :::
 
@@ -813,7 +813,7 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-57.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-57.png/zipstyle)
 
 :::
 
@@ -825,13 +825,13 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-58.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-58.png/zipstyle)
 
 :::
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-59.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-59.png/zipstyle)
 
 :::
 
@@ -843,7 +843,7 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-60.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-60.png/zipstyle)
 
 :::
 
@@ -851,7 +851,7 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-61.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-61.png/zipstyle)
 
 :::
 
@@ -865,7 +865,7 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-62.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-62.png/zipstyle)
 
 :::
 
@@ -881,7 +881,7 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-63.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-63.png/zipstyle)
 
 :::
 
@@ -889,7 +889,7 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-64.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-64.png/zipstyle)
 
 :::
 
@@ -899,7 +899,7 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-65.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-65.png/zipstyle)
 
 :::
 
@@ -911,13 +911,13 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-66.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-66.png/zipstyle)
 
 :::
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-67.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-67.png/zipstyle)
 
 :::
 
@@ -931,7 +931,7 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-68.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-68.png/zipstyle)
 
 :::
 
@@ -939,7 +939,7 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-69.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-69.png/zipstyle)
 
 :::
 
@@ -947,7 +947,7 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-70.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-70.png/zipstyle)
 
 :::
 
@@ -959,7 +959,7 @@ spring.cloud.sentinel.datasource.ds2.zk.rule-type=degrade
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-71.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-71.png/zipstyle)
 
 :::
 
@@ -975,7 +975,7 @@ dubbo.application.context.name.filter=com.alibaba.csp.sentinel.adapter.dubbo3.Du
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-72.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-72.png/zipstyle)
 
 :::
 
@@ -983,7 +983,7 @@ dubbo.application.context.name.filter=com.alibaba.csp.sentinel.adapter.dubbo3.Du
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-73.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-73.png/zipstyle)
 
 :::
 
@@ -991,7 +991,7 @@ dubbo.application.context.name.filter=com.alibaba.csp.sentinel.adapter.dubbo3.Du
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-74.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-74.png/zipstyle)
 
 :::
 
@@ -999,7 +999,7 @@ dubbo.application.context.name.filter=com.alibaba.csp.sentinel.adapter.dubbo3.Du
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-75.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-75.png/zipstyle)
 
 :::
 
@@ -1009,6 +1009,6 @@ dubbo.application.context.name.filter=com.alibaba.csp.sentinel.adapter.dubbo3.Du
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/sentinel-dashboard/sentinel-dashboard-76.png/zipstyle)
+![](https://img.benym.cn/sentinel-dashboard/sentinel-dashboard-76.png/zipstyle)
 
 :::

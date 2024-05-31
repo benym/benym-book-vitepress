@@ -19,7 +19,7 @@ Redis提供了哨兵(Sentinel)机制来实现主从集群的自动故障恢复�
 **主从切换技术的方法是：当主服务器宕机后，需要手动把一台从服务器切换为主服务器，这就需要人工干预，费事费力，还会造成一段时间内服务不可用**。这不是一种推荐的方式，更多时候，我们优先考虑**哨兵模式**。
 ## 哨兵的结构如图所示
 ::: center
-<img src="https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/redisImg/redisSentinel1.png/zipstyle" alt="哨兵结构图" style="zoom:50%;" />
+<img src="https://img.benym.cn/redisImg/redisSentinel1.png/zipstyle" alt="哨兵结构图" style="zoom:50%;" />
 :::
 通常而言，哨兵需要部署至少3个节点，保证哨兵集群的高可用。
 其作用可概述为：
@@ -35,7 +35,7 @@ Sentinel基于心跳机制监测服务状态，每隔1秒向集群的每个实�
  - **客观下线**：若超过指定数量（quorum）的sentinel都认为该实例主观下线，则该实例客观下线。quorum值最好超过Sentinel实例数量的一半。即多数sentinel认为主观下线。
 
 ::: center
-<img src="https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/redisImg/redisSentinel2.png/zipstyle" alt="服务状态监控" style="zoom:50%;" />
+<img src="https://img.benym.cn/redisImg/redisSentinel2.png/zipstyle" alt="服务状态监控" style="zoom:50%;" />
 :::
 当sentinel认为实例客观下线时，就需要重新选举master节点。
 
@@ -57,7 +57,7 @@ Sentinel基于心跳机制监测服务状态，每隔1秒向集群的每个实�
 
 如图所示，master从中间的节点变为了最左的节点，原本的master重启后变成了slave
 ::: center
-<img src="https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/redisImg/redisSentinel3.png/zipstyle" alt="故障转移" style="zoom:50%;" />
+<img src="https://img.benym.cn/redisImg/redisSentinel3.png/zipstyle" alt="故障转移" style="zoom:50%;" />
 :::
 
 ## 总结

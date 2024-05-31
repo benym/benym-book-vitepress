@@ -158,7 +158,7 @@ public static void main(String[] args) throws RunnerException {
 
 和生成构造方法的Idea目录相同，插件支持通过右键点击Generate，选择操作 Generate JMH benchmark 就可以生成一个带有 @Benchmark 的方法。
 ::: center
-![https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/genBenchmark.png](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/genBenchmark.png/zipstyle)
+![https://img.benym.cn/img/genBenchmark.png](https://img.benym.cn/img/genBenchmark.png/zipstyle)
 :::
 此时不需要手动打包，也不需要编写main方法，直接点击左侧运行即可
 

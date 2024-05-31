@@ -23,7 +23,7 @@ author: benym
 :::
 ## 打开Github Pages页面的强制HTTPS
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/httpsupdate/hexo%E5%8D%87%E7%BA%A7https-1.png)
+![](https://img.benym.cn/httpsupdate/hexo%E5%8D%87%E7%BA%A7https-1.png)
 :::
 **在此之前，请确认上图中的Custom domain已经写为你的自定义域名**
 
@@ -33,7 +33,7 @@ author: benym
 :::
 ## 打开Coding Pages服务的强制HTTPS访问
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/httpsupdate/hexo%E5%8D%87%E7%BA%A7https-2.png)
+![](https://img.benym.cn/httpsupdate/hexo%E5%8D%87%E7%BA%A7https-2.png)
 :::
 
 
@@ -47,27 +47,27 @@ author: benym
 
 ### 1、在云产品中选择对象存储
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/httpsupdate/hexo%E5%8D%87%E7%BA%A7https-3.png)
+![](https://img.benym.cn/httpsupdate/hexo%E5%8D%87%E7%BA%A7https-3.png)
 :::
 ### 2、创建存储桶
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/httpsupdate/hexo%E5%8D%87%E7%BA%A7https-4.png)
+![](https://img.benym.cn/httpsupdate/hexo%E5%8D%87%E7%BA%A7https-4.png)
 :::
 #### 2.1关于存储的容量问题：
 
 **每个存储桶中的对象不限**
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/httpsupdate/hexo%E5%8D%87%E7%BA%A7https-6.png)
+![](https://img.benym.cn/httpsupdate/hexo%E5%8D%87%E7%BA%A7https-6.png)
 :::
 **每月免费存储额度50GB，下行流量10GB，对于一个个人博客流量还不大的情况下完全足够了**
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/httpsupdate/hexo%E5%8D%87%E7%BA%A7https-7.png)
+![](https://img.benym.cn/httpsupdate/hexo%E5%8D%87%E7%BA%A7https-7.png)
 :::
 ### 3、创建存储桶后上传自己的文件，然后点击**详情**，可以看到他的https外部链接
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/httpsupdate/hexo%E5%8D%87%E7%BA%A7https-5.png)
+![](https://img.benym.cn/httpsupdate/hexo%E5%8D%87%E7%BA%A7https-5.png)
 :::
 ### 4、更换自己的md文件的外部链接即可，然后重新部署hexo，就可以看到效果了
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/httpsupdate/https.png)
+![](https://img.benym.cn/httpsupdate/https.png)
 :::

@@ -86,7 +86,7 @@ author: benym
 
 下图更好的展示了双亲委派的过程：
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%B4%BE%E6%A8%A1%E5%9E%8B.png)
+![](https://img.benym.cn/img/%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%B4%BE%E6%A8%A1%E5%9E%8B.png)
 
 ## 双亲委派的好处
 

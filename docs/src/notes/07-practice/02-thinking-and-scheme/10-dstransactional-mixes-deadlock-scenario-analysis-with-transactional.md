@@ -22,12 +22,12 @@ permalink: /pages/aef382/
 
 问题流程图如下
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/deadlock-seq.png)
+![](https://img.benym.cn/img/deadlock-seq.png)
 
 ## 问题现象
 生产环境偶现死锁异常日志
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/deadlock-exception.png)
+![](https://img.benym.cn/img/deadlock-exception.png)
 
 部分业务执行成功一半，事务没有正常回滚
 

@@ -20,37 +20,37 @@ logistic回归，是一种广义的线性回归分析模型，常用于数据挖
 
 ## 构造函数h(x)
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/%E5%85%AC%E5%BC%8F/1.png)
+![](https://img.benym.cn/%E5%85%AC%E5%BC%8F/1.png)
 :::
 其中sigmoid函数形式为：
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/%E5%85%AC%E5%BC%8F/2.png)
+![](https://img.benym.cn/%E5%85%AC%E5%BC%8F/2.png)
 :::
 对应的函数图像是一个取值在0和1之间的曲线：
 ::: center
-![sigmoid函数图像](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/LogisticRegression/sigmoid.jpg)
+![sigmoid函数图像](https://img.benym.cn/LogisticRegression/sigmoid.jpg)
 :::
 因为：
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/%E5%85%AC%E5%BC%8F/3.png)
+![](https://img.benym.cn/%E5%85%AC%E5%BC%8F/3.png)
 :::
 由上两式联立可得:
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/%E5%85%AC%E5%BC%8F/4.png)
+![](https://img.benym.cn/%E5%85%AC%E5%BC%8F/4.png)
 :::
 ## 使用极大似然估计法
 
 取似然函数(离散型):
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/%E5%85%AC%E5%BC%8F/5.png)
+![](https://img.benym.cn/%E5%85%AC%E5%BC%8F/5.png)
 :::
 对似然函数取ln，转换为：
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/%E5%85%AC%E5%BC%8F/6.png)
+![](https://img.benym.cn/%E5%85%AC%E5%BC%8F/6.png)
 :::
 极大似然估计就是要求得使l(θ)取最大值时的θ，所以如果是这样的话会对应这梯度上升算法，虽然和梯度下降效果一样但是为了便于理解，将J(θ)定义为如下式子，以变化为梯度下降算法求解。
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/%E5%85%AC%E5%BC%8F/7.png)
+![](https://img.benym.cn/%E5%85%AC%E5%BC%8F/7.png)
 :::
 因为乘以了一个负的系数，所以J(θ)取最小值时的θ是最优参数
 
@@ -58,47 +58,47 @@ logistic回归，是一种广义的线性回归分析模型，常用于数据挖
 
 根据梯度下降法可知，更新过程为：
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/%E5%85%AC%E5%BC%8F/8.png)
+![](https://img.benym.cn/%E5%85%AC%E5%BC%8F/8.png)
 :::
 式中α为学习率，求偏导数步骤：
 ::: center
-![偏导数](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/%E4%BC%BC%E7%84%B6%E5%87%BD%E6%95%B0%E6%8E%A8%E5%AF%BC.png)
+![偏导数](https://img.benym.cn/%E4%BC%BC%E7%84%B6%E5%87%BD%E6%95%B0%E6%8E%A8%E5%AF%BC.png)
 :::
 所以更新过程可以写成：
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/%E5%85%AC%E5%BC%8F/10.png)
+![](https://img.benym.cn/%E5%85%AC%E5%BC%8F/10.png)
 :::
 因为α是常量，所以1/m可以省略，最后更新过程变为：
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/%E5%85%AC%E5%BC%8F/11.png)
+![](https://img.benym.cn/%E5%85%AC%E5%BC%8F/11.png)
 :::
 ## 梯度下降的向量化(vectorization)
 
 约定训练数据的矩阵形式如下，**x**的每一行为一条训练样本，而每一列为不同的特称取值 ：
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/vector/%E5%90%91%E9%87%8F%E5%8C%961.png)
+![](https://img.benym.cn/vector/%E5%90%91%E9%87%8F%E5%8C%961.png)
 :::
 约定待求的参数**θ**的矩阵形式为:
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/vector/%E5%90%91%E9%87%8F%E5%8C%962.png)
+![](https://img.benym.cn/vector/%E5%90%91%E9%87%8F%E5%8C%962.png)
 :::
 先求**x*θ**并记为**A** :
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/vector/%E5%90%91%E9%87%8F%E5%8C%963.png)
+![](https://img.benym.cn/vector/%E5%90%91%E9%87%8F%E5%8C%963.png)
 :::
 求**hθ(x)-y**并记为**E**:
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/vector/%E5%90%91%E9%87%8F%E5%8C%964.png)
+![](https://img.benym.cn/vector/%E5%90%91%E9%87%8F%E5%8C%964.png)
 :::
 **g(A)**的参数**A**为一列向量，所以实现**g**函数时要支持列向量作为参数，并返回列向量。由上式可知**hθ(x)-y**可以由**g(A)-y**一次计算求得。
 
 更新过程可以转化为：
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/%E5%85%AC%E5%BC%8F/12.png)
+![](https://img.benym.cn/%E5%85%AC%E5%BC%8F/12.png)
 :::
 综合起来就是:
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/vector/%E5%90%91%E9%87%8F%E5%8C%967.png)
+![](https://img.benym.cn/vector/%E5%90%91%E9%87%8F%E5%8C%967.png)
 :::
 综上所述，vectorization后**θ**更新的步骤如下 :
 
@@ -108,7 +108,7 @@ logistic回归，是一种广义的线性回归分析模型，常用于数据挖
 
 最后，向量化的参数更新公式为:
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/%E5%85%AC%E5%BC%8F/13.png)
+![](https://img.benym.cn/%E5%85%AC%E5%BC%8F/13.png)
 :::
 ## 代码实现
 
@@ -256,7 +256,7 @@ Process finished with exit code 0
 
 
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/vector/%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C.png)
+![](https://img.benym.cn/vector/%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C.png)
 :::
 
 

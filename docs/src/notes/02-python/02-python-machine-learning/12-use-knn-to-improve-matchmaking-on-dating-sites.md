@@ -102,7 +102,7 @@ ax.scatter(datingDataMat[:, 1], datingDataMat[:, 2], 15.0 * array(datingLabels),
 plt.show()
 ```
 
-[数据集](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/datingTestSet.txt)
+[数据集](https://img.benym.cn/datingTestSet.txt)
 
 ## 运行结果
 
@@ -121,7 +121,7 @@ datingLabels[0:20]
 
 散点图结果：
 ::: center
-![散点图](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/2.2%E6%95%A3%E7%82%B9%E5%9B%BE.png)
+![散点图](https://img.benym.cn/2.2%E6%95%A3%E7%82%B9%E5%9B%BE.png)
 :::
 
 ::: tip

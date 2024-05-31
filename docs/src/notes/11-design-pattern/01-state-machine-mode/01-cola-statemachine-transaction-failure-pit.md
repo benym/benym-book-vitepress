@@ -279,7 +279,7 @@ public void fire(State state, Event event, Context context) {
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/design-pattern/statemachine-1.png)
+![](https://img.benym.cn/design-pattern/statemachine-1.png)
 
 :::
 
@@ -287,7 +287,7 @@ public void fire(State state, Event event, Context context) {
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/design-pattern/statemachine-2.png)
+![](https://img.benym.cn/design-pattern/statemachine-2.png)
 
 :::
 
@@ -297,7 +297,7 @@ public void fire(State state, Event event, Context context) {
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/design-pattern/statemachine-3.png)
+![](https://img.benym.cn/design-pattern/statemachine-3.png)
 
 :::
 

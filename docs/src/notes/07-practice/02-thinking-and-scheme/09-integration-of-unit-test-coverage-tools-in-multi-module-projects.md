@@ -171,7 +171,7 @@ maven clean install
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/unit-test/unit-test-1.png)
+![](https://img.benym.cn/unit-test/unit-test-1.png)
 
 :::
 
@@ -212,7 +212,7 @@ Tests run: 7, Failures: 0, Errors: 0, Skipped: 0
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/unit-test/unit-test-2.png)
+![](https://img.benym.cn/unit-test/unit-test-2.png)
 
 :::
 
@@ -222,7 +222,7 @@ Tests run: 7, Failures: 0, Errors: 0, Skipped: 0
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/unit-test/unit-test-3.png)
+![](https://img.benym.cn/unit-test/unit-test-3.png)
 
 :::
 
@@ -238,7 +238,7 @@ Tests run: 7, Failures: 0, Errors: 0, Skipped: 0
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/unit-test/unit-test-4.png)
+![](https://img.benym.cn/unit-test/unit-test-4.png)
 
 :::
 
@@ -250,7 +250,7 @@ Tests run: 7, Failures: 0, Errors: 0, Skipped: 0
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/unit-test/unit-test-5.png)
+![](https://img.benym.cn/unit-test/unit-test-5.png)
 
 :::
 
@@ -258,7 +258,7 @@ Tests run: 7, Failures: 0, Errors: 0, Skipped: 0
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/unit-test/unit-test-6.png)
+![](https://img.benym.cn/unit-test/unit-test-6.png)
 
 :::
 
@@ -305,7 +305,7 @@ jobs:
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/unit-test/unit-test-7.png)
+![](https://img.benym.cn/unit-test/unit-test-7.png)
 
 :::
 
@@ -313,7 +313,7 @@ jobs:
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/unit-test/unit-test-8.png)
+![](https://img.benym.cn/unit-test/unit-test-8.png)
 
 :::
 
@@ -325,7 +325,7 @@ jobs:
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/unit-test/unit-test-9.png)
+![](https://img.benym.cn/unit-test/unit-test-9.png)
 
 :::
 
@@ -335,7 +335,7 @@ jobs:
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/unit-test/unit-test-10.png)
+![](https://img.benym.cn/unit-test/unit-test-10.png)
 
 :::
 
@@ -343,7 +343,7 @@ jobs:
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/unit-test/unit-test-11.png)
+![](https://img.benym.cn/unit-test/unit-test-11.png)
 
 :::
 

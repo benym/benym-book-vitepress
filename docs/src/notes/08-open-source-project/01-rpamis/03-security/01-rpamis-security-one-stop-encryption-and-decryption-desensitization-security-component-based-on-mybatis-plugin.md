@@ -86,7 +86,7 @@ rpamis:
 :::
 
 ::: center
-<img src="https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/rpas/rpamis-security-cover.png" alt="单测覆盖率"/>
+<img src="https://img.benym.cn/rpas/rpamis-security-cover.png" alt="单测覆盖率"/>
 :::
 
 ## 使用方法
@@ -294,7 +294,7 @@ public class TestVersionDO implements Serializable {
 加密后样例
 
 ::: center
-<img src="https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/rpas/rpamis-security-database-demo.png" alt="加密后样例"/>
+<img src="https://img.benym.cn/rpas/rpamis-security-database-demo.png" alt="加密后样例"/>
 :::
 
 ::: tip

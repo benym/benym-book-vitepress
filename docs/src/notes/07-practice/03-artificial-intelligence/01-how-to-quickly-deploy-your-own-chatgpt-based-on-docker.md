@@ -52,7 +52,7 @@ docker run --name chatgpt-web -d -p 127.0.0.1:3888:3002 --env OPENAI_ACCESS_TOKE
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/gpt/chatgpt-web-init.png)
+![](https://img.benym.cn/gpt/chatgpt-web-init.png)
 
 :::
 
@@ -81,7 +81,7 @@ docker run --name chatgpt-web -d -p 127.0.0.1:3888:3002 --env OPENAI_ACCESS_TOKE
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/gpt/SSL-gpt.png)
+![](https://img.benym.cn/gpt/SSL-gpt.png)
 
 :::
 
@@ -95,7 +95,7 @@ docker run --name chatgpt-web -d -p 127.0.0.1:3888:3002 --env OPENAI_ACCESS_TOKE
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/gpt/bt-gpt.png)
+![](https://img.benym.cn/gpt/bt-gpt.png)
 
 :::
 
@@ -105,7 +105,7 @@ docker run --name chatgpt-web -d -p 127.0.0.1:3888:3002 --env OPENAI_ACCESS_TOKE
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/gpt/SSL-L-gpt.png)
+![](https://img.benym.cn/gpt/SSL-L-gpt.png)
 
 :::
 
@@ -119,7 +119,7 @@ docker run --name chatgpt-web -d -p 127.0.0.1:3888:3002 --env OPENAI_ACCESS_TOKE
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/gpt/DNS-gpt.png)
+![](https://img.benym.cn/gpt/DNS-gpt.png)
 
 :::
 
@@ -129,7 +129,7 @@ docker run --name chatgpt-web -d -p 127.0.0.1:3888:3002 --env OPENAI_ACCESS_TOKE
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/gpt/DNS-add.png)
+![](https://img.benym.cn/gpt/DNS-add.png)
 
 :::
 
@@ -139,7 +139,7 @@ docker run --name chatgpt-web -d -p 127.0.0.1:3888:3002 --env OPENAI_ACCESS_TOKE
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/gpt/nginx-gpt.png)
+![](https://img.benym.cn/gpt/nginx-gpt.png)
 
 :::
 
@@ -169,7 +169,7 @@ docker run --name chatgpt-web -d -p 127.0.0.1:3888:3002 --env OPENAI_ACCESS_TOKE
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/gpt/pwa-gpt.jpg)
+![](https://img.benym.cn/gpt/pwa-gpt.jpg)
 
 :::
 

@@ -114,7 +114,7 @@ BenchmarkTestComplex.testSpringBeanUtils  thrpt   10     94.354 ±   0.694  ops/
 
 **简单对象**
 ::: center
-![image-20221117225232188](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/rpas/image-20221117225232188.png)
+![image-20221117225232188](https://img.benym.cn/rpas/image-20221117225232188.png)
 :::
 
 从实验结果中我们可以看出`BeanCopier`、`MapStruct`和原生`get/set`效率类似，吞吐量都很接近。
@@ -134,7 +134,7 @@ BenchmarkTestComplex.testSpringBeanUtils  thrpt   10     94.354 ±   0.694  ops/
 **复杂对象**
 
 ::: center
-![image-20221117225323448](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/rpas/image-20221117225323448.png)
+![image-20221117225323448](https://img.benym.cn/rpas/image-20221117225323448.png)
 :::
 
 不同于简单对象测试，对于复杂对象的拷贝尤其考验拷贝工具类的性能，毕竟在拷贝场景中，我们不仅仅只有简单的对象。更有嵌套、多字段、多类型等复杂情况。
@@ -149,7 +149,7 @@ BenchmarkTestComplex.testSpringBeanUtils  thrpt   10     94.354 ±   0.694  ops/
 
  3. CPU频率图
 ::: center
-![cpu](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/rpas/cpu.png)
+![cpu](https://img.benym.cn/rpas/cpu.png)
 :::
 
 ## 结论

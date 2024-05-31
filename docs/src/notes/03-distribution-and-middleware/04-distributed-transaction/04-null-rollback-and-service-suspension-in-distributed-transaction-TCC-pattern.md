@@ -23,19 +23,19 @@ TCC模式与AT模式非常相似，每阶段都是独立事务，不同的是TCC
 举例，一个扣减用户余额的业务。假设账户A原来余额是100，需要余额扣减30元。
  - 阶段一(Try): 检查余额是否充足，如果充足则冻结金额增加30元，可用余额扣除30
 ::: center
-<img src="https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/TCC1.gif" alt="TCC1" style="zoom:80%;" />
+<img src="https://img.benym.cn/img/TCC1.gif" alt="TCC1" style="zoom:80%;" />
 :::
  - 阶段二：假如要提交（Confirm），则冻结金额扣减30
 ::: center
-<img src="https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/TCC2.gif" alt="TCC2" style="zoom:80%;" />
+<img src="https://img.benym.cn/img/TCC2.gif" alt="TCC2" style="zoom:80%;" />
 :::
  - 阶段三：如果要回滚（Cancel），则冻结金额扣减30，可用余额增加30
 ::: center
-<img src="https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/TCC3.gif" alt="TCC3" style="zoom:80%;" />
+<img src="https://img.benym.cn/img/TCC3.gif" alt="TCC3" style="zoom:80%;" />
 :::
 **TCC工作模型图：**
 ::: center
-<img src="https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/TCCALL.png" alt="TCCALL" style="zoom:80%;" />
+<img src="https://img.benym.cn/img/TCCALL.png" alt="TCCALL" style="zoom:80%;" />
 :::
 ### 空回滚和业务悬挂问题
 以代码中的`account—service`服务为例，利用TCC实现分布式事务需要完成以下逻辑：
@@ -52,13 +52,13 @@ TCC模式与AT模式非常相似，每阶段都是独立事务，不同的是TCC
 业务悬挂：对于已经空回滚的业务，如果以后继续执行try，就永远不可能confirm或cancel，这就是**业务悬挂**。应当阻止执行空回滚后的try操作，避免悬挂。
 如下图所示
 ::: center
-<img src="https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/TCC111.gif" alt="TCC111" style="zoom:80%;" />
+<img src="https://img.benym.cn/img/TCC111.gif" alt="TCC111" style="zoom:80%;" />
 :::
 **空回滚情况：**
 上方调用分支按照TCC流程正常执行，此时下方调用分支因为某种原因而阻塞了，由于长时间没有执行，这个分支发生了超时错误，由TM经过2.1步骤发送超时错误，回滚全局事务的指令给TC，TC检查分支状态2.2，发现确实有一只分支超时，发送2.3回滚指令到各分支的RM，由RM执行2.4cancel操作。
 此时对于第一个分支而言，执行cancel没有问题，因为流程正常。但对于第二个分支而言，他并没有执行第一步的try，所以此时第二个分支不能真正的执行cancel，需要执行空回滚，也就是说返回一个正常状态，且不报错。需要在cancel之前查看是否有前置的try，如果没有执行try则需要空回滚。
 ::: center
-<img src="https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/TCC222.png" alt="TCC222" style="zoom:80%;" />
+<img src="https://img.benym.cn/img/TCC222.png" alt="TCC222" style="zoom:80%;" />
 :::
 **业务悬挂情况：**
 假设在上方的基础上，下方分支的阻塞畅通了，此时他执行1.4去锁定资源(try)，但整个事务都已经回滚结束了，所以他不会执行第二阶段，但冻结了资源，这种情况应该进行避免。需要在try操作之前查看当前分支是否已经回滚过，如果已经回滚过则不能在执行try命令。

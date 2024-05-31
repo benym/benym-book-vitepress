@@ -50,7 +50,7 @@ turtle.done()
 
 ## 运行结果
 ::: center
-![snake](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/turtlesnake.png/zipstyle)
+![snake](https://img.benym.cn/turtlesnake.png/zipstyle)
 :::
 
 
@@ -71,5 +71,5 @@ turtle.done()
 
 ## 运行结果
 ::: center
-![Z](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/turtleZ.png/zipstyle)
+![Z](https://img.benym.cn/turtleZ.png/zipstyle)
 :::

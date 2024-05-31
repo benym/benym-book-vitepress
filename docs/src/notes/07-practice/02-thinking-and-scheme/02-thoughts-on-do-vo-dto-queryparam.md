@@ -37,7 +37,7 @@ author: benym
 
 本文的项目结构为如下
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84.png)
+![](https://img.benym.cn/img/%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84.png)
 :::
 以一个简单的数据库为例，数据库中包含id、name、address、ctime、state五种字段，分别表示用户的id，名字，地址，数据创建事件，状态。
 
@@ -140,7 +140,7 @@ public class TestDataQueryParam {
 
 以最简单的增删改查为例。我们规定前端传输为JSON，对于增加、修改和删除来说，入参统一接收为VO对象。对于查询操作，我们规定入参统一为QueryParam对象。如下图红框所示：
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/%E8%A7%84%E5%AE%9A%E5%85%A5%E5%8F%82.png)
+![](https://img.benym.cn/img/%E8%A7%84%E5%AE%9A%E5%85%A5%E5%8F%82.png)
 :::
 ### 类型转换
 
@@ -152,51 +152,51 @@ public class TestDataQueryParam {
 
 saveOrUpdate方法：
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/saveorupdate.png)
+![](https://img.benym.cn/img/saveorupdate.png)
 :::
 deleteTestData方法：
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/delete.png)
+![](https://img.benym.cn/img/delete.png)
 :::
 对于`getTestDataLocation`方法其入参QueryParam进入Controller之后无需转换，因为其包含查询字段，可直接通过`Service-->ServiceImpl-->Dao-->DaoImpl`传递。其作用域在Controller进入之后到Mapper操作完数据库之后的整个阶段。
 
 getTestDataLocation方法：
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/getlist.png)
+![](https://img.benym.cn/img/getlist.png)
 :::
 ## Service层
 
 在service和serviceImpl层中，**对DTO对象和QueryParam对象无需做对象类型转化**
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/Service.png)
+![](https://img.benym.cn/img/Service.png)
 :::
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/ServiceImpl.png)
+![](https://img.benym.cn/img/ServiceImpl.png)
 :::
 ## Dao层
 
 在Dao和DaoImpl的入参定义中，DTO和QueryParam统一不需要转换对象，因为还是接口之间的参数传递，但在DaoImpl中，**操作数据库之前，需要将DTO对象转化为DO对象**，而QueryParam可以选择用QueryWapper等包装类或者直接传输的方式交给Mapper操作。如下图红框所示
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/Dao.png)
+![](https://img.benym.cn/img/Dao.png)
 :::
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/DaoImpl.png)
+![](https://img.benym.cn/img/DaoImpl.png)
 :::
 ## Mapper层
 
 mapper层用于真正操作数据库，这里采用Mybatis-plus中的BaseMapper提供的接口实现增删改，查询则通过Location查数据，重写一下对应的mapper.xml文件的sql即可
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/mapper.png)
+![](https://img.benym.cn/img/mapper.png)
 :::
 ## 数据返回
 
 增加删除修改等操作，前端往往只需要判断操作成功没有即可，所以返回值一般不是一个对象，对于非对象的传输可以直接返回。另外如查询操作，一般会涉及到分页，查出来的数据是List形式展现而从数据库查到的是DO对象，当这种操作返回值时会从`Mapper-->Dao-->Service-->Controller`一层一层返回回去，这时候就又变成了接口之间的参数传输了，DO对象显然不适合，所以还需转化为DTO对象。如下图红框操作所示，从DO的list转化为DTO的list作为返回值列表。
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/DOtoDTO.png)
+![](https://img.benym.cn/img/DOtoDTO.png)
 :::
 在返回值到达Controller之后，由于需要展示给前端，DTO对象还需要转化为VO对象
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/DTOtoVO.png)
+![](https://img.benym.cn/img/DTOtoVO.png)
 :::
 ## 总结
 

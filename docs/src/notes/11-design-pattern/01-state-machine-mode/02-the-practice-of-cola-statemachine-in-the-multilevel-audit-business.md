@@ -30,14 +30,14 @@ permalink: /pages/2ae430/
 状态机通常由`状态(State)`、`事件(Event)`、`动作(Action)`三个基本元素构成。其中动作不是必须的，可以只根据事件进行状态转移。
 
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/design-pattern/statemachine-base.png)
+![](https://img.benym.cn/design-pattern/statemachine-base.png)
 :::
 
 对于开发者视角的状态机通常还会增加`转移条件(Condtion)`的概念，此时状态机模型变更为
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/design-pattern/statemachine-base-condition.png)
+![](https://img.benym.cn/design-pattern/statemachine-base-condition.png)
 
 :::
 
@@ -51,7 +51,7 @@ permalink: /pages/2ae430/
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/design-pattern/statemachine-compare.png)
+![](https://img.benym.cn/design-pattern/statemachine-compare.png)
 
 :::
 
@@ -332,7 +332,7 @@ public class AuditMachine implements StateMachineStrategy {
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/design-pattern/statemachine-uml.png)
+![](https://img.benym.cn/design-pattern/statemachine-uml.png)
 
 :::
 
@@ -605,7 +605,7 @@ public class AuditServiceImpl implements AuditService {
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/design-pattern/statemachine-database.png)
+![](https://img.benym.cn/design-pattern/statemachine-database.png)
 
 :::
 
@@ -613,7 +613,7 @@ public class AuditServiceImpl implements AuditService {
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/design-pattern/statemachine-postman.png)
+![](https://img.benym.cn/design-pattern/statemachine-postman.png)
 
 :::
 
@@ -621,7 +621,7 @@ public class AuditServiceImpl implements AuditService {
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/design-pattern/statemachine-log.png)
+![](https://img.benym.cn/design-pattern/statemachine-log.png)
 
 :::
 
@@ -631,7 +631,7 @@ public class AuditServiceImpl implements AuditService {
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/design-pattern/statemachine-database-2.png)
+![](https://img.benym.cn/design-pattern/statemachine-database-2.png)
 
 :::
 

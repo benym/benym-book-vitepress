@@ -88,5 +88,5 @@ public class Solotion {
 
 第一轮快排结果推导
 
-![QQ图片20200830171335](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/QQ%E5%9B%BE%E7%89%8720200830171335.jpg)
+![QQ图片20200830171335](https://img.benym.cn/img/QQ%E5%9B%BE%E7%89%8720200830171335.jpg)
 

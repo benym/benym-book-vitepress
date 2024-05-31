@@ -42,7 +42,7 @@ permalink: /pages/1c47ed/
 JSR(Java Specification Requests)是Java规范的提案，JSR-303[^1]是JavaEE6中的一项子规范，叫做Bean Validation[^2]，该提案于2009年正式面向公众，后续的JSR-349、JSR-380均在此提案上进行增强。该规范只提供了校验的注解，位于`javax.validation.constraints`包下，在官网指定的实现贡献者有3个
 
 ::: center
-![Contributions](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/hi-contribution.png/zipstyle)
+![Contributions](https://img.benym.cn/img/hi-contribution.png/zipstyle)
 :::
 
 其中`Hibernate Validator`使用最为广泛。
@@ -53,7 +53,7 @@ JSR(Java Specification Requests)是Java规范的提案，JSR-303[^1]是JavaEE6�
 
 ::: center
 
-![Bean Validation constraint](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/BeanValidator.png/zipstyle)
+![Bean Validation constraint](https://img.benym.cn/img/BeanValidator.png/zipstyle)
 
 :::
 
@@ -61,7 +61,7 @@ JSR(Java Specification Requests)是Java规范的提案，JSR-303[^1]是JavaEE6�
 
 ::: center
 
-![Hibernate Validator](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/hibernate-validator.png/zipstyle)
+![Hibernate Validator](https://img.benym.cn/img/hibernate-validator.png/zipstyle)
 
 :::
 
@@ -137,7 +137,7 @@ public class TestController {
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/validate-return-spring.png/zipstyle)
+![](https://img.benym.cn/img/validate-return-spring.png/zipstyle)
 
 :::
 
@@ -145,7 +145,7 @@ public class TestController {
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/console-validate.png/zipstyle)
+![](https://img.benym.cn/img/console-validate.png/zipstyle)
 
 :::
 
@@ -225,7 +225,7 @@ public class Friend {
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/validandvalidated.png/zipstyle)
+![](https://img.benym.cn/img/validandvalidated.png/zipstyle)
 
 :::
 
@@ -318,7 +318,7 @@ public class TestController {
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/validated-insert.png/zipstyle)
+![](https://img.benym.cn/img/validated-insert.png/zipstyle)
 
 :::
 
@@ -328,7 +328,7 @@ public class TestController {
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/validated-delete.png/zipstyle)
+![](https://img.benym.cn/img/validated-delete.png/zipstyle)
 
 :::
 
@@ -336,7 +336,7 @@ public class TestController {
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/validated-delete-console.png/zipstyle)
+![](https://img.benym.cn/img/validated-delete-console.png/zipstyle)
 
 :::
 
@@ -578,7 +578,7 @@ public String test3(@Validated @RequestBody UserSpValid user) {
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/valid-sp.png/zipstyle)
+![](https://img.benym.cn/img/valid-sp.png/zipstyle)
 
 :::
 
@@ -586,7 +586,7 @@ public String test3(@Validated @RequestBody UserSpValid user) {
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/valid-sp-console.png/zipstyle)
+![](https://img.benym.cn/img/valid-sp-console.png/zipstyle)
 
 :::
 
@@ -616,7 +616,7 @@ public String test3(@Validated @RequestBody UserSpValid user) {
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/no-valid.png)
+![](https://img.benym.cn/img/no-valid.png)
 
 :::
 
@@ -624,7 +624,7 @@ public String test3(@Validated @RequestBody UserSpValid user) {
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/have-valid.png)
+![](https://img.benym.cn/img/have-valid.png)
 
 :::
 
@@ -1018,7 +1018,7 @@ if (StringUtils.isEmpty(user.getId())) {
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/aliguide-frontback.png/zipstyle)
+![](https://img.benym.cn/img/aliguide-frontback.png/zipstyle)
 
 :::
 
@@ -1069,19 +1069,19 @@ switch (status) {
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/200.png/zipstyle)
+![](https://img.benym.cn/img/200.png/zipstyle)
 
 :::
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/400.png/zipstyle)
+![](https://img.benym.cn/img/400.png/zipstyle)
 
 :::
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/500.png/zipstyle)
+![](https://img.benym.cn/img/500.png/zipstyle)
 
 :::
 
@@ -1179,13 +1179,13 @@ public class ExceptionErrorHandler {
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/validandexception.png/zipstyle)
+![](https://img.benym.cn/img/validandexception.png/zipstyle)
 
 :::
 
 ::: center
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/validandexception-console.png/zipstyle)
+![](https://img.benym.cn/img/validandexception-console.png/zipstyle)
 
 :::
 
@@ -1509,7 +1509,7 @@ public ResponseEntity<Response<Object>> handleException(Exception exception) {
 在《阿里巴巴Java开发手册》，也提到过可参考的异常使用方法
 
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/aliguide-exception.png/zipstyle)
+![](https://img.benym.cn/img/aliguide-exception.png/zipstyle)
 :::
 
 以`Dubbo`为例，我们可以定义一个`Filter`进行异常捕获，此时的`Filter`接口位于`org.apache.dubbo.rpc.Filter`
@@ -1738,13 +1738,13 @@ throw new RpasException(ResponseCode.SUCCESS.getCode(),"测试自定义异常");
 接入前
 
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/exception-before.png)
+![](https://img.benym.cn/img/exception-before.png)
 :::
 
 接入后
 
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/exception-after.png)
+![](https://img.benym.cn/img/exception-after.png)
 :::
 
 由此可见接入后的业务逻辑更加清晰，且MVC三层职责明确，代码量减少明显

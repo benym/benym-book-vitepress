@@ -81,7 +81,7 @@ alter table 'table_name' add spatial index spa_index_name('col_name');
 
 哈希索引通过hash表实现，通过将hash函数计算出的hash值存储在索引中，来完成key-value的快速查询
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/mysql-hash.png/zipstyle)
+![](https://img.benym.cn/img/mysql-hash.png/zipstyle)
 
 通常而言当发生hash碰撞之后(即两个key在经过hash函数之后值为同一个)，采用链地址法解决冲突，如上图中小刘到小王的连接线，获取key找到索引地址之后，顺序遍历地址内的链表，获得最终结果。
 
@@ -107,7 +107,7 @@ B树实际上是一棵多叉平衡搜索树。其具有以下特点
 
 B树的结构如下图所示
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/mysql-btree.png/zipstyle)
+![](https://img.benym.cn/img/mysql-btree.png/zipstyle)
 
 在B树的结构图中，可以发现每个节点不仅仅包含数据的Key值，还有data值。
 
@@ -131,13 +131,13 @@ B树的结构如下图所示
 
 B+树的结构如下图所示
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/mysql-b%2Btree.png/zipstyle)
+![](https://img.benym.cn/img/mysql-b%2Btree.png/zipstyle)
 
 为了更详细的描述B+树，图中的指针写明了存储的磁盘块名称，最底下一层含有数据的磁盘块被称为**数据页**，数据页之间通过双向链表进行连接，非叶子节点的磁盘块被称为**索引页**
 
 将上图中磁盘块2与磁盘块5、6、7拿出来进行细分，我们展开各磁盘块，查看单个磁盘块内数据的排列方式
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/mysql-b%2Btree-data.png/zipstyle)
+![](https://img.benym.cn/img/mysql-b%2Btree-data.png/zipstyle)
 
 MySQL在存储数据时以数据页为最小单位，且数据在数据页中的存储是**连续**的，数据页中的数据是按照主键排序(如没有主键则由MySQL自身维护的ROW_ID排序)，而数据页与数据页之间则采用**双向链表**关联，数据与数据之间通过**单向链表**关联。
 
@@ -203,18 +203,18 @@ MySQL在存储数据时以数据页为最小单位，且数据在数据页中的
 
 以下列数据表为例
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/mysql-table.png/zipstyle)
+![](https://img.benym.cn/img/mysql-table.png/zipstyle)
 :::
 
 如果采用聚簇索引的存储方式(主键为ID)，则对应的索引结构为
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/mysql-clus.png/zipstyle)
+![](https://img.benym.cn/img/mysql-clus.png/zipstyle)
 
 可以看出**聚簇索引的数据和索引存储在一起**，根据Id索引能够找到对应的数据行，比如`where Id = 7`这样的条件，聚簇索引能够查到对应主键，获得对应的叶子节点上的行数据。
 
 如果以Name字段建立索引，则对应的辅助索引结构为
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/mysql-noclus.png/zipstyle)
+![](https://img.benym.cn/img/mysql-noclus.png/zipstyle)
 
 可以看出**非聚簇索引的数据和索引，并非存储在一起**，根据Name索引只能找到Name对应的主键Id，比如`where Name = 张三`，非聚簇索引需要通过**两个步骤**才能获取行数据。
 
@@ -224,7 +224,7 @@ MySQL在存储数据时以数据页为最小单位，且数据在数据页中的
 
 整个过程可如下图所示
 
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/mysql-search.png/zipstyle)
+![](https://img.benym.cn/img/mysql-search.png/zipstyle)
 
 两者的主要区别在于**非聚簇索引会多一次查询聚簇索引的过程**
 
@@ -280,7 +280,7 @@ alter table 'table_name' add index index_name('a','b');
 则生成的联合索引B+树会以联合索引字段共同建立，即联合索引的键值对大于1个
 
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/mysql-unindex.png/zipstyle)
+![](https://img.benym.cn/img/mysql-unindex.png/zipstyle)
 :::
 
 将索引的叶子节点按照字段拿出来进行分析，从左至右
@@ -334,13 +334,13 @@ select * from student where a like '1%' and b=2 and c=3;
 无索引下推过程，均需要回表
 
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/mysql-nounder.png/zipstyle)
+![](https://img.benym.cn/img/mysql-nounder.png/zipstyle)
 :::
 
 索引下推过程
 
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/mysql-under.png/zipstyle)
+![](https://img.benym.cn/img/mysql-under.png/zipstyle)
 :::
 
 在这两个图中，每个箭头表示回表一次
@@ -745,7 +745,7 @@ select * from test where a = 1 and b > 2 and c = 3
 首先引入一张网络中流传的经典图，了解`left join`, `inner join`, `right join`等常见结果
 
 ::: center
-![](https://image-1-1257237419.cos.ap-chongqing.myqcloud.com/img/mysql-join.png/zipstyle)
+![](https://img.benym.cn/img/mysql-join.png/zipstyle)
 :::
 
 所谓的小表驱动大表，可以理解为用小的数据集去匹配大的数据集。
