@@ -37,7 +37,7 @@ author: benym
 
 相关链接：
 
-- {% post_link LeetCode-21-合并两个有序链表 %}
+- [LeetCode-21-合并两个有序链表](./25-leetcode-21-merge-two-ordered-linked-lists)
 
 方法1、分治+递归+自底向上：
 

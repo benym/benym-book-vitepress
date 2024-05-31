@@ -40,7 +40,7 @@ author: benym
 
 **回溯+剪枝：**
 
-基于46题{% post_link LeetCode-46-全排列 %}
+基于46题[LeetCode-46-全排列](./33-leetcode-46-full-permutation)
 
 对于刚开始就有重复的数字序列，首先先对数组排序，**保证数据有序**
 
