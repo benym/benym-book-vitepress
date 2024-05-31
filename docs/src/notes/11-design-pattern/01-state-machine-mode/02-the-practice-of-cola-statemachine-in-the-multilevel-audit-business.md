@@ -657,7 +657,7 @@ Q: 在状态机的Action和Condition方法上加AOP注解有效吗
 
 ::: note
 
-A: 无效，Action和Condition由框架内部直接调用，框架并未交给Spring管理，所以无法产生代理对象执行增强。具体经验可查看[COLA-statemachine事务失效踩坑](https://cloud.benym.cn/pages/ac5f01/)
+A: 无效，Action和Condition由框架内部直接调用，框架并未交给Spring管理，所以无法产生代理对象执行增强。具体经验可查看[COLA-statemachine事务失效踩坑](./01-cola-statemachine-transaction-failure-pit)
 
 :::
 

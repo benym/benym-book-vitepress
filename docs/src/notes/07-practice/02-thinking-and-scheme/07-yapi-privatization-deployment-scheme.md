@@ -17,7 +17,7 @@ permalink: /pages/492330/
 
 ## 背景
 
-作为前文[接口管理平台Yapi-最佳实践](https://cloud.benym.cn/pages/747050/)的补充，本文将给出`Yapi`私有化部署方案的教程
+作为前文[接口管理平台Yapi-最佳实践](./06-interface-management-platform-yapi-best-practices)的补充，本文将给出`Yapi`私有化部署方案的教程
 
 开源代码地址<https://github.com/benym/yapi-deploy>
 

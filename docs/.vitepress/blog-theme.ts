@@ -1,11 +1,11 @@
 import type { Theme } from '@sugarat/theme'
 import {footerHTML, getThemeConfig} from '@sugarat/theme/node'
 
-const baseUrl = 'https://cloud.benym.cn'
+const baseUrl = 'https://benym.cn'
 const RSS: Theme.RSSOptions = {
   title: 'benym的知识笔记',
   baseUrl,
-  copyright: 'Copyright (c) 2028-present, benym',
+  copyright: 'Copyright (c) 2018-present, benym',
   description: 'benym的知识笔记'
 }
 
@@ -18,7 +18,7 @@ export const blogTheme = getThemeConfig({
   authorList: [
     {
       nickname: 'benym',
-      url: 'https://cloud.benym.cn',
+      url: 'https://benym.cn',
       des: 'benym的知识笔记'
     }
   ],

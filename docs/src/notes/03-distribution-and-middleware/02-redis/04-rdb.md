@@ -63,4 +63,4 @@ bgsave开始时会fork主进程得到子进程，子进程**共享**主进程的
  - 在备份周期在一定间隔时间做一次备份，所以如果Redis意外down掉的话，就会丢失最后一次快照后的所有修改。
 
 
-[1]: https://cloud.benym.cn/benym-book/pages/c48db1/
+[1]: ./05-aof

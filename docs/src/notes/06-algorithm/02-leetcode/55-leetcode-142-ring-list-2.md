@@ -58,8 +58,8 @@ author: benym
 
 **相关链接：**
 
-1. [LeetCode-141-环形链表]([https://cloud.benym.cn/benym-book/pages/3fd3f6/](https://cloud.benym.cn/benym-book/pages/edad8f/#leetcode-141-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8))
-2. [LeetCode-面试题02.02-返回倒数第k个节点]([https://cloud.benym.cn/benym-book/pages/ee0279/](https://cloud.benym.cn/benym-book/pages/7899ff/#leetcode-%E9%9D%A2%E8%AF%95%E9%A2%9802-02-%E8%BF%94%E5%9B%9E%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9))
+1. [LeetCode-141-环形链表](./104-leetcode-141-ring-list)
+2. [LeetCode-面试题02.02-返回倒数第k个节点](./96-leetcode-interview-questions-02-02-back-to-kth-last-node)
 
 **快慢指针+双指针：**
 

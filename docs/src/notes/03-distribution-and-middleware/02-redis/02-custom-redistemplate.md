@@ -16,7 +16,7 @@ author: benym
 # 自定义RedisTemplate
 
 ::: tip
-本文已过时，请见最新配置[RedisTemplate配置类](https://cloud.benym.cn/pages/c9a954/)
+本文已过时，请见最新配置[RedisTemplate配置类](../../07-practice/04-utility-code/08-redistemplate-basic-configuration)
 :::
 
 ## 背景

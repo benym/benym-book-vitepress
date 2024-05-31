@@ -20,7 +20,7 @@
     "build:github": "cross-env APP_BASE_PATH=/benym-book/ npm run build",
     "lint": "prettier --write .",
     "prepare": "husky install",
-    "baiduPush": "node utils/baiduPush.js https://cloud.benym.cn && bash baiduPush.sh",
+    "baiduPush": "node utils/baiduPush.js https://benym.cn && bash baiduPush.sh",
     "fix-memory-limit": "cross-env LIMIT=2600 increase-memory-limit"
   },
   "postcss": {

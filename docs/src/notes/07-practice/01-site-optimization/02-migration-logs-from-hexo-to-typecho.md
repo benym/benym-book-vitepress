@@ -52,7 +52,7 @@ Web服务器: Nginx: 1.20+
 
 hexo旧站：[here](https://benym.github.io/)
 
-知识库：[here](https://cloud.benym.cn/)
+Vuepress版知识库：[here](https://cloud.benym.cn/)
 
 :::
 

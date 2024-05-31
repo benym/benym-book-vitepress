@@ -89,7 +89,7 @@ alter table 'table_name' add spatial index spa_index_name('col_name');
 
 **BTree索引**
 
-关于平衡二叉搜索树的概念和意义可以详见我的另一篇文章👉[二叉搜索树及AVL树详解](https://cloud.benym.cn/benym-book/pages/2efaaf/)。
+关于平衡二叉搜索树的概念和意义可以详见我的另一篇文章👉[二叉搜索树及AVL树详解](../../07-practice/02-thinking-and-scheme/04-binary-search-tree-and-avl-tree-details)。
 
 B树实际上是一棵多叉平衡搜索树。其具有以下特点
 

@@ -21,9 +21,9 @@ author: benym
 
 相关链接：
 
-1. [LeetCode-144-二叉树的前序遍历](https://cloud.benym.cn/benym-book/pages/3fd3f6/)
-2. [LeetCode-94-二叉树的中序遍历](https://cloud.benym.cn/benym-book/pages/4517f3/#leetcode-94-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86)
-3. [LeetCode-145-二叉树的后序遍历](https://cloud.benym.cn/benym-book/pages/bc617d/#leetcode-145-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86)
+1. [LeetCode-144-二叉树的前序遍历](./10-leetcode-144-binary-tree-precedence-traversal)
+2. [LeetCode-94-二叉树的中序遍历](./11-leetcode-94-mid-order-traversal-of-a-binary-tree)
+3. [LeetCode-145-二叉树的后序遍历](./12-leetcode-145-binary-tree-posterior-traversal)
 
 
 

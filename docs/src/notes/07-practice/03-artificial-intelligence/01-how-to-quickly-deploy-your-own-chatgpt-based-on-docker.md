@@ -173,9 +173,3 @@ docker run --name chatgpt-web -d -p 127.0.0.1:3888:3002 --env OPENAI_ACCESS_TOKE
 
 :::
 
-## 博客嵌入
-
-在博客中也已经加入了ChatGPT的嵌入体验
-
-欢迎访问<https://cloud.benym.cn/gpt/>
-

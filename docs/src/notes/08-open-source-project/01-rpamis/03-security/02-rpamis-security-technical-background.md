@@ -440,5 +440,5 @@ List test2 = SecretUtils.replaceWithMask(JsonUtil.toJson(user), new TypeReferenc
 
 ## 组件原理
 
-具体原理解析可见[Rpamis-security-原理解析](https://cloud.benym.cn/pages/1ffe0d/)
+具体原理解析可见[Rpamis-security-原理解析](./03-rpamis-security-principle-analysis)
 
