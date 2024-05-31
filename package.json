@@ -22,7 +22,7 @@
     "build:github": "cross-env APP_BASE_PATH=/benym-book/ npm run build",
     "lint": "prettier --write .",
     "prepare": "husky install",
-    "baiduPush": "node utils/baiduPush.js https://benym.cn && bash baiduPush.sh",
+    "baiduPush": "node utils/baiduPush.mjs https://benym.cn && bash baiduPush.sh",
     "fix-memory-limit": "cross-env LIMIT=2600 increase-memory-limit"
   },
   "postcss": {
@@ -61,6 +61,7 @@
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
     "@sugarat/theme": "^0.3.6",
+    "chalk": "^5.3.0",
     "dayjs": "^1.11.9",
     "element-plus": "^2.7.3",
     "gray-matter": "^4.0.3",
