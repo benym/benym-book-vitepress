@@ -1,6 +1,6 @@
 ---
 title: 异步消息通知—异步改造
-date: 2021/11/02 17:00:15
+date: 2021-11-02 17:00:15
 description: 总结
 categories:
   - Java
