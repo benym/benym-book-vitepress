@@ -84,7 +84,18 @@ export const navConfig: DefaultTheme.Config['nav'] = [
       }
     ],
   },
-  {text: '🦉里程碑', link: '/notes/09-milestone/01.milestone-detail'},
-  {text: '🐷关于', link: '/notes/10-about/01.about-me'},
-  {text: "👫友情链接", link: "Friends.md"},
+  {
+    text: '🦉站点概览',
+    items: [
+      {
+        text: '🦄里程碑', link: "/notes/09-milestone/01.milestone-detail"
+      },
+      {
+        text: '🐷关于', link: "/notes/10-about/01.about-me"
+      },
+      {
+        text: '👫友情链接', link: "Friends.md"
+      },
+    ],
+  }
 ]

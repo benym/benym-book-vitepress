@@ -36,7 +36,7 @@ export const friendsInfo: Friend[] = [
     color: "sky",
   },
   {
-    avatar: "https://q.qlogo.cn/g?b=qq&nk=1515903788&s=140",
+    avatar: "https://avatars.githubusercontent.com/u/64351788?v=4",
     name: "虚位以待",
     title: "人工智能明日之星🌟",
     link: "",

@@ -9,7 +9,6 @@ tags:
   - Hexo
   - Typecho
   - VuePress
-permalink: /pages/a07112/
 author: benym
 ---
 
