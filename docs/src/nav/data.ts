@@ -103,6 +103,24 @@ export const NAV_DATA: NavData[] = [
         title: 'Vercel',
         desc: '静态站点和无服务器函数的云平台',
         link: 'https://vercel.com/'
+      },
+      {
+        icon: 'https://tongji.baidu.com/web5/image/logo.png?__v=@version@',
+        title: '百度统计',
+        desc: '站点统计管理',
+        link: 'https://tongji.baidu.com/'
+      },
+      {
+        icon: 'https://tongji.baidu.com/web5/image/logo.png?__v=@version@',
+        title: '百度站长平台',
+        desc: '站点百度索引收录',
+        link: 'https://ziyuan.baidu.com/indexs/index'
+      },
+      {
+        icon: 'https://img.benym.cn/navimg/google.png',
+        title: '谷歌搜索控制台',
+        desc: '站点谷歌索引收录',
+        link: 'https://search.google.com/search-console'
       }
     ]
   },

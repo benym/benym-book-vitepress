@@ -53,7 +53,7 @@ export const blogTheme = getThemeConfig({
     body: [
       {type: 'text', content: '❤️博客翻新中'},
     ],
-    duration: 5
+    duration: -1
   },
   footer: [
     {
