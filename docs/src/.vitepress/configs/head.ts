@@ -17,8 +17,15 @@ export const headConfig: HeadConfig[] = [
   ["link", {rel: 'icon', href: "/img/favicon-benym.ico"}],
   [
     'script',
-    {
-      src: isDevelopment ? '' : 'https://hm.baidu.com/hm.js?44ab0268b91d13e0090e3d79467b7500'
-    }
+    {},
+    `
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?44ab0268b91d13e0090e3d79467b7500";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    `,
   ]
 ]
