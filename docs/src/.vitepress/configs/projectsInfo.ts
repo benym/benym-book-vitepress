@@ -11,7 +11,7 @@ interface Project {
  */
 export const projectsInfo: Project[] = [
   {
-    banner: "https://img.benym.cn/project-img/hnecv.png",
+    banner: "https://img.benym.cn/projectimg/hnecv.png",
     title: "HNECV",
     description:
       "⛱️Heterogeneous Network Embedding via Cloud model and Variational inference. CAAI. 2021. 代码实现",
@@ -19,14 +19,14 @@ export const projectsInfo: Project[] = [
     tag: "Python",
   },
   {
-    banner: "https://img.benym.cn/project-img/rpamis.png",
+    banner: "https://img.benym.cn/projectimg/rpamis.png",
     title: "Rpamis",
     description: "🚀为开发者提供快速、统一的项目结构生成，统一的包管理工具，并提供开发效能工具",
     link: "https://github.com/rpamis/rpamis",
     tag: "Java",
   },
   {
-    banner: "https://img.benym.cn/project-img/rpamis-chain.png",
+    banner: "https://img.benym.cn/projectimg/rpamis-chain.png",
     title: "Rpamis-chain",
     description:
       "🌱轻量、高扩展性的责任链模式框架，内置多种责任链形态及执行策略",
@@ -34,7 +34,7 @@ export const projectsInfo: Project[] = [
     tag: "Java",
   },
   {
-    banner: "https://img.benym.cn/project-img/rpamis-security.png",
+    banner: "https://img.benym.cn/projectimg/rpamis-security.png",
     title: "Rpamis-security",
     description:
       "🧱基于Mybatis-Plugin的一站式加解密脱敏安全组件",
