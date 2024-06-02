@@ -32,7 +32,7 @@ export default defineConfig({
   },
   // sitemap
   sitemap: {
-    hostname: 'https://benym.com',
+    hostname: 'https://benym.cn',
     lastmodDateOnly: false
   },
 
