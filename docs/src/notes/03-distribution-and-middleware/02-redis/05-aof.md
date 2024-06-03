@@ -44,7 +44,7 @@ appendfsync no
 :::
 因为是记录命令，AOF文件会比RDB文件大的多。而且AOF会记录对同一个key的多次写操作，但只有最后一次写操作才有意义。通过执行`bgrewriteaof`命令，可以让AOF文件执行重写功能，用最少的命令达到相同效果。
 ::: center
-<img src="https://img.benym.cn/redisImg/redisAOF.png/zipstyle" alt="AOF重写" style="zoom:60%;" />
+<img src="https://img.benym.cn/redisImg/redisAOF.png/zipstyle" alt="AOF重写" style="zoom:100%;" />
 :::
 Redis也会在触发阈值时自动去重写AOF文件。阈值也可以在redis.conf中配置：
 ```java
@@ -67,7 +67,7 @@ AOF文件持续增长而过大时，会fork出一条新进程来将文件重写(
   5. 使用新的AOF文件覆盖旧的AOF文件，完成AOF重写。
   如图所示
   ::: center
-  <img src="https://img.benym.cn/redisImg/redisAOFrewrite.png/zipstyle" alt="AOF重写流程" style="zoom:60%;" />
+  <img src="https://img.benym.cn/redisImg/redisAOFrewrite.png/zipstyle" alt="AOF重写流程" style="zoom:100%;" />
   :::
 ## AOF持久化流程
 

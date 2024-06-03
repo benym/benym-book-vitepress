@@ -162,11 +162,11 @@ author: benym
 :::
 **对于容量为4磅的背包，情况很有趣**。这是非常重要的部分。当前的最大价值为3000美元，你可不偷音响，而偷笔记本电脑，但它只值2000美元。
 ::: center
-<img src="https://img.benym.cn/img/image-20200825154924996.png" alt="image-20200825154924996" style="zoom: 87%;" />
+<img src="https://img.benym.cn/img/image-20200825154924996.png" alt="image-20200825154924996" style="zoom:100%;" />
 :::
 价值没有原来高，但是等一等，**笔记本电脑的重量只有3磅，背包还有1磅的重量没用！**
 ::: center
-<img src="https://img.benym.cn/img/image-20200825154946629.png" alt="image-20200825154946629" style="zoom:87%;" />
+<img src="https://img.benym.cn/img/image-20200825154946629.png" alt="image-20200825154946629" style="zoom:100%;" />
 :::
 **在1磅的容量中，可装入的商品的最大价值是多少呢？** 你之前计算过！
 ::: center
@@ -174,7 +174,7 @@ author: benym
 :::
 根据之前计算的最大价值可知，在1磅的容量中可装入吉他，价值1500美元。因此，你需要做如下的比较：
 ::: center
-<img src="https://img.benym.cn/img/image-20200825155055030.png" alt="image-20200825155055030" style="zoom:87%;" />
+<img src="https://img.benym.cn/img/image-20200825155055030.png" alt="image-20200825155055030" style="zoom:100%;" />
 :::
 你可能始终心存疑惑：为何计算小背包可装入的商品的最大价值呢？但愿你现在明白了其中的原因！**当出现部分剩余空间时，你可根据这些子问题的答案来确定余下的空间可装入哪些商品**。笔记本电脑和吉他的总价值为3500美元，因此偷它们是更好的选择。
 
@@ -196,7 +196,7 @@ author: benym
 
 假设你发现还有第四件商品可偷——一个iPhone！*（或许你会毫不犹豫的拿走，但是请别忘了问题的本身是要拿走价值最大的商品）*
 ::: center
-<img src="https://img.benym.cn/img/image-20200825155205168.png" alt="image-20200825155205168" style="zoom:70%;" />
+<img src="https://img.benym.cn/img/image-20200825155205168.png" alt="image-20200825155205168" style="zoom:100%;" />
 :::
 此时需要重新执行前面所做的计算吗？不需要。别忘了，动态规划逐步计算最大价值。到目前为止，计算出的最大价值如下：
 ::: center

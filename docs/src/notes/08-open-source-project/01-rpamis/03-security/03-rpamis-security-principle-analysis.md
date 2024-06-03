@@ -79,7 +79,7 @@ public interface Interceptor {
 之后`configuration`的`addInterceptor`方法会将拦截器加入到拦截器链中
 
 ::: center
-<img src="https://img.benym.cn/rpas/rpamis-se3.png" style="zoom:70%;" />
+<img src="https://img.benym.cn/rpas/rpamis-se3.png" style="zoom:100%;" />
 :::
 
 在执行`SQL`时，所有的插件都会依次执行

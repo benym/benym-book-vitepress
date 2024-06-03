@@ -24,7 +24,7 @@ author: benym
  - Partition tolerance(分区容错性)：因为网络故障或其它原因导致分布式系统中的部分节点与其它节点失去连接，形成独立分区。在集群出现分区时，整个系统也要持续对外提供服务
 分布式系统无法同时满足这三个指标。分布式系统节点通过网络连接，一定会出现分区问题(P)，当分区出现时，系统的一致性(C)和可用性(A)就无法同时满足，这个结论就叫做 CAP 定理。
 ::: center
-<img src="https://img.benym.cn/img/CAP.png" alt="CAP" style="zoom:60%;" />
+<img src="https://img.benym.cn/img/CAP.png" alt="CAP" style="zoom:100%;" />
 :::
 ## BASE理论
 BASE理论是对CAP的一种解决思路，包含三个思想：

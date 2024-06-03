@@ -37,7 +37,7 @@ dir ./
 bgsave开始时会fork主进程得到子进程，子进程**共享**主进程的内存数据。完成fork后读取内存数据并写入 RDB 文件。
 虽然子进程执行过程是异步的，但fork的过程是阻塞的，流程如下图所示。
 ::: center
-<img src="https://img.benym.cn/redisImg/redisRDB2.png/zipstyle" alt="RDB流程" style="zoom:60%;" />
+<img src="https://img.benym.cn/redisImg/redisRDB2.png/zipstyle" alt="RDB流程" style="zoom:100%;" />
 :::
 由于在linux系统中，进程无法直接操作物理内存，操作系统将分配虚拟内存给每个进程，并维护虚拟内存到物理内存的映射表。进程通过操作虚拟内存，虚拟内存通过页表到物理内存进行真正的读写。在子进程进行fork时，不是将物理内存的数据进行拷贝，而是**复制**主进程的页表，所以当子进程操作复制的页表时，其能够映射到和主进程相同的物理内存区域，从而实现子进程和主进程内存空间的共享。子进程读取内存数据，写入RDB文件，当子进程完成新RDB文件的写入时，会将旧的备份文件替换掉。
 ## 写时复制技术
@@ -47,7 +47,7 @@ bgsave开始时会fork主进程得到子进程，子进程**共享**主进程的
  - 当主进程执行写操作时，则会拷贝一份数据，执行写操作。
   具体来说fork会将共享内存标记为read-only，任何进程仅能够读数据，不能够写数据。如下图所示，
 ::: center  
-<img src="https://img.benym.cn/redisImg/redisRDB.png/zipstyle" alt="RDB流程fork" style="zoom:60%;" />
+<img src="https://img.benym.cn/redisImg/redisRDB.png/zipstyle" alt="RDB流程fork" style="zoom:100%;" />
 :::
   假设要修改的数据是数据B，redis首先会拷贝一份数据B副本，写入时操作数据副本B，同时将页表关系读操作从读取数据B改为读取数据B的副本。在极端情况下，如果内存中的数据在RDB时都被修改过，那么此时**RDB所需要的内存就会膨胀翻倍**
 ## 总结-RDB的优势和劣势

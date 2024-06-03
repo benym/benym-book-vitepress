@@ -23,29 +23,29 @@ author: benym
  3. 它的左右子树也分别可以充当为二叉查找树
 例如
 ::: center
-<img src="https://img.benym.cn/tree/searchtree.png/zipstyle" alt="二叉搜索树" style="zoom:60%;" />
+<img src="https://img.benym.cn/tree/searchtree.png/zipstyle" alt="二叉搜索树" style="zoom:100%;" />
 :::
 ### 优点
 二叉搜索树的优点：能够快速找到想要查找的值。
 以查找数值为14的节点为例，由于二叉搜索树的特性，我们可以很快找到它，其查找过程如下：
  1. 和根节点9比较
 ::: center
-<img src="https://img.benym.cn/tree/searchtree2.png/zipstyle" alt="二叉搜索树2" style="zoom:60%;" />
+<img src="https://img.benym.cn/tree/searchtree2.png/zipstyle" alt="二叉搜索树2" style="zoom:100%;" />
 :::
 
  2. 由于14>9，所以14只可能存在于9的右子树中，因此查看右孩子13
 ::: center
-<img src="https://img.benym.cn/tree/searchtree3.png/zipstyle" alt="二叉搜索树3" style="zoom:60%;" />
+<img src="https://img.benym.cn/tree/searchtree3.png/zipstyle" alt="二叉搜索树3" style="zoom:100%;" />
 :::
 
  3. 由于14>13，所以继续查看13的右孩子15
 ::: center
-<img src="https://img.benym.cn/tree/searchtree4.png/zipstyle" alt="二叉搜索树4" style="zoom:60%;" />
+<img src="https://img.benym.cn/tree/searchtree4.png/zipstyle" alt="二叉搜索树4" style="zoom:100%;" />
 :::
 
  4. 由于14<15，所以14只可能存在于15的左孩子中，因此查找15的左孩子14
 ::: center
-<img src="https://img.benym.cn/tree/searchtree5.png/zipstyle" alt="二叉搜索树5" style="zoom:60%;" />
+<img src="https://img.benym.cn/tree/searchtree5.png/zipstyle" alt="二叉搜索树5" style="zoom:100%;" />
 :::
 
  5. 这时候发现14正是自己查找的值，于是查找结束
@@ -55,12 +55,12 @@ author: benym
 二叉搜索树具有什么缺陷呢？
 假设初始的二叉搜索树只有三个节点：
 ::: center
-<img src="https://img.benym.cn/tree/searchtree6.png/zipstyle" alt="二叉搜索树6" style="zoom:60%;" />
+<img src="https://img.benym.cn/tree/searchtree6.png/zipstyle" alt="二叉搜索树6" style="zoom:100%;" />
 :::
 
 然后我们按照顺序陆续插入节点4、3、2、1、0。插入之后的结构如下：
 ::: center
-<img src="https://img.benym.cn/tree/searchtree7.png/zipstyle" alt="二叉搜索树7" style="zoom:60%;" />
+<img src="https://img.benym.cn/tree/searchtree7.png/zipstyle" alt="二叉搜索树7" style="zoom:100%;" />
 :::
 
 可以观察到，所有的节点都倾向于一边了，当出现这种情况时，二叉搜索树在查找的性能就大打折扣，几乎变成线性了。
@@ -72,12 +72,12 @@ author: benym
  2. 每个节点的左子树和右子树的高度差至多等于1
 例如：下图就是一颗AVL树
 ::: center
-<img src="https://img.benym.cn/tree/searchtree8.png/zipstyle" alt="二叉搜索树8" style="zoom:60%;" />
+<img src="https://img.benym.cn/tree/searchtree8.png/zipstyle" alt="二叉搜索树8" style="zoom:100%;" />
 :::
 
 而这张图中的则不是AVL树(节点右边的数字为节点的高度)
 ::: center
-<img src="https://img.benym.cn/tree/searchtree9.png/zipstyle" alt="二叉搜索树9" style="zoom:60%;" />
+<img src="https://img.benym.cn/tree/searchtree9.png/zipstyle" alt="二叉搜索树9" style="zoom:100%;" />
 :::
 
 对于上图而言，节点9的左孩子高度为2，而右孩子高度为0，他们之间的差值超过了1。AVL树可以保证不会出现大量节点偏向一边的情况。
@@ -87,23 +87,23 @@ author: benym
 **右旋:**
 我们在进行节点插入的时候，可能会出现节点都倾向于左边的情况，例如
 ::: center
-<img src="https://img.benym.cn/tree/searchtree10.png/zipstyle" alt="二叉搜索树10" style="zoom:60%;" />
+<img src="https://img.benym.cn/tree/searchtree10.png/zipstyle" alt="二叉搜索树10" style="zoom:100%;" />
 :::
 
 我们把这种倾向于左边的情况称之为**左-左型**。这个时候，我们就可以对节点9进行**右旋操作**，使它恢复平衡。
 ::: center
-<img src="https://img.benym.cn/tree/searchtree11.png/zipstyle" alt="二叉搜索树11" style="zoom:60%;" />
+<img src="https://img.benym.cn/tree/searchtree11.png/zipstyle" alt="二叉搜索树11" style="zoom:100%;" />
 :::
 
 **即：顺时针旋转两个节点，使得父节点被自己的左孩子取代，而自己成为自己的右孩子**
 再举个例子：
 ::: center
-<img src="https://img.benym.cn/tree/searchtree12.png/zipstyle" alt="二叉搜索树12" style="zoom:60%;" />
+<img src="https://img.benym.cn/tree/searchtree12.png/zipstyle" alt="二叉搜索树12" style="zoom:100%;" />
 :::
 
 节点4和9高度相差大于1。由于是**左孩子的高度较高**，此时是**左-左型**，进行**右旋**。
 ::: center
-<img src="https://img.benym.cn/tree/searchtree13.png/zipstyle" alt="二叉搜索树13" style="zoom:60%;" />
+<img src="https://img.benym.cn/tree/searchtree13.png/zipstyle" alt="二叉搜索树13" style="zoom:100%;" />
 :::
 
 **这里要注意，节点4的右孩子成为了节点6的左孩子了**
@@ -115,7 +115,7 @@ author: benym
 **左旋:**
 左旋和右旋一样，就是用来解决当大部分节点都偏向右边的时候，通过左旋来还原。例如：
 ::: center
-<img src="https://img.benym.cn/tree/searchtree14.png/zipstyle" alt="二叉搜索树14" style="zoom:60%;" />
+<img src="https://img.benym.cn/tree/searchtree14.png/zipstyle" alt="二叉搜索树14" style="zoom:100%;" />
 :::
 
 我们把这种倾向于右边的情况称之为**右-右型**。
@@ -127,94 +127,94 @@ author: benym
 以一个具体实例详细讲解：
 假设二叉树初试状态如下：
 ::: center
-<img src="https://img.benym.cn/tree/searchtree15.png/zipstyle" alt="二叉搜索树15png" style="zoom:60%;" />
+<img src="https://img.benym.cn/tree/searchtree15.png/zipstyle" alt="二叉搜索树15png" style="zoom:100%;" />
 :::
 
 我们逐渐插入如下数值：1，4，5，6，7，10，9，8
 
 插入1
 ::: center
-<img src="https://img.benym.cn/tree/searchtree16.png/zipstyle" alt="二叉搜索树16png" style="zoom:60%;" />
+<img src="https://img.benym.cn/tree/searchtree16.png/zipstyle" alt="二叉搜索树16png" style="zoom:100%;" />
 :::
 
 此时为左-左型，需要右旋调整
 ::: center
-<img src="https://img.benym.cn/tree/searchtree17.png/zipstyle" alt="二叉搜索树17png" style="zoom:60%;" />
+<img src="https://img.benym.cn/tree/searchtree17.png/zipstyle" alt="二叉搜索树17png" style="zoom:100%;" />
 :::
 
 插入4
 ::: center
-<img src="https://img.benym.cn/tree/searchtree18.png/zipstyle" alt="二叉搜索树18png" style="zoom:60%;" />
+<img src="https://img.benym.cn/tree/searchtree18.png/zipstyle" alt="二叉搜索树18png" style="zoom:100%;" />
 :::
 
 继续插入5
 ::: center
-<img src="https://img.benym.cn/tree/searchtree19.png/zipstyle" alt="二叉搜索树19png" style="zoom:60%;" />
+<img src="https://img.benym.cn/tree/searchtree19.png/zipstyle" alt="二叉搜索树19png" style="zoom:100%;" />
 :::
 
 此时为右-右型，需要左旋调整
 ::: center
-<img src="https://img.benym.cn/tree/searchtree20.png/zipstyle" alt="二叉搜索树20png" style="zoom:60%;" />
+<img src="https://img.benym.cn/tree/searchtree20.png/zipstyle" alt="二叉搜索树20png" style="zoom:100%;" />
 :::
 
 继续插入6
 ::: center
-<img src="https://img.benym.cn/tree/searchtree21.png/zipstyle" alt="二叉搜索树21png" style="zoom:60%;" />
+<img src="https://img.benym.cn/tree/searchtree21.png/zipstyle" alt="二叉搜索树21png" style="zoom:100%;" />
 :::
 
 右-右型，需要进行左旋
 ::: center
-<img src="https://img.benym.cn/tree/searchtree22.png/zipstyle" alt="二叉搜索树22png" style="zoom:60%;" />
+<img src="https://img.benym.cn/tree/searchtree22.png/zipstyle" alt="二叉搜索树22png" style="zoom:100%;" />
 :::
 
 继续插入7
 ::: center
-<img src="https://img.benym.cn/tree/searchtree23.png/zipstyle" alt="二叉搜索树23png" style="zoom:60%;" />
+<img src="https://img.benym.cn/tree/searchtree23.png/zipstyle" alt="二叉搜索树23png" style="zoom:100%;" />
 :::
 
 右-右型，需要进行左旋
 ::: center
-<img src="https://img.benym.cn/tree/searchtree24.png/zipstyle" alt="二叉搜索树24png" style="zoom:60%;" />
+<img src="https://img.benym.cn/tree/searchtree24.png/zipstyle" alt="二叉搜索树24png" style="zoom:100%;" />
 :::
 
 继续插入10
 ::: center
-<img src="https://img.benym.cn/tree/searchtree25.png/zipstyle" alt="二叉搜索树25png" style="zoom:60%;" />
+<img src="https://img.benym.cn/tree/searchtree25.png/zipstyle" alt="二叉搜索树25png" style="zoom:100%;" />
 :::
 
 继续插入9
 ::: center
-<img src="https://img.benym.cn/tree/searchtree26.png/zipstyle" alt="二叉搜索树26png" style="zoom:60%;" />
+<img src="https://img.benym.cn/tree/searchtree26.png/zipstyle" alt="二叉搜索树26png" style="zoom:100%;" />
 :::
 
 出现了这种情况应该怎么办呢？对于这种**右-左型**的情况，单单一次左旋或右旋是不行的，下面我们先说说如何处理这种情况。
 ::: center
-<img src="https://img.benym.cn/tree/searchtree27.png/zipstyle" alt="二叉搜索树27png" style="zoom:60%;" />
+<img src="https://img.benym.cn/tree/searchtree27.png/zipstyle" alt="二叉搜索树27png" style="zoom:100%;" />
 :::
 
 这种类型我们把他成为**右-左型**，处理方式是**先对节点10进行右旋把它变成右-右型**
 ::: center
-<img src="https://img.benym.cn/tree/searchtree28.png/zipstyle" alt="二叉搜索树28png" style="zoom:60%;" />
+<img src="https://img.benym.cn/tree/searchtree28.png/zipstyle" alt="二叉搜索树28png" style="zoom:100%;" />
 :::
 
 然后再进行左旋
 ::: center
-<img src="https://img.benym.cn/tree/searchtree29.png/zipstyle" alt="二叉搜索树29png" style="zoom:60%;" />
+<img src="https://img.benym.cn/tree/searchtree29.png/zipstyle" alt="二叉搜索树29png" style="zoom:100%;" />
 :::
 
 所以对这种**右-左型的，我们需要进行一次右旋再左旋**，依次类推，**左-右型需要进行一次左旋再右旋，与右-左型相反**
 ::: center
-<img src="https://img.benym.cn/tree/searchtree30.png/zipstyle" alt="二叉搜索树30png" style="zoom:60%;" />
+<img src="https://img.benym.cn/tree/searchtree30.png/zipstyle" alt="二叉搜索树30png" style="zoom:100%;" />
 :::
 
 回到刚才那道题
 ::: center
-<img src="https://img.benym.cn/tree/searchtree26.png/zipstyle" alt="二叉搜索树26png" style="zoom:60%;" />
+<img src="https://img.benym.cn/tree/searchtree26.png/zipstyle" alt="二叉搜索树26png" style="zoom:100%;" />
 :::
 
 对它进行右旋再左旋
 ::: center
-<img src="https://img.benym.cn/tree/searchtree31.png/zipstyle" alt="二叉搜索树31png" style="zoom:60%;" />
+<img src="https://img.benym.cn/tree/searchtree31.png/zipstyle" alt="二叉搜索树31png" style="zoom:100%;" />
 :::
 
 到此，节点的插入结束
