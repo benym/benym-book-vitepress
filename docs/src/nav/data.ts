@@ -105,6 +105,12 @@ export const NAV_DATA: NavData[] = [
         link: 'https://vercel.com/'
       },
       {
+        icon: 'https://img.benym.cn/navimg/difyai.png',
+        title: 'DifyAI',
+        desc: '开源的 LLM 应用开发平台。提供从 Agent 构建到 AI workflow 编排、RAG 检索、模型管理等能力，轻松构建和运营生成式 AI 原生应用',
+        link: 'https://difyai.com/'
+      },
+      {
         icon: 'https://tongji.baidu.com/web5/image/logo.png?__v=@version@',
         title: '百度统计',
         desc: '站点统计管理',
