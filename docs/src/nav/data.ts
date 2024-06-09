@@ -140,7 +140,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://astro.build'
       },
       {
-        icon: 'https://cn.vuejs.org/logo.svg',
+        icon: 'https://img.benym.cn/navimg/vitepress.png',
         title: 'VitePress',
         desc: '由 Vite 和 Vue 驱动的静态网站生成器',
         link: 'https://vitepress.dev'
