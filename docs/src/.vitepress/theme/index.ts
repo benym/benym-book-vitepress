@@ -72,18 +72,18 @@ export default {
         () => updateHomePageStyle(location.pathname === '/'),
         { immediate: true }
       )
-    }
-    // 创建并配置difyChatbotConfig脚本
-    const chatbotConfigScript = document.createElement('script')
-    chatbotConfigScript.textContent = `window.difyChatbotConfig = { token: 'I9I2dnjtK7fXLcnv' }`
-    document.head.appendChild(chatbotConfigScript)
+      // 创建并配置difyChatbotConfig脚本
+      const chatbotConfigScript = document.createElement('script')
+      chatbotConfigScript.textContent = `window.difyChatbotConfig = { token: 'I9I2dnjtK7fXLcnv' }`
+      document.head.appendChild(chatbotConfigScript)
 
-    // 创建并引入embed.min.js脚本
-    const embedScript = document.createElement('script')
-    embedScript.src = 'https://udify.app/embed.min.js'
-    embedScript.id = 'I9I2dnjtK7fXLcnv'
-    embedScript.defer = true
-    document.head.appendChild(embedScript)
+      // 创建并引入embed.min.js脚本
+      const embedScript = document.createElement('script')
+      embedScript.src = 'https://udify.app/embed.min.js'
+      embedScript.id = 'I9I2dnjtK7fXLcnv'
+      embedScript.defer = true
+      document.head.appendChild(embedScript)
+    }
   }
 }
 
