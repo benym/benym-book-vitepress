@@ -432,7 +432,7 @@ public class StateMachine {
 
 其中ConditionService和ActionService定义了Contion和Action接口的返回，然后在内部实现了匿名类
 
-```
+```java
 public interface ConditionService {
 
     Condition<AuditContext> passOrRejectCondition();
