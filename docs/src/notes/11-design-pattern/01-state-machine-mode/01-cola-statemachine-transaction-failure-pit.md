@@ -70,6 +70,7 @@ public void fire(State state, Event event, Context context) {
 简单改造后的状态机代码可能如下
 
 ```java {1,4-5,7-8,10,15-16}
+// 以下代码并不是定义状态机的正确做法，错误的使用方法造成了事务失效，后面在方法二中解析
 @Component
 public class StateMachine {
 
@@ -350,6 +351,8 @@ public StateMachine<State, Event, Context> stateMachine() {
 
 很可惜，两种方法在当前场景都不适用，因为自调用在`COLA`框架内部，如果为了解决这个问题去再包装框架就有点大动干戈了。
 
+### 方法一
+
 既然没有声明式事务，直接采用编程式事务就好了
 
 改进后的`Action`代码如下
@@ -401,9 +404,110 @@ Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.
 Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@295854a]
 ```
 
+### 方法二
+
+回顾上面的状态机定义，我假定的是你是这样实现的状态机
+
+```java
+@Component
+public class StateMachine {
+
+    @Autowired
+    private ConditionService conditionService;
+
+    @Autowired
+    private ActionService actionService;
+
+    @Bean
+    public StateMachine<State, Event, Context> stateMachine() {
+        StateMachineBuilder<State, Event, Context> builder = StateMachineBuilderFactory.create();
+        builder.externalTransition().from(State.TEST).to(State.DEPLOY)
+                .on(Event.PASS)
+                .when(conditionService.passCondition())
+                .perform(actionService.passAction());
+        return builder.build("testMachine");
+    }
+}
+```
+
+其中ConditionService和ActionService定义了Contion和Action接口的返回，然后在内部实现了匿名类
+
+```
+public interface ConditionService {
+
+    Condition<AuditContext> passOrRejectCondition();
+
+    Condition<AuditContext> doneCondition();
+}
+```
+
+```java
+public interface ActionService {
+
+    Action<AuditState, AuditEvent, AuditContext> passOrRejectAction();
+
+    Action<AuditState, AuditEvent, AuditContext> doneAction();
+}
+```
+
+但其实正确的做法是直接实现Condition或Action的接口，将实现类定义为Bean，传递这个Bean到状态机定义中，从根本上解决事务失效问题
+
+上述代码应该转化为
+
+```java {4-6,8-10,18-19}
+@Component
+public class StateMachine {
+
+    @Resource
+    @Qualifier("conditionImpl")
+    private Condition<Context> conditionImpl;
+
+    @Resource
+    @Qualifier("actionImpl")
+    private Action<State, Event, Context> actionImpl;
+
+    @Bean
+    public StateMachine<State, Event, Context> stateMachine() {
+        StateMachineBuilder<State, Event, Context> builder = StateMachineBuilderFactory.create();
+        builder.externalTransition().from(State.TEST).to(State.DEPLOY)
+                .on(Event.PASS)
+                .when(conditionImpl)
+                .perform(actionImpl);
+        return builder.build("testMachine");
+    }
+}
+```
+
+对应的接口实现
+
+```java
+@Component
+public class ConditionImpl implements Condition<Context> {
+
+    @Override
+    public boolean isSatisfied(Context context) {
+        return false;
+    }
+}
+```
+
+```java
+@Component
+public class ActionImpl implements Action<State, Event, Context> {
+
+    @Override
+    @Transactional
+    public void execute(State from, State to, Event event, Context context) {
+
+    }
+}
+```
+
+由于传递的直接是Bean，所以就不再存在匿名类自调用的问题，在Action或Condition的实现方法`execute`或`isSatisfied`上增加`@Transactional`即可让事务生效
+
 ## 总结
 
 有的时候`Spring`代码写多了，看起来代码和平时没区别，实际上在特殊场景还是会踩坑，当事务和其他框架结合时一定要注意潜在的事务问题，做好单元测试。
 
-
+> 另外，状态机具有天生幂等的特点，不仅仅可以用于这种场景重Condition或Action的场景，在DDD中它可以作为维护某个状态的方法，用于充血模型
 

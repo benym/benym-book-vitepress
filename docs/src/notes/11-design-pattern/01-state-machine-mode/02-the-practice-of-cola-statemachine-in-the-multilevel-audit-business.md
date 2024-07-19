@@ -266,11 +266,21 @@ public enum StateMachineEnum {
 @Component
 public class AuditMachine implements StateMachineStrategy {
 
-    @Autowired
-    private ConditionService conditionService;
+    @Resource
+    @Qualifier("passOrRejectAction")
+    private Action<AuditState, AuditEvent, AuditContext> passOrRejectAction;
 
-    @Autowired
-    private ActionService actionService;
+    @Resource
+    @Qualifier("doneAction")
+    private Action<AuditState, AuditEvent, AuditContext> doneAction;
+
+    @Resource
+    @Qualifier("passOrRejectCondition")
+    private Condition<AuditContext> passOrRejectCondition;
+
+    @Resource
+    @Qualifier("doneCondition")
+    private Condition<AuditContext> doneCondition;
 
     @Override
     public String getMachineType() {
@@ -296,31 +306,31 @@ public class AuditMachine implements StateMachineStrategy {
         // 已申请->爸爸同意
         builder.externalTransition().from(AuditState.APPLY).to(AuditState.DAD_PASS)
                 .on(AuditEvent.PASS)
-                .when(conditionService.passOrRejectCondition())
-                .perform(actionService.passOrRejectAction());
+                .when(passOrRejectCondition)
+                .perform(passOrRejectAction);
         // 已申请->爸爸不同意
         builder.externalTransition().from(AuditState.APPLY).to(AuditState.DAD_REJ)
                 .on(AuditEvent.REJECT)
-                .when(conditionService.passOrRejectCondition())
-                .perform(actionService.passOrRejectAction());
+                .when(passOrRejectCondition)
+                .perform(passOrRejectAction);
         // 爸爸同意->妈妈同意
         builder.externalTransition().from(AuditState.DAD_PASS).to(AuditState.MOM_PASS)
                 .on(AuditEvent.PASS)
-                .when(conditionService.passOrRejectCondition())
-                .perform(actionService.passOrRejectAction());
+                .when(passOrRejectCondition)
+                .perform(passOrRejectAction);
         // 爸爸同意->妈妈不同意
         builder.externalTransition().from(AuditState.DAD_PASS).to(AuditState.MOM_REJ)
                 .on(AuditEvent.REJECT)
-                .when(conditionService.passOrRejectCondition())
-                .perform(actionService.passOrRejectAction());
+                .when(passOrRejectCondition)
+                .perform(passOrRejectAction);
         // 已申请->已完成
         // 爸爸同意->已完成
         // 妈妈同意->已完成
         builder.externalTransitions().fromAmong(AuditState.APPLY, AuditState.DAD_PASS, AuditState.MOM_PASS)
                 .to(AuditState.DONE)
                 .on(AuditEvent.DONE)
-                .when(conditionService.doneCondition())
-                .perform(actionService.doneAction());
+                .when(doneCondition)
+                .perform(doneAction);
         return builder.build(getMachineType());
     }
 }
@@ -398,52 +408,38 @@ public class StateMachineEngine implements InitializingBean {
 }
 ```
 
-其中上文内的`ConditionService`和`ActionService`分别表示转移条件的`Service`服务和动作的`Service`服务
-
-在`COLA`中定义了`Condtion`和`Action`接口
-
 本文的`Condition`实现为
 
 ```java
-public interface ConditionService {
+/**
+ * 通用通过/驳回条件
+ * 覆盖审核正向流程，以及驳回流程
+ * 已申请->爸爸同意->妈妈统一
+ * 已申请->爸爸不同意
+ * 爸爸同意->妈妈不同意
+ */
+@Component
+public class PassOrRejectCondition implements Condition<AuditContext> {
 
-    /**
-     * 通用通过/驳回条件
-     * 覆盖审核正向流程，以及驳回流程
-     * 已申请->爸爸同意->妈妈统一
-     * 已申请->爸爸不同意
-     * 爸爸同意->妈妈不同意
-     *
-     * @return Condition
-     */
-    Condition<AuditContext> passOrRejectCondition();
-
-    /**
-     * 已完成条件
-     *
-     * @return Condition
-     */
-    Condition<AuditContext> doneCondition();
+    @Override
+    public boolean isSatisfied(AuditContext context) {
+        System.out.println(1);
+        return true;
+    }
 }
 ```
 
 ```java
+/**
+ * 已完成条件
+ */
 @Component
-public class ConditionServiceImpl implements ConditionService {
-    @Override
-    public Condition<AuditContext> passOrRejectCondition() {
-        return context -> {
-            System.out.println(1);
-            return true;
-        };
-    }
+public class DoneCondition implements Condition<AuditContext> {
 
     @Override
-    public Condition<AuditContext> doneCondition() {
-        return context -> {
-            System.out.println(1);
-            return true;
-        };
+    public boolean isSatisfied(AuditContext context) {
+        System.out.println(1);
+        return true;
     }
 }
 ```
@@ -453,71 +449,49 @@ public class ConditionServiceImpl implements ConditionService {
 本文的`Action`实现为
 
 ```java
-public interface ActionService {
-
-    /**
-     * 通用审核通过/驳回执行动作
-     * 覆盖审核正向流程，以及驳回流程
-     * 已申请->爸爸同意->妈妈同意
-     * 已申请->爸爸不同意
-     * 爸爸同意->妈妈不同意
-     *
-     * @return Action
-     */
-    Action<AuditState, AuditEvent, AuditContext> passOrRejectAction();
-
-    /**
-     * 已完成执行动作
-     *
-     * @return Action
-     */
-    Action<AuditState, AuditEvent, AuditContext> doneAction();
-}
-```
-
-```java
+/**
+ * 通用审核通过/驳回执行动作
+ * 覆盖审核正向流程，以及驳回流程
+ * 已申请->爸爸同意->妈妈同意
+ * 已申请->爸爸不同意
+ * 爸爸同意->妈妈不同意
+ */
 @Component
-public class ActionServiceImpl implements ActionService {
+public class PassOrRejectAction implements Action<AuditState, AuditEvent, AuditContext> {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(ActionServiceImpl.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(PassOrRejectAction.class);
 
     @Autowired
     private AuditDao auditDao;
 
     @Override
-    public Action<AuditState, AuditEvent, AuditContext> passOrRejectAction() {
-        return (from, to, event, context) -> {
-            LOGGER.info("passOrRejectAction from {}, to {}, on event {}, id:{}", from, to, event, context.getId());
-            auditDao.updateAuditStatus(to.getCode(), context.getId());
-        };
-    }
-
-    @Override
-    public Action<AuditState, AuditEvent, AuditContext> doneAction() {
-        return (from, to, event, context) -> {
-            LOGGER.info("doneAction from {}, to {}, on event {}, id:{}", from, to, event, context.getId());
-            auditDao.updateAuditStatus(to.getCode(), context.getId());
-        };
+    @Transactional
+    public void execute(AuditState from, AuditState to, AuditEvent event, AuditContext context) {
+        LOGGER.info("passOrRejectAction from {}, to {}, on event {}, id:{}", from, to, event, context.getId());
+        auditDao.updateAuditStatus(to.getCode(), context.getId());
     }
 }
 ```
-
-上述代码均采用匿名函数的写法，其实等价于
 
 ```java
-@Override
-public Action<AuditState, AuditEvent, AuditContext> passOrRejectAction() {
-    Action<AuditState, AuditEvent, AuditContext> action = new Action<AuditState, AuditEvent, AuditContext>() {
-        @Override
-        public void execute(AuditState from, AuditState to, AuditEvent event, AuditContext context) {
+/**
+ * 已完成执行动作
+ */
+@Component
+public class DoneAction implements Action<AuditState, AuditEvent, AuditContext> {
 
-        }
-    };
-    return action;
+    private static final Logger LOGGER = LoggerFactory.getLogger(DoneAction.class);
+
+    @Autowired
+    private AuditDao auditDao;
+
+    @Override
+    public void execute(AuditState from, AuditState to, AuditEvent event, AuditContext context) {
+        LOGGER.info("doneAction from {}, to {}, on event {}, id:{}", from, to, event, context.getId());
+        auditDao.updateAuditStatus(to.getCode(), context.getId());
+    }
 }
 ```
-
-在`Action`中只是进行根据`id`更新状态，这一操作
 
 #### Controller层
 
@@ -657,7 +631,7 @@ Q: 在状态机的Action和Condition方法上加AOP注解有效吗
 
 ::: note
 
-A: 无效，Action和Condition由框架内部直接调用，框架并未交给Spring管理，所以无法产生代理对象执行增强。具体经验可查看[COLA-statemachine事务失效踩坑](./01-cola-statemachine-transaction-failure-pit)
+A: 如果你的Action或Condition是匿名内部类的形式，那么事务将无效，这是因为Action和Condition由框架内部直接调用，框架并未交给Spring管理，所以无法产生代理对象执行增强。如果你定义状态机时传递的直接是Action或Condition的实现类，则事务依旧有效。具体经验可查看[COLA-statemachine事务失效踩坑](./01-cola-statemachine-transaction-failure-pit)
 
 :::
 
