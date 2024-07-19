@@ -454,7 +454,7 @@ public interface ActionService {
 
 上述代码应该转化为
 
-```java {4-6,8-10,18-19}
+```java {4-6,8-10,17-18}
 @Component
 public class StateMachine {
 
