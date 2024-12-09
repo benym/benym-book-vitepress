@@ -37,7 +37,7 @@ import java.util.List;
 
 
 @Configuration
-public class RedissionConfig {
+public class RedissonConfig {
 
     @Value("${spring.redis.cluster.nodes}")
     private String redisCluster;
