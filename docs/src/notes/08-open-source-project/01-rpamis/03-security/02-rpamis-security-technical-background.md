@@ -30,7 +30,7 @@ permalink: /pages/c7a36a/
 
 现有市面上加解密、脱敏组件开源项目众多，比较出名的有`Mybatis-plus`提供的`Mybatis-mate`组件，但很可惜代码是闭源、收费的，且根据实际使用不能够很好的支持嵌套脱敏，多种类型脱敏，动态SQL加解密的需求。此外，加解密和脱敏组件互相分离，虽然开源的组件众多，但几乎都是重复工作，仍然有很多待解决的问题需要完善，没有完整形成一个企业级数据安全解决方案。此类项目拥有知名度的极少，同时由于各个组件处理类型不全面，缺少必要的单测用例，进一步造成了不敢接入的问题。
 
-基于上述情况，[rpamis-security](https://github.com/rpamis/rpamis-security)<Badge text="1.0.1"/>由此诞生，提供一站式加解密脱敏安全解决方案。
+基于上述情况，[rpamis-security](https://github.com/rpamis/rpamis-security)<Badge text="1.0.2"/>由此诞生，提供一站式加解密脱敏安全解决方案。
 
 ## 技术方案横向对比
 

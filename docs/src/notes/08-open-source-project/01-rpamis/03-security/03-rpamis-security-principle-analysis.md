@@ -27,7 +27,7 @@ permalink: /pages/1ffe0d/
 
 ## 核心组件
 
-[rpamis-security](https://github.com/rpamis/rpamis-security)<Badge text="1.0.1"/>主要通过`Mybatis-Plugin`及`AOP`切面实现安全功能，其主要组件如下图所示
+[rpamis-security](https://github.com/rpamis/rpamis-security)<Badge text="1.0.2"/>主要通过`Mybatis-Plugin`及`AOP`切面实现安全功能，其主要组件如下图所示
 
 ::: center
 <img src="https://img.benym.cn/rpas/rpamis-security-arch.jpg" />

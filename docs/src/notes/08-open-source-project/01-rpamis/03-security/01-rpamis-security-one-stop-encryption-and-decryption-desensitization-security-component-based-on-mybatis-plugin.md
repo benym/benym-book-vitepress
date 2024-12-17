@@ -26,7 +26,7 @@ permalink: /pages/792496/
 
 ## 介绍
 
-[rpamis-security](https://github.com/rpamis/rpamis-security)<Badge text="1.0.1"/>是一个基于Mybatis插件开发的安全组件，旨在提供更优于市面上组件的脱敏、加解密落库等企业数据安全解决方案。组件提供注解式编程方式，开发者只需要对需要处理的字段或方法加上对应注解，无需关心安全相关需求，由组件全自动完成脱敏、加解密等功能
+[rpamis-security](https://github.com/rpamis/rpamis-security)<Badge text="1.0.2"/>是一个基于Mybatis插件开发的安全组件，旨在提供更优于市面上组件的脱敏、加解密落库等企业数据安全解决方案。组件提供注解式编程方式，开发者只需要对需要处理的字段或方法加上对应注解，无需关心安全相关需求，由组件全自动完成脱敏、加解密等功能
 
 SpringBoot项目接入方式
 
@@ -75,15 +75,7 @@ rpamis:
 
 ## 代码及单测覆盖率
 
-::: cardList 1
-```yaml
-- name: Rpamis-security
-  desc: 🧱基于Mybatis-Plugin的一站式加解密脱敏安全组件
-  link: https://github.com/rpamis/rpamis-security
-  bgColor: '#C76DA2'
-  textColor: '#FFFFFF'
-```
-:::
+https://github.com/rpamis/rpamis-security
 
 ::: center
 <img src="https://img.benym.cn/rpas/rpamis-security-cover.png" alt="单测覆盖率"/>
