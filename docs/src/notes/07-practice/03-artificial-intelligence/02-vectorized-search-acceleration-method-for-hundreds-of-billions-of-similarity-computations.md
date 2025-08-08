@@ -549,7 +549,7 @@ where id in
 
 #### 整体架构图
 
-
+// 待补充
 
 #### 生产核心计算数据
 
@@ -647,23 +647,271 @@ where id in
 
 ### 向量化检索
 
+由于实际生产运行上述方案效率上不可接受，所以换为向量化搜索架构，向量化搜索改版后结果
 
+存量全量数据向量化写入时间
+
+![](https://img.benym.cn/vector-search/vector-sim6.png)
+
+相似度实时全量计算时间(最大省份)
+
+112分钟=6720秒
+
+![](https://img.benym.cn/vector-search/vector-sim7.png)
+
+单天增量相似度数据写入时间
+
+272秒=4分钟
+
+![](https://img.benym.cn/vector-search/vector-sim8.png)
+
+可以看到面对超大数据量的计算，向量化检索的方案在计算效率上有了质的提高
+
+#### 整体架构图
+
+// 待补充
 
 #### Embedding模型选择
 
+由于采用了向量化方案，计算的准确性变得和Embedding模型的选择息息相关，选用什么样的模型直接决定了向量化后地址的质量。这时候可能大家都会想到GPT系列、BGE系列的模型，这些SOTA模型在NLP领域表现得非常好
 
+但地址数据相对特殊，他不属于一个需要去理解文字语义的场景
+
+比如从NLP的角度来说
+
+`北京市海淀区海淀街道新海大厦`和`北京市海淀区人民政府海淀街道办事处`，这两句话可能是非常相似的
+
+但实际上对于定位地址来说，新海大厦和街道办事处是完全不同的两个地方
+
+在我们实际上的测试中，我们使用了GPT的text-embedding、BGE large、Sentence-bert、word2vec、以及原始的编辑距离
+
+根据测试结果我们最终使用了word2vec
+
+因为他的效果最接近编辑距离，基于单个词来进行地址区分，能够明显得判别出上述SOTA模型识别的语义上CASE接近，但实际上是两个不同地址的问题
 
 #### 向量数据库选择
 
+我们首选了milvus和elasticsearch，最终由于一些资源限制，使用了生产环境的高版本支持向量存储的elasticsearch
 
+在es中，需要新建如下索引
+
+```sql
+PUT /address_vector/_mapping
+{
+  "properties": {
+    "orderId": {
+      "type": "long"
+    },
+    "province":{
+      "type" : "text",
+      "fields" : {
+        "keyword" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        }
+      }
+    },
+    "city":{
+      "type" : "text",
+      "fields" : {
+        "keyword" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        }
+      }
+    },
+    "county" :{
+      "type" : "text",
+      "fields" : {
+        "keyword" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        }
+      }
+    },
+    "township": {
+      "type": "text",
+      "fields": {
+        "keyword": {
+          "type": "keyword",
+          "ignore_above": 256
+        }
+      }
+    },
+    "detailAddress":{
+      "type" : "text",
+      "fields" : {
+        "keyword" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        }
+      }
+    },
+    "userId" :{
+      "type" : "keyword"
+    },
+    "addressVector": {
+      "type": "dense_vector",
+      "dims": 200,
+      "index": true,
+      "similarity": "cosine",
+      "index_options": {
+        "type": "hnsw",
+        "m": 16,
+        "ef_construction": 200
+      }
+    }
+  }
+}
+```
+
+addressVector用于存储向量化之后的地址，采用余弦相似度进行计算，和HNSW小世界图索引，参数的具体设置可以参考腾讯云的[十亿级高性能向量检索实践](https://cloud.tencent.com/document/practice/845/98224)以及https://blog.csdn.net/xcg340123/article/details/142521029
 
 #### 混合检索
 
+上述索引的过程中我们也加上了地址的一些其他信息，用于在召回的时候同时进行混合检索先过滤掉一些不必要的地址，再去检索，加快检索的效率。
 
+对于低版本的es而言，可以选择使用KNN插件https://opendistro.github.io/for-elasticsearch-docs/docs/knn/approximate-knn/，不过我们尝试过在低版本上集成该插件，实际上效果并不好(可能是使用姿势的原因)，建议是直接升级到能够支持向量存储的es版本
+
+**需要注意的是：通常使用es进行向量搜索都是使用近似KNN(Approximate k-NN)，也叫做ANN，一般是基于HNSW索引情况下，近邻计算意味着每次对于一个地址他会去计算小世界图上你开始搜索设置的k个邻居，允许少量误差的算法，在大规模数据情况下，可以在短时间内获得卓越的准确性，所以使用这个方法时应该对自身的业务有一定的估计，比如说我这个地址可能就和近似的200个地址计算(通过历史数据观测)，就能够满足业务了**
+
+如果觉得KNN的评分不够准确，那么还可以使用script_score去定义评分规则，但是这样做会让KNN退化为精确计算，在我们的测试中，这和让es直接两两计算相似度无疑，这是很难让人接受的，因为KNN的计算方法一般都是暴力搜索或者KD树，在计算量大的时候不友好
+
+向量化搜索的核心代码是
+
+```java
+public List<VectorAddressDTO> searchSimilarUser(ProvinceParam provinceParam, OrderAddressDTO orderAddressOne, Double similarityThreshold) {
+    // 1.根据订单号查询订单地址向量
+    BatchStockOrderDTO esOrder = this.searchOrderByOrderId(String.valueOf(orderAddressOne.getOrderCode()));
+    if (esOrder == null) {
+        throw ExceptionFactory.bizNoStackException("从es中未获取到数据");
+    }
+    // 2.根据地址向量查询所有相似地址
+    List<BatchStockOrderDTO> esOrders = this.searchSimilarDocumentsByKnn(esOrder, provinceParam, similarityThreshold, orderAddressOne.getOrderCode());
+    if (CollectionUtils.isEmpty(esOrders)) {
+        return new ArrayList<>();
+    }
+    // 3.数据转型
+    return esOrders.stream().map(tmpEsOrder -> {
+                VectorAddressDTO vectorAddressDTO = new VectorAddressDTO();
+                vectorAddressDTO.setOrderCode(String.valueOf(tmpEsOrder.getOrderCode()));
+                vectorAddressDTO.setUserId(tmpEsOrder.getUserId());
+                vectorAddressDTO.setProvince(tmpEsOrder.getProvince());
+                vectorAddressDTO.setCity(tmpEsOrder.getCity());
+                vectorAddressDTO.setCounty(tmpEsOrder.getCounty());
+                vectorAddressDTO.setDetailAddress(tmpEsOrder.getDetailAddress());
+                return vectorAddressDTO;
+            })
+            .collect(Collectors.toList());
+}
+```
+
+其中第2点为
+
+```java
+public List<BatchStockOrderDTO> searchSimilarDocumentsByKnn(BatchStockOrderDTO esOrder, ProvinceParam provinceParam, Double similarityThreshold, Long orderId) {
+    try {
+        QueryWrapper<OrderSimilarUserDO> queryWrapper = new QueryWrapper<>();
+        queryWrapper.lambda()
+                .eq(OrderSimilarUserDO::getOrderId, orderId);
+        OrderSimilarUserDO orderSimilarUserDO = orderSimilarUserMapper.selectOne(queryWrapper);
+        if (orderSimilarUserDO != null) {
+            throw new NoNeedComputeException(orderId + "已被分组,不再需要召回计算");
+        }
+        if (log.isDebugEnabled()) {
+            log.info("searchSimilarDocumentsByKnn, similarityThreshold: {}, orderId: {}", similarityThreshold, orderId);
+        }
+        // 构建查询条件
+        BoolQuery.Builder boolQueryBuilder = new BoolQuery.Builder()
+                .must(new MatchPhraseQuery.Builder().field(EsOrderIndexKey.DELIVERY_PROVINCE).query(provinceParam.getProvince()).build()._toQuery())
+                .must(new MatchPhraseQuery.Builder().field(EsOrderIndexKey.DELIVERY_CITY).query(provinceParam.getCity()).build()._toQuery())
+                .must(new MatchPhraseQuery.Builder().field(EsOrderIndexKey.DELIVERY_COUNTY).query(provinceParam.getCounty()).build()._toQuery())
+                .mustNot(new MatchPhraseQuery.Builder().field(EsOrderIndexKey.ORDER_CODE).query(String.valueOf(orderId)).build()._toQuery())
+                .mustNot(new MatchPhraseQuery.Builder().field(EsOrderIndexKey.USER_ID).query(esOrder.getUserId()).build()._toQuery());
+        // 添加街道信息作为 must 查询条件（如果存在）
+        if (StringUtils.hasLength(esOrder.getTownship())) {
+            boolQueryBuilder.must(new MatchPhraseQuery.Builder().field(EsOrderIndexKey.TOWNSHIP).query(esOrder.getTownship()).build()._toQuery());
+        }
+        // 构建最终的 BoolQuery 对象
+        BoolQuery boolQuery = boolQueryBuilder.build();
+        // 1. 构建KNN查询，召回向量地址
+        Integer k = dynamicConfig.getKnnNum();
+        KnnQuery knnQuery = new KnnQuery.Builder()
+                .field(EsOrderIndexKey.DELIVERY_ADDRESS_VECTOR)
+                .k(k)
+                // 可选：增加候选数以提高召回率
+                .numCandidates(dynamicConfig.getNumCandidates())
+                .filter(boolQuery._toQuery())
+                .queryVector(esOrder.getAddressVector())
+                .build();
+        // 构建搜索请求
+        SearchRequest searchRequest = new SearchRequest.Builder()
+                .index(indexConfig.getIndexName4OrderVector())
+                .size(dynamicConfig.getRecallSize())
+                // 使用KNN查询作为主查询
+                .query(knnQuery._toQuery())
+                .build();
+        // 执行搜索请求
+        if (log.isDebugEnabled()) {
+            log.info("searchSimilarDocumentsByKnn, final es query string {}", searchRequest.toString());
+        }
+        SearchResponse<BatchStockOrderDTO> response = elasticsearchClient.search(searchRequest, BatchStockOrderDTO.class);
+        // 提取响应中的命中项
+        List<BatchStockOrderDTO> resultList = new ArrayList<>();
+        // 2. 执行rerank重排序
+        ReRankQueryDTO reRankQuery = new ReRankQueryDTO();
+        reRankQuery.setThrehold(similarityThreshold);
+        reRankQuery.setQueryAddress(esOrder.getDetailAddress());
+        List<ReRankOrderDTO> reRankOrderList = new ArrayList<>();
+        int count = 0;
+        // 该订单数据是否有街道信息
+        for (Hit<BatchStockOrderDTO> hit : response.hits().hits()) {
+            if (Objects.nonNull(hit.score()) && hit.source() != null) {
+                Double score = hit.score();
+                if (score.compareTo(similarityThreshold) >= 0) {
+                    resultList.add(hit.source());
+                    if (log.isDebugEnabled()) {
+                        log.info("searchSimilarDocumentsByKnn, hit score: {}, similarityThreshold:{}", hit.score(), similarityThreshold);
+                    }
+                    ReRankOrderDTO reRankOrderDTO = new ReRankOrderDTO();
+                    reRankOrderDTO.setOrderId(hit.source().getOrderCode());
+                    reRankOrderDTO.setAddress(hit.source().getDetailAddress());
+                    reRankOrderDTO.setSimilarity(hit.score());
+                    reRankOrderList.add(reRankOrderDTO);
+                }
+                count++;
+                if (count % dynamicConfig.getRecallSize() == 0 && score.compareTo(similarityThreshold) >= 0) {
+                    log.info("searchSimilarDocumentsByKnn, count: {}, query address:{}, orderId:{}, similarityThreshold:{}", count,
+                            esOrder.getDetailAddress(), esOrder.getOrderCode(), similarityThreshold);
+                }
+            }
+        }
+        if (CollectionUtils.isEmpty(reRankOrderList)) {
+            return resultList;
+        }
+        reRankQuery.setOrders(reRankOrderList);
+        List<String> rerankOrderIdAddressList = this.rerankForRecallAddress(reRankQuery);
+        // 根据重排序结果过滤
+        return resultList.stream().filter(batchStockOrderDTO -> rerankOrderIdAddressList.contains(batchStockOrderDTO.getDetailAddress()))
+                .collect(Collectors.toList());
+    } catch (NoNeedComputeException e) {
+        throw e;
+    } catch (Exception e) {
+        log.error("searchSimilarDocumentsByKnn error", e);
+        return new ArrayList<>();
+    }
+}
+```
+
+当然也可以选择Hybrid search，在搜索的时候融入BM25评分，这个就看需不需要了，es本身也支持bm25计算
 
 #### Rerank
 
+通常在召回过后，回来的地址/文档需要再一次需要重排序，来进行二次评分。这也是由于地址的特殊性，word2vec实际上还是有一些问题，召回回来的地址不是能够很好的去区分一些bad case
 
+通过混合相似度rerank权重调节可根据不同需求调整不同的权重分数满足相似度分类需求，减少相似度分类错误问题，比如权重（订单地址向量化相似度0.74+文本相似度0.25+数字相似度0.01）
+
+在这次项目中，我们没有用到ReRank模型，仅仅只是简单的加权打分，满足需求即可
 
 
 
