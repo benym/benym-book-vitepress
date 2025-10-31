@@ -1,49 +1,57 @@
-#name: CICD-TencentCloud
-#on:
-#  #监听push操作
-#  push:
-#    branches:
-#      # master分支，你也可以改成其他分支
-#      - master
-#jobs:
-#  build:
-#    # runs-on 指定job任务运行所需要的虚拟机环境(必填字段)
-#    runs-on: ubuntu-latest
-#
-#    strategy:
-#      matrix:
-#        node-version: [ 12.x ]
-#
-#    steps:
-#      # 获取源码
-#      - name: Checkout
-#        # 使用action库  actions/checkout获取源码
-#        uses: actions/checkout@v1
-#      # 安装Node13
-#      - name: Use Node.js ${{ matrix.node-version }}
-#        # 使用action库  actions/setup-node安装node
-#        uses: actions/setup-node@v1
-#        with:
-#          node-version: ${{ matrix.node-version }}
-#      # 安装依赖
-#      - name: npm install
-#        run: npm install
-#      # 打包
-#      - name: npm build
-#        run: npm run build
-#      # 部署到服务器
-#      - name: Deploy to TencentCloud
-#        uses: easingthemes/ssh-deploy@v2.1.1
-#        env:
-#          # 私钥
-#          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY_BIJIBEN }}
-#          # 复制操做的参数。"-avzr --delete"意味部署时清空服务器目标目录下的文件
-#          ARGS: "-avzr --delete"
-#          # 源目录，编译后生成的文件目录
-#          SOURCE: "docs/.vuepress/dist"
-#          # 服务器ip：换成你的服务器IP
-#          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-#          # 用户
-#          REMOTE_USER: ${{ secrets.REMOTE_USER }}
-#          # 目标地址 你在服务器上部署代码的地方
-#          TARGET: ${{ secrets.BUILD_DIR }}
+name: CI/CD-TencentCloud
+on:
+  #监听push操作
+  push:
+    branches:
+      # master分支，你也可以改成其他分支
+      - master
+jobs:
+  build:
+    # runs-on 指定job任务运行所需要的虚拟机环境(必填字段)
+    runs-on: ubuntu-latest
+
+    steps:
+      # 获取源码
+      - name: Checkout
+        # 使用action库  actions/checkout获取源码
+        uses: actions/checkout@v1
+      # 安装Node13
+      - name: Use Node.js
+        # 使用action库  actions/setup-node安装node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 18.17.0
+      # 安装依赖
+      - name: Npm install
+        run: npm install
+      # 打包
+      - name: Npm build
+        run: npm run docs:build
+      # 部署到服务器
+      - name: Deploy to TencentCloud
+        uses: easingthemes/ssh-deploy@v2.1.6
+        env:
+          # 私钥
+          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY_BIJIBEN }}
+          # 复制操做的参数。"-avzr --delete"意味部署时清空服务器目标目录下的文件
+          ARGS: "-avzr --delete"
+          # 源目录，编译后生成的文件目录
+          SOURCE: "dist"
+          # 服务器ip：换成你的服务器IP
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          # 用户
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          # 目标地址 你在服务器上部署代码的地方
+          TARGET: ${{ secrets.BUILD_DIR }}
+          # 排除文件夹
+          EXCLUDE: "/node_modules/"
+      # 重启 nginx
+      - name: Restart nginx
+        uses: appleboy/ssh-action@v0.1.3
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USER }}
+          key: ${{ secrets.PRIVATE_KEY_BIJIBEN }}
+          script: |
+            systemctl stop nginx.service
+            systemctl restart nginx.service
