@@ -3,10 +3,10 @@ import { VPDocAsideSponsors } from 'vitepress/theme'
 
 const data = [
   {
-    items: [{ img: 'https://img.foreverblog.cn/wormhole_4_tp.gif' }]
+    items: [{ img: 'https://foreverblog.cn/assets/logo/wormhole_4_tp.gif' }]
   },
   {
-    items: [{ img: 'https://img.foreverblog.cn/logo_en_default.png' }]
+    items: [{ img: 'https://foreverblog.cn/assets/logo/logo_en_default.png' }]
   },
   {
     items: [{ img: 'https://help-assets.codehub.cn/enterprise/guanwang/tencent-logo.svg' }]
