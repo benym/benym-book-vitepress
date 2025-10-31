@@ -43,8 +43,6 @@ jobs:
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           # 目标地址 你在服务器上部署代码的地方
           TARGET: ${{ secrets.BUILD_DIR }}
-          # 排除文件夹
-          EXCLUDE: "/node_modules/"
       # 重启 nginx
       - name: Restart nginx
         uses: appleboy/ssh-action@v0.1.3
