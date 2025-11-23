@@ -71,7 +71,7 @@ author: benym
 1. 开启递归左子节点，返回值记为left；
 2. 开启递归右子节点，返回值记为right；
 
-**3、返回值：**根据left和right，可展开为四种情况；
+**3、返回值：** 根据left和right，可展开为四种情况；
 
 1. 当left和right**同时为空**：说明root的左/右子树中都不包含p,q，返回null；
 2. 当left和right**同时不为空**：说明p,q分列在root的左/右子树，因此root为最近公共祖先，返回root；
