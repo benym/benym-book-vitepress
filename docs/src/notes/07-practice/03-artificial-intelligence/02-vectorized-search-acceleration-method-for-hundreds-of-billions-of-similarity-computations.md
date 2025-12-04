@@ -549,7 +549,7 @@ where id in
 
 #### 整体架构图
 
-// 待补充
+![vector-sim](https://img.benym.cn/vector-search/compute-execute.jpg)
 
 #### 生产核心计算数据
 
@@ -669,7 +669,7 @@ where id in
 
 #### 整体架构图
 
-// 待补充
+![](https://img.benym.cn/vector-search/vector-compute.jpg)
 
 #### Embedding模型选择
 
