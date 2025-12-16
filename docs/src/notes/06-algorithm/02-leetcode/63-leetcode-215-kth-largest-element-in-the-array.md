@@ -187,6 +187,88 @@ class Solution {
 }
 ```
 
+## Java代码3
+```java
+class Solution {
+    /**
+     * 查找数组中第k大的元素
+     * @param nums 输入数组
+     * @param k 第k大
+     * @return 第k大的元素
+     */
+    public int findKthLargest(int[] nums, int k) {
+        int n = nums.length;
+        // 第k大元素 = 排序后第n-k位置的元素（0-based索引）
+        int targetIndex = n - k;
+        return quickSelect(nums, 0, n - 1, targetIndex);
+    }
+    
+    /**
+     * 快速选择算法
+     * @param nums 数组
+     * @param left 当前分区的左边界
+     * @param right 当前分区的右边界
+     * @param targetIndex 目标元素的索引
+     * @return 目标元素的值
+     */
+    private int quickSelect(int[] nums, int left, int right, int targetIndex) {
+        // 如果只有一个元素，直接返回
+        if (left == right) {
+            return nums[targetIndex];
+        }
+        
+        // 选择基准值（使用左边界元素）
+        int pivotValue = nums[left];
+        
+        // 初始化左右指针
+        int leftPointer = left - 1;
+        int rightPointer = right + 1;
+        
+        // Hoare分区算法
+        while (leftPointer < rightPointer) {
+            // 从左向右找到第一个大于等于基准值的元素
+            do {
+                leftPointer++;
+            } while (nums[leftPointer] < pivotValue);
+            
+            // 从右向左找到第一个小于等于基准值的元素
+            do {
+                rightPointer--;
+            } while (nums[rightPointer] > pivotValue);
+            
+            // 交换这两个元素
+            if (leftPointer < rightPointer) {
+                swap(nums, leftPointer, rightPointer);
+            }
+        }
+        
+        // 分区完成后，数组被分为两部分：
+        // [left, rightPointer] 和 [rightPointer+1, right]
+        // 基准值不一定在 rightPointer 位置
+        
+        // 如果目标在左分区，继续在左分区查找
+        if (targetIndex <= rightPointer) {
+            return quickSelect(nums, left, rightPointer, targetIndex);
+        } 
+        // 否则在右分区查找
+        else {
+            return quickSelect(nums, rightPointer + 1, right, targetIndex);
+        }
+    }
+    
+    /**
+     * 交换数组中两个元素的位置
+     * @param nums 数组
+     * @param i 第一个元素的索引
+     * @param j 第二个元素的索引
+     */
+    private void swap(int[] nums, int i, int j) {
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
+    }
+}
+```
 
 
 
