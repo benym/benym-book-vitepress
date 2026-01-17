@@ -26,7 +26,7 @@ permalink: /pages/792496/
 
 ## 介绍
 
-[rpamis-security](https://github.com/rpamis/rpamis-security)<Badge text="1.0.2"/>是一个基于Mybatis插件开发的安全组件，旨在提供更优于市面上组件的脱敏、加解密落库等企业数据安全解决方案。组件提供注解式编程方式，开发者只需要对需要处理的字段或方法加上对应注解，无需关心安全相关需求，由组件全自动完成脱敏、加解密等功能
+[rpamis-security](https://github.com/rpamis/rpamis-security)<Badge text="1.0.3"/>是一个基于Mybatis插件开发的安全组件，旨在提供更优于市面上组件的脱敏、加解密落库等企业数据安全解决方案。组件提供注解式编程方式，开发者只需要对需要处理的字段或方法加上对应注解，无需关心安全相关需求，由组件全自动完成脱敏、加解密等功能
 
 SpringBoot项目接入方式
 
@@ -34,7 +34,7 @@ SpringBoot项目接入方式
 <dependency>
     <groupId>com.rpamis</groupId>
     <artifactId>rpamis-security-spring-boot-starter</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
 </dependency>
 ```
 yml配置
@@ -46,16 +46,21 @@ rpamis:
     # 是否开启安全组件，落库加密，出库脱密，如果不指定加密算法，则默认返回原值
     # 当此开关为false时，无论脱敏切面是否开启，均不生效
     enable: true
-    # 加密算法类型，内置sm4，可自行扩展
-    algorithm: sm4
-    # 加密算法密钥，需要自己生成，满足16位即可，下面只是样例
-    sm4key: 2U43wVWjLgToKBzG
     # 忽略解密失败，如果解密失败则返回原值，否则抛出异常，如果不填写默认true
     ignore-decrypt-failed: true
     # 是否开启脱敏切面
     desensitization-enable: true
     # 自定义切点，比如增加RestController切点
-    custom-pointcut: @within(org.springframework.web.bind.annotation.RestController)
+    custom-pointcut: '@within(org.springframework.web.bind.annotation.RestController)'
+    # 加解密算法
+    algorithm:
+      # 激活的加密算法
+      active: sm4
+      sm4:
+        # 加密算法key，需要自己生成，满足16位即可，下面只是样例
+        key: 2U43wVWjLgToKBzG
+        # 加解密唯一识别前缀
+        prefix: Your_CUSTOM_PREFIX_
 ```
 
 组件特点
@@ -71,15 +76,7 @@ rpamis:
 | 新增后，如果修改同一个对象引用，再进行更新，能够正常加密 | **支持**                                                     | **支持**                                                     |
 | 可拓展式加密算法、加解密类型处理器、脱敏类型处理器       | **✅支持**                                                    | **❌不支持**                                                  |
 | 自定义脱敏标识，起始位置，结束位置                       | ✅**支持**                                                    | ❌**不支持**                                                  |
-| 完整的单测用例                                           | ✅**给出完整的单测用例，单测覆盖率达80%(含get/set)**          | ❌**无**                                                      |
-
-## 代码及单测覆盖率
-
-https://github.com/rpamis/rpamis-security
-
-::: center
-<img src="https://img.benym.cn/rpas/rpamis-security-cover.png" alt="单测覆盖率"/>
-:::
+| 完整的单测用例                                           | ✅**给出完整的单测用例，单测覆盖率达75%(含get/set)**          | ❌**无**                                                      |
 
 ## 使用方法
 
