@@ -26,10 +26,21 @@ permalink: /pages/792496/
 
 ## 介绍
 
-[rpamis-security](https://github.com/rpamis/rpamis-security)<Badge text="1.0.3"/>是一个基于Mybatis插件开发的安全组件，旨在提供更优于市面上组件的脱敏、加解密落库等企业数据安全解决方案。组件提供注解式编程方式，开发者只需要对需要处理的字段或方法加上对应注解，无需关心安全相关需求，由组件全自动完成脱敏、加解密等功能
+[rpamis-security](https://github.com/rpamis/rpamis-security)<Badge text="1.1.0"/>是一个基于Mybatis插件开发的安全组件，旨在提供更优于市面上组件的脱敏、加解密落库等企业数据安全解决方案。组件提供注解式编程方式，开发者只需要对需要处理的字段或方法加上对应注解，无需关心安全相关需求，由组件全自动完成脱敏、加解密等功能
 
 SpringBoot项目接入方式
 
+JDK17及以上
+
+```xml
+<dependency>
+  <groupId>com.rpamis</groupId>
+  <artifactId>rpamis-security-spring-boot-starter</artifactId>
+  <version>1.1.0</version>
+</dependency>
+```
+
+JDK8-JDK17
 ```xml
 <dependency>
     <groupId>com.rpamis</groupId>
@@ -322,4 +333,15 @@ public class TestVersionDO implements Serializable {
 | 获取解密数据-Mybatis-selectMap                               | ✅通过    |
 | 新增入库后不改变源对象引用-深拷贝                            | ✅通过    |
 | 新增后，如果修改同一个对象引用，再进行更新，能够正常加密     | ✅通过    |
+| 存量未加密数据进行解密，支持原值返回                         | ✅通过    |
+| 避免重复加密                                                 | ✅通过    |
+| 兼容1.0.3以下旧版本加解密                                    | ✅通过    |
+| 嵌套解密                                                     | ✅通过    |
+| 加解密缓存隔离                                               | ✅通过    |
+| 查询数据返回null正常处理                                     | ✅通过    |
+| 默认安全算法-插入数据返回原值                                | ✅通过    |
+| SM4密钥为空-抛出提示                                         | ✅通过    |
+| SM4密钥长度不足16位-抛出提示                                 | ✅通过    |
+
+
 
