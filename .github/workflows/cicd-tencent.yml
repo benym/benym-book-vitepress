@@ -44,12 +44,12 @@ jobs:
           # 目标地址 你在服务器上部署代码的地方
           TARGET: ${{ secrets.BUILD_DIR }}
       # 重启 nginx
-      - name: Restart nginx
-        uses: appleboy/ssh-action@v0.1.3
-        with:
-          host: ${{ secrets.REMOTE_HOST }}
-          username: ${{ secrets.REMOTE_USER }}
-          key: ${{ secrets.PRIVATE_KEY_BIJIBEN }}
-          script: |
-            systemctl stop nginx.service
-            systemctl restart nginx.service
+      # - name: Restart nginx
+      #  uses: appleboy/ssh-action@v0.1.3
+      #  with:
+      #    host: ${{ secrets.REMOTE_HOST }}
+      #    username: ${{ secrets.REMOTE_USER }}
+      #    key: ${{ secrets.PRIVATE_KEY_BIJIBEN }}
+      #    script: |
+      #      systemctl stop nginx.service
+      #      systemctl restart nginx.service
