@@ -123,11 +123,11 @@ for (String query : queries) {
 
 具体的搜索服务实现由下列这些包提供
 
-[](https://img.benym.cn/deepresearch/deepresearch-search-impl.png)
+![](https://img.benym.cn/deepresearch/deepresearch-search-impl.png)
 
 展开其中一个搜索查看实现，可以发现对于这些api都是采用的http请求
 
-[](https://img.benym.cn/deepresearch/deepresearch-search-baidu.png)
+![](https://img.benym.cn/deepresearch/deepresearch-search-baidu.png)
 
 由于各个搜索引擎返回的数据不一样，DeepResearch在处理这些信息时统一规定了一些key，如title、content、url、weight权重、source来源
 
