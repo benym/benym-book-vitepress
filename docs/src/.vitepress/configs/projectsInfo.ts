@@ -27,10 +27,10 @@ export const projectsInfo: Project[] = [
   },
   {
     banner: "https://img.benym.cn/projectimg/rpamis-chain.png",
-    title: "Rpamis-chain",
+    title: "Chainlet",
     description:
       "🌱轻量、高扩展性的责任链模式框架，内置多种责任链形态及执行策略",
-    link: "https://github.com/rpamis/rpamis-chain",
+    link: "https://github.com/rpamis/chainlet",
     tag: "Java",
   },
   {

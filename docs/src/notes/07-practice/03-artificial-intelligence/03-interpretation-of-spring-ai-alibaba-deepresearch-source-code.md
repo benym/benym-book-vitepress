@@ -159,7 +159,7 @@ private List<Map<String, String>> convertToSearchResults(List<SearchService.Sear
 
 获取到搜索结果之后，将会将这些搜索信息作为side info(辅助信息)交给大模型，具体实现上的表现为，组装了隐式组装了一个UserMessage，整个历史的报告信息一起输入给背景调查Agent处理
 
-[](https://img.benym.cn/deepresearch/deepresearch-search-background.png)
+![](https://img.benym.cn/deepresearch/deepresearch-search-background.png)
 
 之后如果是开启了深度研究，则将背景调查的信息交给Plan，否则则直接进入Report环节
 
