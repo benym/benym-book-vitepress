@@ -165,6 +165,107 @@ private List<Map<String, String>> convertToSearchResults(List<SearchService.Sear
 
 ## PlannerNode(计划节点)
 
+Plan节点将会根据用户提问和背景调查信息，生成深度研究的计划，然后将计划推送给前端展示
+
+这一部分关于计划的生成，主要是通过`src/main/resources/prompts/planner.md`这个prompt文件来实现
+
+在prompt中对于Plan设定角色和分析的细节，让Planner产生一个多Step的Json格式的计划用于后续反序列为Plan实体，其中Step的子步骤数量由占位符{{ max_step_num }}决定，这个变量由系统进行配置，然后传递给大模型前进行prompt渲染
+
+![](https://img.benym.cn/deepresearch/deepresearch-search-planner-json.png)
+
+我们可以看到在一个Plan中含有一个Step数组，也就是将任务拆解为了多个子任务，每个子任务会有自己的标题、描述、是否需要搜索等信息
+
+## InformationNode(信息节点)
+
+Information节点主要承接Plan的反序列化，因为即使提示模型输出了Json格式的Plan，但并不代表这个Plan就一定是符合要求的，对于反序列化失败的Plan，会捕获到反序列化异常，然后根据设定的最大重试次数生成Plan，重新设置下一条节点到PlannerNode再次生成计划。
+
+Plan生成成功后，如果在系统设置的时候选择了不自动接受计划，则会动态设置下一条节点为人类反馈节点`human_feedback`，否则进入research_team节点
+
+设置位置在
+
+![](https://img.benym.cn/deepresearch/deepresearch-search-acceptplan.png)
+
+## HumanFeedbackNode(人类反馈节点)
+
+由于在编译Graph时设定了当node_id为`human_feedback`时会打断流程，等待人类反馈，所以在任何节点都可以动态设置下一跳为`human_feedback`，从而实现让用户对当前节点的结果进行反馈。
+
+不过此时还没有进入`HumanFeedbackNode`人类反馈节点，前端此时只展示了Plan的内容，用户可以根据Plan内容进行审核然后输入修改意见，或者接受计划。
+
+再键入意见之后，前端将会调用`com.alibaba.cloud.ai.example.deepresearch.controller.ChatController#resume`恢复接口，带上用户反馈信息进入中断Graph的恢复，此处才会真正进入到`HumanFeedbackNode`节点
+
+节点内处理时如果用户有feedBack反馈，则动态设置下一条节点回到PlannerNode，带上用户的反馈重新生成Plan，否则进入research_team节点
+
+## ResearchTeamNode(研究组节点)
+
+ResearchTeam节点主要负责判断Plan的每个Step是否执行完成，如果没有则走向`parallel_executor`，否则走到`professional_kb_decision`节点，可以理解为一个简单的中间态调度。
+
+我们需要注意的是，ResearchTeam的概念就是研究组，而研究组下面的研究者(ResearcherNode)和编码者(CoderNode)都是在`com.alibaba.cloud.ai.example.deepresearch.config.DeepResearchConfiguration`中循环生成的
+
+具体生成的个数在DeepResearch项目中是通过yaml进行预先配置，默认都是4个，对于这两个节点他们默认在`parallel_executor`节点之后，且下一跳节点都是`research_team`
+
+详细代码为
+
+```java
+private void addResearcherNodes(StateGraph stateGraph) throws GraphStateException {
+	ReflectionProcessor reflectionProcessor = reflectionProcessor();
+	for (int i = 0; i < deepResearchProperties.getParallelNodeCount()
+		.get(ParallelEnum.RESEARCHER.getValue()); i++) {
+		String nodeId = "researcher_" + i;
+		stateGraph.addNode(nodeId,
+				node_async(new ResearcherNode(researchAgent, String.valueOf(i), reflectionProcessor,
+						mcpProviderFactory, searchFilterService, smartAgentDispatcher, smartAgentProperties,
+						jinaCrawlerService)));
+		stateGraph.addEdge("parallel_executor", nodeId).addEdge(nodeId, "research_team");
+	}
+}
+
+private void addCoderNodes(StateGraph stateGraph) throws GraphStateException {
+	ReflectionProcessor reflectionProcessor = reflectionProcessor();
+	for (int i = 0; i < deepResearchProperties.getParallelNodeCount().get(ParallelEnum.CODER.getValue()); i++) {
+		String nodeId = "coder_" + i;
+		stateGraph.addNode(nodeId,
+				node_async(new CoderNode(coderAgent, String.valueOf(i), reflectionProcessor, mcpProviderFactory)));
+		stateGraph.addEdge("parallel_executor", nodeId).addEdge(nodeId, "research_team");
+	}
+}
+```
+
+## ParallelExecutorNode(并行执行节点)
+
+
+## ProfessionalKbDecisionNode(专业知识库决策节点)
+
+专业知识库主要是集成各种平台的api，或者es中的数据
+
+如阿里云百炼的知识库为例，可以在线上[创建知识库](https://bailian.console.aliyun.com/cn-beijing/?tab=app#/knowledge-base)，然后通过[api的形式进行查询](https://bailian.console.aliyun.com/cn-beijing/?tab=doc#/doc/?type=app&url=2852772)
+
+![](https://img.benym.cn/deepresearch/deepresearch-knowledge.png)
+
+详细的专业知识库配置在`src/main/resources/application-kb.yml`
+
+Agent根据用户的提问来分析适合使用哪些知识库来进行回答，然后将这些模型选择的知识库id传入上下文中，选中知识库后进入`professional_kb_rag`处理，这块主要是用`com.alibaba.cloud.ai.example.deepresearch.service.RagNodeService`来区分到底是采用Hybrid RAG还是传统的多元RAG召回融合
+
+## RagNode(Rag节点)
+
+**Hybrid Rag**:
+
+`com.alibaba.cloud.ai.example.deepresearch.rag.core.DefaultHybridRagProcessor`提供了HybridRag的默认实现框架，主要分为如下几个步骤：
+
+1. 查询前处理
+2. 构建过滤表达式
+3. 执行Hybrid Retrieve
+4. 文档后处理
+
+对于查询前处理，用户的原始提问将经过`TranslationQueryTransformer(查询翻译) -> MultiQueryExpander(查询扩展) -> HyDeTransformer(假设性文档嵌入生成)`进行多元转化
+
+转化之后根据当前的会话id，用户id，来源类型元数据进行ES表达式构建
+
+之后ES根据表达式执行KNN+BM25的混合检索，查询符合用户问题的topK个文档，同时采用RRF融合算法对检索结果进行排序，同时根据文档id进行去重
+
+文档后处理部分是DeepResearch提供的RRF实现，用于召回后进行Rerank，主要是为了克服ES RRF需要收费的问题，所以内置了一个简单的RRF实现，当然这一部分也可以用户自己实现
+
+**传统策略Rag**:
+
 
 
 ## Search API
