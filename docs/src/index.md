@@ -38,8 +38,8 @@ features:
     icon:
       src: https://img.benym.cn/img/site3back.png
   - title: 项目实践方案
-    details: 包含站点优化、通用技术方案、人工智能、实用代码等总结整理
-    link: /notes/07-practice/02-thinking-and-scheme/01-massive-data-topk-problem
+    details: 包含站点优化、通用技术方案、AI Agent、实用代码等总结整理
+    link: /notes/07-practice/03-artificial-intelligence/03-interpretation-of-spring-ai-alibaba-deepresearch-source-code
     icon:
       src: https://img.benym.cn/img/task.svg
   - title: 开源项目
