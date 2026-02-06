@@ -440,21 +440,69 @@ RagDataController用户上传部分的实现是典型的`文件解析 -> 文本�
 
 ### Memory
 
+DeepResearch中关于Memory的处理主要分为对话记忆，用户角色记忆，报告记忆三种
+
 #### ConversationMemory(对话记忆)
+
+其中对话记忆仍然采用了Spring AI的内置实现，采用滑动窗口式的对话记忆，详细配置在`com.alibaba.cloud.ai.example.deepresearch.config.MemoryConfig`，默认保存100条
+
+会话记忆实现得比较简单，仅在`CoordinatorNode`和`ReporterNode`中进行会话的存储，即保存用户的问题和产出的报告回答，在多轮对话中根据`session_id`进行查询，每次会话均会带上对应的会话历史记录，让模型能够记住之前说的信息
+
+一般来讲，这一块的实现还可以埋点得更细粒度，比如保存模型的思考过程，保存MCP调用的Tool信息等等
 
 #### ShortUserRoleMemory(短期用户角色记忆)
 
+如前文所说，用户角色记忆能够根据用户的多轮对话进行自进化的角色记忆，塑造用户的背景信息和沟通偏好，从而引导模型生成符合用户偏好的回答
+
+其yaml配置如下
+
+```yaml
+spring:
+  ai:
+    alibaba:
+      deepresearch:
+        # short-term memory configuration
+        short-term-memory:
+          enabled: true
+          # conversation memory configuration
+          conversation-memory:
+            # maximum Reservation conversation Length
+            max-messages: 100
+          # user role memory configuration
+          user-role-memory:
+            # scope of User Role Short-Term Memory Guidance Model Generation
+            guide-scope: every
+            # The similarity threshold for determining when a memory update is needed ranges from 0 to 1, with a default of 0.8.
+            update-similarity-threshold : 0.8
+            # Refer to the number of questions asked by users in the past
+            history-user-messages-num: 10
+          # memory-type
+          memory-type: in-memory
+```
+
+其中`guide-scope`用户角色记忆引导范围，包含
+
+- `every`: 每次对话都引导
+- `once`: 仅第一次对话引导
+- `none`: 不引导
+
+系统内的引导方式主要是通过`com.alibaba.cloud.ai.example.deepresearch.util.TemplateUtil#addShortUserRoleMemory`进行设置，并在`BackgroundInvestigationNode`背景调查节点、`CordinatorNode`协调者节点、`PlannerNode`计划节点、`ResearcherNode`研究者节点、`ReporterNode`报告节点中进行调用
+
+主要实现类为`com.alibaba.cloud.ai.example.deepresearch.memory.ShortTermMemoryRepository`
+
 #### ReportMemory(报告记忆)
 
+报告记忆主要负责存储用户的历史报告内容，方便多轮对话时调用，由于实现的先后顺序报告记忆分别有`com.alibaba.cloud.ai.example.deepresearch.service.ReportRedisService`的直接redis存储，和基于Spring AI MessageWindowChatMemory的实现。实现过程比较简单，这里不再赘述
+
 ### Reflection
+
+Reflection机制是DeepResearch中一个非常重要的机制，主要用于在Plan执行过程中对每个Step的结果进行质量评估，如果质量不达标则进行重新处理，直到质量达标或者超过最大反思次数为止，本质上还是llm as judge的方式进行实现。
 
 ### Tool & MCP
 
 ## 总结
 
-### 优点
-
-### 缺点
+### 
 
 ## 参考资料
 - [Spring AI Alibaba DeepResearch](https://github.com/spring-ai-alibaba/deepresearch)
