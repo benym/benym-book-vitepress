@@ -500,11 +500,43 @@ Reflection机制是DeepResearch中一个非常重要的机制，主要用于在P
 
 ### Tool & MCP
 
+DeepResearch中的Tool主要是`PlannerTool`、`PythonReplTool`、`SearchFilterTool`，前两个分别作用于Planner生成，Coder数据分析，而`SearchFilterTool`则用户Agent判断是否需要进行搜索引擎搜索，但是阅读源码的时候发现目前是强制搜索的，没有绑定Tool。
+
+如果需要绑定这个Tool则它应该定义在`com.alibaba.cloud.ai.example.deepresearch.agents.AgentsConfiguration#researchAgent`中，毕竟在`src/main/resources/prompts/researcher.md`中已经定义了这个Tool可用
+
+![](https://img.benym.cn/deepresearch/deepresearch-tool.png)
+
+DeepResearch的MCP部分支持了JSON化的，多Agent和MCP的绑定，不同于直接使用Spring AI的yaml配置全局MCP，多个Agent时，每个Agent下的MCP工具应该是不同的。初始配置可从这个类查看`com.alibaba.cloud.ai.example.deepresearch.agents.McpAssignNodeConfiguration`。由于MCP连接需要经过initial过程，在项目早期的版本中采用的为项目启动就为所有Agent初始化好MCP连接的形式，
+
+但这样启动项目很快就发现，经过会出现MCP超时，尤其是MCP连接较多的时候，同时维持一些没有使用的长连接，导致资源浪费和性能下降。所以DeepResearch采用了先注入Mcp工厂，再聊天时动态绑定MCP工具到Agent的方式，只有真实产生Agent调用了才会使用MCP。
+
+典型代码如
+
+```java
+// 使用MCP工厂创建MCP客户端
+AsyncMcpToolCallbackProvider mcpProvider = mcpFactory != null
+		? mcpFactory.createProvider(state, "coderAgent") : null;
+if (mcpProvider != null) {
+	requestSpec = requestSpec.toolCallbacks(mcpProvider.getToolCallbacks());
+}
+```
+
 ## 总结
 
-### 
+DeepResearch作为2025年特别热门的AI项目方向，有许多开源产品值得我们学习，SAA DeepResearch基本上囊括了现阶段最为主流，全面的AI技术，如Graph，Plan、Reflection、Tool、MCP、Hybrid RAG、RRF ReRank、HITL、Memory、Online Search、Coding、Sandbox、LLM as Judge、Trace等。
+
+但同样还有许多值得完善的地方
+
+- Memory: Memory一定是上下文工程2026的重点方向，如何用好记忆，将会是Agent的核心竞争力之一，2025年Memory的探索仍然处于怎么存储Memory，和怎么定义长期和短期记忆，且和RAG技术有一定的重叠，如把记忆分为聊天记忆、工作记忆、情景记忆。好的工作比如Mem0和MemoryBank。但很多长期记忆仅仅是存储了就没在深入说到底要用这些长期记忆做些什么，如何用好记忆，将会是2026年Memory的重点方向。好的记忆应该是可以自进化的，self-evolving这个词最近在业界也经常提起，我们可以通过RL算法来实现Memory的自进化。也可以像DeepResearch一样，做工程侧的self-evolving memory用来引导模型生成适合用户背景的回答。甚至Memory本身应该是一个OS系统般的存在
+- HITL(人类反馈): 由于Graph本质上还是人工预先编排的workflow，所以HITL人类反馈到底什么时候需要反馈还是人为定义的，Workflow+Agentic的组合非常适合于现存的业务项目朝着AI Agent进行转型，即有一定的智能，但关键节点需要控制。但现在更多的声音我们发现，人类反馈机制其实也可以作为Tool，模型应该自己判断当前的操作是否需要进行人类反馈，比如输出的命令是一个风险命令的时候。
+- Evaluation(评测): DeepResearch作为开放式任务，评测会比较困难，由于社区精力的关系没有实现评测这一环，对于Agent效果的评估是非常重要的，如果没有指标评测，甚至会不知道优化方向。对于DeepResearch项目而言，[DeepResearch Bench](https://huggingface.co/spaces/muset-ai/DeepResearch-Bench-Leaderboard)就是很好的基准测试。同样的不仅仅是最终效果的评估，Prompt的评估、RAG的评估都将决定整个Agent最终的效果。另外对于线上评测，通常来说开始上线还可以人工收集，但后期bad case应该也采用[Agent自动化收集和打分](https://mp.weixin.qq.com/s/5ytev_RLKutH9S6mgmMQpw)
+- MCP & Prompt: DeepResearch为了快速实现多Agent绑定MCP的功能，MCP的配置是采用本地JSON化的，真实的生产环境下应该用Nacos结合Higress完成MCP的注册和发现，包括多模型配置、Prompt的管理也应该存储在其他存储而非本地。比如采用SAA的admin项目来管理Prompt和评测数据集
+- 上下文压缩: 对于长程任务，上下文压缩至关重要，这部分在2025年的实现中已经在AI IDE内跑出了许多上下文压缩的落地，包括Spring AI Alibaba和AgentScope也都有了Token的估计，和达到阈值后压缩的功能，这一部分也是实现长期运行的Agent的重要技术，怎样压缩上下文，怎么保留关键信息非常重要
+- Agentic API: 基于Graph的API在定义的时候仍然不是很方便，而且Graph其实还是Workflow，当模型能力足够强的时候，我们其实应该以ReActAgent为核心，这也是SAA和AgentScope所实现的，基于Hook机制来扩展Agent，让模型自主选择智能执行的能力放大
 
 ## 参考资料
 - [Spring AI Alibaba DeepResearch](https://github.com/spring-ai-alibaba/deepresearch)
 - [基于Spring AI Alibaba 的 DeepResearch 架构与实践](https://mp.weixin.qq.com/s/JNATHAe2gWpiMNpubj6qAw)
+- [DeepResearch Bench](https://huggingface.co/spaces/muset-ai/DeepResearch-Bench-Leaderboard)
+- [自动化评测的九九归一—评测agent](https://mp.weixin.qq.com/s/5ytev_RLKutH9S6mgmMQpw)
 
