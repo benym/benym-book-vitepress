@@ -13,7 +13,7 @@ hero:
   actions:
     - theme: brand
       text: 探索知识
-      link: /notes/11-design-pattern/01-state-machine-mode/02-the-practice-of-cola-statemachine-in-the-multilevel-audit-business
+      link: /notes/07-practice/03-artificial-intelligence/03-interpretation-of-spring-ai-alibaba-deepresearch-source-code
     - theme: alt
       text: 开源项目
       link: Projects
