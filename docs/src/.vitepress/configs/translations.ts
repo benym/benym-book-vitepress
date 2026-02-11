@@ -31,7 +31,6 @@ export const fileName2Title: Record<string, string> = {
   "07-practice": "实践",
   "01-site-optimization": "站点优化",
   "02-thinking-and-scheme": "思考与方案",
-  "03-artificial-intelligence": "人工智能",
   "04-utility-code": "实用代码",
   "08-open-source-project": "开源项目",
   "01-rpamis": "Rpamis",

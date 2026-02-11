@@ -10,10 +10,10 @@ const data = [
   },
   {
     items: [{ img: 'https://help-assets.codehub.cn/enterprise/guanwang/tencent-logo.svg' }]
-  },
-  {
-    items: [{ img: 'https://help-assets.codehub.cn/enterprise/guanwang/coding-logo.svg' }]
   }
+  // {
+  //   items: [{ img: 'https://help-assets.codehub.cn/enterprise/guanwang/coding-logo.svg' }]
+  // }
 ]
 </script>
 

@@ -11,5 +11,6 @@ export const sidebarConfig: DefaultTheme.Config['sidebar'] = {
   ["/notes/08-open-source-project/"]: [getSidebar("/docs/src", "/notes/08-open-source-project/")],
   ["/notes/09-milestone/"]: [getSidebar("/docs/src", "/notes/09-milestone/")],
   ["/notes/10-about/"]: [getSidebar("/docs/src", "/notes/10-about/")],
-  ["/notes/11-design-pattern/"]: [getSidebar("/docs/src", "/notes/11-design-pattern/")]
+  ["/notes/11-design-pattern/"]: [getSidebar("/docs/src", "/notes/11-design-pattern/")],
+  ["/notes/12-ai-agent/"]: [getSidebar("/docs/src", "/notes/12-ai-agent/")],
 }

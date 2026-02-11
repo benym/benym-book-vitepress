@@ -13,7 +13,7 @@ hero:
   actions:
     - theme: brand
       text: 探索知识
-      link: /notes/07-practice/03-artificial-intelligence/03-interpretation-of-spring-ai-alibaba-deepresearch-source-code
+      link: /notes/12-ai-agent/01-agent-practice/03-interpretation-of-spring-ai-alibaba-deepresearch-source-code
     - theme: alt
       text: 开源项目
       link: Projects
@@ -22,34 +22,34 @@ hero:
       link: /notes/09-milestone/01.milestone-detail
 
 features:
+  - title: 项目实践方案
+    details: 包含站点优化、通用技术方案、AI Agent、实用代码等总结整理
+    link: /notes/12-ai-agent/01-agent-practice/03-interpretation-of-spring-ai-alibaba-deepresearch-source-code
+    icon:
+      src: https://img.benym.cn/img/site1back.png
+  - title: 开源项目
+    details: Rpamis系列开源项目，现有快速脚手架、通用工具类、安全组件、责任链组件
+    link: /notes/08-open-source-project/01-rpamis/03-security/01-rpamis-security-one-stop-encryption-and-decryption-desensitization-security-component-based-on-mybatis-plugin
+    icon:
+      src: https://img.benym.cn/img/site2back.png
+  - title: 设计模式
+    details: 状态机设计模式
+    link: /notes/11-design-pattern/01-state-machine-mode/01-cola-statemachine-transaction-failure-pit
+    icon:
+      src: https://img.benym.cn/img/site3back.png
   - title: Java
     details: Java基础知识总结
     link: /notes/01-java/01-java-basics/01-reflection-acquires-class-objects-in-three-ways
     icon:
-      src: https://img.benym.cn/img/site1back.png
+      src: https://img.benym.cn/img/task.svg
   - title: 分布式与中间件
     details: Kafka、Redis、MySQL、分布式相关知识
     link: /notes/03-distribution-and-middleware/03-mysql/01-principles-and-application-scenarios-of-mysql-index
     icon:
-      src: https://img.benym.cn/img/site2back.png
+      src: https://img.benym.cn/img/open.svg
   - title: 基础框架
     details: Spring生态框架与常用框架相关知识
     link: /notes/05-foundation-framework/01-spring/02-spring-aop/01-implement-operation-logging-with-aop
-    icon:
-      src: https://img.benym.cn/img/site3back.png
-  - title: 项目实践方案
-    details: 包含站点优化、通用技术方案、AI Agent、实用代码等总结整理
-    link: /notes/07-practice/03-artificial-intelligence/03-interpretation-of-spring-ai-alibaba-deepresearch-source-code
-    icon:
-      src: https://img.benym.cn/img/task.svg
-  - title: 开源项目
-    details: Rpamis系列开源项目，现有快速脚手架、通用工具类、安全组件、责任链组件
-    link: /notes/08-open-source-project/01-rpamis/01-utils/01-fear-no-performance-worries-twelve-bean-copy-tools-pressure-test-big-competition
-    icon:
-      src: https://img.benym.cn/img/open.svg
-  - title: 设计模式
-    details: 状态机设计模式
-    link: /notes/11-design-pattern/01-state-machine-mode/01-cola-statemachine-transaction-failure-pit
     icon:
       src: https://img.benym.cn/img/design.svg
 ---
