@@ -22,11 +22,15 @@ author: benym
 
 本文主要介绍DeepResearch项目在实现过程中的一些关键源码。
 
-## 官方整体架构
+## 整体架构
+
+![](https://img.benym.cn/deepresearch/deepresearch-architecture-zh.gif)
 
 ![](https://img.benym.cn/deepresearch/deepresearch-workflow.png)
 
-官方仓库内这张图能够大致的描述出DeepResearch项目的整体架构，但其实读源码之后还有更多的技术细节没有在图中表达，比如Plan设计，Reflection机制，Hybrid RAG等
+## 系统运行样例
+
+![](https://img.benym.cn/deepresearch/deepresearch-system.png)
 
 ## 核心Graph节点
 
