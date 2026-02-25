@@ -49,7 +49,7 @@ jobs:
         with:
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
-          key: ${{ secrets.PRIVATE_KEY_BIJIBEN }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             systemctl stop nginx.service
             systemctl restart nginx.service
