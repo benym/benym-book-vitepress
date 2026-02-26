@@ -129,7 +129,7 @@ export const navConfig: DefaultTheme.Config['nav'] = [
     text: '🦉站点概览',
     items: [
       {
-        text: '🦄里程碑',
+        text: '🦥里程碑',
         link: '/notes/09-milestone/01.milestone-detail'
       },
       {
