@@ -56,7 +56,7 @@ export const NAV_DATA: NavData[] = [
       },
       {
         icon: 'https://img.benym.cn/navimg/tongyi.png',
-        title: '通义千问',
+        title: '千问',
         link: 'https://tongyi.aliyun.com/qianwen/'
       },
       {
@@ -87,10 +87,10 @@ export const NAV_DATA: NavData[] = [
         link: 'https://cloud.tencent.com/'
       },
       {
-        icon: 'https://img.benym.cn/navimg/coding.png',
-        title: 'Coding',
-        desc: '提供一站式研发管理平台及云原生开发工具',
-        link: 'https://coding.net/'
+        icon: 'https://img.benym.cn/navimg/volcengine.png',
+        title: '火山引擎',
+        desc: '云服务平台',
+        link: 'https://www.volcengine.com/'
       },
       {
         icon: 'https://img.benym.cn/navimg/alicloud.png',
