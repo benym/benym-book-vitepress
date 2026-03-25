@@ -265,3 +265,6 @@ hapi runner start
 
 ![](https://img.benym.cn/hapi/8.jpg)
 
+### PWA支持
+
+手机谷歌浏览器访问你部署hub的ip+端口，或者域名，进入之后点击右上角三个点，点击保存到桌面应用即可
