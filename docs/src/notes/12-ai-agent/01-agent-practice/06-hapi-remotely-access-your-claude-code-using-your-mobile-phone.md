@@ -255,15 +255,7 @@ hapi runner start
 
 效果如图
 
-![](https://img.benym.cn/hapi/4.jpg)
-
-![](https://img.benym.cn/hapi/5.jpg)
-
-![](https://img.benym.cn/hapi/6.jpg)
-
-![](https://img.benym.cn/hapi/7.jpg)
-
-![](https://img.benym.cn/hapi/8.jpg)
+![](https://img.benym.cn/hapi/4.png)
 
 ### PWA支持
 
