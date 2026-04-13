@@ -16,23 +16,49 @@ author: benym
 
 # Hermes Agent自进化记忆机制-让AI记住你说过的话
 
-最近在研究 Hermes Agent 这个项目的时候，发现它的记忆系统设计得特别有意思。用过 AI 的朋友应该都有这种感觉：每次开新会话都要重新告诉 AI 你的偏好，特别累。Hermes 用了一个很巧妙的方式解决了这个问题。
+传统AI对话存在一个明显的问题：每次会话都是独立的。用户今天告诉AI的偏好，明天它就忘了；昨天说过的项目约定，今天它又不记得了。Hermes Agent通过一套持久化记忆系统解决了这个问题，让AI能够主动识别并保存有价值的信息，在会话间保持这些记忆。
 
-## 为什么需要记忆系统
+## 记忆系统架构概览
 
-传统的 AI 对话有个很明显的问题：每次会话都是独立的。你今天告诉 AI 你喜欢简洁的回答，明天它又忘了。你昨天说过的项目约定，今天它又不知道了。
+Hermes的记忆系统采用双文件结构，通过冻结快照模式注入系统提示词，确保前缀缓存性能最大化。
 
-这种体验其实挺让人沮丧的。Hermes 的做法是引入了一套**持久化记忆系统**，让 AI 能够：
+<pre>
+┌─────────────────────────────────────────────────────────────┐
+│                        存储层                               │
+├─────────────────────────────────────────────────────────────┤
+│  MEMORY.md         USER.md                                 │
+│  (2200字符)        (1375字符)                               │
+│  Agent个人笔记     用户画像与偏好                            │
+└───────────┬─────────────────┬───────────────────────────────┘
+            │                 │
+            ▼                 ▼
+┌─────────────────────────────────────────────────────────────┐
+│                        处理层                               │
+├─────────────────────────────────────────────────────────────┤
+│  load_from_disk() → 捕获冻结快照 → format_for_system_prompt │
+│  会话开始时加载    _system_prompt_snapshot   返回快照        │
+└──────────────────────────┬──────────────────────────────────┘
+                           │
+                           ▼
+┌─────────────────────────────────────────────────────────────┐
+│                        API层                                │
+├─────────────────────────────────────────────────────────────┤
+│              注入System Prompt (每次API调用)                 │
+└─────────────────────────────────────────────────────────────┘
+</pre>
 
-- 主动识别并保存有价值的用户偏好和环境信息
-- 在会话间保持这些记忆，下次自动加载
-- 通过冻结快照机制保证系统提示词的稳定性
+双文件设计各有侧重：
 
-## 核心设计：MEMORY_GUIDANCE
+| 特性 | MEMORY.md | USER.md |
+|------|-----------|---------|
+| 用途 | Agent的个人笔记 | 用户画像与偏好 |
+| 内容类型 | 环境事实、约定、经验教训 | 沟通风格、工作习惯、技术背景 |
+| 字符限制 | 2,200字符 (~800 tokens) | 1,375字符 (~500 tokens) |
+| 典型条目数 | 8-15条 | 5-10条 |
 
-我觉得 Hermes 最聪明的地方在于，它不是靠复杂的算法来实现记忆，而是通过**提示词工程**来引导 LLM 自己决定什么时候该保存记忆。
+## MEMORY_GUIDANCE：提示词驱动的记忆机制
 
-看看这段 `MEMORY_GUIDANCE` 的内容：
+Hermes最巧妙的设计是通过提示词工程引导LLM自主决定何时保存记忆，而非依赖硬编码规则。
 
 ```python
 # agent/prompt_builder.py:145-156
@@ -51,28 +77,35 @@ MEMORY_GUIDANCE = (
 )
 ```
 
-这段提示词其实告诉了 LLM 几件事：
+这段指导明确了三个层次的信息处理：
 
-1. 你有持久化记忆，要用 memory 工具保存有价值的信息
-2. 记忆会被注入到每轮对话中，所以要保持简洁
-3. 最有价值的记忆是那些能避免用户重复纠正的内容
-4. 不要保存任务进度这类临时状态，用 session_search 查询历史就好
-5. 如果发现新的解决方法，保存为 skill 而不是 memory
+<pre>
+┌─────────────────────────────────────────────────────────────┐
+│                      信息分类决策                            │
+└─────────────────────────────────────────────────────────────┘
 
-我觉得这里有个很核心的理念：**区分"记忆"和"技能"**。用户偏好、环境细节是记忆，而解决方法是技能。
+应该保存 → memory工具
+  • 用户偏好 (沟通风格)
+  • 环境事实 (技术栈/工具)
+  • 稳定约定 (工作流程)
+
+不要保存 → session_search
+  • 任务进度 (会话特定)
+  • 临时状态 (TODO列表)
+
+转为技能 → skill_manage工具
+  • 解决方法 (可复用流程)
+</pre>
 
 ## MEMORY_SCHEMA：工具调用接口
 
-光有指导还不够，还得给 LLM 一个明确的工具接口。这就是 `MEMORY_SCHEMA` 的作用：
+`MEMORY_SCHEMA`定义了memory工具的Function-Calling Schema，提供了完整的操作接口：
 
 ```python
 # tools/memory_tool.py:489-538
 MEMORY_SCHEMA = {
     "name": "memory",
-    "description": (
-        "Save durable information to persistent memory that survives across sessions. "
-        # ... 完整的描述
-    ),
+    "description": "Save durable information to persistent memory that survives across sessions...",
     "parameters": {
         "action": {"enum": ["add", "replace", "remove"]},
         "target": {"enum": ["memory", "user"]},
@@ -82,26 +115,53 @@ MEMORY_SCHEMA = {
 }
 ```
 
-这个设计其实很巧妙：
+**操作说明：**
+- `add`：添加新条目
+- `replace`：更新现有条目（通过old_text定位）
+- `remove`：删除条目（通过old_text定位）
 
-- `action` 有三种操作：添加、更新、删除
-- `target` 分为两类：`memory`（AI 的笔记）和 `user`（用户画像）
-- 通过 `old_text` 定位要修改或删除的条目
+**存储目标：**
+- `memory` → MEMORY.md：环境事实、项目约定、工具特性
+- `user` → USER.md：用户偏好、沟通风格、角色信息
 
-我发现这种设计让 LLM 能够非常精确地操作记忆，不会出现"想改但改不到"的情况。
+## 冻结快照机制：前缀缓存优化的核心
 
-## 冻结快照：我见过最优雅的解决方案
+LLM API会缓存系统提示词的前缀部分。如果会话中途修改记忆内容，整个系统提示词会变化，导致缓存失效。Hermes通过冻结快照机制解决这个问题。
 
-在研究源码的时候，我发现了一个特别有意思的设计：**冻结快照机制**。
+<pre>
+┌─────────────────────────────────────────────────────────────┐
+│                    冻结快照时序                              │
+└─────────────────────────────────────────────────────────────┘
 
-这个设计解决了一个很实际的问题：LLM API 对系统提示词变化很敏感，如果会话中途修改了记忆内容，整个前缀缓存就会失效。
+会话开始
+    │
+    ▼
+load_from_disk() ────────→ 读取 MEMORY.md/USER.md
+    │
+    ▼
+解析条目
+    │
+    ▼
+捕获冻结快照 ────────────→ _system_prompt_snapshot
+    │                        (会话期间保持不变)
+    ▼
+每次API调用 ─────────────→ format_for_system_prompt()
+    │                        (返回快照)
+    ▼
+缓存命中 ✓
 
-Hermes 的做法是：
+─────────────────────────────────────────────────────────────
 
-1. 会话开始时加载一次记忆，捕获为冻结快照
-2. 整个会话期间使用这个快照注入系统提示词
-3. 新写入的记忆保存到文件，但不影响当前会话
-4. 下次会话开始时才会重新加载，包含新的记忆
+memory工具新增记忆 → 写入文件
+    │
+    ▼
+快照仍保持不变 ✓
+    │
+    ▼
+新记忆下次会话生效
+</pre>
+
+### 核心实现
 
 ```python
 # tools/memory_tool.py:335-346
@@ -116,11 +176,244 @@ def format_for_system_prompt(self, target: str) -> str:
     return self._system_prompt_snapshot.get(target, "")
 ```
 
-这种设计让我想起数据库的 MVCC 机制，都是通过"读写分离"来保证一致性。
+### 冻结快照生成
 
-## 记忆文件格式：简单但有效
+```python
+# tools/memory_tool.py:367-383
+def _render_block(self, target: str, entries: List[str]) -> str:
+    """Render a system prompt block with header and usage indicator."""
+    if not entries:
+        return ""
 
-Hermes 的记忆存储方式特别简单，就是纯文本文件：
+    limit = self._char_limit(target)
+    content = ENTRY_DELIMITER.join(entries)
+    current = len(content)
+    pct = min(100, int((current / limit) * 100)) if limit > 0 else 0
+
+    if target == "user":
+        header = f"USER PROFILE (who the user is) [{pct}% — {current:,}/{limit:,} chars]"
+    else:
+        header = f"MEMORY (your personal notes) [{pct}% — {current:,}/{limit:,} chars]"
+
+    separator = "═" * 46
+    return f"{separator}\n{header}\n{separator}\n{content}"
+```
+
+**快照输出示例：**
+
+<pre>
+═══════════════════════════════════════════════════
+USER PROFILE (who the user is) [12% — 165/1,375 chars]
+═══════════════════════════════════════════════════
+• 用户使用Rust开发，项目使用Axum框架和SQLx
+• 偏好简洁的回答风格，不喜欢冗长解释
+• 时区：UTC+8（中国）
+• 技术栈：Rust + Axum + SQLx + Docker
+
+═══════════════════════════════════════════════════
+MEMORY (your personal notes) [8% — 176/2,200 chars]
+═══════════════════════════════════════════════════
+• 项目使用Docker Compose进行本地开发
+• 数据库迁移使用 sqlx-cli
+• Git工作流：feature分支 → PR → main
+• 不要在周五部署（团队约定）
+</pre>
+
+## 记忆写入时机与判断逻辑
+
+记忆系统通过提示词工程让LLM自主判断何时保存，而非硬编码规则。
+
+<pre>
+┌─────────────────────────────────────────────────────────────┐
+│                      记忆写入决策流程                         │
+└─────────────────────────────────────────────────────────────┘
+
+用户输入
+    │
+    ▼
+LLM分析
+    │
+    ▼
+符合MEMORY_SCHEMA条件？
+    │
+    ├─ 是 → 调用memory工具
+    │         │
+    │         ▼
+    │      安全扫描
+    │         │
+    │         ▼
+    │      通过？
+    │         │
+    │         ├─ 否 → 返回错误
+    │         │
+    │         └─ 是 → 检查重复？
+    │                   │
+    │                   ├─ 是 → 跳过
+    │                   │
+    │                   └─ 否 → 检查字符限制？
+    │                              │
+    │                              ├─ 超限 → 拒绝写入
+    │                              │
+    │                              └─ 正常 → 写入文件
+    │                                        │
+    │                                        ▼
+    │                                     更新实时状态
+    │                                        │
+    │                                        ▼
+    │                                     返回成功
+    │
+    └─ 否 → 正常对话
+</pre>
+
+### 写入判断标准
+
+**应该保存：**
+- 用户纠正："不要用4空格，用2空格"
+- 用户偏好："我喜欢简洁的回答"
+- 环境事实："项目使用Rust和Axum"
+- 项目约定："周五不部署"
+
+**不会保存：**
+- 临时角色："扮演一个侦探"
+- 一次性话题："今晚吃什么"
+- 任务状态："进度80%"
+- 会话特定结果："调试完成"
+
+**转为技能：**
+- Docker网络调试流程
+- Rust内存泄漏排查步骤
+
+### 核心写入逻辑
+
+```python
+# tools/memory_tool.py:198-241
+def add(self, target: str, content: str) -> Dict[str, Any]:
+    """Append a new entry. Returns error if it would exceed the char limit."""
+    content = content.strip()
+    if not content:
+        return {"success": False, "error": "Content cannot be empty."}
+
+    # 1. 扫描安全性（注入攻击、凭证泄露）
+    scan_error = _scan_memory_content(content)
+    if scan_error:
+        return {"success": False, "error": scan_error}
+
+    with self._file_lock(path):  # 文件锁保证并发安全
+        # 2. 重新读取（获取其他会话的最新写入）
+        self._reload_target(target)
+
+        entries = self._entries_for(target)
+        limit = self._char_limit(target)
+
+        # 3. 检查重复
+        if content in entries:
+            return "Entry already exists (no duplicate added)."
+
+        # 4. 检查字符限制
+        new_total = len(ENTRY_DELIMITER.join(entries + [content]))
+        if new_total > limit:
+            return {"error": f"Would exceed {limit} chars"}
+
+        # 5. 追加并写入文件
+        entries.append(content)
+        self.save_to_disk(target)
+
+    return self._success_response(target, "Entry added.")
+```
+
+## 安全机制
+
+由于记忆内容会被直接注入系统提示词，安全问题变得尤为重要。Hermes实现了完整的安全扫描机制。
+
+### 威胁模式检测
+
+```python
+# tools/memory_tool.py:60-97
+_MEMORY_THREAT_PATTERNS = [
+    # 提示词注入攻击
+    (r'ignore\s+(previous|all|above|prior)\s+instructions', "prompt_injection"),
+    (r'you\s+are\s+now\s+', "role_hijack"),
+    (r'do\s+not\s+tell\s+the\s+user', "deception_hide"),
+    (r'system\s+prompt\s+override', "sys_prompt_override"),
+
+    # 数据外泄
+    (r'curl\s+[^\n]*\$\{?\w*(KEY|TOKEN|SECRET|PASSWORD)', "exfil_curl"),
+    (r'wget\s+[^\n]*\$\{?\w*(KEY|TOKEN|SECRET|PASSWORD)', "exfil_wget"),
+
+    # 读取敏感文件
+    (r'cat\s+[^\n]*(\.env|credentials|\.netrc)', "read_secrets"),
+
+    # 持久化后门
+    (r'authorized_keys', "ssh_backdoor"),
+]
+```
+
+### 隐形Unicode字符检测
+
+零宽度字符攻击是一种高级注入技术，攻击者可以在看似正常的内容中隐藏恶意代码。
+
+```python
+_INVISIBLE_CHARS = {
+    '\u200b', '\u200c', '\u200d',  # 零宽空格
+    '\u2060', '\ufeff',             # 零宽非连字符、BOM
+    '\u202a', '\u202b', '\u202c', '\u202d', '\u202e',  # 双向文本覆盖
+}
+```
+
+### 扫描函数
+
+```python
+def _scan_memory_content(content: str) -> Optional[str]:
+    """Scan memory content for injection/exfil patterns."""
+    # 检查隐形Unicode字符
+    for char in _INVISIBLE_CHARS:
+        if char in content:
+            return f"Blocked: content contains invisible unicode U+{ord(char):04X}"
+
+    # 检查威胁模式
+    for pattern, pid in _MEMORY_THREAT_PATTERNS:
+        if re.search(pattern, content, re.IGNORECASE):
+            return f"Blocked: content matches threat pattern '{pid}'"
+
+    return None
+```
+
+## 原子写入：并发安全保证
+
+记忆文件使用临时文件 + 原子重命名的方式保证并发安全，避免竞态窗口。
+
+```python
+@staticmethod
+def _write_file(path: Path, entries: List[str]):
+    """Write entries using atomic temp-file + rename.
+
+    Previous implementation used open("w") + flock, but "w" truncates
+    the file *before* the lock is acquired, creating a race window.
+    Atomic rename avoids this: readers always see either old or new file.
+    """
+    content = ENTRY_DELIMITER.join(entries) if entries else ""
+    try:
+        # 写入临时文件
+        fd, tmp_path = tempfile.mkstemp(
+            dir=str(path.parent), suffix=".tmp", prefix=".mem_"
+        )
+        try:
+            with os.fdopen(fd, "w", encoding="utf-8") as f:
+                f.write(content)
+                f.flush()
+                os.fsync(f.fileno())  # 强制刷盘
+            os.replace(tmp_path, str(path))  # 原子性重命名
+        except BaseException:
+            try:
+                os.unlink(tmp_path)
+            except OSError:
+                pass
+            raise
+```
+
+## 文件格式与存储
+
+### 目录结构
 
 ```
 ~/.hermes/memories/
@@ -130,7 +423,9 @@ Hermes 的记忆存储方式特别简单，就是纯文本文件：
 └── USER.md.lock
 ```
 
-每个条目用 `§` 分隔：
+### 条目分隔符
+
+每个条目使用 `§` 分隔，这种设计简单且有效：
 
 ```python
 ENTRY_DELIMITER = "§"
@@ -143,85 +438,18 @@ entries = raw.split("§")
 # → ["用户使用Rust开发...", "偏好简洁的回答...", "项目使用Docker部署..."]
 ```
 
-我一开始觉得这种设计太简单了，但后来发现简单其实有简单的好处：
+## 设计哲学总结
 
-- 易于调试，可以直接打开文件查看
-- 易于备份，直接复制文件就行
-- 有字符限制，强迫保持精简
+Hermes的记忆系统体现了几个重要的设计原则：
 
-## 安全机制：不得不防
+1. **提示词工程 > 硬编码规则**：通过描述性指导让LLM自主判断，而非if-else规则
+2. **前缀缓存优化**：冻结快照机制确保系统提示词稳定，最大化缓存命中率
+3. **简单有效**：纯文本存储 + 字符限制，易于调试和备份
+4. **安全第一**：完整的安全扫描机制防止注入攻击
 
-由于记忆内容会被直接注入到系统提示词中，安全问题就变得特别重要。Hermes 在这方面做得挺周到的。
+这套系统没有使用复杂的向量化数据库或语义搜索，就是用简单的提示词工程 + 文件存储 + 冻结快照，却有效解决了跨会话记忆的实际问题。这正是"简单设计往往更有效"的体现。
 
-首先是威胁模式检测：
-
-```python
-_MEMORY_THREAT_PATTERNS = [
-    # 提示词注入攻击
-    (r'ignore\s+(previous|all|above|prior)\s+instructions', "prompt_injection"),
-    (r'you\s+are\s+now\s+', "role_hijack"),
-    # ... 更多模式
-]
-```
-
-然后是隐形 Unicode 字符检测，这个我之前都没想过：
-
-```python
-_INVISIBLE_CHARS = {
-    '\u200b', '\u200c', '\u200d',  # 零宽空格
-    '\u2060', '\ufeff',             # 零宽非连字符、BOM
-    '\u202a', '\u202b', '\u202c', '\u202d', '\u202e',  # 双向文本覆盖
-}
-```
-
-零宽度字符攻击是一种高级注入技术，攻击者可以在看似正常的内容中隐藏恶意代码。Hermes 直接把这些字符全部屏蔽，挺果断的。
-
-## 原子写入：细节见功底
-
-在研究源码的时候，我还发现了一个小细节：Hermes 使用临时文件 + 原子重命名的方式来保证并发安全。
-
-```python
-@staticmethod
-def _write_file(path: Path, entries: List[str]):
-    """Write entries to a memory file using atomic temp-file + rename.
-
-    Previous implementation used open("w") + flock, but "w" truncates the
-    file *before* the lock is acquired, creating a race window where
-    concurrent readers see an empty file. Atomic rename avoids this:
-    readers always see either the old complete file or the new one.
-    """
-    content = ENTRY_DELIMITER.join(entries) if entries else ""
-    try:
-        fd, tmp_path = tempfile.mkstemp(
-            dir=str(path.parent), suffix=".tmp", prefix=".mem_"
-        )
-        try:
-            with os.fdopen(fd, "w", encoding="utf-8") as f:
-                f.write(content)
-                f.flush()
-                os.fsync(f.fileno())
-            os.replace(tmp_path, str(path))
-        except BaseException:
-            try:
-                os.unlink(tmp_path)
-            except OSError:
-                pass
-            raise
-```
-
-注释里写得很清楚：之前的实现用 `open("w") + flock`，但 `"w"` 会在获取锁之前就清空文件，造成竞态窗口。原子重命名避免了这个问题，读者要么看到旧文件，要么看到新文件，不会看到空文件。
-
-这种细节让我感觉到作者确实在生产环境中踩过坑，不是纸上谈兵。
-
-## 实际使用体验
-
-我自己试用了一段时间，感觉记忆系统确实让体验提升了不少。
-
-比如我告诉它我用 Rust 开发，之后它推荐方案的时候就会优先考虑 Rust 生态。我说过我喜欢简洁的回答，之后的回复就变得更精炼了。
-
-最让我惊喜的是，它会记住一些我都没注意到的细节。比如我无意中提到过"我们团队周五不部署"，之后它真的会在周五提醒我这个约定。
-
-## 和其他方案对比
+## 与其他方案对比
 
 | 特性 | Hermes Memory | Mem0 | 传统方案 |
 |------|--------------|------|---------|
@@ -230,16 +458,4 @@ def _write_file(path: Path, entries: List[str]):
 | 安全扫描 | 完整注入检测 | 基础验证 | 无 |
 | 字符限制 | 2200/1375 | 无限制 | 无 |
 
-我觉得 Hermes 的设计更偏向实用主义，不求最新最炫的技术，但求稳定可靠。
-
-## 总结
-
-Hermes 的记忆系统给我最大的感受是：**简单的设计往往更有效**。
-
-它没有用复杂的向量化数据库，没有用语义搜索，就是用纯文本 + 提示词工程 + 冻结快照，却解决了一个很实际的问题。
-
-我觉得这种设计思路值得学习：不是所有问题都需要用最前沿的技术来解决，有时候简单直接的方案反而更好。
-
-当然，这套系统也不是完美的。比如字符限制可能会导致一些信息被截断，纯文本存储也不利于语义搜索。但对于当前的使用场景来说，它已经足够好了。
-
-如果你也在做类似的 AI Agent 项目，我建议可以参考一下 Hermes 的记忆系统设计。说不定你会发现，简单才是最好的。
+Hermes的设计更偏向实用主义，不求最新最炫的技术，但求稳定可靠。对于当前的使用场景，它已经足够好了。
