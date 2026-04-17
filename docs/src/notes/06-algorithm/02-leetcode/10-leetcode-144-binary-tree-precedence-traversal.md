@@ -91,16 +91,23 @@ class Solution {
 class Solution {
     public List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> res = new ArrayList<>();
-        if(root==null) return res;
+        if (root == null) return res;
+        
         Deque<TreeNode> stack = new ArrayDeque<>();
-        stack.add(root);
-        while(!stack.isEmpty()){
-            TreeNode temp = stack.pop();
-            res.add(temp.val);
-            if(temp.right!=null)
-                stack.add(temp.right);
-            if(temp.left!=null)
-                stack.add(temp.left);
+        stack.push(root);
+        
+        while (!stack.isEmpty()) {
+            TreeNode node = stack.pop();
+            res.add(node.val);
+            
+            // 注意：先压入右子节点，再压入左子节点
+            // 这样左子节点会先出栈，符合前序遍历的顺序
+            if (node.right != null) {
+                stack.push(node.right);
+            }
+            if (node.left != null) {
+                stack.push(node.left);
+            }
         }
         return res;
     }
