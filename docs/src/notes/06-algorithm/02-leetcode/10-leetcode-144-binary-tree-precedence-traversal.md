@@ -46,10 +46,7 @@ author: benym
 
 递归：添加根节点，开启左子树递归，开启右子树递归
 
-迭代：前序遍历一般等同于BFS，一般用Queue来实现，先进先出，层序遍历即可。
-
-不过奇怪的是这个题跑不过测试用例.......只能换成栈来做，也就是调整一下加入顺序，需要先添加右子树，再添加左子树，由于pop是后进先出，所以弹出的顺序变为了先弹出左子树，再是右子树，变成了Queue的先进先出的样子
-
+迭代：使用Queue或者Stack，先添加根节点，弹出根节点，添加右子树，再添加左子树
 ## Java代码(递归)
 
 ```java
@@ -79,37 +76,6 @@ class Solution {
 }
 ```
 
-## Java代码(迭代Queue)
-
-```java
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-class Solution {
-    public List<Integer> preorderTraversal(TreeNode root) {
-        List<Integer> res = new ArrayList<>();
-        if(root==null) return res;
-        Queue<TreeNode> queue = new LinkedList<>();
-        queue.add(root);
-        while(!queue.isEmpty()){
-            TreeNode temp = queue.poll();
-            res.add(temp.val);
-            if(temp.left!=null)
-                queue.add(temp.left);
-            if(temp.right!=null)
-                queue.add(temp.right);
-        }
-        return res;
-    }
-}
-```
-
 ## Java代码(迭代Stack)
 
 ```java
@@ -126,7 +92,7 @@ class Solution {
     public List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> res = new ArrayList<>();
         if(root==null) return res;
-        Stack<TreeNode> stack = new Stack<>();
+        Deque<TreeNode> stack = new ArrayDeque<>();
         stack.add(root);
         while(!stack.isEmpty()){
             TreeNode temp = stack.pop();
