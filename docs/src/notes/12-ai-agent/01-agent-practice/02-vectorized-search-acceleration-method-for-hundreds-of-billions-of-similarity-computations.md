@@ -29,7 +29,7 @@ author: benym
 
 用户2 订单2 地址为 北京市海淀区XXX小区
 
-两个地址相似度为100%，则将用户1和用户2视为同一用户，我们先不考虑这个需求是否合理，从技术的角度讲，如果要实现动态分组和计算，那么我们必然会至少计算一次用户1订单1和用户2订单2之间的地址相似度，通过计算出的相似度我们才能知道是否满足业务阈值，来进行分类打标
+两个地址相似度达到一定阈值，则将用户1和用户2视为同一用户，我们先不考虑这个需求是否合理，从技术的角度讲，如果要实现动态分组和计算，那么我们必然会至少计算一次用户1订单1和用户2订单2之间的地址相似度，通过计算出的相似度我们才能知道是否满足业务阈值，来进行分类打标
 
 如果假设系统中有N个订单，则需要计算NxN次地址相似度，计算量是笛卡尔积
 
@@ -666,6 +666,12 @@ where id in
 
 ![](https://img.benym.cn/vector-search/vector-sim8.png)
 
+单条数据写入时间
+
+3毫秒
+
+![](https://img.benym.cn/vector-search/index-vector-time.png)
+
 可以看到面对超大数据量的计算，向量化检索的方案在计算效率上有了质的提高
 
 #### 整体架构图
@@ -689,6 +695,24 @@ where id in
 根据测试结果我们最终使用了word2vec
 
 因为他的效果最接近编辑距离，基于单个词来进行地址区分，能够明显得判别出上述SOTA模型识别的语义上CASE接近，但实际上是两个不同地址的问题
+
+### 核心指标
+
+对比结果如下
+
+![](https://img.benym.cn/vector-search/algorithm-compare.png)
+
+写入TPS数据对比，针对1000、1w、10w生成效果
+
+![](https://img.benym.cn/vector-search/model-tps.png)
+
+![](https://img.benym.cn/vector-search/model-tps-time.png)
+
+QPS数据
+
+![](https://img.benym.cn/vector-search/model-qps.png)
+
+![](https://img.benym.cn/vector-search/model-qps-time.png)
 
 #### 向量数据库选择
 
