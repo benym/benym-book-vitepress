@@ -668,7 +668,7 @@ where id in
 
 单条数据写入时间
 
-3毫秒
+30毫秒
 
 ![](https://img.benym.cn/vector-search/index-vector-time.png)
 
