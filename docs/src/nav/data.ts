@@ -45,7 +45,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://code.claude.com/'
       },
       {
-        icon: 'https://img.benym.cn/navimg/chatgpt.png',
+        icon: 'https://img.benym.cn/navimg/codex.png',
         title: 'Codex',
         link: 'https://openai.com/zh-Hans-CN/codex/'
       },
