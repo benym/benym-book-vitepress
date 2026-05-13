@@ -40,6 +40,16 @@ export const NAV_DATA: NavData[] = [
     title: '大模型系列',
     items: [
       {
+        icon: 'https://img.benym.cn/navimg/claudecode.png',
+        title: 'Claude Code',
+        link: 'https://code.claude.com/'
+      },
+      {
+        icon: 'https://img.benym.cn/navimg/chatgpt.png',
+        title: 'Codex',
+        link: 'https://openai.com/zh-Hans-CN/codex/'
+      },
+      {
         icon: 'https://img.benym.cn/navimg/chatgpt.png',
         title: 'ChatGPT',
         link: 'https://chat.openai.com/chat'
@@ -57,24 +67,23 @@ export const NAV_DATA: NavData[] = [
       {
         icon: 'https://img.benym.cn/navimg/tongyi.png',
         title: '千问',
-        link: 'https://tongyi.aliyun.com/qianwen/'
+        link: 'https://www.qianwen.com/?ch=tongyi_redirect'
       },
       {
         icon: 'https://img.benym.cn/navimg/yuanbao.png',
-        title: '腾讯元宝',
+        title: '元宝',
         link: 'https://yuanbao.tencent.com/chat'
-      },
-      {
-        icon: 'https://img.benym.cn/navimg/coze.png',
-        title: 'Coze',
-        link: 'https://www.coze.cn/'
       },
       {
         icon: 'https://img.benym.cn/navimg/kimi.png',
         title: 'Kimi',
         link: 'https://kimi.moonshot.cn/'
+      },
+      {
+        icon: 'https://img.benym.cn/navimg/minimax.png',
+        title: 'MiniMax',
+        link: 'https://agent.minimaxi.com/'
       }
-
     ]
   },
   {
@@ -134,10 +143,10 @@ export const NAV_DATA: NavData[] = [
     title: '站点生成器',
     items: [
       {
-        icon: 'https://astro.build/favicon.svg',
-        title: 'Astro',
-        desc: '一个现代化的轻量级静态站点生成器',
-        link: 'https://astro.build'
+        icon: 'https://img.benym.cn/navimg/fumadocs.png',
+        title: 'Fumadocs',
+        desc: '基于React.js的现代化文档框架',
+        link: 'https://www.fumadocs.dev/'
       },
       {
         icon: 'https://img.benym.cn/navimg/vitepress.png',
@@ -162,6 +171,12 @@ export const NAV_DATA: NavData[] = [
         title: 'Docusaurus',
         desc: '基于 React 的静态网站生成器',
         link: 'https://docusaurus.io/zh-CN'
+      },
+      {
+        icon: 'https://avatars.githubusercontent.com/u/3275593?s=48&v=4',
+        title: 'Furo',
+        desc: '一款简洁且可自定义的 Sphinx 文档主题',
+        link: 'https://pradyunsg.me/furo/'
       }
     ]
   },
@@ -212,6 +227,12 @@ export const NAV_DATA: NavData[] = [
         link: 'https://juejin.cn'
       },
       {
+        title: 'LinuxDO',
+        icon: 'https://img.benym.cn/navimg/linuxdo.png',
+        desc: '新的理想型社区',
+        link: 'https://linux.do/'
+      },
+      {
         title: 'V2EX',
         icon: 'https://img.benym.cn/navimg/v2ex.png',
         desc: '一个关于分享和探索的地方',
@@ -219,7 +240,7 @@ export const NAV_DATA: NavData[] = [
       },
       {
         title: 'SegmentFault 思否',
-        icon: 'https://static.segmentfault.com/main_site_next/0dc4bace/touch-icon.png',
+        icon: 'https://img.benym.cn/navimg/segmentfault.png',
         desc: '技术问答开发者社区',
         link: 'https://segmentfault.com'
       },
@@ -235,7 +256,6 @@ export const NAV_DATA: NavData[] = [
         desc: '中文互联网高质量的问答社区和创作者聚集的原创内容平台',
         link: 'https://www.xiaohongshu.com/'
       }
-
     ]
   }
 ]

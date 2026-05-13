@@ -41,4 +41,6 @@ export const fileName2Title: Record<string, string> = {
   "10-about": "关于",
   "11-design-pattern": "设计模式",
   "01-state-machine-mode": "状态机模式",
+  "12-ai-agent": "AI Agent",
+  "01-agent-practice": "实践"
 };
