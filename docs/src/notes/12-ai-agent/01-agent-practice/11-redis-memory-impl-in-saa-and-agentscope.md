@@ -72,6 +72,8 @@ public void save(SessionKey sessionKey, String key, State value) {
 ```
 核心逻辑很简单，组装key之后直接存储序列化之后的State对象，这个`State`是AgentScope中定义的接口，在AgentScope中有如下这些实现类。
 
+![](https://img.benym.cn/img/redis-memory-1.png)
+
 可以看出，存储的内容不仅仅只有普通的Msg、还可以是Image、Audio、Plan、Compression等多种类型的State对象，State对象的分层设计也对应着Memory不仅仅是存储会话记忆，还要存储会话中的工作记忆，多模态消息，Plan执行计划等
 
 另外个save接口是批量存储
@@ -256,6 +258,10 @@ Spring AI Alibaba中的Redis Memory的实现核心功能也与AgentScope类似�
 用户可以很方便的在Spring AI环境下使用Redis Memory，并通过yaml配置文件切换不同的客户端
 
 核心主要查看`RedisChatMemoryConnectionAutoConfiguration`和`BaseRedisChatMemoryRepository`，前者是SpringBoot环境下的自动配置类，后者是Redis Memory的核心实现类。
+
+![](https://img.benym.cn/img/redis-memory-2.png)
+
+![](https://img.benym.cn/img/redis-memory-3.png)
 
 主要能看到代码中是如何处理多种不同的客户端，以及多种不同的Redis部署方式的，和AgentScope有区别，Spring AI Alibaba的实现中需要兼容的Spring的地方更多
 
